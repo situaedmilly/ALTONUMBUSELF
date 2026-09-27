@@ -699,7 +699,7 @@
   },
   "ledger_timestamp": "2026-09-27T05:02:32Z",
   "artifact_receipt": {
-    "observation_time_utc": "2026-09-27T05:05:20Z",
+    "observation_time_utc": null,
     "source": "GitHub authenticated connector fetch_file responses after artifact writes",
     "repository": "situaedmilly/ALTONUMBUSELF",
     "ref": "main",
@@ -721,6 +721,8 @@
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       }
     ],
-    "limitation": "These receipts were computed from current-session connector readback; SELFGRAPH_INSTANCE.json is not self-hashed here. The final provenance-ledger digest is reported externally because a file cannot contain a stable digest of its own final bytes."
+    "limitation": "These receipts were computed from current-session connector readback; SELFGRAPH_INSTANCE.json is not self-hashed here. The final provenance-ledger digest is reported externally because a file cannot contain a stable digest of its own final bytes.",
+    "observation_date": "2026-09-27",
+    "observation_time_limit": "Exact GitHub connector read time was not returned; readback occurred after observed head 16ad5e0bd38698141654acf2dd8fb7f811b847bd (commit timestamp 2026-09-27T05:07:16Z)."
   }
 }
