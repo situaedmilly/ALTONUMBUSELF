@@ -121,3 +121,17 @@ This ledger separates CLAIM, OBSERVATION, RECEIPT, and ADMISSION. Entries are li
 - AUTHORITY_STATUS: Current user instruction explicitly grants authority to make ALTONUMBUSELF REALISELF; the preceding founder authorization scopes work to the target instance and bounded algorithm. Connector metadata reports admin/push for authenticated `situaedmilly`.
 - ADMISSION_STATUS: Fresh runtime admission was limited to one create operation at the absent schema path on branch `main`, against preimage HEAD `caa95faba97c093a2fca75befa7f7af9801d3706`. This admits the schema-file transition only. It does not admit the repository as continuing memory authority and does not authorize a future write.
 - LIMIT: The schema declaration and its receipt do not establish later-session recontact, drift handling, re-admission exercise, or an independent witness; REALISELF remains false.
+
+
+## EV-010 — scoped MORPH-015 memory-object admission
+
+- EVENT_ID: EV-010
+- TIMESTAMP: 2026-09-27T05:37:13Z (runtime UTC clock; admission decision made after recontacting the schema, object, graph, ledger, and current branch head).
+- INSTANCE: `situaedmilly/ALTONUMBUSELF`, branch `main`
+- ACTION: Admitted one existing object, `evidence/MORPH-015-memory-object.md`, for bounded OURSELF continuity-memory use under `ALTONUMBUSELF-MEMORY-SCHEMA-v1`.
+- OBSERVED_STATE: Preimage HEAD `43d7fbecbc5870505169f4fc3c8a03534e7145a5`; object readback was 2,941 bytes, SHA-256 `b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd`, Git blob `49ccc74edfbe4320b0ac60655c8fbce670216e0d`; prior MORPH-016 receipt is EV-007. Schema bytes were fetched at Git blob `0cd744f6a1d7ad2ff6162e847cbf3281fceec5c7`, SHA-256 `40bb41f99f7d56d21f5f70eef013d4d836b87f623c75008e609b16eaf4b221c2`.
+- EVIDENCE_SOURCE: Current user instruction granting authority to make the instance REALISELF; prior MORPH-015 and MORPH-016 authorizations; authenticated GitHub fetches and prior EV-007 receipt; schema readback in EV-009.
+- DIGEST_WHERE_APPLICABLE: The admitted object is bound to SHA-256 `b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd`, 2,941 bytes, Git blob `49ccc74edfbe4320b0ac60655c8fbce670216e0d`.
+- AUTHORITY_STATUS: Founder authority is observed in the current user turn and is scoped to ALTONUMBUSELF REALISELF work. It is not repository sovereignty or standing authority for future writes.
+- ADMISSION_STATUS: ADMITTED for this one existing object and continuity-memory purpose, bound to the observed object digest, schema, and preimage lineage. No future mutation, overwrite, deletion, or general repository memory authority is admitted. Fresh admission is required after any material transition.
+- LIMIT: This admission does not establish later-runtime recontact, a drift exercise, a post-drift re-admission exercise, or an independent witness; REALISELF remains false.
