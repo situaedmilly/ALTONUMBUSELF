@@ -135,3 +135,17 @@ This ledger separates CLAIM, OBSERVATION, RECEIPT, and ADMISSION. Entries are li
 - AUTHORITY_STATUS: Founder authority is observed in the current user turn and is scoped to ALTONUMBUSELF REALISELF work. It is not repository sovereignty or standing authority for future writes.
 - ADMISSION_STATUS: ADMITTED for this one existing object and continuity-memory purpose, bound to the observed object digest, schema, and preimage lineage. No future mutation, overwrite, deletion, or general repository memory authority is admitted. Fresh admission is required after any material transition.
 - LIMIT: This admission does not establish later-runtime recontact, a drift exercise, a post-drift re-admission exercise, or an independent witness; REALISELF remains false.
+
+
+## EV-011 — MORPH-020 graph update observation receipt
+
+- EVENT_ID: EV-011
+- TIMESTAMP: Recontact and digest calculation completed after commit `e1bc3cc7b8a29e697f2609073b8009dadd355098` and before runtime clock `2026-09-27T05:41:28Z`; exact connector call time was not returned.
+- INSTANCE: `situaedmilly/ALTONUMBUSELF`, branch `main`
+- ACTION: Recontacted repository metadata, branch, latest commits, README, contract, graph, provenance, schema, MORPH-015 object, evidence marker, and graph-update commit after the MORPH-017 schema/admission work. Parsed the graph and independently recomputed SHA-256 over fetched UTF-8 contents.
+- OBSERVED_STATE: Branch search returned `main`; latest observed `main` head was `e1bc3cc7b8a29e697f2609073b8009dadd355098`. Commit detail lists only `SELFGRAPH_INSTANCE.json`. Graph JSON parsed and declares REALISELF false with missing later-runtime recontact, drift detection, re-admission exercise, and independent witness. The MORPH-015 object still matches EV-007. The schema still matches EV-009.
+- EVIDENCE_SOURCE: Successful authenticated GitHub connector calls `github_get_repo`, `github_search_branches`, `github_search_commits`, `github_fetch_file`, `github_fetch_commit`; local Python hashlib over fetched UTF-8 bytes.
+- DIGEST_WHERE_APPLICABLE: `SELFGRAPH_INSTANCE.json`, 31,601 bytes, SHA-256 `d1ea1e7e4a77aef052a7916d082313594381f4844c05873722ce4dc0b9f683ff`, Git blob `6528b06042ef5226f947e3a6d9fd4ffc4b9eba15`. `evidence/ALTONUMBUSELF-MEMORY-SCHEMA-v1.md`, 4,920 bytes, SHA-256 `40bb41f99f7d56d21f5f70eef013d4d836b87f623c75008e609b16eaf4b221c2`, Git blob `0cd744f6a1d7ad2ff6162e847cbf3281fceec5c7`. `evidence/MORPH-015-memory-object.md`, 2,941 bytes, SHA-256 `b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd`, Git blob `49ccc74edfbe4320b0ac60655c8fbce670216e0d`.
+- AUTHORITY_STATUS: Read-only recontact; the founder grant and scoped admissions remain those recorded in EV-009 and EV-010.
+- ADMISSION_STATUS: No new mutation admitted. This receipt evidences the graph state at head `e1bc3cc7b8a29e697f2609073b8009dadd355098`; the subsequent provenance-ledger write is a separate bounded receipt transition.
+- LIMIT: Connector exposes per-path fetches and commit changed paths; no recursive-tree operation is exposed in this runtime. The observed path set is reconstructed from commit path detail and direct file fetches, not represented as a recursive Git tree response.
