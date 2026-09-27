@@ -126,7 +126,7 @@ This ledger separates CLAIM, OBSERVATION, RECEIPT, and ADMISSION. Entries are li
 ## EV-010 — scoped MORPH-015 memory-object admission
 
 - EVENT_ID: EV-010
-- TIMESTAMP: 2026-09-27T05:37:13Z (runtime UTC clock; admission decision made after recontacting the schema, object, graph, ledger, and current branch head).
+- TIMESTAMP: Within 2026-09-27T05:37:13Z–05:38:31Z; the exact decision time was not captured. The interval brackets the runtime clock before the admission and the clock after its ledger write.
 - INSTANCE: `situaedmilly/ALTONUMBUSELF`, branch `main`
 - ACTION: Admitted one existing object, `evidence/MORPH-015-memory-object.md`, for bounded OURSELF continuity-memory use under `ALTONUMBUSELF-MEMORY-SCHEMA-v1`.
 - OBSERVED_STATE: Preimage HEAD `43d7fbecbc5870505169f4fc3c8a03534e7145a5`; object readback was 2,941 bytes, SHA-256 `b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd`, Git blob `49ccc74edfbe4320b0ac60655c8fbce670216e0d`; prior MORPH-016 receipt is EV-007. Schema bytes were fetched at Git blob `0cd744f6a1d7ad2ff6162e847cbf3281fceec5c7`, SHA-256 `40bb41f99f7d56d21f5f70eef013d4d836b87f623c75008e609b16eaf4b221c2`.
