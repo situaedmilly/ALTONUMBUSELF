@@ -93,7 +93,7 @@
       "id": "CONTRACT-001",
       "kind": "CONTRACT",
       "state": "DECLARED_NOT_ADMITTED",
-      "fact": "This file declares bounded instance and SELFMOAT distinctions; declaration is not admission."
+      "fact": "The instance contract is declared; EV-010 admits only one existing object for bounded continuity use, not the repository as standing memory authority."
     },
     {
       "id": "AUTHORITY-001",
@@ -104,8 +104,8 @@
     {
       "id": "ADMISSION-001",
       "kind": "ADMISSION",
-      "state": "NOT_EVIDENCED",
-      "fact": "No independent admission record for ALTONUMBUSELF as memory authority was observed."
+      "state": "SCOPED_ADMISSION_OBSERVED",
+      "fact": "EV-010 records a fresh admission bound to the MORPH-015 object digest, schema, and preimage. No future writes or standing memory authority are admitted."
     },
     {
       "id": "ACTUATION-001",
@@ -116,8 +116,8 @@
     {
       "id": "MEMORY-OBJECT-001",
       "kind": "MEMORY_OBJECT",
-      "state": "OBSERVED_NOT_ADMITTED",
-      "fact": "evidence/MORPH-015-memory-object.md was independently re-fetched on main after the MORPH-015 write; SHA-256 b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd (2941 UTF-8 bytes). The object is not thereby admitted as continuing memory authority."
+      "state": "ADMITTED_SCOPED",
+      "fact": "evidence/MORPH-015-memory-object.md remains observed at 2941 bytes, SHA-256 b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd, Git blob 49ccc74edfbe4320b0ac60655c8fbce670216e0d; EV-010 admits this exact object for continuity use only."
     },
     {
       "id": "OBSERVATION-001",
@@ -172,6 +172,48 @@
       "kind": "REALISELF",
       "state": "FALSE",
       "fact": "Predicate requirements are incomplete; declaration does not upgrade this state."
+    },
+    {
+      "id": "MEMORY-SCHEMA-001",
+      "kind": "INSTANCE",
+      "state": "VERIFIED",
+      "fact": "evidence/ALTONUMBUSELF-MEMORY-SCHEMA-v1.md re-fetched from main: 4920 bytes, SHA-256 40bb41f99f7d56d21f5f70eef013d4d836b87f623c75008e609b16eaf4b221c2, Git blob 0cd744f6a1d7ad2ff6162e847cbf3281fceec5c7; commit 41003ed96944944eb370e0868e45710e4f6b17bb."
+    },
+    {
+      "id": "AUTHORITY-002",
+      "kind": "AUTHORITY",
+      "state": "SCOPED_FOUNDER_AUTHORIZATION",
+      "fact": "Current user granted authority to make ALTONUMBUSELF REALISELF; interpreted only for necessary bounded work in the named repository."
+    },
+    {
+      "id": "ADMISSION-002",
+      "kind": "ADMISSION",
+      "state": "ADMITTED_SCOPED",
+      "fact": "Fresh admission bound to evidence/MORPH-015-memory-object.md, its observed digest, schema, and observed preimage, recorded in EV-010."
+    },
+    {
+      "id": "ACTUATION-002",
+      "kind": "ACTUATION",
+      "state": "EXECUTED",
+      "fact": "Created only evidence/ALTONUMBUSELF-MEMORY-SCHEMA-v1.md in commit 41003ed96944944eb370e0868e45710e4f6b17bb."
+    },
+    {
+      "id": "OBSERVATION-002",
+      "kind": "OBSERVATION",
+      "state": "OBSERVED",
+      "fact": "GitHub connector re-fetched the schema after write; content bytes were independently processed for SHA-256 and Git blob calculation."
+    },
+    {
+      "id": "RECEIPT-002",
+      "kind": "RECEIPT",
+      "state": "VERIFIED",
+      "fact": "Schema readback receipt: 4920 bytes, SHA-256 40bb41f99f7d56d21f5f70eef013d4d836b87f623c75008e609b16eaf4b221c2, Git blob 0cd744f6a1d7ad2ff6162e847cbf3281fceec5c7, write commit 41003ed96944944eb370e0868e45710e4f6b17bb."
+    },
+    {
+      "id": "RECONTACT-002",
+      "kind": "RECONTACT",
+      "state": "OBSERVED",
+      "fact": "This runtime recontacted main and fetched schema and MORPH-015 after the schema and provenance writes; this is not later-runtime recontact."
     }
   ],
   "edges": [
@@ -284,6 +326,46 @@
       "from": "WITNESS-001",
       "to": "REALISELF-001",
       "relation": "REQUIRES"
+    },
+    {
+      "from": "AUTHORITY-002",
+      "to": "ADMISSION-002",
+      "relation": "AUTHORIZES"
+    },
+    {
+      "from": "ADMISSION-002",
+      "to": "MEMORY-OBJECT-001",
+      "relation": "ADMITS"
+    },
+    {
+      "from": "CAPABILITY-WRITE-001",
+      "to": "ACTUATION-002",
+      "relation": "ACTUATES"
+    },
+    {
+      "from": "ACTUATION-002",
+      "to": "MEMORY-SCHEMA-001",
+      "relation": "ACTUATES"
+    },
+    {
+      "from": "MEMORY-SCHEMA-001",
+      "to": "MEMORY-OBJECT-001",
+      "relation": "SUPPORTS"
+    },
+    {
+      "from": "MEMORY-SCHEMA-001",
+      "to": "OBSERVATION-002",
+      "relation": "OBSERVES"
+    },
+    {
+      "from": "OBSERVATION-002",
+      "to": "RECEIPT-002",
+      "relation": "RECEIPTS"
+    },
+    {
+      "from": "RECEIPT-002",
+      "to": "RECONTACT-002",
+      "relation": "RECONTACTS"
     }
   ],
   "realisation_chain": [
@@ -340,12 +422,14 @@
         "CONTRACT_ADMISSION_INSTANCE"
       ],
       "evidence_required": [
-        "contract bytes",
-        "schema bytes",
-        "explicit admission record"
+        "schema path readback",
+        "byte count",
+        "SHA-256",
+        "Git blob",
+        "write and readback lineage"
       ],
-      "state": "UNOBSERVED",
-      "blocking_condition": "Contract admission is not evidenced; a schema declaration alone is insufficient."
+      "state": "VERIFIED",
+      "blocking_condition": "Schema is observed and digest-receipted. Its admission and MORPH-015 admission are limited to the recorded bounded transitions; they do not grant standing authority."
     },
     {
       "instance_id": "MEMORY_OBJECT_INSTANCE",
@@ -359,8 +443,8 @@
         "authorized write lineage",
         "content readback"
       ],
-      "state": "OBSERVED",
-      "blocking_condition": "The artifact exists and was re-read, but contract/schema admission and admission of the repository as continuing memory authority remain unverified."
+      "state": "ADMITTED",
+      "blocking_condition": "MORPH-015 is admitted only for bounded continuity-memory use under the observed schema (EV-010); later-runtime recontact, drift handling, and re-admission remain unverified."
     },
     {
       "instance_id": "OBSERVATION_INSTANCE",
@@ -403,7 +487,7 @@
         "target lineage"
       ],
       "state": "OBSERVED",
-      "blocking_condition": "Current-session GitHub recontact succeeded; time-separated later-session recovery remains unverified."
+      "blocking_condition": "Same-runtime recontact after MORPH-017 schema actuation succeeded; a later-runtime recovery remains unverified."
     },
     {
       "instance_id": "DRIFT_INSTANCE",
@@ -444,12 +528,13 @@
       "evidence_required": [
         "specific authority instrument",
         "scope",
-        "target",
+        "target object",
         "transition",
-        "fresh admission record"
+        "fresh admission record",
+        "observed object and schema receipts"
       ],
-      "state": "UNOBSERVED",
-      "blocking_condition": "The user authorized these setup artifacts, but no distinct memory-authority admission is recorded."
+      "state": "ADMITTED",
+      "blocking_condition": "EV-010 admits only the existing MORPH-015 object for continuity use; no standing repository memory authority or future write is admitted."
     },
     {
       "instance_id": "INDEPENDENT_WITNESS_INSTANCE",
@@ -485,8 +570,6 @@
     "reason": "The task does not define a formal sufficiency model or whether independent witness is mandatory; the predicate conditions identify necessary evidence classes but do not prove a globally minimal count."
   },
   "missing_instances": [
-    "CONTRACT_ADMISSION_INSTANCE",
-    "MEMORY_SCHEMA_INSTANCE",
     "RECONTACT_INSTANCE",
     "DRIFT_INSTANCE",
     "RE_ADMISSION_INSTANCE",
@@ -494,62 +577,49 @@
   ],
   "blocking_edges": [
     {
-      "from": "IDENTITY_INSTANCE",
-      "to": "CONTRACT_ADMISSION_INSTANCE",
-      "relation": "AUTHORIZES",
-      "condition": "No separate admission record binds the identity/authority to memory mutation."
-    },
-    {
-      "from": "CONTRACT_ADMISSION_INSTANCE",
-      "to": "MEMORY_SCHEMA_INSTANCE",
-      "relation": "ADMITS",
-      "condition": "Contract/schema admission not evidenced."
-    },
-    {
-      "from": "MEMORY_SCHEMA_INSTANCE",
-      "to": "MEMORY_OBJECT_INSTANCE",
-      "relation": "REQUIRES",
-      "condition": "No admitted memory object exists."
-    },
-    {
       "from": "RECEIPT_INSTANCE",
       "to": "RECONTACT_INSTANCE",
       "relation": "RECONTACTS",
-      "condition": "No later-session retrieval."
+      "condition": "No later-runtime retrieval of the admitted object has been observed."
     },
     {
       "from": "RECONTACT_INSTANCE",
       "to": "DRIFT_INSTANCE",
       "relation": "DRIFTS",
-      "condition": "No drift-detection exercise."
+      "condition": "No drift-detection exercise has been performed."
     },
     {
       "from": "DRIFT_INSTANCE",
       "to": "RE_ADMISSION_INSTANCE",
       "relation": "REQUIRES",
-      "condition": "No fresh re-admission after material change."
+      "condition": "No fresh re-admission exercise after observed drift/material transition."
     },
     {
       "from": "OBSERVATION_INSTANCE",
       "to": "INDEPENDENT_WITNESS_INSTANCE",
       "relation": "WITNESSES",
-      "condition": "No independent witness channel."
+      "condition": "No separate independent witness channel is evidenced."
     }
   ],
   "realiself_predicate": {
     "all": [
-      "GITHUB_JURISDICTION_OBSERVED",
-      "IDENTITY_OBSERVED",
-      "INSTANCE_OBSERVED",
-      "CONTRACT_ADMITTED",
-      "MEMORY_ARTIFACT_OBSERVED",
-      "RECEIPT_VERIFIED",
+      "ADDRESSABLE",
+      "PERSISTENT",
+      "READABLE",
+      "INTEGRITY_VERIFIED",
+      "LINEAGE_CONTINUOUS",
+      "AUTHORITY_BOUND",
+      "ADMITTED",
+      "ACTUATED",
+      "OBSERVED",
+      "RECEIPTED",
       "RECONTACT_VERIFIED",
       "DRIFT_BOUNDARY_VERIFIED",
-      "RE_ADMISSION_BOUNDARY_VERIFIED"
+      "RE_ADMISSION_BOUNDARY_VERIFIED",
+      "REQUIRED_WITNESS_VERIFIED"
     ],
     "value": false,
-    "evaluation": "FALSE while any required condition lacks independent evidence; file existence or declaration cannot set true."
+    "evaluation": "FALSE: current-session addressability, schema and object receipts, scoped authority/admission, and post-write readback are evidenced; later-runtime recontact, drift handling, re-admission boundary exercise, and independent witness are not."
   },
   "selfmoat": {
     "foreign_state_may_be_observed": true,
@@ -621,16 +691,16 @@
     {
       "morph": "MORPH-017",
       "name": "MEMORY RECONTACT",
-      "PREIMAGE": "Prior morph receipt and current target state",
-      "CONTRACT": "Bounded operation contract; no state transition is implied by declaration.",
-      "AUTHORITY": "Fresh scoped authority required and not evidenced for future transition.",
-      "CAPABILITY": "Capability must be observed for each channel and operation.",
-      "ADMISSION": "Not evidenced unless separately recorded for this exact transition.",
-      "ACTUATION": "Not established by registration alone.",
-      "OBSERVATION": "Same-session GitHub connector return to main and file refetch succeeded.",
-      "RECEIPT": "Must bind observed bytes, digest, and lineage.",
-      "RECONTACT": "Later-session return remains unobserved.",
-      "NEXT_PREIMAGE": "MORPH-018 input state"
+      "PREIMAGE": "MORPH-016 receipt plus schema write lineage at 41003ed96944944eb370e0868e45710e4f6b17bb.",
+      "CONTRACT": "Recontact actual GitHub state, refetch memory and schema, recompute digests, compare against receipts, and do not replay stale intent.",
+      "AUTHORITY": "Current founder authority covers bounded work toward REALISELF; current-session recontact uses read capability only.",
+      "CAPABILITY": "Authenticated GitHub connector metadata, commit search, and fetch_file calls succeeded.",
+      "ADMISSION": "Read-only same-runtime recontact; no write or memory-authority admission implied.",
+      "ACTUATION": "No repository mutation in the recontact step; schema actuation is recorded separately in MORPH-017 evidence.",
+      "OBSERVATION": "Main head and schema/object bytes were re-read after schema and provenance writes; digests match.",
+      "RECEIPT": "Schema: 4920 bytes, SHA-256 40bb41f99f7d56d21f5f70eef013d4d836b87f623c75008e609b16eaf4b221c2, Git blob 0cd744f6a1d7ad2ff6162e847cbf3281fceec5c7. Object still matches EV-007.",
+      "RECONTACT": "Same-runtime recontact observed. Later-runtime recovery pending.",
+      "NEXT_PREIMAGE": "MORPH-018 requires a later-runtime recovered receipt baseline; drift remains untested."
     },
     {
       "morph": "MORPH-018",
