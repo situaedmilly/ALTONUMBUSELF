@@ -1,0 +1,701 @@
+{
+  "graph_version": "1",
+  "reality": "OURSELFECOSYSTEM",
+  "era": 2051,
+  "instance_id": "ALTONUMBUSELF",
+  "instance_class": "MEMORY_STORAGE",
+  "remote": "https://github.com/situaedmilly/ALTONUMBUSELF.git",
+  "local_repository_observation": "No local clone was created; command-host DNS lookup of github.com failed in the earlier attempt.",
+  "node_kinds": [
+    "PREIMAGE",
+    "GITHUB_JURISDICTION",
+    "IDENTITY",
+    "CAPABILITY",
+    "INSTANCE",
+    "REPOSITORY",
+    "MEMORY_OBJECT",
+    "CONTRACT",
+    "AUTHORITY",
+    "ADMISSION",
+    "ACTUATION",
+    "REALISELF",
+    "OBSERVATION",
+    "WITNESS",
+    "RECEIPT",
+    "RECONTACT",
+    "DRIFT",
+    "REFUSAL",
+    "QUARANTINE"
+  ],
+  "edge_relations": [
+    "REQUIRES",
+    "DISCOVERS",
+    "IDENTIFIES",
+    "CONTAINS",
+    "DERIVES",
+    "SUPPORTS",
+    "AUTHORIZES",
+    "ADMITS",
+    "ACTUATES",
+    "REALIZES",
+    "OBSERVES",
+    "WITNESSES",
+    "RECEIPTS",
+    "RECONTACTS",
+    "DRIFTS",
+    "REFUSES",
+    "QUARANTINES"
+  ],
+  "nodes": [
+    {
+      "id": "PREIMAGE-001",
+      "kind": "PREIMAGE",
+      "state": "OBSERVED",
+      "fact": "Initial command-host clone attempt failed DNS resolution for github.com; this does not establish remote nonexistence."
+    },
+    {
+      "id": "GH-JURISDICTION-001",
+      "kind": "GITHUB_JURISDICTION",
+      "state": "OBSERVED",
+      "fact": "Authenticated GitHub connector returned identity, organization list, accessible repository listing, target metadata and content."
+    },
+    {
+      "id": "IDENTITY-001",
+      "kind": "IDENTITY",
+      "state": "OBSERVED",
+      "fact": "Connectorlogin sit uaedmilly"
+    },
+    {
+      "id": "CAPABILITY-READ-001",
+      "kind": "CAPABILITY",
+      "state": "OBSERVED",
+      "fact": "Connector read calls succeeded for repository metadata, branch search, commit history, and README content."
+    },
+    {
+      "id": "CAPABILITY-WRITE-001",
+      "kind": "CAPABILITY",
+      "state": "AVAILABLE_UNVERIFIED",
+      "fact": "GitHub create/update file interfaces are advertised and repository metadata reports admin/push permissions; writing requested artifacts will test this scoped path."
+    },
+    {
+      "id": "REPOSITORY-001",
+      "kind": "REPOSITORY",
+      "state": "OBSERVED",
+      "fact": "Public situaedmilly/ALTONUMBUSELF, default branch main; initial commit d6e19691984fac5c7baf38b25f13a16704a9ca88."
+    },
+    {
+      "id": "INSTANCE-001",
+      "kind": "INSTANCE",
+      "state": "OBSERVED",
+      "fact": "Target repository is identified as the requested ALTONUMBUSELF instance; admission for memory authority is not evidenced."
+    },
+    {
+      "id": "CONTRACT-001",
+      "kind": "CONTRACT",
+      "state": "DECLARED_NOT_ADMITTED",
+      "fact": "This file declares bounded instance and SELFMOAT distinctions; declaration is not admission."
+    },
+    {
+      "id": "AUTHORITY-001",
+      "kind": "AUTHORITY",
+      "state": "SCOPED_USER_DIRECTIVE",
+      "fact": "The user explicitly requested creation of these target instance artifacts. This authority is limited to the named repository and requested structure."
+    },
+    {
+      "id": "ADMISSION-001",
+      "kind": "ADMISSION",
+      "state": "NOT_EVIDENCED",
+      "fact": "No independent admission record for ALTONUMBUSELF as memory authority was observed."
+    },
+    {
+      "id": "ACTUATION-001",
+      "kind": "ACTUATION",
+      "state": "PENDING_AT_GRAPH_DRAFT",
+      "fact": "This graph is prepared before its GitHub write. Provenance ledger records observed results only after recontact."
+    },
+    {
+      "id": "MEMORY-OBJECT-001",
+      "kind": "MEMORY_OBJECT",
+      "state": "MISSING",
+      "fact": "No actual persistent memory object beyond control-plane instance documentation is established by this graph."
+    },
+    {
+      "id": "OBSERVATION-001",
+      "kind": "OBSERVATION",
+      "state": "PARTIAL",
+      "fact": "Initial repository and post-write artifact reads can establish observations; independent witness is not evidenced."
+    },
+    {
+      "id": "WITNESS-001",
+      "kind": "WITNESS",
+      "state": "MISSING",
+      "fact": "No independent witness channel is evidenced."
+    },
+    {
+      "id": "RECEIPT-001",
+      "kind": "RECEIPT",
+      "state": "PENDING",
+      "fact": "A post-write digest and lineage receipt is required; this graph is a draft and cannot receipt itself."
+    },
+    {
+      "id": "RECONTACT-001",
+      "kind": "RECONTACT",
+      "state": "PENDING",
+      "fact": "Re-read the target through GitHub after all writes; later-session recovery remains unverified."
+    },
+    {
+      "id": "DRIFT-001",
+      "kind": "DRIFT",
+      "state": "UNVERIFIED",
+      "fact": "No divergence-detection exercise has been performed."
+    },
+    {
+      "id": "READMISSION-001",
+      "kind": "ADMISSION",
+      "state": "UNVERIFIED",
+      "fact": "No fresh re-admission boundary has been exercised after a material transition."
+    },
+    {
+      "id": "REFUSAL-001",
+      "kind": "REFUSAL",
+      "state": "AVAILABLE_AS_BOUNDARY",
+      "fact": "No refusal exercise is evidenced."
+    },
+    {
+      "id": "QUARANTINE-001",
+      "kind": "QUARANTINE",
+      "state": "UNVERIFIED",
+      "fact": "No quarantine behavior has been exercised."
+    },
+    {
+      "id": "REALISELF-001",
+      "kind": "REALISELF",
+      "state": "FALSE",
+      "fact": "Predicate requirements are incomplete; declaration does not upgrade this state."
+    }
+  ],
+  "edges": [
+    {
+      "from": "PREIMAGE-001",
+      "to": "GITHUB_JURISDICTION-001",
+      "relation": "DISCOVERS"
+    },
+    {
+      "from": "GH-JURISDICTION-001",
+      "to": "IDENTITY-001",
+      "relation": "IDENTIFIES"
+    },
+    {
+      "from": "GH-JURISDICTION-001",
+      "to": "CAPABILITY-READ-001",
+      "relation": "SUPPORTS"
+    },
+    {
+      "from": "GH-JURISDICTION-001",
+      "to": "REPOSITORY-001",
+      "relation": "OBSERVES"
+    },
+    {
+      "from": "IDENTITY-001",
+      "to": "REPOSITORY-001",
+      "relation": "DISCOVERS"
+    },
+    {
+      "from": "REPOSITORY-001",
+      "to": "INSTANCE-001",
+      "relation": "CONTAINS"
+    },
+    {
+      "from": "CONTRACT-001",
+      "to": "INSTANCE-001",
+      "relation": "DERIVES"
+    },
+    {
+      "from": "AUTHORITY-001",
+      "to": "ACTUATION-001",
+      "relation": "AUTHORIZES"
+    },
+    {
+      "from": "ADMISSION-001",
+      "to": "ACTUATION-001",
+      "relation": "ADMITS"
+    },
+    {
+      "from": "CAPABILITY-WRITE-001",
+      "to": "ACTUATION-001",
+      "relation": "ACTUATES"
+    },
+    {
+      "from": "ACTUATION-001",
+      "to": "MEMORY-OBJECT-001",
+      "relation": "ACTUATES"
+    },
+    {
+      "from": "MEMORY-OBJECT-001",
+      "to": "OBSERVATION-001",
+      "relation": "OBSERVES"
+    },
+    {
+      "from": "OBSERVATION-001",
+      "to": "WITNESS-001",
+      "relation": "WITNESSES"
+    },
+    {
+      "from": "OBSERVATION-001",
+      "to": "RECEIPT-001",
+      "relation": "RECEIPTS"
+    },
+    {
+      "from": "RECEIPT-001",
+      "to": "RECONTACT-001",
+      "relation": "RECONTACTS"
+    },
+    {
+      "from": "RECONTACT-001",
+      "to": "DRIFT-001",
+      "relation": "REQUIRES"
+    },
+    {
+      "from": "DRIFT-001",
+      "to": "READMISSION-001",
+      "relation": "REQUIRES"
+    },
+    {
+      "from": "READMISSION-001",
+      "to": "ACTUATION-001",
+      "relation": "AUTHORIZES"
+    },
+    {
+      "from": "RECONTACT-001",
+      "to": "REALISELF-001",
+      "relation": "REQUIRES"
+    },
+    {
+      "from": "DRIFT-001",
+      "to": "REALISELF-001",
+      "relation": "REQUIRES"
+    },
+    {
+      "from": "READMISSION-001",
+      "to": "REALISELF-001",
+      "relation": "REQUIRES"
+    },
+    {
+      "from": "WITNESS-001",
+      "to": "REALISELF-001",
+      "relation": "REQUIRES"
+    }
+  ],
+  "realisation_chain": [
+    {
+      "instance_id": "GITHUB_JURISDICTION_INSTANCE",
+      "purpose": "Establish the accessible GitHub account, jurisdiction, target and scoped capabilities.",
+      "requires": [
+        "authenticated connector response"
+      ],
+      "evidence_required": [
+        "identity response",
+        "organization listing",
+        "accessible repository listing",
+        "target metadata",
+        "successful relevant API operations"
+      ],
+      "state": "OBSERVED",
+      "blocking_condition": "Repository-creation capability is not tested because the target already exists; mutation capability is only tested for requested file operations."
+    },
+    {
+      "instance_id": "IDENTITY_INSTANCE",
+      "purpose": "Bind the connected GitHub authority boundary to an observable identity.",
+      "requires": [
+        "GITHUB_JURISDICTION_INSTANCE"
+      ],
+      "evidence_required": [
+        "authenticated login response",
+        "owner relationship or explicit repository permission metadata"
+      ],
+      "state": "OBSERVED",
+      "blocking_condition": "Connector login is observed; identity-to-authority control beyond returned repository permissions is not independently witnessed."
+    },
+    {
+      "instance_id": "ALTONUMBUSELF_REPOSITORY_INSTANCE",
+      "purpose": "Prove repository existence and lineage.",
+      "requires": [
+        "GITHUB_JURISDICTION_INSTANCE",
+        "IDENTITY_INSTANCE"
+      ],
+      "evidence_required": [
+        "repository metadata",
+        "default branch",
+        "initial commit and tree evidence",
+        "post-write head and tree"
+      ],
+      "state": "OBSERVED",
+      "blocking_condition": "Post-write lineage must be captured after the bounded artifact writes."
+    },
+    {
+      "instance_id": "MEMORY_SCHEMA_INSTANCE",
+      "purpose": "Declare a bounded schema and state distinctions for this memory/storage instance.",
+      "requires": [
+        "ALTONUMBUSELF_REPOSITORY_INSTANCE",
+        "CONTRACT_ADMISSION_INSTANCE"
+      ],
+      "evidence_required": [
+        "contract bytes",
+        "schema bytes",
+        "explicit admission record"
+      ],
+      "state": "UNOBSERVED",
+      "blocking_condition": "Contract admission is not evidenced; a schema declaration alone is insufficient."
+    },
+    {
+      "instance_id": "MEMORY_OBJECT_INSTANCE",
+      "purpose": "Establish an actual persistent OURSELF memory artifact under the declared schema.",
+      "requires": [
+        "MEMORY_SCHEMA_INSTANCE",
+        "FRESH_ADMISSION_INSTANCE"
+      ],
+      "evidence_required": [
+        "specific memory artifact",
+        "authorized write lineage",
+        "content readback"
+      ],
+      "state": "UNOBSERVED",
+      "blocking_condition": "Instance documentation/control artifacts are not yet an admitted memory object."
+    },
+    {
+      "instance_id": "OBSERVATION_INSTANCE",
+      "purpose": "Independently re-read the memory object from GitHub reality.",
+      "requires": [
+        "MEMORY_OBJECT_INSTANCE"
+      ],
+      "evidence_required": [
+        "separate post-actuation GitHub read",
+        "independence boundary documented"
+      ],
+      "state": "UNOBSERVED",
+      "blocking_condition": "Recontact reads are planned; independent witness/source separation is not yet established."
+    },
+    {
+      "instance_id": "RECEIPT_INSTANCE",
+      "purpose": "Bind observed bytes and repository lineage to a receipt.",
+      "requires": [
+        "OBSERVATION_INSTANCE"
+      ],
+      "evidence_required": [
+        "SHA-256",
+        "byte count",
+        "path",
+        "commit lineage",
+        "observation timestamp"
+      ],
+      "state": "UNOBSERVED",
+      "blocking_condition": "Post-write observations and digest computation are pending."
+    },
+    {
+      "instance_id": "RECONTACT_INSTANCE",
+      "purpose": "Show a later session can recover the same memory from external storage.",
+      "requires": [
+        "RECEIPT_INSTANCE"
+      ],
+      "evidence_required": [
+        "time-separated retrieval",
+        "matching content/digests",
+        "target lineage"
+      ],
+      "state": "UNOBSERVED",
+      "blocking_condition": "No later-session return has occurred."
+    },
+    {
+      "instance_id": "DRIFT_INSTANCE",
+      "purpose": "Detect divergence without silent overwrite.",
+      "requires": [
+        "RECONTACT_INSTANCE"
+      ],
+      "evidence_required": [
+        "baseline receipt",
+        "changed-state observation",
+        "mismatch detection record",
+        "non-overwrite outcome"
+      ],
+      "state": "UNOBSERVED",
+      "blocking_condition": "No controlled drift comparison has been exercised."
+    },
+    {
+      "instance_id": "RE_ADMISSION_INSTANCE",
+      "purpose": "Require fresh scoped authority after drift or any material transition.",
+      "requires": [
+        "DRIFT_INSTANCE",
+        "CONTRACT_ADMISSION_INSTANCE"
+      ],
+      "evidence_required": [
+        "fresh admission decision bound to target and transition",
+        "rejected stale receipt or stale admission"
+      ],
+      "state": "UNOBSERVED",
+      "blocking_condition": "No re-admission exercise or separately recorded admission exists."
+    },
+    {
+      "instance_id": "CONTRACT_ADMISSION_INSTANCE",
+      "purpose": "Admit the declared contract for a scoped operation under an evidenced authority.",
+      "requires": [
+        "IDENTITY_INSTANCE",
+        "ALTONUMBUSELF_REPOSITORY_INSTANCE"
+      ],
+      "evidence_required": [
+        "specific authority instrument",
+        "scope",
+        "target",
+        "transition",
+        "fresh admission record"
+      ],
+      "state": "UNOBSERVED",
+      "blocking_condition": "The user authorized these setup artifacts, but no distinct memory-authority admission is recorded."
+    },
+    {
+      "instance_id": "INDEPENDENT_WITNESS_INSTANCE",
+      "purpose": "Corroborate critical observations over an independent witness channel.",
+      "requires": [
+        "OBSERVATION_INSTANCE"
+      ],
+      "evidence_required": [
+        "separate witness identity or channel",
+        "matching observation receipt"
+      ],
+      "state": "UNOBSERVED",
+      "blocking_condition": "No independent witness is available in current evidence."
+    }
+  ],
+  "minimum_realisation_instance_set": {
+    "necessary_candidates": [
+      "GITHUB_JURISDICTION_INSTANCE",
+      "IDENTITY_INSTANCE",
+      "ALTONUMBUSELF_REPOSITORY_INSTANCE",
+      "CONTRACT_ADMISSION_INSTANCE",
+      "MEMORY_SCHEMA_INSTANCE",
+      "MEMORY_OBJECT_INSTANCE",
+      "OBSERVATION_INSTANCE",
+      "RECEIPT_INSTANCE",
+      "RECONTACT_INSTANCE",
+      "DRIFT_INSTANCE",
+      "RE_ADMISSION_INSTANCE",
+      "INDEPENDENT_WITNESS_INSTANCE"
+    ],
+    "minimum_count": null,
+    "derivation_status": "NOT_DERIVABLE",
+    "reason": "The task does not define a formal sufficiency model or whether independent witness is mandatory; the predicate conditions identify necessary evidence classes but do not prove a globally minimal count."
+  },
+  "missing_instances": [
+    "CONTRACT_ADMISSION_INSTANCE",
+    "MEMORY_SCHEMA_INSTANCE",
+    "MEMORY_OBJECT_INSTANCE",
+    "OBSERVATION_INSTANCE",
+    "RECEIPT_INSTANCE",
+    "RECONTACT_INSTANCE",
+    "DRIFT_INSTANCE",
+    "RE_ADMISSION_INSTANCE",
+    "INDEPENDENT_WITNESS_INSTANCE"
+  ],
+  "blocking_edges": [
+    {
+      "from": "IDENTITY_INSTANCE",
+      "to": "CONTRACT_ADMISSION_INSTANCE",
+      "relation": "AUTHORIZES",
+      "condition": "No separate admission record binds the identity/authority to memory mutation."
+    },
+    {
+      "from": "CONTRACT_ADMISSION_INSTANCE",
+      "to": "MEMORY_SCHEMA_INSTANCE",
+      "relation": "ADMITS",
+      "condition": "Contract/schema admission not evidenced."
+    },
+    {
+      "from": "MEMORY_SCHEMA_INSTANCE",
+      "to": "MEMORY_OBJECT_INSTANCE",
+      "relation": "REQUIRES",
+      "condition": "No admitted memory object exists."
+    },
+    {
+      "from": "MEMORY_OBJECT_INSTANCE",
+      "to": "OBSERVATION_INSTANCE",
+      "relation": "OBSERVES",
+      "condition": "Actual memory artifact not established."
+    },
+    {
+      "from": "OBSERVATION_INSTANCE",
+      "to": "RECEIPT_INSTANCE",
+      "relation": "RECEIPTS",
+      "condition": "Independent post-write read and digest not yet recorded."
+    },
+    {
+      "from": "RECEIPT_INSTANCE",
+      "to": "RECONTACT_INSTANCE",
+      "relation": "RECONTACTS",
+      "condition": "No later-session retrieval."
+    },
+    {
+      "from": "RECONTACT_INSTANCE",
+      "to": "DRIFT_INSTANCE",
+      "relation": "DRIFTS",
+      "condition": "No drift-detection exercise."
+    },
+    {
+      "from": "DRIFT_INSTANCE",
+      "to": "RE_ADMISSION_INSTANCE",
+      "relation": "REQUIRES",
+      "condition": "No fresh re-admission after material change."
+    },
+    {
+      "from": "OBSERVATION_INSTANCE",
+      "to": "INDEPENDENT_WITNESS_INSTANCE",
+      "relation": "WITNESSES",
+      "condition": "No independent witness channel."
+    }
+  ],
+  "realiself_predicate": {
+    "all": [
+      "GITHUB_JURISDICTION_OBSERVED",
+      "IDENTITY_OBSERVED",
+      "INSTANCE_OBSERVED",
+      "CONTRACT_ADMITTED",
+      "MEMORY_ARTIFACT_OBSERVED",
+      "RECEIPT_VERIFIED",
+      "RECONTACT_VERIFIED",
+      "DRIFT_BOUNDARY_VERIFIED",
+      "RE_ADMISSION_BOUNDARY_VERIFIED"
+    ],
+    "value": false,
+    "evaluation": "FALSE while any required condition lacks independent evidence; file existence or declaration cannot set true."
+  },
+  "selfmoat": {
+    "foreign_state_may_be_observed": true,
+    "observation_grants_authority": false,
+    "repository_existence_grants_mutation_authority": false,
+    "proposed_write_equals_admitted_write": false,
+    "committed_artifact_observed_only_after_recontact": true,
+    "receipt_must_refer_to_observed_state": true,
+    "prior_receipt_authorizes_new_transition": false,
+    "fresh_admission_required_per_material_transition": true
+  },
+  "morph_chain": [
+    {
+      "morph": "MORPH-013",
+      "name": "BOUNDED PHYSICAL ACTUATION",
+      "PREIMAGE": "Physical environment before bounded actuation",
+      "CONTRACT": "Bounded operation contract; no state transition is implied by declaration.",
+      "AUTHORITY": "Fresh scoped authority required and not evidenced for future transition.",
+      "CAPABILITY": "Capability must be observed for each channel and operation.",
+      "ADMISSION": "Not evidenced unless separately recorded for this exact transition.",
+      "ACTUATION": "Not established by registration alone.",
+      "OBSERVATION": "Must be read from actual target after actuation.",
+      "RECEIPT": "Must bind observed bytes, digest, and lineage.",
+      "RECONTACT": "Required on a later return; pending.",
+      "NEXT_PREIMAGE": "MORPH-014 input state"
+    },
+    {
+      "morph": "MORPH-014",
+      "name": "GITHUB JURISDICTION + ALTONUMBUSELF INSTANCE ADMISSION",
+      "PREIMAGE": "Initial remote URL claim plus prior DNS failure",
+      "CONTRACT": "Bounded operation contract; no state transition is implied by declaration.",
+      "AUTHORITY": "User instruction authorizes requested target artifacts only.",
+      "CAPABILITY": "Capability must be observed for each channel and operation.",
+      "ADMISSION": "Not evidenced unless separately recorded for this exact transition.",
+      "ACTUATION": "Not established by registration alone.",
+      "OBSERVATION": "Must be read from actual target after actuation.",
+      "RECEIPT": "Must bind observed bytes, digest, and lineage.",
+      "RECONTACT": "Required on a later return; pending.",
+      "NEXT_PREIMAGE": "MORPH-015 input state"
+    },
+    {
+      "morph": "MORPH-015",
+      "name": "MEMORY ARTIFACT ACTUATION",
+      "PREIMAGE": "Prior morph receipt and current target state",
+      "CONTRACT": "Bounded operation contract; no state transition is implied by declaration.",
+      "AUTHORITY": "Fresh scoped authority required and not evidenced for future transition.",
+      "CAPABILITY": "Capability must be observed for each channel and operation.",
+      "ADMISSION": "Not evidenced unless separately recorded for this exact transition.",
+      "ACTUATION": "Not established by registration alone.",
+      "OBSERVATION": "Must be read from actual target after actuation.",
+      "RECEIPT": "Must bind observed bytes, digest, and lineage.",
+      "RECONTACT": "Required on a later return; pending.",
+      "NEXT_PREIMAGE": "MORPH-016 input state"
+    },
+    {
+      "morph": "MORPH-016",
+      "name": "INDEPENDENT MEMORY OBSERVATION + RECEIPT",
+      "PREIMAGE": "Prior morph receipt and current target state",
+      "CONTRACT": "Bounded operation contract; no state transition is implied by declaration.",
+      "AUTHORITY": "Fresh scoped authority required and not evidenced for future transition.",
+      "CAPABILITY": "Capability must be observed for each channel and operation.",
+      "ADMISSION": "Not evidenced unless separately recorded for this exact transition.",
+      "ACTUATION": "Not established by registration alone.",
+      "OBSERVATION": "Must be read from actual target after actuation.",
+      "RECEIPT": "Must bind observed bytes, digest, and lineage.",
+      "RECONTACT": "Required on a later return; pending.",
+      "NEXT_PREIMAGE": "MORPH-017 input state"
+    },
+    {
+      "morph": "MORPH-017",
+      "name": "MEMORY RECONTACT",
+      "PREIMAGE": "Prior morph receipt and current target state",
+      "CONTRACT": "Bounded operation contract; no state transition is implied by declaration.",
+      "AUTHORITY": "Fresh scoped authority required and not evidenced for future transition.",
+      "CAPABILITY": "Capability must be observed for each channel and operation.",
+      "ADMISSION": "Not evidenced unless separately recorded for this exact transition.",
+      "ACTUATION": "Not established by registration alone.",
+      "OBSERVATION": "Must be read from actual target after actuation.",
+      "RECEIPT": "Must bind observed bytes, digest, and lineage.",
+      "RECONTACT": "Required on a later return; pending.",
+      "NEXT_PREIMAGE": "MORPH-018 input state"
+    },
+    {
+      "morph": "MORPH-018",
+      "name": "DRIFT DETECTION",
+      "PREIMAGE": "Prior morph receipt and current target state",
+      "CONTRACT": "Bounded operation contract; no state transition is implied by declaration.",
+      "AUTHORITY": "Fresh scoped authority required and not evidenced for future transition.",
+      "CAPABILITY": "Capability must be observed for each channel and operation.",
+      "ADMISSION": "Not evidenced unless separately recorded for this exact transition.",
+      "ACTUATION": "Not established by registration alone.",
+      "OBSERVATION": "Must be read from actual target after actuation.",
+      "RECEIPT": "Must bind observed bytes, digest, and lineage.",
+      "RECONTACT": "Required on a later return; pending.",
+      "NEXT_PREIMAGE": "MORPH-019 input state"
+    },
+    {
+      "morph": "MORPH-019",
+      "name": "FRESH RE-ADMISSION",
+      "PREIMAGE": "Prior morph receipt and current target state",
+      "CONTRACT": "Bounded operation contract; no state transition is implied by declaration.",
+      "AUTHORITY": "Fresh scoped authority required and not evidenced for future transition.",
+      "CAPABILITY": "Capability must be observed for each channel and operation.",
+      "ADMISSION": "Not evidenced unless separately recorded for this exact transition.",
+      "ACTUATION": "Not established by registration alone.",
+      "OBSERVATION": "Must be read from actual target after actuation.",
+      "RECEIPT": "Must bind observed bytes, digest, and lineage.",
+      "RECONTACT": "Required on a later return; pending.",
+      "NEXT_PREIMAGE": "MORPH-020 input state"
+    },
+    {
+      "morph": "MORPH-020",
+      "name": "SELFGRAPH CONTINUATION",
+      "PREIMAGE": "Prior morph receipt and current target state",
+      "CONTRACT": "Bounded operation contract; no state transition is implied by declaration.",
+      "AUTHORITY": "Fresh scoped authority required and not evidenced for future transition.",
+      "CAPABILITY": "Capability must be observed for each channel and operation.",
+      "ADMISSION": "Not evidenced unless separately recorded for this exact transition.",
+      "ACTUATION": "Not established by registration alone.",
+      "OBSERVATION": "Must be read from actual target after actuation.",
+      "RECEIPT": "Must bind observed bytes, digest, and lineage.",
+      "RECONTACT": "Required on a later return; pending.",
+      "NEXT_PREIMAGE": "MORPH-021 input state"
+    }
+  ],
+  "prior_boundary_observation": {
+    "event_id": "EV-PRIOR-CLONE-DNS",
+    "timestamp": "2026-09-27 (exact time not recorded in prior command output)",
+    "command": "git clone https://github.com/situaedmilly/ALTONUMBUSELF.git /home/selfadmin/ourself-instances/ALTONUMBUSELF",
+    "observed_error": "Could not resolve host: github.com",
+    "interpretation": "NETWORK_UNREACHABILITY for the prior command-host transport path; not GITHUB_NONEXISTENCE."
+  },
+  "ledger_timestamp": "2026-09-27T05:02:32Z"
+}
