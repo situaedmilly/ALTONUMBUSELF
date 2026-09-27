@@ -75,6 +75,30 @@ This ledger separates CLAIM, OBSERVATION, RECEIPT, and ADMISSION. Entries are li
 - AUTHORITY_STATUS: User-authorized scope for the named instance graph and ledger.
 - ADMISSION_STATUS: Does not admit memory authority or authorize a future transition.
 
+## EV-007 — MORPH-016 memory artifact readback and digest receipt
+
+- EVENT_ID: EV-007
+- TIMESTAMP: Read operations occurred within the runtime-clock bracket 2026-09-27T05:18:09Z–2026-09-27T05:18:22Z; exact connector call time was not returned.
+- INSTANCE: situaedmilly/ALTONUMBUSELF, branch `main`
+- ACTION: After the MORPH-015 write, re-read repository metadata, branch, current commit history, the memory object, SELFGRAPH_INSTANCE.json, and this ledger through the authenticated GitHub connector. Computed SHA-256 over the fetched UTF-8 memory-object bytes with local Python hashlib.
+- OBSERVED_STATE: The repository remained public under the authenticated account; `main` head was `4e09ac674193bdef4949f65823c219fc2769fdf0`, commit message `Actuate bounded MORPH-015 memory artifact` (created 2026-09-27T05:16:42Z). The requested memory object was returned at `evidence/MORPH-015-memory-object.md`.
+- EVIDENCE_SOURCE: Successful `github_get_repo`, `github_search_branches`, `github_search_commits`, and `github_fetch_file` responses, plus local Python hashlib on the returned bytes.
+- DIGEST_WHERE_APPLICABLE: `evidence/MORPH-015-memory-object.md`, 2941 UTF-8 bytes; SHA-256 `b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd`; Git blob `49ccc74edfbe4320b0ac60655c8fbce670216e0d`.
+- AUTHORITY_STATUS: User explicitly authorized MORPH-016 observation and receipt.
+- ADMISSION_STATUS: Scoped to observe and receipt the MORPH-015 artifact. Does not admit continuing memory authority or authorize another memory write.
+
+## EV-008 — graph receipt update and recontact
+
+- EVENT_ID: EV-008
+- TIMESTAMP: Graph commit `287ce2e4bf06cadc4d7d175ce21b6c32c69be519` was created at 2026-09-27T05:19:19Z; graph readback and digest calculation completed by 2026-09-27T05:19:26Z.
+- INSTANCE: situaedmilly/ALTONUMBUSELF
+- ACTION: Updated SELFGRAPH_INSTANCE.json to record MORPH-015 actuation, MORPH-016 observation and receipt, and remaining admission/recontact/drift limits; then fetched the graph and computed its digest.
+- OBSERVED_STATE: Graph write returned success; subsequent GitHub fetch returned graph blob `f6c23bbda039c2ed21255eaa0d3daf0e42966f3f`; retrieved JSON parsed successfully.
+- EVIDENCE_SOURCE: GitHub connector `github_update_file`, `github_search_commits`, `github_fetch_file`; local Python hashlib.
+- DIGEST_WHERE_APPLICABLE: `SELFGRAPH_INSTANCE.json`, 28289 UTF-8 bytes; SHA-256 `f7f82e92a2a1ebd87438f973ab34fe5afd1a176e0f7740e99c17267bda5016b4`.
+- AUTHORITY_STATUS: User-authorized MORPH-016 observation and receipt transition.
+- ADMISSION_STATUS: Receipt covers the observed artifact bytes and current lineage only; it does not admit memory authority.
+
 ## State semantics and limits
 
 - CLAIM: A statement not yet supported by a source observation.
@@ -82,4 +106,4 @@ This ledger separates CLAIM, OBSERVATION, RECEIPT, and ADMISSION. Entries are li
 - RECEIPT: A record binding observed bytes to path, digest, and lineage; it grants no authority.
 - ADMISSION: A fresh decision for one scoped transition. No admission of this repository as memory authority is evidenced.
 - The GitHub page reader returned a cached pre-write view during this session; it was not used as post-write proof. Post-write evidence above comes from the authenticated GitHub connector.
-- No separate persistent memory object, later-session recovery, drift exercise, fresh re-admission exercise, or independent witness is established by these events.
+- The MORPH-015 memory artifact now exists and was re-read for MORPH-016. This does not admit ALTONUMBUSELF as continuing memory authority. Later-session recovery, drift exercise, fresh re-admission, and an independent witness remain unverified.
