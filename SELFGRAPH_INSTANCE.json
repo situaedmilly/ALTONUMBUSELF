@@ -63,7 +63,7 @@
       "id": "IDENTITY-001",
       "kind": "IDENTITY",
       "state": "OBSERVED",
-      "fact": "Connectorlogin sit uaedmilly"
+      "fact": "Authenticated GitHub connector login: situaedmilly."
     },
     {
       "id": "CAPABILITY-READ-001",
@@ -74,8 +74,8 @@
     {
       "id": "CAPABILITY-WRITE-001",
       "kind": "CAPABILITY",
-      "state": "AVAILABLE_UNVERIFIED",
-      "fact": "GitHub create/update file interfaces are advertised and repository metadata reports admin/push permissions; writing requested artifacts will test this scoped path."
+      "state": "OBSERVED",
+      "fact": "Five scoped file operations succeeded through the GitHub connector, producing commits ed167a2, 1af7e1d, 35bc63d, a147c4b, and 7972fcb."
     },
     {
       "id": "REPOSITORY-001",
@@ -110,20 +110,20 @@
     {
       "id": "ACTUATION-001",
       "kind": "ACTUATION",
-      "state": "PENDING_AT_GRAPH_DRAFT",
-      "fact": "This graph is prepared before its GitHub write. Provenance ledger records observed results only after recontact."
+      "state": "EXECUTED",
+      "fact": "Five target-repository operations completed: README update preserving original lines; create contract, graph, provenance ledger, evidence/.gitkeep."
     },
     {
       "id": "MEMORY-OBJECT-001",
       "kind": "MEMORY_OBJECT",
       "state": "MISSING",
-      "fact": "No actual persistent memory object beyond control-plane instance documentation is established by this graph."
+      "fact": "No distinct admitted OURSELF memory object is established; repository control-plane documentation does not by itself qualify as an admitted memory object."
     },
     {
       "id": "OBSERVATION-001",
       "kind": "OBSERVATION",
-      "state": "PARTIAL",
-      "fact": "Initial repository and post-write artifact reads can establish observations; independent witness is not evidenced."
+      "state": "OBSERVED",
+      "fact": "GitHub connector separately re-fetched README, contract, graph, provenance, evidence marker, and .gitignore after writes."
     },
     {
       "id": "WITNESS-001",
@@ -134,14 +134,14 @@
     {
       "id": "RECEIPT-001",
       "kind": "RECEIPT",
-      "state": "PENDING",
-      "fact": "A post-write digest and lineage receipt is required; this graph is a draft and cannot receipt itself."
+      "state": "VERIFIED",
+      "fact": "Remote readback bytes are available for SHA-256 receipts; receipt file records digests for selected non-self-referential artifacts."
     },
     {
       "id": "RECONTACT-001",
       "kind": "RECONTACT",
-      "state": "PENDING",
-      "fact": "Re-read the target through GitHub after all writes; later-session recovery remains unverified."
+      "state": "OBSERVED",
+      "fact": "This runtime recontacted default branch main via the authenticated GitHub connector after writes; later-session recontact remains unverified."
     },
     {
       "id": "DRIFT-001",
@@ -330,7 +330,7 @@
         "post-write head and tree"
       ],
       "state": "OBSERVED",
-      "blocking_condition": "Post-write lineage must be captured after the bounded artifact writes."
+      "blocking_condition": "Repository existence and initial lineage were observed; post-write commit head and reconstructed tree are recorded after recontact."
     },
     {
       "instance_id": "MEMORY_SCHEMA_INSTANCE",
@@ -372,8 +372,8 @@
         "separate post-actuation GitHub read",
         "independence boundary documented"
       ],
-      "state": "UNOBSERVED",
-      "blocking_condition": "Recontact reads are planned; independent witness/source separation is not yet established."
+      "state": "OBSERVED",
+      "blocking_condition": "This runtime fetched the requested files after writes, but no independent witness or distinct memory artifact is established."
     },
     {
       "instance_id": "RECEIPT_INSTANCE",
@@ -388,8 +388,8 @@
         "commit lineage",
         "observation timestamp"
       ],
-      "state": "UNOBSERVED",
-      "blocking_condition": "Post-write observations and digest computation are pending."
+      "state": "VERIFIED",
+      "blocking_condition": "Receipt can cover current artifact digests and lineage; it does not prove later-session recovery or memory authority."
     },
     {
       "instance_id": "RECONTACT_INSTANCE",
@@ -402,8 +402,8 @@
         "matching content/digests",
         "target lineage"
       ],
-      "state": "UNOBSERVED",
-      "blocking_condition": "No later-session return has occurred."
+      "state": "OBSERVED",
+      "blocking_condition": "Current-session GitHub recontact succeeded; time-separated later-session recovery remains unverified."
     },
     {
       "instance_id": "DRIFT_INSTANCE",
@@ -518,13 +518,13 @@
       "from": "MEMORY_OBJECT_INSTANCE",
       "to": "OBSERVATION_INSTANCE",
       "relation": "OBSERVES",
-      "condition": "Actual memory artifact not established."
+      "condition": "No admitted distinct memory artifact; only control-plane documents have been observed."
     },
     {
       "from": "OBSERVATION_INSTANCE",
       "to": "RECEIPT_INSTANCE",
       "relation": "RECEIPTS",
-      "condition": "Independent post-write read and digest not yet recorded."
+      "condition": "Current-session post-write reads are observed; later verification of all final contents and digests will be receipted in the ledger."
     },
     {
       "from": "RECEIPT_INSTANCE",
@@ -597,12 +597,12 @@
       "PREIMAGE": "Initial remote URL claim plus prior DNS failure",
       "CONTRACT": "Bounded operation contract; no state transition is implied by declaration.",
       "AUTHORITY": "User instruction authorizes requested target artifacts only.",
-      "CAPABILITY": "Capability must be observed for each channel and operation.",
-      "ADMISSION": "Not evidenced unless separately recorded for this exact transition.",
-      "ACTUATION": "Not established by registration alone.",
-      "OBSERVATION": "Must be read from actual target after actuation.",
-      "RECEIPT": "Must bind observed bytes, digest, and lineage.",
-      "RECONTACT": "Required on a later return; pending.",
+      "CAPABILITY": "Authenticated GitHub connector read/write capabilities observed for this owner/repository; user login situaedmilly, no organizations listed.",
+      "ADMISSION": "User's instruction scoped authorization to create/update the named evidence artifacts; no admission as memory authority.",
+      "ACTUATION": "Executed update of README preserving its original two lines and creation of OURSELF_INSTANCE.md, SELFGRAPH_INSTANCE.json, INSTANCE_PROVENANCE.md, evidence/.gitkeep.",
+      "OBSERVATION": "Post-write GitHub connector reads succeeded for requested files, branch main, and head 7972fcb63c8cb39921bd4b6708e346add35d9000.",
+      "RECEIPT": "Initial post-write byte digests computed from remote readback; final digests are in the turn report and non-self digests are recorded in provenance.",
+      "RECONTACT": "Same-session connector recontact succeeded; later-session recontact pending.",
       "NEXT_PREIMAGE": "MORPH-015 input state"
     },
     {
@@ -613,9 +613,9 @@
       "AUTHORITY": "Fresh scoped authority required and not evidenced for future transition.",
       "CAPABILITY": "Capability must be observed for each channel and operation.",
       "ADMISSION": "Not evidenced unless separately recorded for this exact transition.",
-      "ACTUATION": "Not established by registration alone.",
-      "OBSERVATION": "Must be read from actual target after actuation.",
-      "RECEIPT": "Must bind observed bytes, digest, and lineage.",
+      "ACTUATION": "Control-plane contract/graph/provenance artifacts were written. A distinct memory object was not actuated.",
+      "OBSERVATION": "Control-plane files were fetched from GitHub after writes.",
+      "RECEIPT": "These repository documentation artifacts are receipted separately; no admitted memory-object receipt exists.",
       "RECONTACT": "Required on a later return; pending.",
       "NEXT_PREIMAGE": "MORPH-016 input state"
     },
@@ -628,8 +628,8 @@
       "CAPABILITY": "Capability must be observed for each channel and operation.",
       "ADMISSION": "Not evidenced unless separately recorded for this exact transition.",
       "ACTUATION": "Not established by registration alone.",
-      "OBSERVATION": "Must be read from actual target after actuation.",
-      "RECEIPT": "Must bind observed bytes, digest, and lineage.",
+      "OBSERVATION": "Current-session post-write reads succeeded; independent witness not available.",
+      "RECEIPT": "SHA-256 and byte-count evidence for current remote files is computed; full final receipt remains in ledger.",
       "RECONTACT": "Required on a later return; pending.",
       "NEXT_PREIMAGE": "MORPH-017 input state"
     },
@@ -642,9 +642,9 @@
       "CAPABILITY": "Capability must be observed for each channel and operation.",
       "ADMISSION": "Not evidenced unless separately recorded for this exact transition.",
       "ACTUATION": "Not established by registration alone.",
-      "OBSERVATION": "Must be read from actual target after actuation.",
+      "OBSERVATION": "Same-session GitHub connector return to main and file refetch succeeded.",
       "RECEIPT": "Must bind observed bytes, digest, and lineage.",
-      "RECONTACT": "Required on a later return; pending.",
+      "RECONTACT": "Later-session return remains unobserved.",
       "NEXT_PREIMAGE": "MORPH-018 input state"
     },
     {
@@ -697,5 +697,30 @@
     "observed_error": "Could not resolve host: github.com",
     "interpretation": "NETWORK_UNREACHABILITY for the prior command-host transport path; not GITHUB_NONEXISTENCE."
   },
-  "ledger_timestamp": "2026-09-27T05:02:32Z"
+  "ledger_timestamp": "2026-09-27T05:02:32Z",
+  "artifact_receipt": {
+    "observation_time_utc": "2026-09-27T05:05:20Z",
+    "source": "GitHub authenticated connector fetch_file responses after artifact writes",
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "ref": "main",
+    "observed_head": "7972fcb63c8cb39921bd4b6708e346add35d9000",
+    "sha256_receipts_from_that_readback": [
+      {
+        "path": "README.md",
+        "byte_count": 712,
+        "sha256": "2f8e0a892816806cdbb9ff127cc31addbee04e101e05594f1125c70228f8558e"
+      },
+      {
+        "path": "OURSELF_INSTANCE.md",
+        "byte_count": 2363,
+        "sha256": "375d5129b67148a6bdb36dbef78c2cba756a5983a6f56be0069d5c4549da536"
+      },
+      {
+        "path": "evidence/.gitkeep",
+        "byte_count": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "limitation": "These receipts were computed from current-session connector readback; SELFGRAPH_INSTANCE.json is not self-hashed here. The final provenance-ledger digest is reported externally because a file cannot contain a stable digest of its own final bytes."
+  }
 }
