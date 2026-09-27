@@ -1,0 +1,110 @@
+{
+  "evidence_schema": "ourself.alchemy.observed-transformation.v1",
+  "evidence_id": "ALTONUMBUSELF-ALCHEMY-MORPH-017-001",
+  "instance_id": "ALTONUMBUSELF",
+  "graph_id": "ALCHEMY",
+  "jurisdiction_contract": {
+    "source": "ourself-control-plane/contracts/ourself-graph-jurisdiction-registry.v1.json",
+    "declared_requirement": [
+      "BEFORE_STATE",
+      "AFTER_STATE",
+      "TRANSFORMATION_RULE"
+    ],
+    "limit": "ALCHEMY establishes a transformation only; it does not establish authority or effect without a witness."
+  },
+  "transformation_rule": "Work backward from ALTONUMBUSELF-MEMORY-SCHEMA-v1 REALISELF predicate. Bind each established condition to observed remote artifacts and receipts; retain every condition without sufficient evidence as unsatisfied. Do not promote REALISELF by declaration.",
+  "before_state": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "main",
+    "head": "caa95faba97c093a2fca75befa7f7af9801d3706",
+    "artifact_path": "SELFGRAPH_INSTANCE.json",
+    "git_blob": "f6c23bbda039c2ed21255eaa0d3daf0e42966f3f",
+    "byte_count": 28289,
+    "sha256": "f7f82e92a2a1ebd87438f973ab34fe5afd1a176e0f7740e99c17267bda5016b4",
+    "realiself": false,
+    "missing_instances": [
+      "CONTRACT_ADMISSION_INSTANCE",
+      "MEMORY_SCHEMA_INSTANCE",
+      "RECONTACT_INSTANCE",
+      "DRIFT_INSTANCE",
+      "RE_ADMISSION_INSTANCE",
+      "INDEPENDENT_WITNESS_INSTANCE"
+    ],
+    "evidence_source": "Authenticated GitHub fetch_file at immutable commit caa95faba97c093a2fca75befa7f7af9801d3706; local SHA-256 over returned UTF-8 bytes."
+  },
+  "after_state": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "main",
+    "observed_head": "3828d92dffd76e1a0d73e716780181efdeb70d33",
+    "artifact_path": "SELFGRAPH_INSTANCE.json",
+    "git_blob": "6528b06042ef5226f947e3a6d9fd4ffc4b9eba15",
+    "byte_count": 31601,
+    "sha256": "d1ea1e7e4a77aef052a7916d082313594381f4844c05873722ce4dc0b9f683ff",
+    "realiself": false,
+    "missing_instances": [
+      "RECONTACT_INSTANCE",
+      "DRIFT_INSTANCE",
+      "RE_ADMISSION_INSTANCE",
+      "INDEPENDENT_WITNESS_INSTANCE"
+    ],
+    "evidence_source": "Authenticated GitHub fetch_file at main resolving to observed head 3828d92dffd76e1a0d73e716780181efdeb70d33; local SHA-256 over returned UTF-8 bytes."
+  },
+  "transformed_artifacts": [
+    {
+      "path": "evidence/ALTONUMBUSELF-MEMORY-SCHEMA-v1.md",
+      "observed_head": "3828d92dffd76e1a0d73e716780181efdeb70d33",
+      "git_blob": "0cd744f6a1d7ad2ff6162e847cbf3281fceec5c7",
+      "byte_count": 4920,
+      "sha256": "40bb41f99f7d56d21f5f70eef013d4d836b87f623c75008e609b16eaf4b221c2",
+      "status": "OBSERVED_AND_RECEIPTED"
+    },
+    {
+      "path": "evidence/MORPH-015-memory-object.md",
+      "observed_head": "3828d92dffd76e1a0d73e716780181efdeb70d33",
+      "git_blob": "49ccc74edfbe4320b0ac60655c8fbce670216e0d",
+      "byte_count": 2941,
+      "sha256": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd",
+      "status": "OBSERVED_RECEIPTED_AND_ADMITTED_FOR_BOUNDED_CONTINUITY_USE"
+    }
+  ],
+  "predicate_evaluation": {
+    "established": [
+      "ADDRESSABLE",
+      "PERSISTENT",
+      "READABLE",
+      "INTEGRITY_VERIFIED",
+      "LINEAGE_CONTINUOUS",
+      "AUTHORITY_BOUND",
+      "ADMITTED",
+      "ACTUATED",
+      "OBSERVED",
+      "RECEIPTED"
+    ],
+    "partially_established": [
+      {
+        "condition": "RECONTACT_VERIFIED",
+        "fact": "Same-runtime GitHub recontact observed; required later-runtime recovery is absent."
+      }
+    ],
+    "unsatisfied": [
+      "RECONTACT_VERIFIED",
+      "DRIFT_BOUNDARY_VERIFIED",
+      "RE_ADMISSION_BOUNDARY_VERIFIED",
+      "REQUIRED_WITNESS_VERIFIED"
+    ],
+    "realiself": false,
+    "rule": "Conjunction; any unsatisfied required condition keeps REALISELF false."
+  },
+  "effect_boundary": {
+    "authority": "Current user explicitly authorized ALCHEMY engineering for work toward ALTONUMBUSELF REALISELF.",
+    "admission": "Fresh scoped admission for creation of this one evidence record against observed preimage HEAD 3828d92dffd76e1a0d73e716780181efdeb70d33.",
+    "mutation": "Create this one new evidence path only.",
+    "witness_status": "NOT_WITNESSED",
+    "effect_claim": "This record supports an observed graph transformation; it does not independently witness the external effect."
+  },
+  "observation_limits": [
+    "GitHub connector reads and local digest computation are same-runtime observations, not an independent witness.",
+    "No later-runtime recontact has occurred.",
+    "No controlled drift or post-drift re-admission exercise has occurred."
+  ]
+}
