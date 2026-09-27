@@ -1,0 +1,115 @@
+{
+  "evidence_schema": "ourself.alchemy.reverself-memory-recontact.v1",
+  "evidence_id": "ALTONUMBUSELF-REVERSELF-001",
+  "transition": "REVERSELF(ALTONUMBUSELF -> SELFMEMORY/STORAGE -> REALISELF)",
+  "target": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "main",
+    "object_id": "ALTONUMBUSELF-MEMORY-MORPH-015-001",
+    "path": "evidence/MORPH-015-memory-object.md",
+    "content_type": "text/markdown; charset=utf-8"
+  },
+  "preimage": {
+    "historical_proof": {
+      "prior_receipt": "INSTANCE_PROVENANCE.md#EV-015",
+      "observed_head": "26bc87776bad67fb887a9727f763df36ae371fa2",
+      "status": "REALISELF=false; later-runtime recontact, drift, re-admission, and witness still incomplete"
+    },
+    "fresh_cloud_state": {
+      "observed_head": "6e1a8b630ed0336f2b1869f77aa869efa4fd26a3",
+      "head_commit_message": "Represent remaining REALISELF instances explicitly",
+      "tree_entries": 10,
+      "object_present": true,
+      "object_git_blob": "49ccc74edfbe4320b0ac60655c8fbce670216e0d",
+      "object_byte_count": 2941,
+      "object_sha256": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd",
+      "schema_git_blob": "0cd744f6a1d7ad2ff6162e847cbf3281fceec5c7",
+      "graph_git_blob": "475b541db24921178e6b0ccf86c748c21ba3e6c2",
+      "graph_sha256": "c3a755e045a9e095f5dd25d02ee5c543958ee289a5edcd89041f74c660be98ce",
+      "graph_byte_count": 36824,
+      "graph_realiself": false
+    },
+    "distinction": "Current branch head is newer than the historical EV-015 observation. Current authenticated login is sohocode4 (ID 222744407), not the historical connector login situaedmilly. Current direct collaborator listing grants sohocode4 role write; this is the current capability evidence."
+  },
+  "memory_contract": {
+    "schema": "evidence/ALTONUMBUSELF-MEMORY-SCHEMA-v1.md",
+    "addressable": true,
+    "persistent": true,
+    "readable": true,
+    "integrity_verified": true,
+    "lineage_bound": true,
+    "authority_bound": true,
+    "admitted_scope": "Existing MORPH-015 object for continuity use only; this record does not grant standing repository memory authority or authorize changes to the object.",
+    "recontactable": true,
+    "drift_boundary": "EXPECTED_DIGEST == CURRENT_OBSERVED_DIGEST confirms integrity. A mismatch is drift; retain EXPECTED_DIGEST, recontact, distinguish, quarantine/refuse, and require fresh scoped authority/admission before repair.",
+    "re_admission_boundary": "A prior receipt/admission cannot authorize a material transition against a new preimage; require fresh authority and admission bound to the new HEAD, exact path, and capability.",
+    "realiseLF_predicate_weakened": false
+  },
+  "authority": {
+    "source": "Explicit founder authorization in the current user request",
+    "scope": ["ALTONUMBUSELF", "SELFMEMORY/STORAGE", "REVERSELF", "REALISELF"],
+    "bounded_operation": "Create this one evidence receipt at the exact path below; do not modify or replace MORPH-015, graph, schema, or unrelated files."
+  },
+  "capability": {
+    "authenticated_login": "sohocode4",
+    "repository_role": "write",
+    "evidence": "Current get_me plus direct collaborator listing; authenticated GitHub reads succeeded for main, tree, graph, schema, provenance, and memory object.",
+    "write_interface": "create_or_update_file; create-only at the absent receipt path"
+  },
+  "admission": {
+    "decision": "ADMITTED",
+    "operation": "create",
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "main",
+    "expected_preimage_head": "6e1a8b630ed0336f2b1869f77aa869efa4fd26a3",
+    "target_path": "evidence/REVERSELF-001-memory-recontact-receipt.json",
+    "target_absent_at_preimage": true,
+    "capability": "GitHub repository write",
+    "authority_ref": "current user instruction"
+  },
+  "observation": {
+    "immutable_ref": "6e1a8b630ed0336f2b1869f77aa869efa4fd26a3",
+    "channels": [
+      "Authenticated GitHub MCP get_file_contents",
+      "Separate raw.githubusercontent.com fetch"
+    ],
+    "result": "Both returned the same MORPH-015 bytes; authenticated response Git blob and independently recomputed Git blob match the historical receipt.",
+    "observed_time_note": "Reads occurred in this later Copilot CLI session after the prior EV-015 runtime; exact connector call timestamp was not returned."
+  },
+  "receipt": {
+    "object_byte_count": 2941,
+    "object_sha256": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd",
+    "object_git_blob": "49ccc74edfbe4320b0ac60655c8fbce670216e0d",
+    "object_write_commit": "4e09ac674193bdef4949f65823c219fc2769fdf0",
+    "prior_receipt_ref": "INSTANCE_PROVENANCE.md#EV-007",
+    "current_observed_head": "6e1a8b630ed0336f2b1869f77aa869efa4fd26a3"
+  },
+  "lineage": {
+    "object_preimage_head": "c46e7d24c4cfd48fbf1ab50274026f6916015018",
+    "object_write_commit": "4e09ac674193bdef4949f65823c219fc2769fdf0",
+    "receipt_preimage_head": "6e1a8b630ed0336f2b1869f77aa869efa4fd26a3",
+    "observation_ref": "6e1a8b630ed0336f2b1869f77aa869efa4fd26a3"
+  },
+  "recontact": {
+    "status": "LATER_RUNTIME_READ_MATCHED",
+    "comparison_to_prior_receipt": "MATCH",
+    "cross_channel_byte_match": true,
+    "later_runtime_limit": "This recontact is later than EV-015. A future recontact remains useful for ongoing continuity; this receipt is not standing authority."
+  },
+  "drift": {
+    "expected_digest": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd",
+    "current_observed_digest": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd",
+    "status": "MEMORY_INTEGRITY=CONFIRMED",
+    "mismatch_branch_exercise": "NOT_EXECUTED; no cloud mutation was made to induce drift",
+    "on_mismatch": "MEMORY_DRIFT=DETECTED; keep EXPECTED_DIGEST unchanged; RECONTACT -> DISTINGUISH -> quarantine/refuse -> fresh scoped re-admission before repair"
+  },
+  "re_admission": {
+    "boundary": "Fresh authority and admission must bind the actual new preimage, exact target, and capability; stale admission is rejected.",
+    "post_drift_exercise": "NOT_EXECUTED"
+  },
+  "realiself_evaluation": {
+    "value": false,
+    "unsatisfied": ["DRIFT_BOUNDARY_VERIFIED", "RE_ADMISSION_BOUNDARY_VERIFIED"],
+    "reason": "Matching current bytes establish integrity and later-runtime recontact, not exercised drift refusal or post-drift re-admission. No graph declaration upgrades REALISELF."
+  }
+}
