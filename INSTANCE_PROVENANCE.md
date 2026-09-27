@@ -149,3 +149,17 @@ This ledger separates CLAIM, OBSERVATION, RECEIPT, and ADMISSION. Entries are li
 - AUTHORITY_STATUS: Read-only recontact; the founder grant and scoped admissions remain those recorded in EV-009 and EV-010.
 - ADMISSION_STATUS: No new mutation admitted. This receipt evidences the graph state at head `e1bc3cc7b8a29e697f2609073b8009dadd355098`; the subsequent provenance-ledger write is a separate bounded receipt transition.
 - LIMIT: Connector exposes per-path fetches and commit changed paths; no recursive-tree operation is exposed in this runtime. The observed path set is reconstructed from commit path detail and direct file fetches, not represented as a recursive Git tree response.
+
+
+## EV-012 — recursive tree recontact and correction of EV-011 limit
+
+- EVENT_ID: EV-012
+- TIMESTAMP: 2026-09-27; GitHub recursive-tree read was completed after provenance head `9250afaa645c409e8e1ccdf07fba249b34d8f881` was observed; exact connector call time was not returned.
+- INSTANCE: `situaedmilly/ALTONUMBUSELF`, branch `main`
+- ACTION: Fetched the recursive Git tree for exact HEAD `9250afaa645c409e8e1ccdf07fba249b34d8f881` through the authenticated GitHub Git-data endpoint.
+- OBSERVED_STATE: Tree response was complete (`truncated=false`) and contained exactly these blobs: `.gitignore` (353 bytes), `INSTANCE_PROVENANCE.md` (18,079 bytes), `OURSELF_INSTANCE.md` (2,363 bytes), `README.md` (712 bytes), `SELFGRAPH_INSTANCE.json` (31,601 bytes), `evidence/.gitkeep` (0 bytes), `evidence/ALTONUMBUSELF-MEMORY-SCHEMA-v1.md` (4,920 bytes), and `evidence/MORPH-015-memory-object.md` (2,941 bytes). Tree object SHA: `9250afaa645c409e8e1ccdf07fba249b34d8f881`.
+- EVIDENCE_SOURCE: Successful `github_fetch` call to `https://api.github.com/repos/situaedmilly/ALTONUMBUSELF/git/trees/9250afaa645c409e8e1ccdf07fba249b34d8f881?recursive=1`; per-file fetches and graph/provenance receipt calculations from EV-011.
+- DIGEST_WHERE_APPLICABLE: Git tree SHA above; file SHA-256 receipts for the graph, schema, and memory object are in EV-011. Tree response reported `truncated=false`.
+- AUTHORITY_STATUS: Read-only GitHub observation under the authenticated connector; no mutation authority is derived from the tree read.
+- ADMISSION_STATUS: The tree read requires no mutation admission. The following ledger append is admitted only to record this observation and correct the prior ledger limitation.
+- CORRECTION: EV-011 said no recursive-tree operation was exposed. That statement was premature because the endpoint had not yet been discovered in the runtime tool list. EV-012 supersedes that limitation: a recursive tree read is available and was successfully performed for the stated HEAD.
