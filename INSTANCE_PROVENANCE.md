@@ -177,3 +177,17 @@ This ledger separates CLAIM, OBSERVATION, RECEIPT, and ADMISSION. Entries are li
 - AUTHORITY_STATUS: Read-only observation.
 - ADMISSION_STATUS: No target mutation admitted by this observation; the ledger correction is admitted only to correct the earlier mistaken label of the commit SHA as a tree SHA.
 - CORRECTION: EV-012 previously labeled commit `9250...` as the tree SHA. EV-013 corrects that identifier to root tree `07c34...`; its path inventory and sizes remain confirmed.
+
+
+## EV-014 — ALCHEMY MORPH-017 observed transformation receipt
+
+- EVENT_ID: EV-014
+- TIMESTAMP: ALCHEMY artifact readback and digest calculation completed after commit `028de22d8fe74485001c672db50f15e8b963cd62` and before runtime clock `2026-09-27T05:52:48Z`; exact connector read time was not returned.
+- INSTANCE: `situaedmilly/ALTONUMBUSELF`, branch `main`
+- ACTION: Created one ALCHEMY evidence record from the observed pre-schema graph at commit `caa95faba97c093a2fca75befa7f7af9801d3706` and the current post-schema/admission graph observed at commit `3828d92dffd76e1a0d73e716780181efdeb70d33`; then fetched the new evidence record and graph again from GitHub.
+- OBSERVED_STATE: GitHub create-file returned commit `028de22d8fe74485001c672db50f15e8b963cd62`. Commit detail lists only `evidence/ALCHEMY-MORPH-017-transformation.json`. Re-fetch returned 4,636 UTF-8 bytes; JSON parsed and reports REALISELF false. It binds the before/after graph bytes and leaves later-runtime recontact, drift exercise, fresh re-admission after drift, and independent witness unresolved.
+- EVIDENCE_SOURCE: Authenticated GitHub connector `github_fetch_file`, `github_search_commits`, and `github_fetch_commit`; local Python hashlib over fetched UTF-8 bytes.
+- DIGEST_WHERE_APPLICABLE: `evidence/ALCHEMY-MORPH-017-transformation.json`, 4,636 bytes, SHA-256 `118d32ed2b717e6341c21fe5fabc79087b624733b51b4fd856d110b3d8470381`, Git blob `8e78085ca9c18e3bf71ada32bf08316b1d5e4eca`. Before graph: 28,289 bytes, SHA-256 `f7f82e92a2a1ebd87438f973ab34fe5afd1a176e0f7740e99c17267bda5016b4`, blob `f6c23bbda039c2ed21255eaa0d3daf0e42966f3f`. After graph: 31,601 bytes, SHA-256 `d1ea1e7e4a77aef052a7916d082313594381f4844c05873722ce4dc0b9f683ff`, blob `6528b06042ef5226f947e3a6d9fd4ffc4b9eba15`.
+- AUTHORITY_STATUS: Current user explicitly authorized ALCHEMY engineering for the observed evidence toward ALTONUMBUSELF REALISELF.
+- ADMISSION_STATUS: Fresh admission limited to creating `evidence/ALCHEMY-MORPH-017-transformation.json` against preimage HEAD `3828d92dffd76e1a0d73e716780181efdeb70d33`, followed by readback and receipt. No authority or witness is inferred from the ALCHEMY record.
+- LIMIT: ALCHEMY jurisdiction evidence establishes an observed transformation only. It cannot establish effect without a witness. REALISELF remains false.
