@@ -1,0 +1,85 @@
+{
+  "evidence_schema": "ourself.alchemy.reverself-boundary-evidence.v1",
+  "evidence_id": "ALTONUMBUSELF-REVERSELF-002",
+  "target": "situaedmilly/ALTONUMBUSELF",
+  "branch": "main",
+  "authority": {
+    "source": "Explicit current user instruction (2026-09-27): authorization for the complete required predicate and evidence",
+    "scope": ["ALTONUMBUSELF", "SELFMEMORY/STORAGE", "REVERSELF", "REALISELF"],
+    "capability": "Authenticated GitHub repository write"
+  },
+  "admission": {
+    "operation": "create two evidence files only",
+    "expected_preimage_head": "080d1fbe8d943264f1414414fbf466d4b04b5e77",
+    "paths": [
+      "evidence/reverself-boundary-check.py",
+      "evidence/REVERSELF-002-boundary-evidence.json"
+    ],
+    "memory_object_mutation": false,
+    "graph_or_provenance_mutation": false
+  },
+  "preimage": {
+    "memory_path": "evidence/MORPH-015-memory-object.md",
+    "observed_head": "080d1fbe8d943264f1414414fbf466d4b04b5e77",
+    "byte_count": 2941,
+    "sha256": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd",
+    "git_blob": "49ccc74edfbe4320b0ac60655c8fbce670216e0d"
+  },
+  "independent_channel_witness": {
+    "status": "CROSS_CHANNEL_BYTES_MATCHED",
+    "same_runtime": true,
+    "channel_a": "Authenticated GitHub MCP get_file_contents at immutable commit 080d1fbe8d943264f1414414fbf466d4b04b5e77",
+    "channel_b": "Direct HTTPS GET from raw.githubusercontent.com at immutable commit 080d1fbe8d943264f1414414fbf466d4b04b5e77",
+    "byte_count": 2941,
+    "sha256": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd",
+    "git_blob": "49ccc74edfbe4320b0ac60655c8fbce670216e0d"
+  },
+  "boundary_policy_test": {
+    "implementation": {
+      "path": "evidence/reverself-boundary-check.py",
+      "byte_count": 3843,
+      "sha256": "3eaf8b21e9433bf0770e817efa631c90fe6e830766ba066c0897de871101d51c"
+    },
+    "test_mode": "NON_MUTATING_ISOLATED_FIXTURE",
+    "integrity_fixture": {
+      "status": "MEMORY_INTEGRITY_CONFIRMED",
+      "expected_sha256": "83717197d0957c86f090fbce0126f2c3799751a7c164bfc3ab2e0040549abed6",
+      "observed_sha256": "83717197d0957c86f090fbce0126f2c3799751a7c164bfc3ab2e0040549abed6"
+    },
+    "controlled_mismatch_fixture": {
+      "status": "MEMORY_DRIFT_DETECTED",
+      "expected_sha256_retained": "83717197d0957c86f090fbce0126f2c3799751a7c164bfc3ab2e0040549abed6",
+      "observed_sha256": "a1100d13c937e2d8689513bc2bf2284008b8cb3665fb055901792482c0c729de",
+      "decision": "RECONTACT_DISTINGUISH_QUARANTINE_REFUSE",
+      "quarantine": true,
+      "mutation_permitted": false
+    },
+    "stale_admission": {
+      "decision": "REFUSED",
+      "reason": "preimage_head mismatch: stale 6e1a8b630ed0336f2b1869f77aa869efa4fd26a3 vs current 080d1fbe8d943264f1414414fbf466d4b04b5e77"
+    },
+    "fresh_scoped_admission_evaluation": {
+      "decision": "ADMITTED",
+      "bound_preimage_head": "080d1fbe8d943264f1414414fbf466d4b04b5e77",
+      "target_path": "evidence/MORPH-015-memory-object.md",
+      "capability": "GitHub repository write",
+      "authority_ref": "current user instruction (2026-09-27)",
+      "execution": "NOT_PERFORMED; fixture decision only"
+    },
+    "test_execution": "All assertions passed using python3 before the evidence write.",
+    "important_limit": "This tests reference decision logic against an isolated changed-byte fixture. It is not observed drift of the cloud memory object and does not establish runtime enforcement, an actual post-drift repair, or persistent quarantine."
+  },
+  "recontact": {
+    "status": "SAME_RUNTIME_ONLY",
+    "later_runtime_recovery": "NOT_OBSERVED"
+  },
+  "predicate_evaluation": {
+    "realiself": false,
+    "not_established": [
+      "RECONTACT_VERIFIED",
+      "DRIFT_HANDLED_ON_THE_CLOUD_MEMORY_INSTANCE",
+      "RE_ADMISSION_BOUNDARY_ENFORCED_BY_THE_CLOUD_WRITE_PATH"
+    ],
+    "graph_status": "Not edited; the existing SELFGRAPH continues to report REALISELF=false."
+  }
+}
