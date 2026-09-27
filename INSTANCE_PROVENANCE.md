@@ -157,9 +157,23 @@ This ledger separates CLAIM, OBSERVATION, RECEIPT, and ADMISSION. Entries are li
 - TIMESTAMP: 2026-09-27; GitHub recursive-tree read was completed after provenance head `9250afaa645c409e8e1ccdf07fba249b34d8f881` was observed; exact connector call time was not returned.
 - INSTANCE: `situaedmilly/ALTONUMBUSELF`, branch `main`
 - ACTION: Fetched the recursive Git tree for exact HEAD `9250afaa645c409e8e1ccdf07fba249b34d8f881` through the authenticated GitHub Git-data endpoint.
-- OBSERVED_STATE: Tree response was complete (`truncated=false`) and contained exactly these blobs: `.gitignore` (353 bytes), `INSTANCE_PROVENANCE.md` (18,079 bytes), `OURSELF_INSTANCE.md` (2,363 bytes), `README.md` (712 bytes), `SELFGRAPH_INSTANCE.json` (31,601 bytes), `evidence/.gitkeep` (0 bytes), `evidence/ALTONUMBUSELF-MEMORY-SCHEMA-v1.md` (4,920 bytes), and `evidence/MORPH-015-memory-object.md` (2,941 bytes). Tree object SHA: `9250afaa645c409e8e1ccdf07fba249b34d8f881`.
+- OBSERVED_STATE: Tree response was complete (`truncated=false`) and contained exactly these blobs: `.gitignore` (353 bytes), `INSTANCE_PROVENANCE.md` (18,079 bytes), `OURSELF_INSTANCE.md` (2,363 bytes), `README.md` (712 bytes), `SELFGRAPH_INSTANCE.json` (31,601 bytes), `evidence/.gitkeep` (0 bytes), `evidence/ALTONUMBUSELF-MEMORY-SCHEMA-v1.md` (4,920 bytes), and `evidence/MORPH-015-memory-object.md` (2,941 bytes). Commit ref used for the recursive tree read: `9250afaa645c409e8e1ccdf07fba249b34d8f881`.
 - EVIDENCE_SOURCE: Successful `github_fetch` call to `https://api.github.com/repos/situaedmilly/ALTONUMBUSELF/git/trees/9250afaa645c409e8e1ccdf07fba249b34d8f881?recursive=1`; per-file fetches and graph/provenance receipt calculations from EV-011.
 - DIGEST_WHERE_APPLICABLE: Git tree SHA above; file SHA-256 receipts for the graph, schema, and memory object are in EV-011. Tree response reported `truncated=false`.
 - AUTHORITY_STATUS: Read-only GitHub observation under the authenticated connector; no mutation authority is derived from the tree read.
 - ADMISSION_STATUS: The tree read requires no mutation admission. The following ledger append is admitted only to record this observation and correct the prior ledger limitation.
 - CORRECTION: EV-011 said no recursive-tree operation was exposed. That statement was premature because the endpoint had not yet been discovered in the runtime tool list. EV-012 supersedes that limitation: a recursive tree read is available and was successfully performed for the stated HEAD.
+
+
+## EV-013 — Git tree root SHA correction
+
+- EVENT_ID: EV-013
+- TIMESTAMP: 2026-09-27; exact connector call time was not returned.
+- INSTANCE: `situaedmilly/ALTONUMBUSELF`
+- ACTION: Checked the GitHub commit object for commit `9250afaa645c409e8e1ccdf07fba249b34d8f881`, obtained its root tree SHA, then fetched that tree directly and compared paths and sizes.
+- OBSERVED_STATE: Commit API returned root tree SHA `07c34ac588b05c6000dc0b8eba7d36002a838735`. Fetching that tree returned the same complete path/size list recorded in EV-012 and `truncated=false`. The commit SHA is not the Git tree SHA.
+- EVIDENCE_SOURCE: Authenticated `github_fetch` GET calls to `/commits/9250afaa645c409e8e1ccdf07fba249b34d8f881` and `/git/trees/07c34ac588b05c6000dc0b8eba7d36002a838735?recursive=1`.
+- DIGEST_WHERE_APPLICABLE: Root Git tree SHA `07c34ac588b05c6000dc0b8eba7d36002a838735`; complete tree response, `truncated=false`.
+- AUTHORITY_STATUS: Read-only observation.
+- ADMISSION_STATUS: No target mutation admitted by this observation; the ledger correction is admitted only to correct the earlier mistaken label of the commit SHA as a tree SHA.
+- CORRECTION: EV-012 previously labeled commit `9250...` as the tree SHA. EV-013 corrects that identifier to root tree `07c34...`; its path inventory and sizes remain confirmed.
