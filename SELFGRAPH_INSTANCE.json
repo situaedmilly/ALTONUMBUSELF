@@ -214,6 +214,18 @@
       "kind": "RECONTACT",
       "state": "OBSERVED",
       "fact": "This runtime recontacted main and fetched schema and MORPH-015 after the schema and provenance writes; this is not later-runtime recontact."
+    },
+    {
+      "id": "ALCHEMY-TRANSFORMATION-017",
+      "kind": "INSTANCE",
+      "state": "OBSERVED_TRANSFORMATION_NOT_WITNESSED",
+      "fact": "evidence/ALCHEMY-MORPH-017-transformation.json binds the observed pre-schema graph at caa95f... to the current post-schema/admission graph at 3828d...; it preserves REALISELF=false and is not an independent witness."
+    },
+    {
+      "id": "RECEIPT-ALCHEMY-017",
+      "kind": "RECEIPT",
+      "state": "PENDING_RECONTACT",
+      "fact": "ALCHEMY evidence was fetched and hashed (4636 bytes, SHA-256 118d32ed2b717e6341c21fe5fabc79087b624733b51b4fd856d110b3d8470381, Git blob 8e78085ca9c18e3bf71ada32bf08316b1d5e4eca); ledger records EV-014; graph update is now recording this receipt."
     }
   ],
   "edges": [
@@ -366,6 +378,21 @@
       "from": "RECEIPT-002",
       "to": "RECONTACT-002",
       "relation": "RECONTACTS"
+    },
+    {
+      "from": "PREIMAGE-001",
+      "to": "ALCHEMY-TRANSFORMATION-017",
+      "relation": "SUPPORTS"
+    },
+    {
+      "from": "REPOSITORY-001",
+      "to": "ALCHEMY-TRANSFORMATION-017",
+      "relation": "OBSERVES"
+    },
+    {
+      "from": "ALCHEMY-TRANSFORMATION-017",
+      "to": "RECEIPT-ALCHEMY-017",
+      "relation": "RECEIPTS"
     }
   ],
   "realisation_chain": [
@@ -619,7 +646,7 @@
       "REQUIRED_WITNESS_VERIFIED"
     ],
     "value": false,
-    "evaluation": "FALSE: current-session addressability, schema and object receipts, scoped authority/admission, and post-write readback are evidenced; later-runtime recontact, drift handling, re-admission boundary exercise, and independent witness are not."
+    "evaluation": "FALSE: current-session addressability, schema and object receipts, scoped authority/admission, and post-write readback are evidenced; later-runtime recontact, drift handling, re-admission boundary exercise, and independent witness are not. ALCHEMY MORPH-017 records a real before/after graph transformation, but is not an independent witness and does not satisfy the remaining boundaries."
   },
   "selfmoat": {
     "foreign_state_may_be_observed": true,
@@ -787,5 +814,17 @@
     "limitation": "These receipts were computed from current-session connector readback; SELFGRAPH_INSTANCE.json is not self-hashed here. The final provenance-ledger digest is reported externally because a file cannot contain a stable digest of its own final bytes.",
     "observation_date": "2026-09-27",
     "observation_time_limit": "Exact GitHub connector read time was not returned; readback occurred after observed head 16ad5e0bd38698141654acf2dd8fb7f811b847bd (commit timestamp 2026-09-27T05:07:16Z)."
+  },
+  "alchemy_evidence": {
+    "path": "evidence/ALCHEMY-MORPH-017-transformation.json",
+    "state": "OBSERVED_TRANSFORMATION_NOT_WITNESSED",
+    "sha256": "118d32ed2b717e6341c21fe5fabc79087b624733b51b4fd856d110b3d8470381",
+    "byte_count": 4636,
+    "git_blob": "8e78085ca9c18e3bf71ada32bf08316b1d5e4eca",
+    "preimage_graph_sha256": "f7f82e92a2a1ebd87438f973ab34fe5afd1a176e0f7740e99c17267bda5016b4",
+    "postimage_graph_sha256": "d1ea1e7e4a77aef052a7916d082313594381f4844c05873722ce4dc0b9f683ff",
+    "witness_status": "NOT_WITNESSED",
+    "effect_established": false,
+    "realiself_predicate_value": false
   }
 }
