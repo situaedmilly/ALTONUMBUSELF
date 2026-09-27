@@ -63,6 +63,18 @@ This ledger separates CLAIM, OBSERVATION, RECEIPT, and ADMISSION. Entries are li
 - AUTHORITY_STATUS: Readback is observation only.
 - ADMISSION_STATUS: No memory-authority admission. Current-session recontact is observed; later-session recontact is not.
 
+## EV-006 — graph timestamp precision correction
+
+- EVENT_ID: EV-006
+- TIMESTAMP: 2026-09-27; exact read time not returned, after commit `6af3c06353f0141db07284269fab7b8ac82521c8` (created 2026-09-27T05:09:39Z).
+- INSTANCE: situaedmilly/ALTONUMBUSELF
+- ACTION: Corrected SELFGRAPH_INSTANCE.json to distinguish the commit creation timestamp from the unreturned connector read time; re-fetched the graph and computed SHA-256 from returned UTF-8 bytes.
+- OBSERVED_STATE: Connector reported latest commit `6af3c06353f0141db07284269fab7b8ac82521c8`; fetched graph blob `349829779ca9d31a374ec64cc7de4a6a33dd4f8c`; JSON parsed successfully.
+- EVIDENCE_SOURCE: GitHub connector `github_search_commits`, `github_fetch_file`; local Python hashlib over fetched content.
+- DIGEST_WHERE_APPLICABLE: SELFGRAPH_INSTANCE.json 27275 bytes, SHA-256 `8c424724cbf31cc8854719f22679fe073b609b305ae675802b9a81c497f3c09a`.
+- AUTHORITY_STATUS: User-authorized scope for the named instance graph and ledger.
+- ADMISSION_STATUS: Does not admit memory authority or authorize a future transition.
+
 ## State semantics and limits
 
 - CLAIM: A statement not yet supported by a source observation.
