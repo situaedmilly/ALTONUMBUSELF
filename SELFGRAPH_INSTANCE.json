@@ -224,8 +224,80 @@
     {
       "id": "RECEIPT-ALCHEMY-017",
       "kind": "RECEIPT",
-      "state": "PENDING_RECONTACT",
-      "fact": "ALCHEMY evidence was fetched and hashed (4636 bytes, SHA-256 118d32ed2b717e6341c21fe5fabc79087b624733b51b4fd856d110b3d8470381, Git blob 8e78085ca9c18e3bf71ada32bf08316b1d5e4eca); ledger records EV-014; graph update is now recording this receipt."
+      "state": "VERIFIED",
+      "fact": "ALCHEMY evidence was re-fetched after its write and graph linkage: 4636 bytes, SHA-256 118d32ed2b717e6341c21fe5fabc79087b624733b51b4fd856d110b3d8470381, Git blob 8e78085ca9c18e3bf71ada32bf08316b1d5e4eca; recontact is same-runtime only and no witness is established."
+    },
+    {
+      "id": "RECONTACT_INSTANCE",
+      "kind": "RECONTACT",
+      "instance_id": "RECONTACT_INSTANCE",
+      "purpose": "Recover the admitted memory object from external storage in a later runtime and compare it with the receipt.",
+      "requires": [
+        "RECEIPT_INSTANCE"
+      ],
+      "evidence_required": [
+        "later-runtime retrieval",
+        "matching bytes and SHA-256",
+        "repository/branch/commit lineage",
+        "recontact time separated from prior runtime"
+      ],
+      "state": "OBSERVED_SAME_RUNTIME_ONLY",
+      "fulfillment_status": "UNSATISFIED",
+      "blocking_condition": "Same-runtime recontact is observed; no later-runtime recovery is evidenced."
+    },
+    {
+      "id": "DRIFT_INSTANCE",
+      "kind": "DRIFT",
+      "instance_id": "DRIFT_INSTANCE",
+      "purpose": "Detect divergence from a receipted memory state and refuse silent overwrite.",
+      "requires": [
+        "RECONTACT_INSTANCE"
+      ],
+      "evidence_required": [
+        "receipt baseline",
+        "observed changed state",
+        "mismatch detection record",
+        "non-overwrite or quarantine outcome"
+      ],
+      "state": "UNOBSERVED",
+      "fulfillment_status": "UNSATISFIED",
+      "blocking_condition": "No controlled or naturally occurring drift has been observed and handled."
+    },
+    {
+      "id": "RE_ADMISSION_INSTANCE",
+      "kind": "ADMISSION",
+      "instance_id": "RE_ADMISSION_INSTANCE",
+      "purpose": "Require fresh scoped admission after drift or another material transition.",
+      "requires": [
+        "DRIFT_INSTANCE",
+        "CONTRACT_ADMISSION_INSTANCE"
+      ],
+      "evidence_required": [
+        "post-drift authority scope",
+        "new admission bound to current preimage/target/capability",
+        "proof that stale admission is rejected"
+      ],
+      "state": "UNOBSERVED",
+      "fulfillment_status": "UNSATISFIED",
+      "blocking_condition": "No post-drift re-admission exercise or stale-admission refusal is evidenced."
+    },
+    {
+      "id": "INDEPENDENT_WITNESS_INSTANCE",
+      "kind": "WITNESS",
+      "instance_id": "INDEPENDENT_WITNESS_INSTANCE",
+      "purpose": "Corroborate the target artifact and lineage using an independent witness identity or channel.",
+      "requires": [
+        "OBSERVATION_INSTANCE"
+      ],
+      "evidence_required": [
+        "independent witness identity/channel",
+        "direct observation of target bytes and lineage",
+        "matching digest receipt",
+        "non-synthetic evidence"
+      ],
+      "state": "UNOBSERVED",
+      "fulfillment_status": "UNSATISFIED",
+      "blocking_condition": "No independent witness identity or channel is evidenced; same-runtime connector calls are not independent witness evidence."
     }
   ],
   "edges": [
@@ -393,6 +465,46 @@
       "from": "ALCHEMY-TRANSFORMATION-017",
       "to": "RECEIPT-ALCHEMY-017",
       "relation": "RECEIPTS"
+    },
+    {
+      "from": "RECEIPT-001",
+      "to": "RECONTACT_INSTANCE",
+      "relation": "RECONTACTS"
+    },
+    {
+      "from": "RECONTACT_INSTANCE",
+      "to": "DRIFT_INSTANCE",
+      "relation": "DRIFTS"
+    },
+    {
+      "from": "DRIFT_INSTANCE",
+      "to": "RE_ADMISSION_INSTANCE",
+      "relation": "REQUIRES"
+    },
+    {
+      "from": "OBSERVATION-001",
+      "to": "INDEPENDENT_WITNESS_INSTANCE",
+      "relation": "WITNESSES"
+    },
+    {
+      "from": "RECONTACT_INSTANCE",
+      "to": "REALISELF-001",
+      "relation": "REQUIRES"
+    },
+    {
+      "from": "DRIFT_INSTANCE",
+      "to": "REALISELF-001",
+      "relation": "REQUIRES"
+    },
+    {
+      "from": "RE_ADMISSION_INSTANCE",
+      "to": "REALISELF-001",
+      "relation": "REQUIRES"
+    },
+    {
+      "from": "INDEPENDENT_WITNESS_INSTANCE",
+      "to": "REALISELF-001",
+      "relation": "REQUIRES"
     }
   ],
   "realisation_chain": [
@@ -604,28 +716,28 @@
   ],
   "blocking_edges": [
     {
-      "from": "RECEIPT_INSTANCE",
+      "from": "RECEIPT-001",
       "to": "RECONTACT_INSTANCE",
       "relation": "RECONTACTS",
-      "condition": "No later-runtime retrieval of the admitted object has been observed."
+      "condition": "Later-runtime memory retrieval not observed."
     },
     {
       "from": "RECONTACT_INSTANCE",
       "to": "DRIFT_INSTANCE",
       "relation": "DRIFTS",
-      "condition": "No drift-detection exercise has been performed."
+      "condition": "Drift detection and non-overwrite response not exercised."
     },
     {
       "from": "DRIFT_INSTANCE",
       "to": "RE_ADMISSION_INSTANCE",
       "relation": "REQUIRES",
-      "condition": "No fresh re-admission exercise after observed drift/material transition."
+      "condition": "Fresh post-drift admission and stale-admission refusal not observed."
     },
     {
-      "from": "OBSERVATION_INSTANCE",
+      "from": "OBSERVATION-001",
       "to": "INDEPENDENT_WITNESS_INSTANCE",
       "relation": "WITNESSES",
-      "condition": "No separate independent witness channel is evidenced."
+      "condition": "Independent witness channel absent."
     }
   ],
   "realiself_predicate": {
@@ -646,7 +758,7 @@
       "REQUIRED_WITNESS_VERIFIED"
     ],
     "value": false,
-    "evaluation": "FALSE: current-session addressability, schema and object receipts, scoped authority/admission, and post-write readback are evidenced; later-runtime recontact, drift handling, re-admission boundary exercise, and independent witness are not. ALCHEMY MORPH-017 records a real before/after graph transformation, but is not an independent witness and does not satisfy the remaining boundaries."
+    "evaluation": "FALSE: all four required instances are explicitly represented, but their evidence obligations remain unsatisfied as shown by each node and blocking edge."
   },
   "selfmoat": {
     "foreign_state_may_be_observed": true,
