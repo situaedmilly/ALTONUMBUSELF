@@ -116,14 +116,14 @@
     {
       "id": "MEMORY-OBJECT-001",
       "kind": "MEMORY_OBJECT",
-      "state": "MISSING",
-      "fact": "No distinct admitted OURSELF memory object is established; repository control-plane documentation does not by itself qualify as an admitted memory object."
+      "state": "OBSERVED_NOT_ADMITTED",
+      "fact": "evidence/MORPH-015-memory-object.md was independently re-fetched on main after the MORPH-015 write; SHA-256 b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd (2941 UTF-8 bytes). The object is not thereby admitted as continuing memory authority."
     },
     {
       "id": "OBSERVATION-001",
       "kind": "OBSERVATION",
       "state": "OBSERVED",
-      "fact": "GitHub connector separately re-fetched README, contract, graph, provenance, evidence marker, and .gitignore after writes."
+      "fact": "A later authenticated GitHub connector fetch returned the exact MORPH-015 memory artifact bytes; SHA-256 and byte count were computed from that readback. This is a separate read, not an independent witness channel."
     },
     {
       "id": "WITNESS-001",
@@ -135,7 +135,7 @@
       "id": "RECEIPT-001",
       "kind": "RECEIPT",
       "state": "VERIFIED",
-      "fact": "Remote readback bytes are available for SHA-256 receipts; receipt file records digests for selected non-self-referential artifacts."
+      "fact": "Verified receipt for evidence/MORPH-015-memory-object.md: 2941 bytes, SHA-256 b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd; Git blob 49ccc74edfbe4320b0ac60655c8fbce670216e0d; observed from main after actuation commit 4e09ac674193bdef4949f65823c219fc2769fdf0."
     },
     {
       "id": "RECONTACT-001",
@@ -359,8 +359,8 @@
         "authorized write lineage",
         "content readback"
       ],
-      "state": "UNOBSERVED",
-      "blocking_condition": "Instance documentation/control artifacts are not yet an admitted memory object."
+      "state": "OBSERVED",
+      "blocking_condition": "The artifact exists and was re-read, but contract/schema admission and admission of the repository as continuing memory authority remain unverified."
     },
     {
       "instance_id": "OBSERVATION_INSTANCE",
@@ -372,8 +372,8 @@
         "separate post-actuation GitHub read",
         "independence boundary documented"
       ],
-      "state": "OBSERVED",
-      "blocking_condition": "This runtime fetched the requested files after writes, but no independent witness or distinct memory artifact is established."
+      "state": "VERIFIED",
+      "blocking_condition": "A separate authenticated GitHub content fetch verified the artifact bytes; independent witness and later-session recontact remain unverified."
     },
     {
       "instance_id": "RECEIPT_INSTANCE",
@@ -389,7 +389,7 @@
         "observation timestamp"
       ],
       "state": "VERIFIED",
-      "blocking_condition": "Receipt can cover current artifact digests and lineage; it does not prove later-session recovery or memory authority."
+      "blocking_condition": "This receipt binds the artifact bytes to path, hash, Git blob, and observed pre-receipt commit lineage; it does not admit memory authority."
     },
     {
       "instance_id": "RECONTACT_INSTANCE",
@@ -487,9 +487,6 @@
   "missing_instances": [
     "CONTRACT_ADMISSION_INSTANCE",
     "MEMORY_SCHEMA_INSTANCE",
-    "MEMORY_OBJECT_INSTANCE",
-    "OBSERVATION_INSTANCE",
-    "RECEIPT_INSTANCE",
     "RECONTACT_INSTANCE",
     "DRIFT_INSTANCE",
     "RE_ADMISSION_INSTANCE",
@@ -513,18 +510,6 @@
       "to": "MEMORY_OBJECT_INSTANCE",
       "relation": "REQUIRES",
       "condition": "No admitted memory object exists."
-    },
-    {
-      "from": "MEMORY_OBJECT_INSTANCE",
-      "to": "OBSERVATION_INSTANCE",
-      "relation": "OBSERVES",
-      "condition": "No admitted distinct memory artifact; only control-plane documents have been observed."
-    },
-    {
-      "from": "OBSERVATION_INSTANCE",
-      "to": "RECEIPT_INSTANCE",
-      "relation": "RECEIPTS",
-      "condition": "Current-session post-write reads are observed; later verification of all final contents and digests will be receipted in the ledger."
     },
     {
       "from": "RECEIPT_INSTANCE",
@@ -610,28 +595,28 @@
       "name": "MEMORY ARTIFACT ACTUATION",
       "PREIMAGE": "Prior morph receipt and current target state",
       "CONTRACT": "Bounded operation contract; no state transition is implied by declaration.",
-      "AUTHORITY": "Fresh scoped authority required and not evidenced for future transition.",
+      "AUTHORITY": "Direct user instruction explicitly authorized MORPH-015 memory artifact actuation, scoped to one evidence-backed artifact.",
       "CAPABILITY": "Capability must be observed for each channel and operation.",
-      "ADMISSION": "Not evidenced unless separately recorded for this exact transition.",
-      "ACTUATION": "Control-plane contract/graph/provenance artifacts were written. A distinct memory object was not actuated.",
+      "ADMISSION": "Scoped authority recorded for this single artifact write; this does not admit ALTONUMBUSELF as continuing memory authority.",
+      "ACTUATION": "GitHub create_file returned success for evidence/MORPH-015-memory-object.md, commit 4e09ac674193bdef4949f65823c219fc2769fdf0.",
       "OBSERVATION": "Control-plane files were fetched from GitHub after writes.",
       "RECEIPT": "These repository documentation artifacts are receipted separately; no admitted memory-object receipt exists.",
       "RECONTACT": "Required on a later return; pending.",
-      "NEXT_PREIMAGE": "MORPH-016 input state"
+      "NEXT_PREIMAGE": "MORPH-016 input: artifact actuation commit 4e09ac674193bdef4949f65823c219fc2769fdf0."
     },
     {
       "morph": "MORPH-016",
       "name": "INDEPENDENT MEMORY OBSERVATION + RECEIPT",
       "PREIMAGE": "Prior morph receipt and current target state",
       "CONTRACT": "Bounded operation contract; no state transition is implied by declaration.",
-      "AUTHORITY": "Fresh scoped authority required and not evidenced for future transition.",
-      "CAPABILITY": "Capability must be observed for each channel and operation.",
-      "ADMISSION": "Not evidenced unless separately recorded for this exact transition.",
+      "AUTHORITY": "User explicitly authorized MORPH-016 as the separate observation and receipt transition.",
+      "CAPABILITY": "Authenticated GitHub connector fetch_file and commit search calls succeeded for this repository.",
+      "ADMISSION": "User authorization scoped to post-actuation observation and receipt of the MORPH-015 artifact.",
       "ACTUATION": "Not established by registration alone.",
-      "OBSERVATION": "Current-session post-write reads succeeded; independent witness not available.",
-      "RECEIPT": "SHA-256 and byte-count evidence for current remote files is computed; full final receipt remains in ledger.",
-      "RECONTACT": "Required on a later return; pending.",
-      "NEXT_PREIMAGE": "MORPH-017 input state"
+      "OBSERVATION": "After actuation commit 4e09ac674193bdef4949f65823c219fc2769fdf0, fetch_file on main returned evidence/MORPH-015-memory-object.md (Git blob 49ccc74edfbe4320b0ac60655c8fbce670216e0d); content digest computed from returned UTF-8 bytes.",
+      "RECEIPT": "2941 UTF-8 bytes; SHA-256 b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd; Git blob 49ccc74edfbe4320b0ac60655c8fbce670216e0d; pre-receipt head 4e09ac674193bdef4949f65823c219fc2769fdf0.",
+      "RECONTACT": "Same-runtime GitHub readback succeeded after actuation; later-session recovery remains MORPH-017.",
+      "NEXT_PREIMAGE": "MORPH-017 input: observed and receipted memory artifact; latest lineage to be confirmed by final readback."
     },
     {
       "morph": "MORPH-017",
@@ -700,7 +685,7 @@
   "ledger_timestamp": "2026-09-27T05:02:32Z",
   "artifact_receipt": {
     "observation_time_utc": null,
-    "source": "GitHub authenticated connector fetch_file responses after artifact writes",
+    "source": "Authenticated GitHub connector fetch_file response after MORPH-015 actuation; local Python hashlib over returned UTF-8 content.",
     "repository": "situaedmilly/ALTONUMBUSELF",
     "ref": "main",
     "observed_head": "7972fcb63c8cb39921bd4b6708e346add35d9000",
@@ -719,6 +704,14 @@
         "path": "evidence/.gitkeep",
         "byte_count": 0,
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "evidence/MORPH-015-memory-object.md",
+        "byte_count": 2941,
+        "sha256": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd",
+        "git_blob": "49ccc74edfbe4320b0ac60655c8fbce670216e0d",
+        "observed_after_head": "4e09ac674193bdef4949f65823c219fc2769fdf0",
+        "observed_time_interval_utc": "2026-09-27T05:18:09Z to 2026-09-27T05:18:22Z"
       }
     ],
     "limitation": "These receipts were computed from current-session connector readback; SELFGRAPH_INSTANCE.json is not self-hashed here. The final provenance-ledger digest is reported externally because a file cannot contain a stable digest of its own final bytes.",
