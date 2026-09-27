@@ -107,3 +107,17 @@ This ledger separates CLAIM, OBSERVATION, RECEIPT, and ADMISSION. Entries are li
 - ADMISSION: A fresh decision for one scoped transition. No admission of this repository as memory authority is evidenced.
 - The GitHub page reader returned a cached pre-write view during this session; it was not used as post-write proof. Post-write evidence above comes from the authenticated GitHub connector.
 - The MORPH-015 memory artifact now exists and was re-read for MORPH-016. This does not admit ALTONUMBUSELF as continuing memory authority. Later-session recovery, drift exercise, fresh re-admission, and an independent witness remain unverified.
+
+
+## EV-009 — MORPH-017 schema contract actuation and readback receipt
+
+- EVENT_ID: EV-009
+- TIMESTAMP: 2026-09-27T05:37:13Z (runtime UTC clock; schema readback completed earlier in this runtime turn).
+- INSTANCE: `situaedmilly/ALTONUMBUSELF`, branch `main`
+- ACTION: Recontacted branch head and confirmed `evidence/ALTONUMBUSELF-MEMORY-SCHEMA-v1.md` absent at preimage `caa95faba97c093a2fca75befa7f7af9801d3706`; admitted and created exactly that new path; fetched the committed schema and existing MORPH-015 object again from GitHub.
+- OBSERVED_STATE: GitHub create-file returned commit `41003ed96944944eb370e0868e45710e4f6b17bb`. Later commit search returned that commit as current `main` head. Fetch of the schema returned Git blob `0cd744f6a1d7ad2ff6162e847cbf3281fceec5c7`; commit detail lists only the schema path. Fresh fetch returned 4,920 UTF-8 bytes. Existing MORPH-015 object re-fetch returned its previously receipted 2,941 bytes unchanged.
+- EVIDENCE_SOURCE: Authenticated GitHub connector: `github_search_commits`, `github_fetch_file`, `github_fetch_commit`; local Python hashlib and Git blob calculation over fetched UTF-8 bytes.
+- DIGEST_WHERE_APPLICABLE: Schema `evidence/ALTONUMBUSELF-MEMORY-SCHEMA-v1.md`: SHA-256 `40bb41f99f7d56d21f5f70eef013d4d836b87f623c75008e609b16eaf4b221c2`, 4,920 bytes; Git blob `0cd744f6a1d7ad2ff6162e847cbf3281fceec5c7`. Existing memory object: SHA-256 `b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd`, 2,941 bytes; Git blob `49ccc74edfbe4320b0ac60655c8fbce670216e0d`.
+- AUTHORITY_STATUS: Current user instruction explicitly grants authority to make ALTONUMBUSELF REALISELF; the preceding founder authorization scopes work to the target instance and bounded algorithm. Connector metadata reports admin/push for authenticated `situaedmilly`.
+- ADMISSION_STATUS: Fresh runtime admission was limited to one create operation at the absent schema path on branch `main`, against preimage HEAD `caa95faba97c093a2fca75befa7f7af9801d3706`. This admits the schema-file transition only. It does not admit the repository as continuing memory authority and does not authorize a future write.
+- LIMIT: The schema declaration and its receipt do not establish later-session recontact, drift handling, re-admission exercise, or an independent witness; REALISELF remains false.
