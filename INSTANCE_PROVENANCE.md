@@ -191,3 +191,17 @@ This ledger separates CLAIM, OBSERVATION, RECEIPT, and ADMISSION. Entries are li
 - AUTHORITY_STATUS: Current user explicitly authorized ALCHEMY engineering for the observed evidence toward ALTONUMBUSELF REALISELF.
 - ADMISSION_STATUS: Fresh admission limited to creating `evidence/ALCHEMY-MORPH-017-transformation.json` against preimage HEAD `3828d92dffd76e1a0d73e716780181efdeb70d33`, followed by readback and receipt. No authority or witness is inferred from the ALCHEMY record.
 - LIMIT: ALCHEMY jurisdiction evidence establishes an observed transformation only. It cannot establish effect without a witness. REALISELF remains false.
+
+
+## EV-015 — ALCHEMY evidence and linked graph recontact
+
+- EVENT_ID: EV-015
+- TIMESTAMP: Recontact and digest computation completed after graph commit `26bc87776bad67fb887a9727f763df36ae371fa2` and before runtime clock `2026-09-27T05:54:16Z`; exact connector call time was not returned.
+- INSTANCE: `situaedmilly/ALTONUMBUSELF`, branch `main`
+- ACTION: Re-fetched the ALCHEMY transformation evidence, SELFGRAPH, provenance, schema, and MORPH-015 object after the ALCHEMY evidence write and graph link update; parsed JSON and recomputed SHA-256 over fetched bytes.
+- OBSERVED_STATE: Latest head was `26bc87776bad67fb887a9727f763df36ae371fa2`; its commit detail lists only `SELFGRAPH_INSTANCE.json`. The fetched graph parsed and remains REALISELF=false. The ALCHEMY artifact re-fetch matched its Git blob and independently recomputed digest. It remains NOT_WITNESSED.
+- EVIDENCE_SOURCE: Authenticated GitHub connector `github_search_commits`, `github_fetch_commit`, and `github_fetch_file`; local Python hashlib over fetched UTF-8 bytes.
+- DIGEST_WHERE_APPLICABLE: Graph, 33,458 bytes, SHA-256 `4986ea7c55d967d792853e90596449e096bbc42a64c9dbd2f12376f12b2a3c8c`, blob `470e1c4b6babf11371572498d859059f4f5384dc`. ALCHEMY evidence, 4,636 bytes, SHA-256 `118d32ed2b717e6341c21fe5fabc79087b624733b51b4fd856d110b3d8470381`, blob `8e78085ca9c18e3bf71ada32bf08316b1d5e4eca`.
+- AUTHORITY_STATUS: Read-only recontact under the current user-authorized ALCHEMY engineering scope.
+- ADMISSION_STATUS: No new mutation admitted by this observation. The following ledger append is limited to recording the post-actuation recontact and receipt.
+- LIMIT: Same-runtime recontact is observed. Later-runtime recovery, drift handling, post-drift re-admission, and an independent witness remain unverified; REALISELF remains false.
