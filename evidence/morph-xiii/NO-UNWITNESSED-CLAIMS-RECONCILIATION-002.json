@@ -1,0 +1,253 @@
+{
+  "decision": "BLOCKED_UNWITNESSED_STATE_CLAIMS_PRESENT",
+  "finding_count": 11,
+  "findings": [
+    {
+      "code": "WITNESS_LINK_ABSENT",
+      "detail": "Witness node state is MISSING; no independent witness is established.",
+      "json_pointer": "/nodes/13",
+      "path": "SELFGRAPH_INSTANCE.json"
+    },
+    {
+      "code": "WITNESS_NOT_INDEPENDENT",
+      "detail": "The record identifies shared runtime or identity; channel agreement is not independent witnessing.",
+      "json_pointer": "/independent_channel_witness",
+      "path": "evidence/REVERSELF-002-boundary-evidence.json"
+    },
+    {
+      "code": "EXECUTION_CLAIM_WITHOUT_PROCESS_PROOF",
+      "detail": "Execution is asserted without a same-record command, successful process result, and exit code.",
+      "json_pointer": "/execution",
+      "path": "evidence/morph-xii/EXECUTION-MORPH-XII-001.json"
+    },
+    {
+      "code": "EXECUTION_CLAIM_WITHOUT_PROCESS_PROOF",
+      "detail": "Execution is asserted without a same-record command, successful process result, and exit code.",
+      "json_pointer": "/execution",
+      "path": "evidence/morph-xii/OBSERVATION-MORPH-XII-001.json"
+    },
+    {
+      "code": "SEMANTIC_OBSERVATION_CONTRADICTION",
+      "detail": "The same subject asserts observed=true and observation=false without a defined distinct-event temporal binding.",
+      "json_pointer": "/",
+      "path": "evidence/morph-xii/SELFMOAT-TEST-001-C.actuation.json"
+    },
+    {
+      "code": "EXECUTION_CLAIM_WITHOUT_PROCESS_PROOF",
+      "detail": "Execution is asserted without a same-record command, successful process result, and exit code.",
+      "json_pointer": "/execution",
+      "path": "evidence/morph-xii/SELFMOAT-TEST-001-C.actuation.json"
+    },
+    {
+      "code": "OBSERVED_WITHOUT_EXTERNAL_EVIDENCE",
+      "detail": "An affirmative observation claim lacks a bound external observation path, source, and digest.",
+      "json_pointer": "/observed",
+      "path": "evidence/morph-xii/SELFMOAT-TEST-001-C.actuation.json"
+    },
+    {
+      "code": "WITNESS_LINK_ABSENT",
+      "detail": "Witness status is NOT_WITNESSED and its reference is absent.",
+      "json_pointer": "/witness",
+      "path": "evidence/morph-xiii/COMPILER-RECEIPT-001.json"
+    },
+    {
+      "code": "WITNESS_LINK_ABSENT",
+      "detail": "Witness status is NOT_WITNESSED and its reference is absent.",
+      "json_pointer": "/witness",
+      "path": "evidence/morph-xiii/drift/DRIFT-BASELINE-RECEIPT-001.json"
+    },
+    {
+      "code": "WITNESS_LINK_ABSENT",
+      "detail": "Witness status is NOT_WITNESSED and its reference is absent.",
+      "json_pointer": "/witness",
+      "path": "runtime/compilers/matter-compiler/MATTER-0001.json"
+    },
+    {
+      "code": "WITNESS_LINK_ABSENT",
+      "detail": "Witness status is BLOCKED and its reference is absent.",
+      "json_pointer": "/witness",
+      "path": "runtime/reverself/REVERSELF-0001.json"
+    }
+  ],
+  "fresh_scan_timestamp": "2026-09-28T16:45:45Z",
+  "mutated_inputs": false,
+  "reconciliation": {
+    "current_finding_count": 11,
+    "difference": 3,
+    "previous_finding_count": 8,
+    "previous_report_reference": "evidence/morph-xiii/NO-UNWITNESSED-CLAIMS-REPORT-001.json",
+    "previous_source_commit": "e71dde1ffc7fcacc3e8a879d25cc21f188575567",
+    "status": "EVIDENCE_DRIFT_DETECTED"
+  },
+  "scanned_files": [
+    {
+      "byte_count": 43923,
+      "git_blob": "93a7cd02615b01df752ee9c71b8a4600ddcc219b",
+      "path": "SELFGRAPH_INSTANCE.json",
+      "sha256": "3385a7ab394d9288deebee0499c2acf9beee521ecc710ef79ebb59a7c21df98e"
+    },
+    {
+      "byte_count": 3334,
+      "git_blob": "3a2819b79fb57860efa857e06074a97b0bdc392a",
+      "path": "registry/MATTER_REGISTRY.json",
+      "sha256": "df96415fba7a66c520a25100ce858ddf9779475c718d860faf5233fd8b937116"
+    },
+    {
+      "byte_count": 3664,
+      "git_blob": "984b34f40fd11ec3b4d12c3f419c43518793a1d3",
+      "path": "runtime/compilers/matter-compiler/MATTER-0001.json",
+      "sha256": "422f1055e76d93d381bea467ee1ad27839aeb37e8660ebc3ba0186247b4090af"
+    },
+    {
+      "byte_count": 3275,
+      "git_blob": "920374aed9d93bdafbe052b15870c903ab7a4f09",
+      "path": "runtime/compilers/matter-compiler/outputs/MATTER-0001-SELFMOAT-C-OUTPUT.json",
+      "sha256": "a931be79ae0b10642a76140d3eeefa2e24b6c5887fe824fbe1085f72a4aa0c4e"
+    },
+    {
+      "byte_count": 850,
+      "git_blob": "2b56bdd7672fb6b1348733e3d6ed98ff180f99b9",
+      "path": "runtime/compilers/matter-compiler/ADMISSION-DECISION-MORPH-XI.json",
+      "sha256": "3dc226d787983e349c7773787ba502b65335fa52f5161f57f866ee324c0d91d9"
+    },
+    {
+      "byte_count": 1627,
+      "git_blob": "bbb658f51ba31f3f9597e77ea6d2317ec9840eb3",
+      "path": "runtime/compilers/matter-compiler/ADMISSION-DECISION-MORPH-XII.json",
+      "sha256": "84d935500b2802e46038799e7ba89b26acada6a940adab0ca0deaf053c141eb7"
+    },
+    {
+      "byte_count": 6399,
+      "git_blob": "050d8229c76d7c11e0b16f7e787172bca01371c1",
+      "path": "evidence/REVERSELF-001-memory-recontact-receipt.json",
+      "sha256": "b701121172f2b6d2b1c83d2bc7450c486d43471bdbf62d0dfe186986ae20b185"
+    },
+    {
+      "byte_count": 3955,
+      "git_blob": "60df9bb82a2e0c9db6987efbc5527dfe41f1c620",
+      "path": "evidence/REVERSELF-002-boundary-evidence.json",
+      "sha256": "fc5b7b30810c93214eb425a47a7338539d50fe7bb245bb6578717573b829e077"
+    },
+    {
+      "byte_count": 4636,
+      "git_blob": "8e78085ca9c18e3bf71ada32bf08316b1d5e4eca",
+      "path": "evidence/ALCHEMY-MORPH-017-transformation.json",
+      "sha256": "118d32ed2b717e6341c21fe5fabc79087b624733b51b4fd856d110b3d8470381"
+    },
+    {
+      "byte_count": 844,
+      "git_blob": "2b43f7ee90e7817e29c03179e364c2d087366a19",
+      "path": "evidence/morph-xii/SELFMOAT-TEST-001-C.actuation.json",
+      "sha256": "22b28b6090d9681c0ce3229e596fe0f97415fe9f7d9551165d15e55098b0e6dc"
+    },
+    {
+      "byte_count": 639,
+      "git_blob": "14b5685039455714637f5ffa4bbbf5b25d568065",
+      "path": "evidence/morph-xii/EXECUTION-MORPH-XII-001.json",
+      "sha256": "8be3719e10c9f2816be0b093204ec9dfda8d1570835502c66146bf29b7166335"
+    },
+    {
+      "byte_count": 1042,
+      "git_blob": "966b2e879b20669f015784a357e29214c7fa0cf0",
+      "path": "evidence/morph-xii/OBSERVATION-MORPH-XII-001.json",
+      "sha256": "3bb01292c2777cd951c357818ea2ddbd0d2ab17007d3df04a31b1e7cb826285b"
+    },
+    {
+      "byte_count": 1145,
+      "git_blob": "c3b87fce9be26eeab6bea63e7bb15efeca3792ed",
+      "path": "evidence/morph-xii/RECEIPT-MORPH-XII-001.json",
+      "sha256": "919c56ffbbfc914503d7e118dd551f3a21c1c1b330617db2fd2e2ae45e60007f"
+    },
+    {
+      "byte_count": 2107,
+      "git_blob": "b9c9e7067dc4dec345affcc6e7651203b3d219e6",
+      "path": "evidence/morph-xiii/COMPILER-EXECUTION-001.json",
+      "sha256": "e5cf3b10df3f3fe4fe5f1600f5537f2587961b3bc65131e56662109c613c8187"
+    },
+    {
+      "byte_count": 1020,
+      "git_blob": "f0280c35d75da52edcbbd6ba429b137bb17e4745",
+      "path": "evidence/morph-xiii/COMPILER-OBSERVATION-001.json",
+      "sha256": "594893cbebafbb368b324bdfddd5f7c637f202eb4c202b694d79aec92f6e0d1c"
+    },
+    {
+      "byte_count": 1083,
+      "git_blob": "02401c9b56938c5fe30fc87874cfc355df7b106a",
+      "path": "evidence/morph-xiii/COMPILER-RECEIPT-001.json",
+      "sha256": "89d3f497848fc6603aa22bdc6f40605256e9326fc9dc802de97480295d95388f"
+    },
+    {
+      "byte_count": 1357,
+      "git_blob": "a96366a7883ba760b1be89b00b814da58528b03d",
+      "path": "evidence/morph-xiii/COMPILER-RECONTACT-001.json",
+      "sha256": "939bdabdd3ccd4058cc72ceae8fa7c9f003bfa92a2e768e4cb8404f0a94e7520"
+    },
+    {
+      "byte_count": 2727,
+      "git_blob": "b698509ffddce1d46cebcc2f814e65b804ffdda7",
+      "path": "evidence/morph-xiii/RUNTIME-B-RECOVERY-001.json",
+      "sha256": "034ed628efe3c98134f560da7c5302375afa92ec68905e5c351d56bdb3a1f9f5"
+    },
+    {
+      "byte_count": 968,
+      "git_blob": "18d8294af6cd0c6022b302c6e4556743744ab607",
+      "path": "evidence/morph-xiii/drift/DRIFT-BASELINE-RECEIPT-001.json",
+      "sha256": "12b0b5e887e0e28c8afb62bb6bccfb7c8b874dc42e7e17aabc3c3dddd60ae49f"
+    },
+    {
+      "byte_count": 321,
+      "git_blob": "5e8fbc5f5519c8f5b671a7328ab5a28d07fe17e3",
+      "path": "evidence/morph-xiii/drift/DRIFT-SPECIMEN-001.json",
+      "sha256": "70d38fbb509c8afd0cf20cc3badeb295cbe97066b06411a668a13c37702dbe6b"
+    },
+    {
+      "byte_count": 1842,
+      "git_blob": "3a1ba18700f24bf07e47b3ea59a5c8655306aba7",
+      "path": "evidence/morph-xiii/drift/DRIFT-OBSERVATION-001.json",
+      "sha256": "767b49b3b0d9863b645406f021dd68fb1a80c6c42acb50ddbee3267aee3ea1c1"
+    },
+    {
+      "byte_count": 1829,
+      "git_blob": "67b7f90d50811ea36151e008b9d55bbb32e9913c",
+      "path": "evidence/morph-xiii/drift/DRIFT-REFUSAL-QUARANTINE-001.json",
+      "sha256": "926cb68edc7161aab4d483d2f2a303552618afb2c9513b5796fc2d07ab313408"
+    },
+    {
+      "byte_count": 1369,
+      "git_blob": "e7b56b25ebe1f6d1d32dd9990a3e37a602d08beb",
+      "path": "evidence/morph-xiii/drift/STALE-ADMISSION-REFUSAL-001.json",
+      "sha256": "796f32538eb44fb1981f654a9907207403fa73ab0691caa773338b3fe082e038"
+    },
+    {
+      "byte_count": 3045,
+      "git_blob": "8491dc94f43916fe38f4cfefd22cdf4f4402a3b8",
+      "path": "evidence/morph-xiii/drift/FRESH-ADMISSION-001.json",
+      "sha256": "320b78f41e4d79eac74af0b75c0d9d949023ac61a32b05f14fa2a9ddb85cc921"
+    },
+    {
+      "byte_count": 1503,
+      "git_blob": "df52592889b160b55d0ef955cd31fb1877f8d794",
+      "path": "evidence/morph-xiii/INDEPENDENT-WITNESS-001.json",
+      "sha256": "7775269df68a347b170843cd85e086db24f2a301c2b23be13c053e91cb91fede"
+    },
+    {
+      "byte_count": 5196,
+      "git_blob": "8046b18bdd99da10f35018788e336f68fd05d09b",
+      "path": "evidence/morph-xiii/PREDICATE-DEPENDENCY-MAP-001.json",
+      "sha256": "d6f72d094e93e446cabcdee3e480ea64ea8aed335349b0de6fa984864c12c325"
+    },
+    {
+      "byte_count": 3849,
+      "git_blob": "3fc77537b6caea27d60602b33bdba73a3c225d06",
+      "path": "runtime/reverself/REVERSELF-0001.json",
+      "sha256": "7ac72a8788556f1700666029bb109410d5b31982a2f5b3229566841aaffc82cc"
+    }
+  ],
+  "scanner": "runtime/reverself/no_unwitnessed_claims.py",
+  "scanner_artifact": {
+    "git_blob": "c118c195d5f927901f26a7f151705b0e3fa8413d",
+    "sha256": "f449bb7716c34bc19d8b82a800f8eadc3e4837d29ee98a661922d93d0a6bd69e"
+  },
+  "scanner_version": "1.1.0",
+  "source_commit": "d244461935ab7ae7e4cdd1175f52c93f7bc83caf"
+}
