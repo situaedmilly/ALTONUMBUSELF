@@ -997,5 +997,23 @@
     },
     "admission_status": "PENDING",
     "actuation_status": "PENDING"
+  },
+  "morph_xi": {
+    "morph_id": "MORPH-XI",
+    "purpose": "FORMAL_IMPLEMENTATION_AND_SELFMOAT_PROVING",
+    "status": "VALIDATION_PASS_ADMISSION_PENDING",
+    "parent": "MATTER-0001",
+    "test_suite": "runtime/compilers/matter-compiler/SELFMOAT_TEST_VECTORS.json",
+    "validator": "runtime/compilers/matter-compiler/SELFMOAT_VALIDATOR.md",
+    "validation_report": "runtime/compilers/matter-compiler/VALIDATION_REPORT-MORPH-XI.json",
+    "admission_decision": "runtime/compilers/matter-compiler/ADMISSION-DECISION-MORPH-XI.json",
+    "negative_path": "PASS",
+    "positive_path": "PASS",
+    "compiler_admission": "PENDING",
+    "compiler_actuation": "PENDING",
+    "compiler_execution": "PENDING",
+    "compiler_observation": "PENDING",
+    "independent_witness": "PENDING",
+    "ecosystem_migration_gate": "CLOSED"
   }
 }
