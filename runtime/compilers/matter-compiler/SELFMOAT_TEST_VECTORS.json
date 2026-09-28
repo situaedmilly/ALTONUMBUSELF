@@ -1,0 +1,51 @@
+{
+  "test_suite_id": "SELFMOAT-TEST-001",
+  "compiler_matter_id": "MATTER-0001",
+  "version": "0.1.0",
+  "cases": [
+    {
+      "case_id": "A",
+      "observed": true,
+      "admitted": false,
+      "mutation_authorized": false,
+      "expected": [
+        "REFUSE",
+        "QUARANTINE"
+      ]
+    },
+    {
+      "case_id": "B",
+      "observed": true,
+      "admitted": true,
+      "mutation_authorized": false,
+      "expected": [
+        "REFUSE"
+      ]
+    },
+    {
+      "case_id": "C",
+      "observed": true,
+      "admitted": true,
+      "mutation_authorized": true,
+      "expected": [
+        "ACTUATABLE"
+      ]
+    },
+    {
+      "case_id": "D",
+      "observed": false,
+      "admitted": true,
+      "mutation_authorized": true,
+      "expected": [
+        "REFUSE",
+        "MISSING_OBSERVATION"
+      ]
+    }
+  ],
+  "invariants": [
+    "OBSERVED does not imply ADMITTED",
+    "AUTHORIZED does not imply EXECUTED",
+    "EXECUTED does not imply OBSERVED",
+    "ACTUATABLE requires observation, admission, authority, capability, and contract"
+  ]
+}
