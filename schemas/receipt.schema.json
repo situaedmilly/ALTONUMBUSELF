@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/situaedmilly/ALTONUMBUSELF/schemas/receipt.schema.json",
+  "title": "OURSELF Receipt",
+  "type": "object",
+  "required": ["receipt_id","matter_id","event","observed_artifact","observed_digest","timestamp","lineage"],
+  "properties": {
+    "receipt_id":{"type":"string"},
+    "matter_id":{"type":"string"},
+    "event":{"type":"string"},
+    "observed_artifact":{"type":"string"},
+    "observed_digest":{"type":"string"},
+    "timestamp":{"type":"string"},
+    "lineage":{"type":"object"},
+    "witness":{"type":"object"},
+    "recontact":{"type":"object"}
+  },
+  "additionalProperties": false
+}
