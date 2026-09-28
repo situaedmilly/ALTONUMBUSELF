@@ -10,17 +10,38 @@
       "name": "OURSELF Matter Compiler",
       "version": "0.1.0",
       "source": "runtime/compilers/matter-compiler/COMPILER_CONTRACT.md",
-      "status": "CONTRACT_INITIALIZED",
+      "status": "CONTRACT_OBSERVED",
       "algorithm_id": null,
       "formula_ids": [],
       "dependencies": [],
-      "authority": {"status":"DECLARED_FOR_BOUNDED_MORPH"},
-      "admission": {"status":"PENDING"},
-      "actuation": {"status":"PENDING"},
-      "observation": {"status":"PENDING"},
-      "receipt": {"status":"PENDING"},
-      "recontact": {"status":"PENDING"},
-      "lineage": {"preimage":"MORPH-X","target":"MATTER-0001"}
+      "authority": {
+        "status": "DECLARED_FOR_BOUNDED_MORPH"
+      },
+      "admission": {
+        "status": "PENDING",
+        "reason": "MORPH-X establishes the compiler contract; formal admission of executable compiler Matter remains a later bounded transition."
+      },
+      "actuation": {
+        "status": "PENDING",
+        "reason": "No runtime execution of the compiler has been claimed."
+      },
+      "observation": {
+        "status": "VERIFIED",
+        "ref": "evidence/RECEIPT-MORPH-X-001.json",
+        "commit": "3f1ba98349f65bd0e4783b2ab3c19b1112cfaa29"
+      },
+      "receipt": {
+        "status": "ISSUED",
+        "receipt_id": "RECEIPT-MORPH-X-001"
+      },
+      "recontact": {
+        "status": "VERIFIED",
+        "ref": "morph-x/matter-compiler-contract"
+      },
+      "lineage": {
+        "preimage": "MORPH-X",
+        "target": "MATTER-0001"
+      }
     }
   ]
 }
