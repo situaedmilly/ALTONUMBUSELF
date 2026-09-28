@@ -1,0 +1,57 @@
+{
+  "contract_id": "TERMINAL-PROOF-CONTRACT-001",
+  "version": "1.0.0",
+  "purpose": "Bound Phase-C evaluation to one finite evidence pass and stop at either product terminus or an explicitly named irreducible boundary.",
+  "scope": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "phase": "MORPH-XIII"
+  },
+  "finite_rule": {
+    "evaluation_passes": 1,
+    "terminal_states": [
+      "PRODUCT_TERMINUS",
+      "BLOCKED_IRREDUCIBLE_BOUNDARY",
+      "FAILED_EVIDENCE_INTEGRITY"
+    ],
+    "no_automatic_retry": true,
+    "reopen_requires": "A new explicit user instruction and fresh preimage-bound admission."
+  },
+  "product_terminus_predicate": {
+    "all_available_phase_c_proofs_persisted": true,
+    "final_external_head_and_artifact_reads_recorded": true,
+    "migration_gate_remains": "CLOSED",
+    "REALISELF_remains": false,
+    "unresolved_conditions_are_named": true,
+    "no_unwitnessed_success_claims": true
+  },
+  "blocked_irreducible_predicate": {
+    "available_repairs_and_reachable_gates_exhausted": true,
+    "remaining_boundaries_have_explicit_missing_capability_or_preserved_ambiguity": true,
+    "no_silent_repair": true,
+    "no_gate_or_graph_escalation_without_new_scope": true,
+    "witness_block_must_name_missing_independent_identity_channel_runtime_and_host": true,
+    "scanner_findings_must_be_retained_not_suppressed": true
+  },
+  "terminal_proof_must_bind": [
+    "repository",
+    "branch",
+    "final_head",
+    "evidence_subjects",
+    "source_commits",
+    "observed_byte_digests",
+    "predicate_dependency_map",
+    "unresolved_predicates",
+    "gate_state",
+    "REALISELF_state"
+  ],
+  "forbidden_terminal_claims": [
+    "REALISELF=true",
+    "independent witness verified when C10 is blocked",
+    "historical MORPH-XII execution ambiguity resolved",
+    "migration complete merely because the compiler ran"
+  ],
+  "final_proof_path": "evidence/morph-xiii/FINAL-PROOF-001.json",
+  "final_recontact_path": "evidence/morph-xiii/FINAL-RECONTACT-001.json",
+  "mutation_authority": false
+}

@@ -1,0 +1,36 @@
+{
+  "witness_record_id": "INDEPENDENT-WITNESS-001",
+  "contract": "runtime/reverself/INDEPENDENT-WITNESS-CONTRACT-001.json",
+  "decision": "BLOCKED",
+  "successful_witness_claim": false,
+  "target": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "main",
+    "path": "evidence/MORPH-015-memory-object.md",
+    "prior_receipt": "evidence/REVERSELF-001-memory-recontact-receipt.json",
+    "expected_sha256": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd"
+  },
+  "primary_endpoint": {
+    "identity_id": null,
+    "channel_id": "authenticated GitHub connector and raw.githubusercontent.com reads in prior same-runtime evidence",
+    "runtime_id": null,
+    "host_id": null,
+    "identity_independently_verified": false
+  },
+  "witness_endpoint": null,
+  "reason": "No separate independently authenticated identity, channel, runtime, and host endpoint is available in this execution. The prior cross-channel evidence explicitly shares one runtime and is not an independent witness.",
+  "evaluation": {
+    "evaluator": "runtime/reverself/independent_witness.py::evaluate_witness",
+    "witness_observation_performed": false,
+    "identity_independence_verified": false,
+    "channel_independence_verified": false,
+    "runtime_independence_verified": false,
+    "host_independence_verified": false,
+    "digest_match_verified_by_witness": false
+  },
+  "effect": {
+    "mutation_performed": false,
+    "REALISELF_changed": false,
+    "migration_gate_changed": false
+  }
+}

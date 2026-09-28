@@ -1,0 +1,125 @@
+{
+  "admission_id": "REVERSELF-PROOF-ADMISSION-001",
+  "transition": "MORPH-XIII-REVERSELF-TERMINAL-PREDICATE-PACK",
+  "decision": "ADMITTED",
+  "operation": "CREATE_EXACT_ARTIFACT_PACK",
+  "authority": {
+    "source": "Explicit current user instruction to continue and complete bounded MORPH-XIII Phase C",
+    "scope": [
+      "situaedmilly/ALTONUMBUSELF",
+      "branch morph-xi/selfmoat-proving",
+      "C10 independent-witness evaluator and truthful BLOCKED record",
+      "C11 non-mutating scanner, tests, and findings report",
+      "C12 finite terminal-proof contract",
+      "C13 predicate dependency map",
+      "C14 distinct REVERSELF Matter"
+    ],
+    "standing_authority": false
+  },
+  "capability": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "authenticated_identity": "situaedmilly",
+    "repository_permission": "push",
+    "verified": true
+  },
+  "preimage": {
+    "head": "e71dde1ffc7fcacc3e8a879d25cc21f188575567",
+    "tree": "75b39eb32804b6c72019db0c37db439348364417",
+    "remote_head_recontacted": true,
+    "all_targets_absent_at_preimage": true
+  },
+  "targets": [
+    {
+      "path": "runtime/reverself/no_unwitnessed_claims.py",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_READ_ONLY_SCANNER",
+      "byte_count": 8812,
+      "sha256": "4808fb17b63349ccf825a2c44bd3be6e9ea3a964c03a99195013788364e5f94b"
+    },
+    {
+      "path": "runtime/reverself/independent_witness.py",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_WITNESS_EVALUATOR",
+      "byte_count": 3356,
+      "sha256": "a5434a84c19ebeb189498e8a2e99b8c2956b49cb871b0deeb7bdd2a95f1fd7c4"
+    },
+    {
+      "path": "runtime/reverself/test_reverself_evidence.py",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_UNIT_TESTS",
+      "byte_count": 3501,
+      "sha256": "98a91c793846aa673d2ba76deed40d973ac9879282ce2877a82b3aff2e6a33b8"
+    },
+    {
+      "path": "runtime/reverself/INDEPENDENT-WITNESS-CONTRACT-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_CONTRACT",
+      "byte_count": 1786,
+      "sha256": "8dd915d872e278bc7f80a611c7e260230f8729623e10f615c80e2ab7a2f1c6da"
+    },
+    {
+      "path": "runtime/reverself/TERMINAL-PROOF-CONTRACT-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_FINITE_TERMINAL_CONTRACT",
+      "byte_count": 2075,
+      "sha256": "610541fb543a5223377d79891d1b9737c35c24bdccb699baebf2c7f8582d9c20"
+    },
+    {
+      "path": "runtime/reverself/REVERSELF-0001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_DISTINCT_REVERSELF_MATTER",
+      "byte_count": 3849,
+      "sha256": "7ac72a8788556f1700666029bb109410d5b31982a2f5b3229566841aaffc82cc"
+    },
+    {
+      "path": "evidence/morph-xiii/INDEPENDENT-WITNESS-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_TRUTHFUL_BLOCKED_RESULT",
+      "byte_count": 1503,
+      "sha256": "7775269df68a347b170843cd85e086db24f2a301c2b23be13c053e91cb91fede"
+    },
+    {
+      "path": "evidence/morph-xiii/NO-UNWITNESSED-CLAIMS-REPORT-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_NON_MUTATING_SCAN_REPORT",
+      "byte_count": 6772,
+      "sha256": "7d91faa419751f450de3a2d3b89c0d9e56de70f9ac45d5d89e79e6a025c84280"
+    },
+    {
+      "path": "evidence/morph-xiii/PREDICATE-DEPENDENCY-MAP-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_MACHINE_READABLE_DEPENDENCY_MAP",
+      "byte_count": 5196,
+      "sha256": "d6f72d094e93e446cabcdee3e480ea64ea8aed335349b0de6fa984864c12c325"
+    },
+    {
+      "path": "evidence/morph-xiii/REVERSELF-PROOF-ADMISSION-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_THIS_SCOPED_DECISION"
+    }
+  ],
+  "decision_basis": {
+    "branch_head_matches_preimage": true,
+    "target_paths_absent_at_preimage": true,
+    "scanner_report_source_commit": "e71dde1ffc7fcacc3e8a879d25cc21f188575567",
+    "scanner_findings": 8,
+    "scanner_decision": "BLOCKED_UNWITNESSED_STATE_CLAIMS_PRESENT",
+    "unit_tests_passed": 9,
+    "dependency_map_acyclic": true,
+    "independent_witness": "BLOCKED_NO_ENDPOINT"
+  },
+  "expected_proof": [
+    "Persist the exact scanner, unit tests, contracts, distinct REVERSELF Matter, dependency map, and generated scan report.",
+    "Preserve all eight scanner findings and the historical MORPH-XII execution ambiguity without rewriting source evidence.",
+    "Record the independent witness as BLOCKED; do not infer a witness from same-runtime channels.",
+    "Keep SELFGRAPH, registry, migration gate, REALISELF, and MORPH-015 unchanged."
+  ],
+  "prohibitions": [
+    "No SELFGRAPH, registry, migration gate, or REALISELF edits.",
+    "No modification, repair, or reinterpretation of historical memory or MORPH-XII evidence.",
+    "No successful independent-witness claim.",
+    "No force push or history rewrite."
+  ],
+  "decision_record_self_hash": false
+}

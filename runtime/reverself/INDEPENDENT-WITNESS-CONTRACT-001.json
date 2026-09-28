@@ -1,0 +1,38 @@
+{
+  "contract_id": "INDEPENDENT-WITNESS-CONTRACT-001",
+  "contract_type": "INDEPENDENT_EFFECT_WITNESS",
+  "version": "1.0.0",
+  "purpose": "Corroborate one exact artifact subject and digest without conflating same-runtime or same-identity channel agreement with an independent witness.",
+  "subject_binding": [
+    "repository",
+    "branch",
+    "path",
+    "immutable_commit",
+    "sha256"
+  ],
+  "endpoint_requirements": [
+    "Primary and witness identity references are independently authenticated.",
+    "Primary and witness channel identifiers are distinct.",
+    "Primary and witness runtime identifiers are distinct.",
+    "Primary and witness host identifiers are distinct.",
+    "Both endpoints bind the exact same subject and SHA-256 digest.",
+    "The witness endpoint has a durable evidence reference."
+  ],
+  "decision_states": {
+    "VERIFIED": "All endpoint distinctions, authentication, subject, digest, and evidence-reference checks pass.",
+    "BLOCKED": "A witness endpoint or required distinction/authentication evidence is unavailable.",
+    "REFUSED": "The endpoints returned different subject or digest values."
+  },
+  "non_claims": [
+    "A second API or URL in the same runtime is not by itself an independent witness.",
+    "The evaluator validates supplied evidence; it cannot authenticate an identity or create a witness observation.",
+    "A successful unit-test fixture does not establish a witness for repository state."
+  ],
+  "evaluator": "runtime/reverself/independent_witness.py::evaluate_witness",
+  "current_capability": {
+    "decision": "BLOCKED",
+    "reason": "No independently authenticated identity, channel, runtime, and host endpoint is available for this task.",
+    "successful_witness_claim": false
+  },
+  "mutation_authority": false
+}

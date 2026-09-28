@@ -1,0 +1,107 @@
+{
+  "matter_id": "REVERSELF-0001",
+  "matter_type": "MEMORY_BOUNDARY_CONTROLLER",
+  "version": "1.0.0",
+  "distinct_from": {
+    "matter_id": "MATTER-0001",
+    "matter_type": "COMPILER",
+    "distinction": "REVERSELF-0001 observes, compares, refuses, and preserves evidence boundaries; MATTER-0001 compiles structural Matter. Neither identity subsumes the other."
+  },
+  "jurisdiction": {
+    "reality": "OURSELFECOSYSTEM",
+    "instance": "ALTONUMBUSELF",
+    "substrate": "GitHub"
+  },
+  "semantic": {
+    "definition": "A bounded, non-mutating memory-boundary Matter that scans claims, compares externally observed bytes to receipts, and records refusal/quarantine evidence without repairing state.",
+    "semantic_type": "REVERSELF_BOUNDARY_MATTER",
+    "vocabulary_refs": [
+      "evidence/ALTONUMBUSELF-MEMORY-SCHEMA-v1.md",
+      "runtime/reverself/INDEPENDENT-WITNESS-CONTRACT-001.json",
+      "runtime/reverself/TERMINAL-PROOF-CONTRACT-001.json"
+    ]
+  },
+  "algorithm": {
+    "implementation": "runtime/reverself/no_unwitnessed_claims.py",
+    "witness_evaluator": "runtime/reverself/independent_witness.py",
+    "payload_comparator": "evidence/reverself-boundary-check.py::compare_payload"
+  },
+  "formulas": [],
+  "states": [
+    "PREIMAGE_BOUND",
+    "CLAIMS_SCANNED",
+    "OBSERVATION_COMPARED",
+    "DRIFT_QUARANTINED",
+    "STALE_ADMISSION_REFUSED",
+    "WITNESS_BLOCKED",
+    "TERMINATED"
+  ],
+  "invariants": [
+    "Reading and hashing do not grant authority or mutate targets.",
+    "A receipt records observed bytes but does not authorize future writes.",
+    "A digest mismatch preserves the expected digest and quarantines without repair.",
+    "A stale admission is refused against a new preimage.",
+    "Same-runtime or same-identity channel agreement is not independent witnessing.",
+    "Scanner findings and historical ambiguity are preserved without rewriting source evidence.",
+    "REVERSELF-0001 does not set REALISELF or the migration gate."
+  ],
+  "transitions": [
+    {
+      "from": "PREIMAGE_BOUND",
+      "to": "CLAIMS_SCANNED",
+      "condition": "Every configured committed JSON input matches the selected source commit."
+    },
+    {
+      "from": "CLAIMS_SCANNED",
+      "to": "OBSERVATION_COMPARED",
+      "condition": "Exact externally returned bytes are compared to the unchanged receipt digest."
+    },
+    {
+      "from": "OBSERVATION_COMPARED",
+      "to": "DRIFT_QUARANTINED",
+      "condition": "A mismatch is recorded; no repair is performed."
+    },
+    {
+      "from": "DRIFT_QUARANTINED",
+      "to": "STALE_ADMISSION_REFUSED",
+      "condition": "A stale decision is rejected and any new operation uses current-preimage admission."
+    },
+    {
+      "from": "STALE_ADMISSION_REFUSED",
+      "to": "WITNESS_BLOCKED",
+      "condition": "No distinct independently authenticated witness endpoint is available."
+    },
+    {
+      "from": "WITNESS_BLOCKED",
+      "to": "TERMINATED",
+      "condition": "Terminal proof records all reachable results and exact unresolved boundaries."
+    }
+  ],
+  "authority": {
+    "status": "SCOPED_BY_CURRENT_PHASE_C_DIRECTIVE",
+    "standing_authority": false
+  },
+  "admission": {
+    "status": "CURRENT_PREIMAGE_SCOPED",
+    "ref": "evidence/morph-xiii/REVERSELF-PROOF-ADMISSION-001.json"
+  },
+  "execution": {
+    "status": "NON_MUTATING_SCAN_AND_EVALUATION",
+    "external_memory_mutation": false
+  },
+  "observation": {
+    "status": "SUBJECT_BOUND_PER_EVIDENCE_RECORD"
+  },
+  "witness": {
+    "status": "BLOCKED",
+    "witness_ref": null
+  },
+  "receipt": {
+    "status": "NOT_A_MEMORY_OBJECT_RECEIPT",
+    "note": "This Matter defines evidence operations; it does not receipt or admit MORPH-015."
+  },
+  "lineage": {
+    "preimage_head": "e71dde1ffc7fcacc3e8a879d25cc21f188575567",
+    "transition": "MORPH-XIII-REVERSELF-TERMINAL-PREDICATE-PACK"
+  }
+}
