@@ -1,0 +1,56 @@
+{
+  "execution_id": "COMPILER-EXECUTION-001",
+  "matter_id": "MATTER-0001",
+  "compiler_version": "0.1.0",
+  "fixture_matter_id": "MORPH-XIII-FIXTURE-001",
+  "state": "EXECUTED",
+  "event": "BOUNDED_STRUCTURAL_COMPILATION",
+  "admission": {
+    "ref": "evidence/morph-xiii/COMPILER-EXECUTION-ADMISSION-001.json",
+    "sha256": "98e104941e0027dd33a5dfdde32516b6e87335ccbe9ae576a5ccd01b90eebedd",
+    "preimage_head": "818ce6798c6ef44f073e9d3cf631a079915a273b"
+  },
+  "preimage": {
+    "branch": "morph-xi/selfmoat-proving",
+    "head": "818ce6798c6ef44f073e9d3cf631a079915a273b",
+    "compiler_matter_sha256": "422f1055e76d93d381bea467ee1ad27839aeb37e8660ebc3ba0186247b4090af",
+    "algorithm_sha256": "81ace80b86e90cde000980c9e1950816e65fdc82584d71935785ba1ad6816724"
+  },
+  "invocation": {
+    "command": [
+      "python3",
+      "runtime/compilers/matter-compiler/structural_compiler.py",
+      "--input",
+      "runtime/compilers/matter-compiler/fixtures/SELFMOAT-C-PROVING-MATTER.json",
+      "--output",
+      "runtime/compilers/matter-compiler/outputs/MATTER-0001-SELFMOAT-C-OUTPUT.json"
+    ],
+    "runtime": "Python 3.14.7",
+    "started_at": "2026-09-28T14:55:54Z",
+    "finished_at": "2026-09-28T14:55:54Z",
+    "exit_code": 0,
+    "result": "COMPILED"
+  },
+  "input": {
+    "path": "runtime/compilers/matter-compiler/fixtures/SELFMOAT-C-PROVING-MATTER.json",
+    "sha256": "4855861739a6379b82cc724bf995bb80b7e8178ed46c7c4c15ed3bf304d0c62b",
+    "byte_count": 1934
+  },
+  "output": {
+    "path": "runtime/compilers/matter-compiler/outputs/MATTER-0001-SELFMOAT-C-OUTPUT.json",
+    "sha256": "a931be79ae0b10642a76140d3eeefa2e24b6c5887fe824fbe1085f72a4aa0c4e",
+    "git_blob": "920374aed9d93bdafbe052b15870c903ab7a4f09",
+    "byte_count": 3275,
+    "formula_status": "UNFORMALIZED"
+  },
+  "claims": {
+    "compiler_invoked": true,
+    "fixture_matter_executed": false,
+    "formula_invented": false,
+    "external_repository_mutated_by_compiler_invocation": false,
+    "external_observation": false,
+    "independent_witness": false,
+    "receipt": false
+  },
+  "execution_record_self_hash": false
+}

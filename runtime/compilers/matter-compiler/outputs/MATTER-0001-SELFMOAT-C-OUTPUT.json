@@ -1,0 +1,138 @@
+{
+  "artifact_schema": "ourself.matter-compiler.structural-output.v1",
+  "claims": {
+    "external_observation_performed": false,
+    "external_state_mutated": false,
+    "formula_invented": false,
+    "source_matter_executed": false
+  },
+  "compiler": {
+    "matter_id": "MATTER-0001",
+    "mode": "STRUCTURAL_ONLY",
+    "version": "0.1.0"
+  },
+  "source": {
+    "byte_count": 1934,
+    "matter_id": "MORPH-XIII-FIXTURE-001",
+    "sha256": "4855861739a6379b82cc724bf995bb80b7e8178ed46c7c4c15ed3bf304d0c62b"
+  },
+  "source_matter": {
+    "admission": {
+      "status": "NOT_APPLICABLE"
+    },
+    "algorithm": null,
+    "authority": {
+      "status": "FIXTURE_ONLY"
+    },
+    "capability": {
+      "status": "NOT_APPLICABLE"
+    },
+    "dependencies": [],
+    "execution": {
+      "status": "NOT_CLAIMED"
+    },
+    "failure_states": [
+      {
+        "reason": "The source is malformed or outside the declared structural contract.",
+        "state": "REJECTED"
+      }
+    ],
+    "formulas": [
+      "UNFORMALIZED: descriptive fixture has no defensible mathematical definition"
+    ],
+    "inputs": [
+      {
+        "name": "source_bytes",
+        "required": true,
+        "type": "bounded UTF-8 JSON"
+      }
+    ],
+    "invariants": [
+      "Compilation preserves the descriptive source.",
+      "No formula is inferred from descriptive language."
+    ],
+    "jurisdiction": {
+      "instance": "ALTONUMBUSELF",
+      "reality": "OURSELFECOSYSTEM",
+      "substrate": "FIXTURE"
+    },
+    "lineage": {
+      "source": "MORPH-XIII bounded test fixture"
+    },
+    "matter_id": "MORPH-XIII-FIXTURE-001",
+    "matter_type": "SPECIMEN",
+    "observation": {
+      "status": "NOT_CLAIMED"
+    },
+    "outputs": [
+      {
+        "name": "compiled_structure",
+        "type": "canonical JSON"
+      }
+    ],
+    "preconditions": [
+      "Input is within the compiler's byte and nesting limits."
+    ],
+    "receipt": {
+      "status": "NOT_CLAIMED"
+    },
+    "recontact": {
+      "status": "NOT_APPLICABLE"
+    },
+    "semantic": {
+      "definition": "A small descriptive Matter fixture used to test structural compilation; it does not define a mathematical law.",
+      "semantic_type": "COMPILER_FIXTURE",
+      "vocabulary_refs": [
+        "runtime/compilers/matter-compiler/COMPILER_CONTRACT.md"
+      ]
+    },
+    "state": {
+      "initial": "UNPARSED",
+      "terminal": "COMPILED"
+    },
+    "transitions": [
+      {
+        "from": "UNPARSED",
+        "to": "COMPILED",
+        "trigger": "strict structural compilation succeeds"
+      }
+    ],
+    "version": "1.0.0",
+    "witness": {
+      "status": "NOT_CLAIMED"
+    }
+  },
+  "structure": {
+    "fields": [
+      "admission",
+      "algorithm",
+      "authority",
+      "capability",
+      "dependencies",
+      "execution",
+      "failure_states",
+      "formulas",
+      "inputs",
+      "invariants",
+      "jurisdiction",
+      "lineage",
+      "matter_id",
+      "matter_type",
+      "observation",
+      "outputs",
+      "preconditions",
+      "receipt",
+      "recontact",
+      "semantic",
+      "state",
+      "transitions",
+      "version",
+      "witness"
+    ],
+    "formula_count": 1,
+    "formula_status": "UNFORMALIZED",
+    "input_count": 1,
+    "output_count": 1,
+    "transition_count": 1
+  }
+}

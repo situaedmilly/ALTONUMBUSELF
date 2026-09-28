@@ -1,0 +1,84 @@
+{
+  "admission_id": "COMPILER-EXECUTION-ADMISSION-001",
+  "transition": "MORPH-XIII-MATTER-0001-COMPILER-EXECUTION",
+  "decision": "ADMITTED",
+  "operation": "RUN_BOUNDED_COMPILER_AND_CREATE_OUTPUT_EVIDENCE",
+  "authority": {
+    "source": "Explicit current user instruction to execute Phase C",
+    "scope": [
+      "MATTER-0001",
+      "MORPH-XIII-FIXTURE-001",
+      "one bounded structural compilation",
+      "create-only compiler output and execution evidence"
+    ],
+    "standing_authority": false
+  },
+  "capability": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "authenticated_identity": "situaedmilly",
+    "repository_permission": "push",
+    "verified": true
+  },
+  "preimage": {
+    "head": "818ce6798c6ef44f073e9d3cf631a079915a273b",
+    "tree": "48ed1874e88a819c5f2f220a981036aea1dd6623",
+    "compiler_matter": {
+      "path": "runtime/compilers/matter-compiler/MATTER-0001.json",
+      "sha256": "422f1055e76d93d381bea467ee1ad27839aeb37e8660ebc3ba0186247b4090af",
+      "git_blob": "984b34f40fd11ec3b4d12c3f419c43518793a1d3"
+    },
+    "algorithm": {
+      "path": "runtime/compilers/matter-compiler/structural_compiler.py",
+      "sha256": "81ace80b86e90cde000980c9e1950816e65fdc82584d71935785ba1ad6816724",
+      "git_blob": "0ce5772086383eb305c3d0915951ff3349b3e49a"
+    },
+    "fixture": {
+      "path": "runtime/compilers/matter-compiler/fixtures/SELFMOAT-C-PROVING-MATTER.json",
+      "sha256": "4855861739a6379b82cc724bf995bb80b7e8178ed46c7c4c15ed3bf304d0c62b",
+      "git_blob": "c9b39fb9775dc232d482349a28a0cbced242cc84"
+    }
+  },
+  "targets": [
+    {
+      "path": "runtime/compilers/matter-compiler/outputs/MATTER-0001-SELFMOAT-C-OUTPUT.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_DETERMINISTIC_STRUCTURAL_OUTPUT"
+    },
+    {
+      "path": "evidence/morph-xiii/COMPILER-EXECUTION-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_RUN_RECORD_WITH_OUTPUT_DIGEST"
+    },
+    {
+      "path": "evidence/morph-xiii/COMPILER-EXECUTION-ADMISSION-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_THIS_SCOPED_DECISION"
+    }
+  ],
+  "bounds": {
+    "compiler_input_bytes": 65536,
+    "compiler_output_bytes": 131072,
+    "maximum_json_nesting_depth": 8,
+    "input_matter_id": "MORPH-XIII-FIXTURE-001",
+    "one_invocation_only": true
+  },
+  "decision_basis": {
+    "compiler_and_fixture_bytes_externally_recontacted": true,
+    "output_and_execution_targets_absent_at_preimage": true,
+    "bootstrap_admission_does_not_cover_execution": true,
+    "execution_is_distinct_from_observation_and_receipt": true
+  },
+  "expected_proof": [
+    "Execute the admitted compiler algorithm once against the bound fixture bytes.",
+    "Persist the exact deterministic output and a run record with source and output hashes.",
+    "Do not claim execution of the fixture Matter, external mutation, observation, witness, or receipt."
+  ],
+  "prohibitions": [
+    "No migration gate or SELFGRAPH edit.",
+    "No REALISELF status change.",
+    "No modification of historical evidence.",
+    "No force push or history rewrite."
+  ],
+  "decision_record_self_hash": false
+}
