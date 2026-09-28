@@ -1,0 +1,33 @@
+{
+  "receipt_id": "RECEIPT-MORPH-X-001",
+  "matter_id": "MATTER-0001",
+  "event": "MORPH_X_STRUCTURAL_RECONTACT",
+  "observed_artifact": "morph-x/matter-compiler-contract branch at commit 67e41e63605a6f2517a13033efe30c5c4f7a02a9",
+  "observed_digest": "git_commit:67e41e63605a6f2517a13033efe30c5c4f7a02a9",
+  "timestamp": "2026-09-28T08:53:00-04:00",
+  "lineage": {
+    "source": "MORPH-X",
+    "target": "MATTER-0001",
+    "observed_files": [
+      "schemas/matter.schema.json",
+      "schemas/transition.schema.json",
+      "schemas/formula.schema.json",
+      "schemas/receipt.schema.json",
+      "runtime/compilers/matter-compiler/COMPILER_CONTRACT.md",
+      "runtime/compilers/matter-compiler/MORPH-X.md",
+      "registry/MATTER_REGISTRY.json",
+      "ecosystem/algorithms/SELFMOAT-ADMISSION.md",
+      "SELFGRAPH_INSTANCE.json"
+    ]
+  },
+  "witness": {
+    "mode": "SAME_RUNTIME_GITHUB_RECONTACT",
+    "independent": false,
+    "note": "Repository state was re-read through the authenticated GitHub substrate; this is not an independent external witness."
+  },
+  "recontact": {
+    "external_state_read": true,
+    "ref": "morph-x/matter-compiler-contract",
+    "verified": true
+  }
+}
