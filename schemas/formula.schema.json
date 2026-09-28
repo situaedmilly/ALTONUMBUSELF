@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/situaedmilly/ALTONUMBUSELF/schemas/formula.schema.json",
+  "title": "OURSELF Formula",
+  "type": "object",
+  "required": ["formula_id","domain","definition","inputs","units","parameters","function","outputs","validity_domain","invariants","numerical_method","precision","provenance","evidence","version"],
+  "properties": {
+    "formula_id":{"type":"string"},
+    "domain":{"type":"string"},
+    "definition":{"type":"string"},
+    "inputs":{"type":"array","items":{"type":"object"}},
+    "units":{"type":"object"},
+    "parameters":{"type":"object"},
+    "function":{"type":"string"},
+    "outputs":{"type":"array","items":{"type":"object"}},
+    "validity_domain":{"type":"object"},
+    "invariants":{"type":"array","items":{"type":"string"}},
+    "numerical_method":{"type":"string"},
+    "precision":{"type":"object"},
+    "provenance":{"type":"object"},
+    "evidence":{"type":"object"},
+    "version":{"type":"string"},
+    "status":{"type":"string","enum":["FORMALIZED","UNFORMALIZED","DEPRECATED","BLOCKED"]}
+  },
+  "additionalProperties": false
+}
