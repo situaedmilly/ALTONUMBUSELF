@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/situaedmilly/ALTONUMBUSELF/runtime/compilers/matter-compiler/ADMISSION_DECISION.schema.json",
+  "title": "OURSELF Admission Decision",
+  "type": "object",
+  "required": [
+    "matter_id",
+    "preimage_digest",
+    "compiler_version",
+    "authority_reference",
+    "capability_reference",
+    "contract_reference",
+    "validation_reference",
+    "observation_plan",
+    "receipt_plan",
+    "decision",
+    "reason",
+    "timestamp",
+    "decision_digest"
+  ],
+  "properties": {
+    "matter_id": {
+      "type": "string"
+    },
+    "preimage_digest": {
+      "type": "string"
+    },
+    "compiler_version": {
+      "type": "string"
+    },
+    "authority_reference": {
+      "type": "string"
+    },
+    "capability_reference": {
+      "type": "string"
+    },
+    "contract_reference": {
+      "type": "string"
+    },
+    "validation_reference": {
+      "type": "string"
+    },
+    "observation_plan": {
+      "type": "object"
+    },
+    "receipt_plan": {
+      "type": "object"
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "ADMIT",
+        "REFUSE"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "decision_digest": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
