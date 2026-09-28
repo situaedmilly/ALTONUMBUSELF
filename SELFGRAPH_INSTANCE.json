@@ -938,5 +938,54 @@
     "witness_status": "NOT_WITNESSED",
     "effect_established": false,
     "realiself_predicate_value": false
+  },
+  "morph_x": {
+    "morph_id": "MORPH-X",
+    "purpose": "BUILD_MINIMUM_VIABLE_OURSELF_MATTER_COMPILER_CONTRACT",
+    "status": "IN_PROGRESS",
+    "no_false_migration": true,
+    "compiler_matter_id": "MATTER-0001",
+    "compiler_contract": "runtime/compilers/matter-compiler/COMPILER_CONTRACT.md",
+    "proving_specimen": "SELFMOAT",
+    "states": [
+      "PREIMAGE",
+      "PARSED",
+      "TYPED",
+      "NORMALIZED",
+      "FORMAL",
+      "COMPILED",
+      "VALIDATED",
+      "ADMITTED",
+      "ACTUATED",
+      "OBSERVED",
+      "RECEIPTED"
+    ],
+    "orthogonal_facts": [
+      "AUTHORITY",
+      "CAPABILITY",
+      "PREIMAGE",
+      "ADMISSION",
+      "ACTUATION",
+      "EXECUTED",
+      "OBSERVED",
+      "WITNESSED",
+      "RECEIPTED",
+      "RECONTACTED"
+    ],
+    "lineage": {
+      "source": "MORPH-X",
+      "target": "MATTER-0001"
+    },
+    "acceptance_predicate": {
+      "matter_schema": true,
+      "transition_schema": true,
+      "formula_schema": true,
+      "receipt_schema": true,
+      "compiler_contract": true,
+      "canonical_compiler_identity": true,
+      "registry": true,
+      "selfgraph_lineage": true,
+      "ecosystem_migration_false": true
+    }
   }
 }
