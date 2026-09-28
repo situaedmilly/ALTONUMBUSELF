@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "registry_id": "MATTER-REGISTRY-001",
+  "instance": "ALTONUMBUSELF",
+  "status": "INITIALIZED",
+  "entries": [
+    {
+      "matter_id": "MATTER-0001",
+      "matter_type": "COMPILER",
+      "name": "OURSELF Matter Compiler",
+      "version": "0.1.0",
+      "source": "runtime/compilers/matter-compiler/COMPILER_CONTRACT.md",
+      "status": "CONTRACT_INITIALIZED",
+      "algorithm_id": null,
+      "formula_ids": [],
+      "dependencies": [],
+      "authority": {"status":"DECLARED_FOR_BOUNDED_MORPH"},
+      "admission": {"status":"PENDING"},
+      "actuation": {"status":"PENDING"},
+      "observation": {"status":"PENDING"},
+      "receipt": {"status":"PENDING"},
+      "recontact": {"status":"PENDING"},
+      "lineage": {"preimage":"MORPH-X","target":"MATTER-0001"}
+    }
+  ]
+}
