@@ -1,0 +1,143 @@
+{
+  "admission_id": "C11-RECONCILIATION-ADMISSION-001",
+  "transition": "C11_REVERSELF_EVIDENCE_RECONCILIATION",
+  "decision": "ADMITTED",
+  "decision_scope": "THIS_BOUNDED_TRANSITION_ONLY",
+  "preimage_digest": "9319b272e5f9082036ce5be5d7580440c047fc5d35636f813db299823e8c6182",
+  "preimage_digest_method": "SHA-256 of canonical UTF-8 JSON (sorted keys, compact separators) recorded in preimage_manifest",
+  "preimage_manifest": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "head": "023794a98286dd197918f5bd1716a67cc982421e",
+    "tree": "c4997740a08a3f26f49256ba851f6105b26d8b41",
+    "scanner_blob": "0e7ce5cbed91feb21db5176d5f2680214013e86c",
+    "test_blob": "2588f1a61aab03efa26cafe729d99dd8878353e2",
+    "claimed_report_path": "evidence/morph-xiii/REVERSELF-SCANNER-REPORT.json",
+    "claimed_report_state": "ABSENT",
+    "prior_report_path": "evidence/morph-xiii/NO-UNWITNESSED-CLAIMS-REPORT-001.json",
+    "prior_report_sha256": "7d91faa419751f450de3a2d3b89c0d9e56de70f9ac45d5d89e79e6a025c84280",
+    "prior_report_git_blob": "3b3124373ccb06bc4dfd895613c3cbbbb24f1020",
+    "prior_finding_count": 8,
+    "target_allowlist": [
+      "runtime/reverself/no_unwitnessed_claims.py",
+      "runtime/reverself/test_reverself_evidence.py",
+      "evidence/morph-xiii/C11-RECONCILIATION-ADMISSION-001.json",
+      "evidence/morph-xiii/NO-UNWITNESSED-CLAIMS-RECONCILIATION-002.json",
+      "evidence/morph-xiii/C11-WITNESS-CAPABILITY-ASSESSMENT-001.json"
+    ],
+    "authority_reference": "User instruction in this session: MORPH-XIII C11 evidence-reconciliation directive received 2026-09-28T12:09:52-04:00",
+    "capability_reference": "Current gh auth status and GitHub repository metadata: authenticated identity situaedmilly; permissions.push=true"
+  },
+  "authority_reference": "User instruction in this session: MORPH-XIII C11 evidence-reconciliation directive received 2026-09-28T12:09:52-04:00",
+  "capability_reference": {
+    "identity": "situaedmilly",
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "permission": "push",
+    "verified_by": [
+      "gh auth status",
+      "gh api repos/situaedmilly/ALTONUMBUSELF permissions"
+    ],
+    "force_push": false
+  },
+  "contract_reference": [
+    "runtime/reverself/INDEPENDENT-WITNESS-CONTRACT-001.json",
+    "runtime/reverself/TERMINAL-PROOF-CONTRACT-001.json",
+    "evidence/morph-xiii/PREDICATE-DEPENDENCY-MAP-001.json",
+    "runtime/compilers/matter-compiler/MIGRATION_GATE.md"
+  ],
+  "target_allowlist": [
+    "runtime/reverself/no_unwitnessed_claims.py",
+    "runtime/reverself/test_reverself_evidence.py",
+    "evidence/morph-xiii/C11-RECONCILIATION-ADMISSION-001.json",
+    "evidence/morph-xiii/NO-UNWITNESSED-CLAIMS-RECONCILIATION-002.json",
+    "evidence/morph-xiii/C11-WITNESS-CAPABILITY-ASSESSMENT-001.json"
+  ],
+  "expected_state": [
+    {
+      "path": "runtime/reverself/no_unwitnessed_claims.py",
+      "current_state": "EXTERNAL_PERSISTED",
+      "current_git_blob": "0e7ce5cbed91feb21db5176d5f2680214013e86c",
+      "intended_state": "PERSISTED_C11_SCANNER_REPAIR",
+      "intended_byte_count": 17948,
+      "intended_sha256": "f449bb7716c34bc19d8b82a800f8eadc3e4837d29ee98a661922d93d0a6bd69e",
+      "intended_git_blob": "c118c195d5f927901f26a7f151705b0e3fa8413d"
+    },
+    {
+      "path": "runtime/reverself/test_reverself_evidence.py",
+      "current_state": "EXTERNAL_PERSISTED",
+      "current_git_blob": "2588f1a61aab03efa26cafe729d99dd8878353e2",
+      "intended_state": "PERSISTED_REQUIRED_C11_TESTS",
+      "intended_byte_count": 8834,
+      "intended_sha256": "2b9bd61eb57056d31a7791e5d748666f1ecd5c7262604d8e9fce181179def090",
+      "intended_git_blob": "bab95027dcec73529459eccafff668e2d434e267"
+    },
+    {
+      "path": "evidence/morph-xiii/C11-RECONCILIATION-ADMISSION-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PERSIST_THIS_SCOPED_ADMISSION"
+    },
+    {
+      "path": "evidence/morph-xiii/NO-UNWITNESSED-CLAIMS-RECONCILIATION-002.json",
+      "current_state": "ABSENT",
+      "intended_state": "PERSIST_FRESH_SCANNER_REPORT",
+      "derivation": "Run the admitted committed scanner against the exact scanner-commit inputs and include the previous report comparison and fresh scan timestamp."
+    },
+    {
+      "path": "evidence/morph-xiii/C11-WITNESS-CAPABILITY-ASSESSMENT-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "RECORD_BLOCKED_IF_NO_GENUINELY_DISTINCT_ENDPOINT_IS_AVAILABLE",
+      "non_claim": "This capability assessment is not an independent witness observation."
+    }
+  ],
+  "authorized_operations_only": [
+    "Persist the exact C11 scanner repair at its allowlisted path.",
+    "Persist only its directly required scanner tests at their allowlisted path.",
+    "After external byte verification, run the committed scanner against the exact committed inputs.",
+    "Persist the fresh scan report at its allowlisted new path without overwriting the prior report.",
+    "Attempt the contracted independent-witness path; record BLOCKED rather than fabricate a witness if required distinct endpoints are unavailable.",
+    "Perform read-only final external recontact and reconcile the C11 and REALISELF evidence."
+  ],
+  "observation_plan": {
+    "after_scanner_commit": "Recontact branch head and raw-read scanner and test at the immutable commit; independently compare byte count, SHA-256, and Git blob to the admission.",
+    "scan": "Run scanner with --commit set to the externally verified scanner commit and --previous-report evidence/morph-xiii/NO-UNWITNESSED-CLAIMS-REPORT-001.json; capture its exact stdout as the new report.",
+    "after_report_commit": "Recontact branch head and raw-read scanner, tests, prior report, new report, and capability assessment; compute hashes only from returned bytes."
+  },
+  "receipt_plan": {
+    "persisted_report_subject": "evidence/morph-xiii/NO-UNWITNESSED-CLAIMS-RECONCILIATION-002.json",
+    "record": "External raw-byte observation will include immutable commit, byte count, SHA-256, and Git blob in the final reconciliation output.",
+    "self_hash": false
+  },
+  "witness_plan": {
+    "required_distinctions": [
+      "identity",
+      "channel",
+      "runtime",
+      "host_or_execution_boundary"
+    ],
+    "subject": "The externally persisted fresh C11 scanner report and its exact bytes.",
+    "rule": "Witness must independently retrieve the external subject and compute its own digest; it must not consume the actuator's report-exists assertion.",
+    "fallback": "If no actually available and independently authenticated endpoint satisfies the distinctions, record BLOCKED and do not call the assessment a witness."
+  },
+  "recontact_plan": {
+    "branch": "morph-xi/selfmoat-proving",
+    "timing": "After scanner commit and again after report/capability-assessment persistence.",
+    "method": "Read branch head and retrieve allowlisted artifacts from that immutable external commit; do not use local files as external proof."
+  },
+  "prohibitions": [
+    "No migration-gate, SELFGRAPH, registry, REALISELF, or historical-evidence mutation.",
+    "No overwrite of the prior scanner report.",
+    "No claim of independent witness without the contracted distinct endpoints.",
+    "No force push or history rewrite."
+  ],
+  "decision_basis": {
+    "branch_head_matches_preimage": true,
+    "local_worktree_changes_confined_to_scanner_and_tests": true,
+    "required_tests_passed": 22,
+    "old_report_externally_present_at_alternate_path": true,
+    "claimed_report_path_absent": true,
+    "local_preview_finding_count": 11,
+    "local_preview_decision": "BLOCKED_UNWITNESSED_STATE_CLAIMS_PRESENT",
+    "independent_witness_endpoint": "NOT_AVAILABLE_IN_CURRENT_TOOL_SEAT"
+  },
+  "decision_record_self_hash": false
+}

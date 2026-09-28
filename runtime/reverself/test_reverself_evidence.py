@@ -33,9 +33,149 @@ class NoUnwitnessedClaimsTests(unittest.TestCase):
         )
         self.assertEqual([item["code"] for item in findings], ["WITNESS_LINK_ABSENT"])
 
+    def test_shared_witness_boundary_is_not_independent(self):
+        findings = inspect_document(
+            "sample.json",
+            {"independent_channel_witness": {"same_runtime": True}},
+        )
+        self.assertEqual([item["code"] for item in findings], ["WITNESS_NOT_INDEPENDENT"])
+
     def test_explicit_false_witness_flag_is_not_an_affirmative_claim(self):
         findings = inspect_document("sample.json", {"witnessed": False})
         self.assertEqual(findings, [])
+
+    def test_affirmative_witness_claim_requires_a_link(self):
+        findings = inspect_document("sample.json", {"witness_verified": True})
+        self.assertEqual([item["code"] for item in findings], ["AFFIRMATIVE_WITNESS_CLAIM"])
+
+    def test_affirmative_realiself_claim_is_reported(self):
+        findings = inspect_document("sample.json", {"REALISELF": True})
+        self.assertEqual(
+            [item["code"] for item in findings],
+            ["AFFIRMATIVE_REALISELF_CLAIM"],
+        )
+
+    def test_unproven_execution_claim_is_reported(self):
+        findings = inspect_document("sample.json", {"executed": True})
+        self.assertEqual(
+            [item["code"] for item in findings],
+            ["EXECUTION_CLAIM_WITHOUT_PROCESS_PROOF"],
+        )
+
+    def test_observed_and_observation_false_is_a_contradiction(self):
+        findings = inspect_document(
+            "sample.json",
+            {"observed": True, "observation": False},
+        )
+        self.assertEqual(
+            {item["code"] for item in findings},
+            {
+                "SEMANTIC_OBSERVATION_CONTRADICTION",
+                "OBSERVED_WITHOUT_EXTERNAL_EVIDENCE",
+            },
+        )
+
+    def test_undefined_temporal_label_does_not_hide_contradiction(self):
+        findings = inspect_document(
+            "sample.json",
+            {
+                "observed": True,
+                "observation": False,
+                "temporal_distinction": "different times",
+                "observation_reference": "evidence/observation.json",
+                "observation_source": "external HTTPS read",
+                "observed_digest": "a" * 64,
+            },
+        )
+        self.assertIn(
+            "SEMANTIC_OBSERVATION_CONTRADICTION",
+            {item["code"] for item in findings},
+        )
+
+    def test_unparseable_temporal_values_do_not_hide_contradiction(self):
+        findings = inspect_document(
+            "sample.json",
+            {
+                "subject": "sample-subject",
+                "observed": True,
+                "observation": False,
+                "temporal_distinction": {
+                    "kind": "DISTINCT_EVENT_TIMES",
+                    "observed_at": "t1",
+                    "observation_at": "t0",
+                    "subject": "sample-subject",
+                },
+                "observation_reference": "evidence/observation.json",
+                "observation_source": "external HTTPS read",
+                "observed_digest": "a" * 64,
+            },
+        )
+        self.assertIn(
+            "SEMANTIC_OBSERVATION_CONTRADICTION",
+            {item["code"] for item in findings},
+        )
+
+    def test_defined_distinct_event_times_can_separate_observation_states(self):
+        findings = inspect_document(
+            "sample.json",
+            {
+                "subject": "sample-subject",
+                "observed": True,
+                "observation": False,
+                "temporal_distinction": {
+                    "kind": "DISTINCT_EVENT_TIMES",
+                    "observed_at": "2026-09-28T10:00:00Z",
+                    "observation_at": "2026-09-28T10:01:00Z",
+                    "subject": "sample-subject",
+                },
+                "observation_reference": "evidence/observation.json",
+                "observation_source": "external HTTPS read",
+                "observed_digest": "a" * 64,
+            },
+        )
+        self.assertEqual(findings, [])
+
+    def test_admission_requires_preimage(self):
+        findings = inspect_document("sample.json", {"admitted": True})
+        self.assertEqual(
+            [item["code"] for item in findings],
+            ["ADMISSION_WITHOUT_PREIMAGE"],
+        )
+
+    def test_authorization_requires_reference(self):
+        findings = inspect_document("sample.json", {"authorized": True})
+        self.assertEqual(
+            [item["code"] for item in findings],
+            ["AUTHORIZATION_WITHOUT_REFERENCE"],
+        )
+
+    def test_receipt_requires_observed_artifact(self):
+        findings = inspect_document("sample.json", {"receipted": True})
+        self.assertEqual(
+            [item["code"] for item in findings],
+            ["RECEIPT_WITHOUT_OBSERVED_ARTIFACT"],
+        )
+
+    def test_recontact_requires_persisted_subject(self):
+        findings = inspect_document("sample.json", {"recontacted": True})
+        self.assertEqual(
+            [item["code"] for item in findings],
+            ["RECONTACT_WITHOUT_PERSISTED_SUBJECT"],
+        )
+
+    def test_present_state_requires_realization_evidence(self):
+        findings = inspect_document("sample.json", {"state": "PRESENT"})
+        self.assertEqual(
+            [item["code"] for item in findings],
+            ["PRESENT_WITHOUT_REALIZATION_EVIDENCE"],
+        )
+
+    def test_affirmative_witness_requires_reference(self):
+        findings = inspect_document("sample.json", {"witnessed": True})
+        self.assertEqual(
+            [item["code"] for item in findings],
+            ["AFFIRMATIVE_WITNESS_CLAIM"],
+        )
 
 
 class IndependentWitnessTests(unittest.TestCase):
