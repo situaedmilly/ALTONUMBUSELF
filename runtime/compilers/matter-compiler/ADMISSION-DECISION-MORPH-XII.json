@@ -1,0 +1,29 @@
+{
+  "matter_id": "MATTER-0001",
+  "preimage_digest": "00d211dca0b84337e769f8b746177ab43c55808ec72cdee4d8f73558bca3d7af",
+  "compiler_version": "0.1.0",
+  "authority_reference": "AUTHORITY-MORPH-XII-001",
+  "capability_reference": "CAPABILITY-MORPH-XII-001",
+  "contract_reference": "runtime/compilers/matter-compiler/COMPILER_CONTRACT.md",
+  "validation_reference": "runtime/compilers/matter-compiler/VALIDATION_REPORT-MORPH-XII.json",
+  "observation_plan": {
+    "required": true,
+    "artifact_path": "evidence/morph-xii/SELFMOAT-TEST-001-C.actuation.json",
+    "source": "GitHub external branch contents read",
+    "after_actuation": true,
+    "digest": "SHA-256 over bytes returned by the external read",
+    "recontact": "Distinct later external branch/path read after receipt generation",
+    "execution_is_not_observation": true
+  },
+  "receipt_plan": {
+    "required": true,
+    "receipt_id": "RECEIPT-MORPH-XII-001",
+    "receipt_path": "evidence/morph-xii/RECEIPT-MORPH-XII-001.json",
+    "observed_artifact_digest_required": true,
+    "receipt_self_hash_excluded": true
+  },
+  "decision": "ADMIT",
+  "reason": "Freshly observed branch preimage and absent target; the current explicit user directive authorizes only this ABSENT-to-PRESENT path transition, the separately represented GitHub create capability is available, and the referenced pre-actuation validation passes. Admission covers no other Matter or path and does not claim execution, observation, receipt, or recontact.",
+  "timestamp": "2026-09-28T10:15:08-04:00",
+  "decision_digest": "7a225fd505ac6937d6b1f1c9ca7e712056f0aa142a2f762e5d1f06972913bb93"
+}

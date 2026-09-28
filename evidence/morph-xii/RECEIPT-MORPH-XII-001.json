@@ -1,0 +1,22 @@
+{
+  "receipt_id": "RECEIPT-MORPH-XII-001",
+  "matter_id": "MATTER-0001",
+  "event": "SELFMOAT_SPECIMEN_CASE_C_ACTUATION_OBSERVED",
+  "observed_artifact": "evidence/morph-xii/SELFMOAT-TEST-001-C.actuation.json",
+  "observed_digest": "22b28b6090d9681c0ce3229e596fe0f97415fe9f7d9551165d15e55098b0e6dc",
+  "timestamp": "2026-09-28T10:23:32-04:00",
+  "lineage": {
+    "morph_id": "MORPH-XII",
+    "preimage_digest": "00d211dca0b84337e769f8b746177ab43c55808ec72cdee4d8f73558bca3d7af",
+    "admission_decision": "runtime/compilers/matter-compiler/ADMISSION-DECISION-MORPH-XII.json",
+    "decision_digest": "7a225fd505ac6937d6b1f1c9ca7e712056f0aa142a2f762e5d1f06972913bb93",
+    "actuation_commit": "c68ba7b470628bdf515aba8bf5b50b38ffb8d935",
+    "parent_commit": "a7ff6f2b76e4c876484878216b1b77a509f95808",
+    "branch": "morph-xi/selfmoat-proving",
+    "execution_reference": "evidence/morph-xii/EXECUTION-MORPH-XII-001.json",
+    "observation_reference": "evidence/morph-xii/OBSERVATION-MORPH-XII-001.json",
+    "observed_git_blob": "2b43f7ee90e7817e29c03179e364c2d087366a19",
+    "observed_byte_count": 844,
+    "receipt_hashes_itself": false
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "recontact_id": "RECONTACT-MORPH-XII-001",
+  "matter_id": "MATTER-0001",
+  "branch": "morph-xi/selfmoat-proving",
+  "branch_head": "c68ba7b470628bdf515aba8bf5b50b38ffb8d935",
+  "observed_artifact": "evidence/morph-xii/SELFMOAT-TEST-001-C.actuation.json",
+  "state": "VERIFIED_MATCH",
+  "scope": "SINGLE_SPECIMEN_ACTUATION",
+  "recontacted_at": "2026-09-28T10:24:15-04:00",
+  "source": "raw.githubusercontent.com fetched from current branch head after receipt generation",
+  "receipt_reference": "evidence/morph-xii/RECEIPT-MORPH-XII-001.json",
+  "receipt_digest": "22b28b6090d9681c0ce3229e596fe0f97415fe9f7d9551165d15e55098b0e6dc",
+  "observed_digest": "22b28b6090d9681c0ce3229e596fe0f97415fe9f7d9551165d15e55098b0e6dc",
+  "git_blob": "2b43f7ee90e7817e29c03179e364c2d087366a19",
+  "byte_count": 844,
+  "observed_state": "PRESENT",
+  "matches_receipt": true,
+  "after_receipt": true
+}

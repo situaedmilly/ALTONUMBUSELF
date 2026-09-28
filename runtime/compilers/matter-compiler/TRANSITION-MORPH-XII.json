@@ -1,0 +1,61 @@
+{
+  "transition_id": "TRANSITION-MORPH-XII-001",
+  "from_state": "ABSENT",
+  "to_state": "PRESENT",
+  "preconditions": [
+    "Branch head equals the bound preimage head immediately before actuation.",
+    "Exact target path is absent on the external branch.",
+    "Fresh decision is ADMIT and binds this preimage, authority, capability, contract, validation, observation and receipt plans.",
+    "Only SELFMOAT-TEST-001 case C is the proving specimen."
+  ],
+  "authority": {
+    "reference": "AUTHORITY-MORPH-XII-001",
+    "kind": "CURRENT_USER_DIRECTIVE",
+    "scope": "Create only evidence/morph-xii/SELFMOAT-TEST-001-C.actuation.json on situaedmilly/ALTONUMBUSELF:morph-xi/selfmoat-proving",
+    "effect": "ABSENT -> PRESENT",
+    "source": "Current user message providing the exact specimen effect and staged commit authorization",
+    "repository_permission_is_not_authority": true
+  },
+  "capability": {
+    "reference": "CAPABILITY-MORPH-XII-001",
+    "kind": "GITHUB_BRANCH_FILE_CREATE",
+    "available": true,
+    "mechanism": "Authenticated GitHub git push from the local worktree",
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "path_allowlist": [
+      "evidence/morph-xii/SELFMOAT-TEST-001-C.actuation.json"
+    ],
+    "operation": "Create one absent file; stage/commit only this path; no update/delete/force-push",
+    "permission_is_not_authority": true
+  },
+  "admission": {
+    "decision_reference": "runtime/compilers/matter-compiler/ADMISSION-DECISION-MORPH-XII.json",
+    "decision": "ADMIT",
+    "decision_digest": "7a225fd505ac6937d6b1f1c9ca7e712056f0aa142a2f762e5d1f06972913bb93",
+    "preimage_digest": "00d211dca0b84337e769f8b746177ab43c55808ec72cdee4d8f73558bca3d7af"
+  },
+  "actuation": {
+    "operation": "CREATE_FILE",
+    "target_path": "evidence/morph-xii/SELFMOAT-TEST-001-C.actuation.json",
+    "from_state": "ABSENT",
+    "to_state": "PRESENT",
+    "scope": "SINGLE_SPECIMEN_ACTUATION",
+    "commit_contains_only_target_path": true
+  },
+  "observation": {
+    "required": true,
+    "source": "GitHub external contents API",
+    "must_follow_actuation_commit": true,
+    "digest_from_returned_external_bytes": true,
+    "must_not_reuse_write_payload": true,
+    "receipt_required": true,
+    "later_recontact_required": true
+  },
+  "failure": {
+    "on_any_binding_mismatch": "REFUSE_AND_QUARANTINE",
+    "actuate": false,
+    "migration_gate": "CLOSED",
+    "rollback": "Do not repair in place. If an actuation commit exists and its observed state is wrong, preserve evidence and provide exact revert commit/path; revert only with renewed authorization."
+  }
+}

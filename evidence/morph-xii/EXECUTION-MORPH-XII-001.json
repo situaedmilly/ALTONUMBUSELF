@@ -1,0 +1,19 @@
+{
+  "execution_id": "EXECUTION-MORPH-XII-001",
+  "matter_id": "MATTER-0001",
+  "specimen_id": "SELFMOAT-TEST-001",
+  "case": "C",
+  "state": "EXECUTED",
+  "execution": true,
+  "observation": false,
+  "witnessed": false,
+  "commit_sha": "c68ba7b470628bdf515aba8bf5b50b38ffb8d935",
+  "parent_sha": "a7ff6f2b76e4c876484878216b1b77a509f95808",
+  "branch": "morph-xi/selfmoat-proving",
+  "changed_paths": [
+    "evidence/morph-xii/SELFMOAT-TEST-001-C.actuation.json"
+  ],
+  "scope": "SINGLE_SPECIMEN_ACTUATION",
+  "executed_at": "2026-09-28T10:19:24-04:00",
+  "source": "GitHub commit metadata; commit contains only the admitted target path"
+}

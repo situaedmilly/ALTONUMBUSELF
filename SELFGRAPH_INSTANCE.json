@@ -25,7 +25,9 @@
     "RECONTACT",
     "DRIFT",
     "REFUSAL",
-    "QUARANTINE"
+    "QUARANTINE",
+    "TRANSITION",
+    "EXECUTION"
   ],
   "edge_relations": [
     "REQUIRES",
@@ -44,7 +46,8 @@
     "RECONTACTS",
     "DRIFTS",
     "REFUSES",
-    "QUARANTINES"
+    "QUARANTINES",
+    "EXECUTES"
   ],
   "nodes": [
     {
@@ -298,6 +301,66 @@
       "state": "UNOBSERVED",
       "fulfillment_status": "UNSATISFIED",
       "blocking_condition": "No independent witness identity or channel is evidenced; same-runtime connector calls are not independent witness evidence."
+    },
+    {
+      "id": "PREIMAGE-MORPH-XII-001",
+      "kind": "PREIMAGE",
+      "state": "BOUND",
+      "fact": "Preimage digest 00d211dca0b84337e769f8b746177ab43c55808ec72cdee4d8f73558bca3d7af bound branch head a7ff6f2b76e4c876484878216b1b77a509f95808 and target absence."
+    },
+    {
+      "id": "AUTHORITY-MORPH-XII-001",
+      "kind": "AUTHORITY",
+      "state": "SCOPED_USER_DIRECTIVE",
+      "fact": "Current user directive authorizes only SELFMOAT-TEST-001 case C at the exact target path, ABSENT to PRESENT."
+    },
+    {
+      "id": "CAPABILITY-MORPH-XII-001",
+      "kind": "CAPABILITY",
+      "state": "AVAILABLE",
+      "fact": "GitHub branch file-create capability scoped to one target path; capability is distinct from authority."
+    },
+    {
+      "id": "ADMISSION-MORPH-XII-001",
+      "kind": "ADMISSION",
+      "state": "ADMITTED",
+      "fact": "Fresh decision 7a225fd505ac6937d6b1f1c9ca7e712056f0aa142a2f762e5d1f06972913bb93 admits only the bound case-C transition."
+    },
+    {
+      "id": "MORPH-XII",
+      "kind": "TRANSITION",
+      "state": "VERIFIED_COMPLETE",
+      "fact": "MATTER-0001 case-C specimen transition ABSENT to PRESENT, with execution, observation, receipt, and later recontact established; no compiler admission or migration claimed."
+    },
+    {
+      "id": "ACTUATION-MORPH-XII-001",
+      "kind": "ACTUATION",
+      "state": "EXECUTED",
+      "fact": "Commit c68ba7b470628bdf515aba8bf5b50b38ffb8d935 created only the authorized case-C specimen artifact."
+    },
+    {
+      "id": "EXECUTION-MORPH-XII-001",
+      "kind": "EXECUTION",
+      "state": "EXECUTED",
+      "fact": "Execution evidence records the single-path actuation commit and parent a7ff6f2b76e4c876484878216b1b77a509f95808."
+    },
+    {
+      "id": "OBSERVATION-MORPH-XII-001",
+      "kind": "OBSERVATION",
+      "state": "OBSERVED",
+      "fact": "External artifact read yielded 844 bytes, SHA-256 22b28b6090d9681c0ce3229e596fe0f97415fe9f7d9551165d15e55098b0e6dc, Git blob 2b43f7ee90e7817e29c03179e364c2d087366a19."
+    },
+    {
+      "id": "RECEIPT-MORPH-XII-001",
+      "kind": "RECEIPT",
+      "state": "ISSUED",
+      "fact": "Receipt RECEIPT-MORPH-XII-001 records the external-byte digest and actuation lineage."
+    },
+    {
+      "id": "RECONTACT-MORPH-XII-001",
+      "kind": "RECONTACT",
+      "state": "VERIFIED",
+      "fact": "Later branch/path read after receipt matched the recorded 844-byte count, SHA-256, Git blob, and PRESENT state."
     }
   ],
   "edges": [
@@ -505,6 +568,56 @@
       "from": "INDEPENDENT_WITNESS_INSTANCE",
       "to": "REALISELF-001",
       "relation": "REQUIRES"
+    },
+    {
+      "from": "PREIMAGE-MORPH-XII-001",
+      "to": "MORPH-XII",
+      "relation": "SUPPORTS"
+    },
+    {
+      "from": "AUTHORITY-MORPH-XII-001",
+      "to": "MORPH-XII",
+      "relation": "AUTHORIZES"
+    },
+    {
+      "from": "CAPABILITY-MORPH-XII-001",
+      "to": "MORPH-XII",
+      "relation": "SUPPORTS"
+    },
+    {
+      "from": "ADMISSION-MORPH-XII-001",
+      "to": "MORPH-XII",
+      "relation": "ADMITS"
+    },
+    {
+      "from": "MORPH-XII",
+      "to": "CONTRACT-001",
+      "relation": "REQUIRES"
+    },
+    {
+      "from": "MORPH-XII",
+      "to": "ACTUATION-MORPH-XII-001",
+      "relation": "ACTUATES"
+    },
+    {
+      "from": "EXECUTION-MORPH-XII-001",
+      "to": "MORPH-XII",
+      "relation": "EXECUTES"
+    },
+    {
+      "from": "ACTUATION-MORPH-XII-001",
+      "to": "OBSERVATION-MORPH-XII-001",
+      "relation": "OBSERVES"
+    },
+    {
+      "from": "OBSERVATION-MORPH-XII-001",
+      "to": "RECEIPT-MORPH-XII-001",
+      "relation": "RECEIPTS"
+    },
+    {
+      "from": "RECEIPT-MORPH-XII-001",
+      "to": "RECONTACT-MORPH-XII-001",
+      "relation": "RECONTACTS"
     }
   ],
   "realisation_chain": [
@@ -1015,5 +1128,29 @@
     "compiler_observation": "PENDING",
     "independent_witness": "PENDING",
     "ecosystem_migration_gate": "CLOSED"
+  },
+  "morph_xii": {
+    "morph_id": "MORPH-XII",
+    "purpose": "BOUNDED_SELFMOAT_CASE_C_SPECIMEN_TRANSITION",
+    "status": "RECONTACT_VERIFIED",
+    "parent": "MATTER-0001",
+    "preimage_digest": "00d211dca0b84337e769f8b746177ab43c55808ec72cdee4d8f73558bca3d7af",
+    "admission_decision": "runtime/compilers/matter-compiler/ADMISSION-DECISION-MORPH-XII.json",
+    "transition": "runtime/compilers/matter-compiler/TRANSITION-MORPH-XII.json",
+    "specimen": "SELFMOAT-TEST-001",
+    "case": "C",
+    "target": "evidence/morph-xii/SELFMOAT-TEST-001-C.actuation.json",
+    "actuation_commit": "c68ba7b470628bdf515aba8bf5b50b38ffb8d935",
+    "execution": "evidence/morph-xii/EXECUTION-MORPH-XII-001.json",
+    "observation": "evidence/morph-xii/OBSERVATION-MORPH-XII-001.json",
+    "receipt": "evidence/morph-xii/RECEIPT-MORPH-XII-001.json",
+    "recontact": "evidence/morph-xii/RECONTACT-MORPH-XII-001.json",
+    "scope": "SINGLE_SPECIMEN_ACTUATION",
+    "state_transition": {
+      "from": "ABSENT",
+      "to": "PRESENT"
+    },
+    "ecosystem_migration_gate": "CLOSED",
+    "realiself_predicate_value": false
   }
 }

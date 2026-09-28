@@ -1,0 +1,53 @@
+{
+  "validation_id": "VALIDATION-MORPH-XII-001",
+  "matter_id": "MATTER-0001",
+  "preimage_digest": "00d211dca0b84337e769f8b746177ab43c55808ec72cdee4d8f73558bca3d7af",
+  "validated_at": "2026-09-28T10:15:08-04:00",
+  "result": "PASS",
+  "phase": "PRE_ACTUATION",
+  "branch_head": "a7ff6f2b76e4c876484878216b1b77a509f95808",
+  "target_path": "evidence/morph-xii/SELFMOAT-TEST-001-C.actuation.json",
+  "target_initial_state": "ABSENT",
+  "source_digests": {
+    "matter_contract": {
+      "path": "runtime/compilers/matter-compiler/COMPILER_CONTRACT.md",
+      "sha256": "7e2302306a2915c76756a890538a5d40b2e4beb8ddf2ca4966060b7db959f859"
+    },
+    "specimen": {
+      "path": "runtime/compilers/matter-compiler/SELFMOAT_TEST_VECTORS.json",
+      "sha256": "835d0d4550ea575380d63bb0c302a88605049e8cf1cbe546bfa4745818ac24c0"
+    },
+    "specimen_validator": {
+      "path": "runtime/compilers/matter-compiler/SELFMOAT_VALIDATOR.md",
+      "sha256": "af715d2a0267de752eb30ef3c297a9688ea7e9ce6b893c4980461650a999cedc"
+    },
+    "admission_contract": {
+      "path": "ecosystem/algorithms/SELFMOAT-ADMISSION.md",
+      "sha256": "67779a09a0fd8600938806287fef74f2b3c5fdafefb5020589aa39670500d908"
+    }
+  },
+  "checks": {
+    "branch_head_matches": true,
+    "target_absent_externally": true,
+    "compiler_contract_present": true,
+    "specimen_and_validator_present": true,
+    "case_c_vector_matches_declared_inputs": true,
+    "only_target_path_in_actuation_allowlist": true,
+    "json_structures_validated": true,
+    "migration_gate_closed": true,
+    "realiself_false": true
+  },
+  "case_c_vector_result": {
+    "observed": true,
+    "admitted": true,
+    "mutation_authorized": true,
+    "expected": [
+      "ACTUATABLE"
+    ],
+    "meaning": "Fixture decision-logic result only; it does not supply this transition authority or admission."
+  },
+  "execution": false,
+  "observation": false,
+  "admission": false,
+  "note": "Pre-actuation validation only. It establishes neither execution nor observation nor the later fresh admission decision."
+}
