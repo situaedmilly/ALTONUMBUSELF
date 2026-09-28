@@ -1,0 +1,60 @@
+{
+  "admission_id": "DRIFT-BASELINE-ADMISSION-001",
+  "transition": "MORPH-XIII-DRIFT-SPECIMEN-ABSENT-TO-BASELINE-A",
+  "decision": "ADMITTED",
+  "operation": "CREATE_ONLY",
+  "authority": {
+    "source": "Explicit current user instruction to execute Phase C drift handling",
+    "scope": [
+      "create one new isolated drift specimen baseline",
+      "evidence/morph-xiii/drift/DRIFT-SPECIMEN-001.json"
+    ],
+    "standing_authority": false
+  },
+  "capability": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "authenticated_identity": "situaedmilly",
+    "repository_permission": "push",
+    "verified": true
+  },
+  "preimage": {
+    "head": "35d225abca7c52fa74e220ff5a84976e4bd4030c",
+    "tree": "0a6849638d8470a9f124496b489da0cd2624f8ab"
+  },
+  "targets": [
+    {
+      "path": "evidence/morph-xiii/drift/DRIFT-SPECIMEN-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_REVISION_A",
+      "intended_byte_count": 322,
+      "intended_sha256": "f50d0dcc76cfbca8fea3af2447a2fbfffb11335c43dafa93f3b67c17e20d2b30",
+      "intended_git_blob": "4ab1519329b35f3341b4fd6be0215c0a75b6cbce"
+    },
+    {
+      "path": "evidence/morph-xiii/drift/DRIFT-BASELINE-ADMISSION-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_THIS_SCOPED_DECISION"
+    }
+  ],
+  "decision_basis": {
+    "new_isolated_specimen_target": true,
+    "historical_or_compiler_artifact_modified": false,
+    "this_admission_covers_drift_transition": false,
+    "baseline_receipt_requires_later_external_observation": true
+  },
+  "expected_proof": [
+    "Create only the named new specimen in revision A.",
+    "Observe the persisted baseline from external repository bytes before issuing its receipt.",
+    "Require a separate admission against the receipt-bearing preimage for any revision change."
+  ],
+  "prohibitions": [
+    "No edit to MORPH-015 or other historical memory object.",
+    "No edit to compiler fixture/output or existing receipt.",
+    "No restoration or silent repair of any later specimen revision.",
+    "No migration gate or SELFGRAPH edit.",
+    "No REALISELF status change.",
+    "No force push or history rewrite."
+  ],
+  "decision_record_self_hash": false
+}

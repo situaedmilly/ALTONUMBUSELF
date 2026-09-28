@@ -1,0 +1,7 @@
+{
+  "specimen_id": "DRIFT-SPECIMEN-001",
+  "specimen_scope": "new isolated repository test object; not a memory instance or historical artifact",
+  "revision": "A",
+  "payload": "baseline value for the bounded external drift transition",
+  "repair_policy": "preserve this baseline receipt and all later specimen states"
+}
