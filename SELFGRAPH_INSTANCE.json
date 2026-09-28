@@ -986,6 +986,16 @@
       "registry": true,
       "selfgraph_lineage": true,
       "ecosystem_migration_false": true
-    }
+    },
+    "receipt": "evidence/RECEIPT-MORPH-X-001.json",
+    "recontact_verified": true,
+    "structural_validation": {
+      "status": "PASS",
+      "checked_at": "2026-09-28T08:53:00-04:00",
+      "json_documents_parse": true,
+      "no_false_migration": true
+    },
+    "admission_status": "PENDING",
+    "actuation_status": "PENDING"
   }
 }
