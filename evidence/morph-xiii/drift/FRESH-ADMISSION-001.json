@@ -1,0 +1,81 @@
+{
+  "admission_id": "FRESH-ADMISSION-001",
+  "transition": "MORPH-XIII-DRIFT-SPECIMEN-REVISION-A-TO-B",
+  "decision": "ADMITTED",
+  "operation": "UPDATE_EXACT_TARGET",
+  "authority": {
+    "source": "Explicit current user instruction to exercise bounded drift and refusal",
+    "scope": [
+      "ALTONUMBUSELF",
+      "REVERSELF",
+      "DRIFT-SPECIMEN-001",
+      "revision A to revision B at the exact path below"
+    ],
+    "standing_authority": false
+  },
+  "capability": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "authenticated_identity": "situaedmilly",
+    "repository_permission": "push",
+    "verified_at_admission": true
+  },
+  "preimage": {
+    "head": "b25211a8d603ce6538a262d21edb4067965b70f7",
+    "tree": "c9b0368343ec60dcfbb75b3cf5e99f7f51e37881",
+    "target_path": "evidence/morph-xiii/drift/DRIFT-SPECIMEN-001.json",
+    "current_revision": "A",
+    "current_byte_count": 322,
+    "current_sha256": "f50d0dcc76cfbca8fea3af2447a2fbfffb11335c43dafa93f3b67c17e20d2b30",
+    "current_git_blob": "4ab1519329b35f3341b4fd6be0215c0a75b6cbce",
+    "baseline_receipt": "evidence/morph-xiii/drift/DRIFT-BASELINE-RECEIPT-001.json",
+    "baseline_receipt_sha256": "12b0b5e887e0e28c8afb62bb6bccfb7c8b874dc42e7e17aabc3c3dddd60ae49f"
+  },
+  "intended_state": {
+    "revision": "B",
+    "target_path": "evidence/morph-xiii/drift/DRIFT-SPECIMEN-001.json",
+    "byte_count": 321,
+    "sha256": "70d38fbb509c8afd0cf20cc3badeb295cbe97066b06411a668a13c37702dbe6b"
+  },
+  "freshness_evaluation": {
+    "validator": "evidence/reverself-boundary-check.py::re_admission_decision",
+    "decision": "ADMITTED",
+    "checks": {
+      "authority_scope": true,
+      "fresh_authority_ref": true,
+      "fresh_admission": true,
+      "preimage_head": true,
+      "target_path": true,
+      "capability": true
+    }
+  },
+  "targets": [
+    {
+      "path": "evidence/morph-xiii/drift/DRIFT-SPECIMEN-001.json",
+      "current_state": "PRESENT_REVISION_A",
+      "intended_state": "PRESENT_REVISION_B"
+    },
+    {
+      "path": "evidence/morph-xiii/drift/FRESH-ADMISSION-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_THIS_CURRENT_PREIMAGE_ADMISSION"
+    },
+    {
+      "path": "evidence/morph-xiii/drift/STALE-ADMISSION-REFUSAL-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_REFUSAL_OF_PRIOR_ADMISSION_REUSE"
+    }
+  ],
+  "expected_proof": [
+    "Update only the isolated specimen to the exact revision-B bytes admitted above.",
+    "Reject the old create-only admission because its preimage is stale and its operation scope excludes update.",
+    "Observe the externally persisted revision B and compare against the unchanged revision-A receipt."
+  ],
+  "prohibitions": [
+    "No repair or restoration after the revision-B write.",
+    "No modification of the baseline receipt or any historical memory object.",
+    "No gate, graph, or REALISELF edit.",
+    "No force push or history rewrite."
+  ],
+  "decision_record_self_hash": false
+}
