@@ -1,0 +1,21 @@
+{
+  "matter_id": "MATTER-0001",
+  "preimage_digest": "MORPH-XI/SELFMOAT-TEST-001",
+  "compiler_version": "0.1.0",
+  "authority_reference": "AUTHORITY-002",
+  "capability_reference": "ALTONUMBUSELF/GitHub/push",
+  "contract_reference": "runtime/compilers/matter-compiler/COMPILER_CONTRACT.md",
+  "validation_reference": "runtime/compilers/matter-compiler/VALIDATION_REPORT-MORPH-XI-001.json",
+  "observation_plan": {
+    "required": true,
+    "external_state_read": true
+  },
+  "receipt_plan": {
+    "required": true,
+    "observed_artifact_digest_required": true
+  },
+  "decision": "REFUSE",
+  "reason": "MORPH-XI proves the decision boundary but does not yet authorize MATTER-0001 execution. Positive test yields ACTUATABLE eligibility only.",
+  "timestamp": "2026-09-28T09:59:00-04:00",
+  "decision_digest": "MORPH-XI-DECISION-BOUNDARY-OBSERVED"
+}
