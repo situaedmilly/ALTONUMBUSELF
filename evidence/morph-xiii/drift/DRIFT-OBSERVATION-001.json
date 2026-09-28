@@ -1,0 +1,46 @@
+{
+  "observation_id": "DRIFT-OBSERVATION-001",
+  "matter_id": "DRIFT-SPECIMEN-001",
+  "subject": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "path": "evidence/morph-xiii/drift/DRIFT-SPECIMEN-001.json",
+    "commit": "b5de4a66297391e7980f39fd591d943f83440c01"
+  },
+  "source": {
+    "channel": "raw.githubusercontent.com HTTPS",
+    "immutable_ref": "b5de4a66297391e7980f39fd591d943f83440c01",
+    "returned_http_status": 200
+  },
+  "observed_at": "2026-09-28T15:08:39Z",
+  "state": "OBSERVED_PRESENT",
+  "revision": "B",
+  "byte_count": 321,
+  "sha256": "70d38fbb509c8afd0cf20cc3badeb295cbe97066b06411a668a13c37702dbe6b",
+  "git_blob": "5e8fbc5f5519c8f5b671a7328ab5a28d07fe17e3",
+  "baseline": {
+    "receipt": "evidence/morph-xiii/drift/DRIFT-BASELINE-RECEIPT-001.json",
+    "receipt_sha256": "12b0b5e887e0e28c8afb62bb6bccfb7c8b874dc42e7e17aabc3c3dddd60ae49f",
+    "receipt_git_blob": "18d8294af6cd0c6022b302c6e4556743744ab607",
+    "observed_commit": "b21c989b0687213d243d28268bcb27857533d23b",
+    "revision": "A",
+    "sha256": "f50d0dcc76cfbca8fea3af2447a2fbfffb11335c43dafa93f3b67c17e20d2b30",
+    "byte_count": 322,
+    "git_blob": "4ab1519329b35f3341b4fd6be0215c0a75b6cbce"
+  },
+  "comparison": {
+    "validator": "evidence/reverself-boundary-check.py::compare_payload",
+    "status": "MEMORY_DRIFT_DETECTED",
+    "decision": "RECONTACT_DISTINGUISH_QUARANTINE_REFUSE",
+    "expected_digest": "f50d0dcc76cfbca8fea3af2447a2fbfffb11335c43dafa93f3b67c17e20d2b30",
+    "observed_digest": "70d38fbb509c8afd0cf20cc3badeb295cbe97066b06411a668a13c37702dbe6b",
+    "quarantine": true,
+    "mutation_permitted": false
+  },
+  "claims": {
+    "observation_is_admission": false,
+    "observation_is_authority": false,
+    "observation_is_mutation": false,
+    "independent_witness": false
+  }
+}

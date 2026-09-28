@@ -1,0 +1,41 @@
+{
+  "quarantine_id": "DRIFT-REFUSAL-QUARANTINE-001",
+  "matter_id": "DRIFT-SPECIMEN-001",
+  "decision": "QUARANTINED_PRESERVE_OBSERVED_STATE_NO_REPAIR",
+  "subject": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "path": "evidence/morph-xiii/drift/DRIFT-SPECIMEN-001.json",
+    "commit": "b5de4a66297391e7980f39fd591d943f83440c01",
+    "revision": "B",
+    "sha256": "70d38fbb509c8afd0cf20cc3badeb295cbe97066b06411a668a13c37702dbe6b",
+    "byte_count": 321,
+    "git_blob": "5e8fbc5f5519c8f5b671a7328ab5a28d07fe17e3"
+  },
+  "baseline_receipt": {
+    "path": "evidence/morph-xiii/drift/DRIFT-BASELINE-RECEIPT-001.json",
+    "sha256": "12b0b5e887e0e28c8afb62bb6bccfb7c8b874dc42e7e17aabc3c3dddd60ae49f",
+    "revision": "A",
+    "observed_sha256": "f50d0dcc76cfbca8fea3af2447a2fbfffb11335c43dafa93f3b67c17e20d2b30",
+    "observed_commit": "b21c989b0687213d243d28268bcb27857533d23b"
+  },
+  "observation": "evidence/morph-xiii/drift/DRIFT-OBSERVATION-001.json",
+  "comparison": {
+    "validator": "evidence/reverself-boundary-check.py::compare_payload",
+    "status": "MEMORY_DRIFT_DETECTED",
+    "expected_digest": "f50d0dcc76cfbca8fea3af2447a2fbfffb11335c43dafa93f3b67c17e20d2b30",
+    "observed_digest": "70d38fbb509c8afd0cf20cc3badeb295cbe97066b06411a668a13c37702dbe6b",
+    "quarantine": true,
+    "mutation_permitted": false
+  },
+  "handling": {
+    "preserve_revision_b": true,
+    "restore_revision_a": false,
+    "repair_attempted": false,
+    "specimen_mutated_after_observation": false,
+    "gate_or_graph_mutated": false,
+    "REALISELF_changed": false,
+    "independent_witness": false
+  },
+  "reason": "External revision B differs from the immutable revision-A receipt. Preserve and quarantine the returned state; no repair or restoration is authorized or performed."
+}

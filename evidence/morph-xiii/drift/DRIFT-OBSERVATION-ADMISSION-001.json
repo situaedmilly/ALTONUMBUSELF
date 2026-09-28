@@ -1,0 +1,78 @@
+{
+  "admission_id": "DRIFT-OBSERVATION-ADMISSION-001",
+  "transition": "MORPH-XIII-DRIFT-OBSERVE-QUARANTINE-REVISION-B",
+  "decision": "ADMITTED",
+  "operation": "CREATE_OBSERVATION_AND_QUARANTINE_REPORT_ONLY",
+  "authority": {
+    "source": "Explicit current user instruction to execute bounded Phase-C drift handling",
+    "scope": [
+      "ALTONUMBUSELF",
+      "REVERSELF",
+      "DRIFT-SPECIMEN-001",
+      "create the exact observation and quarantine evidence paths below for the already externally observed revision B"
+    ],
+    "standing_authority": false
+  },
+  "capability": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "authenticated_identity": "situaedmilly",
+    "repository_permission": "push",
+    "verified": true
+  },
+  "preimage": {
+    "head": "b5de4a66297391e7980f39fd591d943f83440c01",
+    "tree": "847e4babcefa2ba46e1d1f580f3a2374ee0ff928",
+    "observed_target": "evidence/morph-xiii/drift/DRIFT-SPECIMEN-001.json",
+    "observed_revision": "B",
+    "observed_byte_count": 321,
+    "observed_sha256": "70d38fbb509c8afd0cf20cc3badeb295cbe97066b06411a668a13c37702dbe6b",
+    "observed_git_blob": "f366bf316475b8d21fcc24ef86e494d183eef98b",
+    "immutable_observation_ref": "b5de4a66297391e7980f39fd591d943f83440c01",
+    "baseline_receipt": "evidence/morph-xiii/drift/DRIFT-BASELINE-RECEIPT-001.json",
+    "baseline_receipt_sha256": "12b0b5e887e0e28c8afb62bb6bccfb7c8b874dc42e7e17aabc3c3dddd60ae49f",
+    "baseline_observed_sha256": "f50d0dcc76cfbca8fea3af2447a2fbfffb11335c43dafa93f3b67c17e20d2b30"
+  },
+  "targets": [
+    {
+      "path": "evidence/morph-xiii/drift/DRIFT-OBSERVATION-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_BOUND_TO_RAW_EXTERNAL_REVISION_B",
+      "intended_byte_count": 1842,
+      "intended_sha256": "767b49b3b0d9863b645406f021dd68fb1a80c6c42acb50ddbee3267aee3ea1c1"
+    },
+    {
+      "path": "evidence/morph-xiii/drift/DRIFT-REFUSAL-QUARANTINE-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_NO_REPAIR_OR_RESTORATION",
+      "intended_byte_count": 1829,
+      "intended_sha256": "926cb68edc7161aab4d483d2f2a303552618afb2c9513b5796fc2d07ab313408"
+    },
+    {
+      "path": "evidence/morph-xiii/drift/DRIFT-OBSERVATION-ADMISSION-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_THIS_SCOPED_DECISION"
+    }
+  ],
+  "decision_basis": {
+    "observation_source": "raw.githubusercontent.com at immutable commit",
+    "returned_http_status": 200,
+    "returned_bytes_hashed": true,
+    "baseline_receipt_unchanged": true,
+    "comparison_status": "MEMORY_DRIFT_DETECTED",
+    "quarantine": true,
+    "mutation_permitted": false
+  },
+  "expected_proof": [
+    "Persist the exact raw external revision-B observation and digest comparison to the unchanged revision-A receipt.",
+    "Record quarantine and refusal to repair or restore the observed B state.",
+    "Do not modify the specimen, baseline receipt, gate, graph, or REALISELF."
+  ],
+  "prohibitions": [
+    "No repair, restoration, or further specimen mutation.",
+    "No modification of the baseline receipt or any historical memory object.",
+    "No gate, graph, or REALISELF edit.",
+    "No force push or history rewrite."
+  ],
+  "decision_record_self_hash": false
+}
