@@ -1,0 +1,24 @@
+{
+  "receipt_id": "DRIFT-BASELINE-RECEIPT-001",
+  "matter_id": "DRIFT-SPECIMEN-001",
+  "event": "ISOLATED_DRIFT_SPECIMEN_BASELINE_OBSERVED",
+  "observed_artifact": "evidence/morph-xiii/drift/DRIFT-SPECIMEN-001.json",
+  "observed_digest": "f50d0dcc76cfbca8fea3af2447a2fbfffb11335c43dafa93f3b67c17e20d2b30",
+  "timestamp": "2026-09-28T15:03:48Z",
+  "lineage": {
+    "morph_id": "MORPH-XIII",
+    "observation_commit": "b21c989b0687213d243d28268bcb27857533d23b",
+    "baseline_admission": "evidence/morph-xiii/drift/DRIFT-BASELINE-ADMISSION-001.json",
+    "receipt_admission": "evidence/morph-xiii/drift/DRIFT-RECEIPT-ADMISSION-001.json",
+    "external_source": "raw.githubusercontent.com HTTPS",
+    "http_status": 200,
+    "revision": "A",
+    "observed_byte_count": 322,
+    "observed_git_blob": "4ab1519329b35f3341b4fd6be0215c0a75b6cbce",
+    "receipt_hashes_itself": false
+  },
+  "witness": {
+    "status": "NOT_WITNESSED",
+    "independent_witness_ref": null
+  }
+}

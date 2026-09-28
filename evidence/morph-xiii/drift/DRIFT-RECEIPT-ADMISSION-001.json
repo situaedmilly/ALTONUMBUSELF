@@ -1,0 +1,61 @@
+{
+  "admission_id": "DRIFT-RECEIPT-ADMISSION-001",
+  "transition": "MORPH-XIII-DRIFT-BASELINE-RECEIPT",
+  "decision": "ADMITTED",
+  "operation": "CREATE_RECEIPT_FOR_EXTERNALLY_OBSERVED_BASELINE",
+  "authority": {
+    "source": "Explicit current user instruction to execute bounded Phase-C drift handling",
+    "scope": [
+      "receipt the observed revision-A DRIFT-SPECIMEN-001 bytes",
+      "evidence/morph-xiii/drift/DRIFT-SPECIMEN-001.json"
+    ],
+    "standing_authority": false
+  },
+  "capability": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "authenticated_identity": "situaedmilly",
+    "repository_permission": "push",
+    "verified": true
+  },
+  "preimage": {
+    "head": "b21c989b0687213d243d28268bcb27857533d23b",
+    "tree": "e92f7f191ff90ae0611f04003bf2ae8549afbf6b",
+    "baseline_specimen_commit": "b21c989b0687213d243d28268bcb27857533d23b",
+    "baseline_specimen_path": "evidence/morph-xiii/drift/DRIFT-SPECIMEN-001.json",
+    "revision": "A",
+    "observed_byte_count": 322,
+    "observed_sha256": "f50d0dcc76cfbca8fea3af2447a2fbfffb11335c43dafa93f3b67c17e20d2b30",
+    "observed_git_blob": "4ab1519329b35f3341b4fd6be0215c0a75b6cbce",
+    "source": "raw.githubusercontent.com immutable-commit read; HTTP 200"
+  },
+  "targets": [
+    {
+      "path": "evidence/morph-xiii/drift/DRIFT-BASELINE-RECEIPT-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_BOUND_TO_REVISION_A_BYTES"
+    },
+    {
+      "path": "evidence/morph-xiii/drift/DRIFT-RECEIPT-ADMISSION-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_THIS_SCOPED_DECISION"
+    }
+  ],
+  "decision_basis": {
+    "baseline_bytes_observed_externally": true,
+    "observed_revision": "A",
+    "receipt_self_hash_excluded": true,
+    "drift_transition_admitted": false
+  },
+  "expected_proof": [
+    "Receipt binds the exact externally observed revision-A path, commit, byte count, SHA-256, and Git blob.",
+    "No baseline bytes are repaired, rewritten, or inferred from a local intended payload."
+  ],
+  "prohibitions": [
+    "No A-to-B mutation under this admission.",
+    "No edit to historical memory, compiler fixture, or prior receipt.",
+    "No gate, graph, or REALISELF edit.",
+    "No force push or history rewrite."
+  ],
+  "decision_record_self_hash": false
+}
