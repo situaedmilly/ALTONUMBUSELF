@@ -1,0 +1,35 @@
+{
+  "validation_id": "VALIDATION-MORPH-XI-001",
+  "matter_id": "MATTER-0001",
+  "specimen": "SELFMOAT",
+  "suite": "SELFMOAT-TEST-001",
+  "validator": "runtime/compilers/matter-compiler/SELFMOAT_VALIDATOR.md",
+  "result": "PASS",
+  "cases": {
+    "A": {
+      "result": "PASS",
+      "decision": "REFUSE",
+      "quarantine": true
+    },
+    "B": {
+      "result": "PASS",
+      "decision": "REFUSE"
+    },
+    "C": {
+      "result": "PASS",
+      "decision": "ACTUATABLE"
+    },
+    "D": {
+      "result": "PASS",
+      "decision": "REFUSE",
+      "reason": "MISSING_OBSERVATION"
+    }
+  },
+  "negative_path_passed": true,
+  "positive_path_passed": true,
+  "no_inference_violations": true,
+  "execution": false,
+  "observation": false,
+  "admission": false,
+  "note": "This report validates the decision logic; it does not itself grant admission or execution authority."
+}
