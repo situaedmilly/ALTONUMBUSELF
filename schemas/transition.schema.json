@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/situaedmilly/ALTONUMBUSELF/schemas/transition.schema.json",
+  "title": "OURSELF Transition Contract",
+  "type": "object",
+  "required": ["transition_id","from_state","to_state","preconditions","authority","capability","admission","actuation","observation","failure"],
+  "properties": {
+    "transition_id":{"type":"string"},
+    "from_state":{"type":"string"},
+    "to_state":{"type":"string"},
+    "preconditions":{"type":"array","items":{"type":"string"}},
+    "authority":{"type":"object"},
+    "capability":{"type":"object"},
+    "admission":{"type":"object"},
+    "actuation":{"type":"object"},
+    "observation":{"type":"object"},
+    "failure":{"type":"object"}
+  },
+  "additionalProperties": false
+}
