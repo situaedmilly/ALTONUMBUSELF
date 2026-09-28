@@ -1,0 +1,71 @@
+{
+  "admission_id": "COMPILER-BOOTSTRAP-ADMISSION-001",
+  "transition": "MORPH-XIII-COMPILER-BOOTSTRAP",
+  "decision": "ADMITTED",
+  "operation": "CREATE_ONLY",
+  "authority": {
+    "source": "Explicit current user instruction to execute Phase C",
+    "scope": [
+      "ALTONUMBUSELF",
+      "MATTER-0001 structural compiler definition",
+      "bounded fixture",
+      "create-only bootstrap transition"
+    ],
+    "standing_authority": false
+  },
+  "capability": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "authenticated_identity": "situaedmilly",
+    "repository_permission": "push",
+    "verified_before_actuation": true
+  },
+  "preimage": {
+    "head": "c44d5c2d026bc2ba143a706c5593d93b68cd4a1b",
+    "tree": "c82d2080566a63da4c013d3b51bd7b31d86a9972",
+    "contract_git_blob": "ae535032c7f09c0fa2433538941855873c7c7663",
+    "matter_schema_git_blob": "e3575bfe7aedc1aed16fa942683d229a95a3c993",
+    "source_fixture_registry_git_blob": "77d84f2e0a5c1df95c34504a2b07524591396388"
+  },
+  "targets": [
+    {
+      "path": "runtime/compilers/matter-compiler/MATTER-0001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_EXECUTABLE_COMPILER_MATTER"
+    },
+    {
+      "path": "runtime/compilers/matter-compiler/structural_compiler.py",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_BOUNDED_NON_RECURSIVE_IMPLEMENTATION"
+    },
+    {
+      "path": "runtime/compilers/matter-compiler/fixtures/SELFMOAT-C-PROVING-MATTER.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_SMALL_UNFORMALIZED_FIXTURE"
+    },
+    {
+      "path": "evidence/morph-xiii/COMPILER-BOOTSTRAP-ADMISSION-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_SCOPED_DECISION_RECORD"
+    }
+  ],
+  "decision_basis": {
+    "target_absence_verified_at_preimage": true,
+    "matter_schema_and_compiler_contract_reviewed": true,
+    "output_precondition": "This admission does not admit execution of MATTER-0001.",
+    "separate_execution_admission_required": true
+  },
+  "expected_proof": [
+    "Compiler Matter validates against schemas/matter.schema.json.",
+    "Strict parser rejects malformed, duplicate-key, oversized, and over-nested input.",
+    "Structural compilation is deterministic and does not invent formulae.",
+    "No external state is claimed observed or mutated by this compiler definition."
+  ],
+  "prohibitions": [
+    "No migration gate or SELFGRAPH edit.",
+    "No REALISELF status change.",
+    "No modification of historical evidence.",
+    "No force push or history rewrite."
+  ],
+  "decision_record_self_hash": false
+}

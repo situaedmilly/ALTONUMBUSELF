@@ -1,0 +1,86 @@
+{
+  "matter_id": "MORPH-XIII-FIXTURE-001",
+  "matter_type": "SPECIMEN",
+  "version": "1.0.0",
+  "jurisdiction": {
+    "reality": "OURSELFECOSYSTEM",
+    "instance": "ALTONUMBUSELF",
+    "substrate": "FIXTURE"
+  },
+  "semantic": {
+    "definition": "A small descriptive Matter fixture used to test structural compilation; it does not define a mathematical law.",
+    "semantic_type": "COMPILER_FIXTURE",
+    "vocabulary_refs": [
+      "runtime/compilers/matter-compiler/COMPILER_CONTRACT.md"
+    ]
+  },
+  "inputs": [
+    {
+      "name": "source_bytes",
+      "type": "bounded UTF-8 JSON",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "name": "compiled_structure",
+      "type": "canonical JSON"
+    }
+  ],
+  "state": {
+    "initial": "UNPARSED",
+    "terminal": "COMPILED"
+  },
+  "invariants": [
+    "Compilation preserves the descriptive source.",
+    "No formula is inferred from descriptive language."
+  ],
+  "preconditions": [
+    "Input is within the compiler's byte and nesting limits."
+  ],
+  "failure_states": [
+    {
+      "state": "REJECTED",
+      "reason": "The source is malformed or outside the declared structural contract."
+    }
+  ],
+  "transitions": [
+    {
+      "from": "UNPARSED",
+      "to": "COMPILED",
+      "trigger": "strict structural compilation succeeds"
+    }
+  ],
+  "algorithm": null,
+  "formulas": [
+    "UNFORMALIZED: descriptive fixture has no defensible mathematical definition"
+  ],
+  "authority": {
+    "status": "FIXTURE_ONLY"
+  },
+  "capability": {
+    "status": "NOT_APPLICABLE"
+  },
+  "admission": {
+    "status": "NOT_APPLICABLE"
+  },
+  "execution": {
+    "status": "NOT_CLAIMED"
+  },
+  "observation": {
+    "status": "NOT_CLAIMED"
+  },
+  "witness": {
+    "status": "NOT_CLAIMED"
+  },
+  "receipt": {
+    "status": "NOT_CLAIMED"
+  },
+  "lineage": {
+    "source": "MORPH-XIII bounded test fixture"
+  },
+  "recontact": {
+    "status": "NOT_APPLICABLE"
+  },
+  "dependencies": []
+}

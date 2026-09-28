@@ -1,0 +1,128 @@
+{
+  "matter_id": "MATTER-0001",
+  "matter_type": "COMPILER",
+  "version": "0.1.0",
+  "jurisdiction": {
+    "reality": "OURSELFECOSYSTEM",
+    "instance": "ALTONUMBUSELF",
+    "substrate": "GitHub"
+  },
+  "semantic": {
+    "definition": "A bounded structural compiler that validates a small Matter object and emits a deterministic structural representation without inventing formulae or actuating the represented Matter.",
+    "semantic_type": "STRUCTURAL_MATTER_COMPILER",
+    "vocabulary_refs": [
+      "runtime/compilers/matter-compiler/COMPILER_CONTRACT.md",
+      "schemas/matter.schema.json"
+    ]
+  },
+  "inputs": [
+    {
+      "name": "source_matter",
+      "type": "JSON Matter object",
+      "maximum_bytes": 65536,
+      "maximum_nesting_depth": 8
+    }
+  ],
+  "outputs": [
+    {
+      "name": "compiled_structure",
+      "type": "canonical JSON",
+      "maximum_bytes": 131072
+    }
+  ],
+  "state": {
+    "states": [
+      "UNPARSED",
+      "PARSED",
+      "VALIDATED",
+      "COMPILED",
+      "REJECTED"
+    ],
+    "execution_does_not_imply_observation": true
+  },
+  "invariants": [
+    "Input and output byte limits are enforced.",
+    "JSON nesting is bounded and compilation is non-recursive.",
+    "Duplicate object keys and non-standard JSON constants are rejected.",
+    "The source Matter is preserved in the output; no formula is invented.",
+    "Compilation does not actuate the source Matter or claim external observation.",
+    "An existing output path is never overwritten."
+  ],
+  "preconditions": [
+    "The input is a UTF-8 JSON object within the declared byte and nesting limits.",
+    "The source object satisfies the required structural Matter fields.",
+    "An admitted exact output target is absent."
+  ],
+  "failure_states": [
+    {
+      "state": "REJECTED",
+      "conditions": [
+        "Input exceeds a bound.",
+        "Input is malformed, ambiguous, or structurally invalid.",
+        "Output already exists or cannot be created."
+      ],
+      "effect": "No successful compilation claim is emitted."
+    }
+  ],
+  "transitions": [
+    {
+      "from": "UNPARSED",
+      "to": "PARSED",
+      "condition": "Bounded strict JSON parsing succeeds."
+    },
+    {
+      "from": "PARSED",
+      "to": "VALIDATED",
+      "condition": "Required Matter structure is valid."
+    },
+    {
+      "from": "VALIDATED",
+      "to": "COMPILED",
+      "condition": "Deterministic structural representation is serialized."
+    }
+  ],
+  "algorithm": "runtime/compilers/matter-compiler/structural_compiler.py:compile_matter",
+  "formulas": [],
+  "authority": {
+    "status": "SCOPED_BY_CURRENT_PHASE_C_DIRECTIVE",
+    "standing_authority": false
+  },
+  "capability": {
+    "status": "VERIFIED_FOR_REPOSITORY_WRITE",
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving"
+  },
+  "admission": {
+    "status": "ADMITTED_CREATE_ONLY",
+    "ref": "evidence/morph-xiii/COMPILER-BOOTSTRAP-ADMISSION-001.json"
+  },
+  "execution": {
+    "status": "NOT_EXECUTED",
+    "execution_ref": null
+  },
+  "observation": {
+    "status": "NOT_OBSERVED",
+    "observation_ref": null
+  },
+  "witness": {
+    "status": "NOT_WITNESSED",
+    "witness_ref": null
+  },
+  "receipt": {
+    "status": "NOT_RECEIPTED",
+    "receipt_ref": null
+  },
+  "lineage": {
+    "preimage_head": "c44d5c2d026bc2ba143a706c5593d93b68cd4a1b",
+    "transition": "MORPH-XIII-COMPILER-BOOTSTRAP",
+    "target_state": "MATTER-0001_STRUCTURAL_COMPILER_DEFINED"
+  },
+  "recontact": {
+    "status": "NOT_RECONTACTED",
+    "subject": null
+  },
+  "dependencies": [
+    "runtime/compilers/matter-compiler/COMPILER_CONTRACT.md",
+    "schemas/matter.schema.json"
+  ]
+}
