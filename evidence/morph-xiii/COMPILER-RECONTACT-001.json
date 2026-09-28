@@ -1,0 +1,30 @@
+{
+  "recontact_id": "COMPILER-RECONTACT-001",
+  "matter_id": "MATTER-0001",
+  "contract": "evidence/morph-xiii/COMPILER-RECONTACT-CONTRACT-001.json",
+  "receipt": "evidence/morph-xiii/COMPILER-RECEIPT-001.json",
+  "admission": {
+    "ref": "evidence/morph-xiii/COMPILER-RECONTACT-ADMISSION-001.json",
+    "sha256": "322ffdc8bd77a6dc216c4729c2298096f6a57ec4ee41005e33589e693f248a46",
+    "preimage_head": "b7e73f471a4c080578c3a20defdf519ed1ce81cf"
+  },
+  "recontacted_at": "2026-09-28T14:57:18Z",
+  "source": "raw.githubusercontent.com HTTPS read at current branch head after receipt commit",
+  "branch": "morph-xi/selfmoat-proving",
+  "branch_head": "b7e73f471a4c080578c3a20defdf519ed1ce81cf",
+  "subject": {
+    "path": "runtime/compilers/matter-compiler/outputs/MATTER-0001-SELFMOAT-C-OUTPUT.json",
+    "produced_at_commit": "9c6bfa1ad68cb41bff46cb1a4bc006d0d16239de",
+    "byte_count": 3275,
+    "sha256": "a931be79ae0b10642a76140d3eeefa2e24b6c5887fe824fbe1085f72a4aa0c4e",
+    "git_blob": "920374aed9d93bdafbe052b15870c903ab7a4f09"
+  },
+  "receipt_observation": {
+    "receipt_path": "evidence/morph-xiii/COMPILER-RECEIPT-001.json",
+    "receipt_sha256": "89d3f497848fc6603aa22bdc6f40605256e9326fc9dc802de97480295d95388f",
+    "receipt_hashes_itself": false
+  },
+  "result": "VERIFIED_MATCH",
+  "matches_receipt": true,
+  "independent_witness": false
+}

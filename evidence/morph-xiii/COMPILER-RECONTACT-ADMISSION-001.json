@@ -1,0 +1,98 @@
+{
+  "admission_id": "COMPILER-RECONTACT-ADMISSION-001",
+  "transition": "MORPH-XIII-POST-RECEIPT-RECONTACT-AND-RUNTIME-B",
+  "decision": "ADMITTED",
+  "operation": "CREATE_RECONTACT_AND_CLEAN_SUBPROCESS_RECOVERY_EVIDENCE",
+  "authority": {
+    "source": "Explicit current user instruction to execute Phase C",
+    "scope": [
+      "recontact of COMPILER-RECEIPT-001 subject",
+      "one clean-environment Runtime B recovery process",
+      "create-only implementation and evidence"
+    ],
+    "standing_authority": false
+  },
+  "capability": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "authenticated_identity": "situaedmilly",
+    "repository_permission": "push",
+    "external_public_read": "HTTPS",
+    "verified": true
+  },
+  "preimage": {
+    "head": "b7e73f471a4c080578c3a20defdf519ed1ce81cf",
+    "tree": "a9a524fc7151d03b2bae831adcb3f23f7eff7b5b",
+    "receipt_path": "evidence/morph-xiii/COMPILER-RECEIPT-001.json",
+    "receipt_sha256": "89d3f497848fc6603aa22bdc6f40605256e9326fc9dc802de97480295d95388f",
+    "contract_path": "evidence/morph-xiii/COMPILER-RECONTACT-CONTRACT-001.json",
+    "contract_sha256": "bcb751b6d53085012750c54b949f680822037b25c7d0bef4d751445e335655ab",
+    "artifact_path": "runtime/compilers/matter-compiler/outputs/MATTER-0001-SELFMOAT-C-OUTPUT.json",
+    "artifact_sha256": "a931be79ae0b10642a76140d3eeefa2e24b6c5887fe824fbe1085f72a4aa0c4e",
+    "artifact_git_blob": "920374aed9d93bdafbe052b15870c903ab7a4f09",
+    "artifact_byte_count": 3275,
+    "runtime_b_script_sha256": "bfc62a828b08dee178c7dbc7369250f64f5e3a499bd6d5d2cd314d6b47d03b66",
+    "runtime_b_script_git_blob": "f80bf8c037444ec95043c53682a3401a2eef38b7"
+  },
+  "targets": [
+    {
+      "path": "runtime/reverself/runtime_b_recovery.py",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_READ_ONLY_EXTERNAL_RECOVERY_TOOL"
+    },
+    {
+      "path": "evidence/morph-xiii/COMPILER-RECONTACT-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_POST_RECEIPT_MATCH_RESULT"
+    },
+    {
+      "path": "evidence/morph-xiii/RUNTIME-B-RECOVERY-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_CLEAN_SUBPROCESS_RESULT"
+    },
+    {
+      "path": "evidence/morph-xiii/COMPILER-RECONTACT-ADMISSION-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_THIS_SCOPED_DECISION"
+    }
+  ],
+  "runtime_boundary": {
+    "subprocess_environment": "env -i with PATH and PYTHONHASHSEED; macOS may add LC_CTYPE and __CF_USER_TEXT_ENCODING",
+    "allowed_environment_keys": [
+      "PATH",
+      "PYTHONHASHSEED",
+      "LC_CTYPE",
+      "__CF_USER_TEXT_ENCODING"
+    ],
+    "other_inherited_environment_keys_refused": true,
+    "initial_attempt": {
+      "result": "REFUSED_BEFORE_EXTERNAL_READ",
+      "reason": "macOS added LC_CTYPE and __CF_USER_TEXT_ENCODING after env -i; original allowlist rejected them",
+      "external_reads": 0
+    },
+    "retry_uses_revised_script_digest": true,
+    "separate_process": true,
+    "separate_host": false,
+    "separate_os_identity": false,
+    "artifact_recovered_from_remote_state": true
+  },
+  "decision_basis": {
+    "post_receipt_external_recontact_passed": true,
+    "runtime_script_is_read_only": true,
+    "receipt_and_contract_read_from_external_repository": true,
+    "initial_attempt_failure_preserved": true
+  },
+  "expected_proof": [
+    "Recontact record binds the exact subject, receipt, post-receipt branch head, and matching returned bytes.",
+    "A clean subprocess independently discovers the current branch head and fetches receipt, contract, and output from GitHub.",
+    "The subprocess verifies digest, byte count, Git blob, and receipt relation without inherited environment state."
+  ],
+  "prohibitions": [
+    "No repository mutation by the Runtime B process.",
+    "No claim of a separate host or OS identity.",
+    "No migration gate or SELFGRAPH edit.",
+    "No REALISELF status change.",
+    "No force push or history rewrite."
+  ],
+  "decision_record_self_hash": false
+}

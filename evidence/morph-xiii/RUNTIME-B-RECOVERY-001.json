@@ -1,0 +1,74 @@
+{
+  "recovery_id": "RUNTIME-B-RECOVERY-001",
+  "matter_id": "MATTER-0001",
+  "decision": "VERIFIED_MATCH",
+  "runtime": {
+    "runtime_id": "RUNTIME-B-86612",
+    "mode": "CLEAN_ENV_SUBPROCESS",
+    "script": "runtime/reverself/runtime_b_recovery.py",
+    "script_sha256": "bfc62a828b08dee178c7dbc7369250f64f5e3a499bd6d5d2cd314d6b47d03b66",
+    "script_git_blob": "f80bf8c037444ec95043c53682a3401a2eef38b7",
+    "command": [
+      "/usr/bin/env",
+      "-i",
+      "PATH=/opt/homebrew/bin:/usr/bin:/bin",
+      "PYTHONHASHSEED=0",
+      "/opt/homebrew/bin/python3",
+      "runtime/reverself/runtime_b_recovery.py"
+    ],
+    "started_at": "2026-09-28T15:00:55Z",
+    "finished_at": "2026-09-28T15:00:56Z",
+    "environment_keys": [
+      "LC_CTYPE",
+      "PATH",
+      "PYTHONHASHSEED",
+      "__CF_USER_TEXT_ENCODING"
+    ],
+    "macos_added_environment_keys": [
+      "LC_CTYPE",
+      "__CF_USER_TEXT_ENCODING"
+    ],
+    "shared_conversation_memory_used": false,
+    "separate_host": false,
+    "separate_os_identity": false
+  },
+  "attempt_history": [
+    {
+      "attempt": 1,
+      "decision": "REFUSED_BEFORE_EXTERNAL_READ",
+      "reason": "macOS added LC_CTYPE and __CF_USER_TEXT_ENCODING after env -i; the initial allowlist rejected them.",
+      "external_reads": 0
+    },
+    {
+      "attempt": 2,
+      "decision": "VERIFIED_MATCH",
+      "reason": "The revised script allowed only those two OS-added keys and rejected all other unexpected environment names.",
+      "external_reads": 4
+    }
+  ],
+  "admission": {
+    "ref": "evidence/morph-xiii/COMPILER-RECONTACT-ADMISSION-001.json",
+    "sha256": "322ffdc8bd77a6dc216c4729c2298096f6a57ec4ee41005e33589e693f248a46",
+    "preimage_head": "b7e73f471a4c080578c3a20defdf519ed1ce81cf"
+  },
+  "external_recovery": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "discovered_branch_head": "b7e73f471a4c080578c3a20defdf519ed1ce81cf",
+    "receipt_path": "evidence/morph-xiii/COMPILER-RECEIPT-001.json",
+    "receipt_id": "COMPILER-RECEIPT-001",
+    "receipt_sha256": "89d3f497848fc6603aa22bdc6f40605256e9326fc9dc802de97480295d95388f",
+    "recontact_contract": "evidence/morph-xiii/COMPILER-RECONTACT-CONTRACT-001.json",
+    "artifact_path": "runtime/compilers/matter-compiler/outputs/MATTER-0001-SELFMOAT-C-OUTPUT.json",
+    "artifact_byte_count": 3275,
+    "artifact_sha256": "a931be79ae0b10642a76140d3eeefa2e24b6c5887fe824fbe1085f72a4aa0c4e",
+    "artifact_git_blob": "920374aed9d93bdafbe052b15870c903ab7a4f09",
+    "matches_receipt": true
+  },
+  "claims": {
+    "remote_reads_only": true,
+    "artifact_recovered_from_external_state": true,
+    "receipt_self_hashed": false,
+    "independent_witness": false
+  }
+}
