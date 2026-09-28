@@ -1,0 +1,73 @@
+{
+  "admission_id": "COMPILER-EVIDENCE-ADMISSION-001",
+  "transition": "MORPH-XIII-COMPILER-OBSERVE-RECEIPT-CONTRACT",
+  "decision": "ADMITTED",
+  "operation": "CREATE_OBSERVATION_RECEIPT_AND_RECONTACT_CONTRACT",
+  "authority": {
+    "source": "Explicit current user instruction to execute Phase C",
+    "scope": [
+      "MATTER-0001 compiler output observation",
+      "receipt of the observed output bytes",
+      "artifact-subject recontact contract"
+    ],
+    "standing_authority": false
+  },
+  "capability": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "authenticated_identity": "situaedmilly",
+    "repository_permission": "push",
+    "verified": true
+  },
+  "preimage": {
+    "head": "9c6bfa1ad68cb41bff46cb1a4bc006d0d16239de",
+    "tree": "a2030a15a8feea4a0be3ee8933904f720c7d17d5",
+    "observed_output_commit": "9c6bfa1ad68cb41bff46cb1a4bc006d0d16239de",
+    "output_path": "runtime/compilers/matter-compiler/outputs/MATTER-0001-SELFMOAT-C-OUTPUT.json",
+    "output_sha256": "a931be79ae0b10642a76140d3eeefa2e24b6c5887fe824fbe1085f72a4aa0c4e",
+    "output_git_blob": "920374aed9d93bdafbe052b15870c903ab7a4f09",
+    "output_byte_count": 3275,
+    "execution_record_sha256": "e5cf3b10df3f3fe4fe5f1600f5537f2587961b3bc65131e56662109c613c8187"
+  },
+  "targets": [
+    {
+      "path": "evidence/morph-xiii/COMPILER-OBSERVATION-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_BOUND_TO_RAW_EXTERNAL_BYTES"
+    },
+    {
+      "path": "evidence/morph-xiii/COMPILER-RECEIPT-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_BOUND_TO_OBSERVATION_AND_OUTPUT"
+    },
+    {
+      "path": "evidence/morph-xiii/COMPILER-RECONTACT-CONTRACT-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_WITH_EXACT_ARTIFACT_SUBJECT"
+    },
+    {
+      "path": "evidence/morph-xiii/COMPILER-EVIDENCE-ADMISSION-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_THIS_SCOPED_DECISION"
+    }
+  ],
+  "decision_basis": {
+    "observation_source": "raw.githubusercontent.com at immutable commit",
+    "returned_bytes_hashed": true,
+    "external_output_matches_execution_record": true,
+    "receipt_self_hash_excluded": true,
+    "recontact_read_not_yet_performed": true
+  },
+  "expected_proof": [
+    "Observation binds actual external output bytes to path, commit, byte count, SHA-256, and Git blob.",
+    "Receipt binds the observation and output digest without hashing itself.",
+    "Contract specifies the exact artifact to recontact after receipt persistence."
+  ],
+  "prohibitions": [
+    "No migration gate or SELFGRAPH edit.",
+    "No REALISELF status change.",
+    "No modification of historical evidence.",
+    "No force push or history rewrite."
+  ],
+  "decision_record_self_hash": false
+}

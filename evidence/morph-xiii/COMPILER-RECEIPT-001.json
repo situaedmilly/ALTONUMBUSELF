@@ -1,0 +1,24 @@
+{
+  "receipt_id": "COMPILER-RECEIPT-001",
+  "matter_id": "MATTER-0001",
+  "event": "COMPILER_OUTPUT_OBSERVED",
+  "observed_artifact": "runtime/compilers/matter-compiler/outputs/MATTER-0001-SELFMOAT-C-OUTPUT.json",
+  "observed_digest": "a931be79ae0b10642a76140d3eeefa2e24b6c5887fe824fbe1085f72a4aa0c4e",
+  "timestamp": "2026-09-28T14:57:18Z",
+  "lineage": {
+    "morph_id": "MORPH-XIII",
+    "execution_admission": "evidence/morph-xiii/COMPILER-EXECUTION-ADMISSION-001.json",
+    "execution_record": "evidence/morph-xiii/COMPILER-EXECUTION-001.json",
+    "observation": "evidence/morph-xiii/COMPILER-OBSERVATION-001.json",
+    "output_commit": "9c6bfa1ad68cb41bff46cb1a4bc006d0d16239de",
+    "observation_preimage_head": "9c6bfa1ad68cb41bff46cb1a4bc006d0d16239de",
+    "observation_admission": "evidence/morph-xiii/COMPILER-EVIDENCE-ADMISSION-001.json",
+    "observed_git_blob": "920374aed9d93bdafbe052b15870c903ab7a4f09",
+    "observed_byte_count": 3275,
+    "receipt_hashes_itself": false
+  },
+  "witness": {
+    "status": "NOT_WITNESSED",
+    "independent_witness_ref": null
+  }
+}

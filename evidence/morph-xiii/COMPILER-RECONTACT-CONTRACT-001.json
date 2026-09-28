@@ -1,0 +1,32 @@
+{
+  "contract_id": "COMPILER-RECONTACT-CONTRACT-001",
+  "matter_id": "MATTER-0001",
+  "purpose": "Recontact the persisted compiler output by exact artifact identity and compare it with its receipt.",
+  "subject": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "path": "runtime/compilers/matter-compiler/outputs/MATTER-0001-SELFMOAT-C-OUTPUT.json",
+    "produced_at_commit": "9c6bfa1ad68cb41bff46cb1a4bc006d0d16239de",
+    "expected_byte_count": 3275,
+    "expected_sha256": "a931be79ae0b10642a76140d3eeefa2e24b6c5887fe824fbe1085f72a4aa0c4e",
+    "expected_git_blob": "920374aed9d93bdafbe052b15870c903ab7a4f09"
+  },
+  "receipt_subject": {
+    "path": "evidence/morph-xiii/COMPILER-RECEIPT-001.json",
+    "receipt_id": "COMPILER-RECEIPT-001"
+  },
+  "required_recontact": {
+    "after_receipt_commit": true,
+    "read_current_branch_head": true,
+    "read_exact_subject_path_from_external_repository": true,
+    "hash_returned_bytes": true,
+    "compare_byte_count_sha256_and_git_blob": true,
+    "record_actual_head_and_result": true
+  },
+  "failure_behavior": {
+    "on_missing_or_mismatch": "REFUSE_MATCH_CLAIM_AND_PRESERVE_RECEIPT_BASELINE",
+    "silent_repair": false,
+    "overwrite_receipt": false
+  },
+  "execution_status": "CONTRACT_DEFINED_RECONTACT_PENDING"
+}
