@@ -1,0 +1,75 @@
+{
+  "admission_id": "REVERSELF-REOPEN-ADMISSION-001",
+  "schema": "ourself.reverself.reopen-admission.v1",
+  "transition": "REOPEN_C10_AFTER_HISTORICAL_TERMINAL",
+  "decision": "ADMITTED_FOR_ONE_FINITE_C10_REASSESSMENT",
+  "issued_at": "2026-09-29T06:30:00Z",
+  "repository": "situaedmilly/ALTONUMBUSELF",
+  "branch": "morph-xi/selfmoat-proving",
+  "authority": {
+    "source": "Explicit user instruction to preserve the historical BLOCKED_IRREDUCIBLE_BOUNDARY proof and reopen C10 through fresh admission, recontact, and reassessment.",
+    "standing_authority": false,
+    "scope": [
+      "evidence/morph-xiii/REVERSELF-REOPEN-ADMISSION-001.json",
+      "evidence/morph-xiii/C10-REOPEN-ASSESSMENT-001.json"
+    ]
+  },
+  "capability": {
+    "authenticated_identity": "situaedmilly",
+    "repository_permission": "write",
+    "verified_by": ["GitHub authenticated-user read", "GitHub repository collaborator permission read"],
+    "verified": true
+  },
+  "preimage": {
+    "head": "4ebe99c13e00ccfa6c04d0925c4e843e3392fe51",
+    "tree": "385e82ccfc124043e85d246d8b30b166ba960e58",
+    "branch_head_recontacted": true,
+    "branch_head_matches_preimage": true,
+    "all_target_paths_absent": true
+  },
+  "operation": "ONE_FINITE_C10_RECONTACT_AND_CAPABILITY_REASSESSMENT",
+  "subject": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "main",
+    "path": "evidence/MORPH-015-memory-object.md",
+    "latest_commit": "4e09ac674193bdef4949f65823c219fc2769fdf0",
+    "git_blob": "49ccc74edfbe4320b0ac60655c8fbce670216e0d",
+    "byte_count": 2941,
+    "sha256": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd"
+  },
+  "contract": {
+    "path": "runtime/reverself/INDEPENDENT-WITNESS-CONTRACT-001.json",
+    "commit": "4ebe99c13e00ccfa6c04d0925c4e843e3392fe51",
+    "git_blob": "c4cdcd9099ed3e365a6f23fd9b35f1895d951416",
+    "byte_count": 1786,
+    "sha256": "8dd915d872e278bc7f80a611c7e260230f8729623e10f615c80e2ab7a2f1c6da"
+  },
+  "required_predicate": [
+    "Independently authenticated primary and witness identity references",
+    "Distinct primary and witness channel identifiers",
+    "Distinct primary and witness runtime identifiers",
+    "Distinct primary and witness host identifiers",
+    "Both endpoints bind the same repository, branch, path, immutable commit, and SHA-256",
+    "Durable witness evidence reference"
+  ],
+  "authorized_operations": [
+    "Create only the two absent paths in scope on the named branch.",
+    "Recontact the immutable C10 subject and scoped branch evidence using the available read-only sources.",
+    "Record whether a qualifying independent witness endpoint is actually available; preserve BLOCKED if required endpoint distinctions are unverified."
+  ],
+  "prohibitions": [
+    "Do not overwrite or delete prior terminal proof, C10 records, receipts, or historical evidence.",
+    "Do not claim MODELSELF-WITNESS or Copilot session presence satisfies C10 without durable endpoint authentication and distinct runtime/host evidence.",
+    "Do not mutate the migration gate, dependency graph, registry, or REALISELF state.",
+    "Do not claim independent witness success without all contract predicates.",
+    "No automatic retry; another attempt requires a new explicit instruction and fresh preimage-bound admission."
+  ],
+  "expected_proof": [
+    "The historical terminal proof remains preserved as a prior pass, not a universal impossibility claim.",
+    "The current C10 subject bytes and immutable provenance are recontacted and recorded.",
+    "C10 is reassessed against every endpoint requirement in the independent witness contract.",
+    "The actual migration gate remains CLOSED and REALISELF remains false unless separately authorized and proven."
+  ],
+  "rollback": "Append-only evidence; no rollback is planned or authorized. Preserve all created records as historical evidence.",
+  "admission_hashes_itself": false
+}
