@@ -1,0 +1,55 @@
+{
+  "morph": "MORPH-XV",
+  "name": "AUTHORITY-SEPARATION",
+  "version": "0.1.0",
+  "status": "DEFINITION_ONLY",
+  "authority_states": [
+    "UNKNOWN",
+    "NONE",
+    "PRESENT",
+    "PRESENT_BUT_OUT_OF_SCOPE"
+  ],
+  "axes": {
+    "governed_relation": true,
+    "validator_action": true
+  },
+  "invariants": [
+    "governed_relation != validator_action",
+    "predicate_established != authorization_established",
+    "authorization_established != admission_performed",
+    "admission_performed != actuation_performed",
+    "historical_authority_values_are_not_rewritten"
+  ],
+  "cases": [
+    {
+      "id": "A",
+      "governed_authority": "UNKNOWN",
+      "predicate": "ESTABLISHED",
+      "expected_admission": "NOT_ESTABLISHED"
+    },
+    {
+      "id": "B",
+      "governed_authority": "NONE",
+      "predicate": "ESTABLISHED",
+      "expected_admission": "NOT_ESTABLISHED"
+    },
+    {
+      "id": "C",
+      "governed_authority": "PRESENT",
+      "predicate": "ESTABLISHED",
+      "expected_admission": "EVALUATE_SCOPE_AUTHORIZATION_CAPABILITY_JURISDICTION"
+    },
+    {
+      "id": "D",
+      "governed_authority": "PRESENT_BUT_OUT_OF_SCOPE",
+      "predicate": "ESTABLISHED",
+      "expected_admission": "NOT_ESTABLISHED"
+    }
+  ],
+  "execution": {
+    "admission_performed": false,
+    "actuation_performed": false,
+    "external_effect_established": false
+  },
+  "realiself": false
+}
