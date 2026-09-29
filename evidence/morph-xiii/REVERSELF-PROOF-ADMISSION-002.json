@@ -1,0 +1,85 @@
+{
+  "admission_id": "REVERSELF-PROOF-ADMISSION-002",
+  "transition": "MORPH-XIII-FINAL-TERMINAL-PROOF",
+  "decision": "ADMITTED",
+  "operation": "CREATE_VERSIONED_DEPENDENCY_MAP_AND_FINAL_EXTERNAL_RECONTACT_AND_TERMINAL_PROOF",
+  "authority": {
+    "source": "Explicit user instruction in this session to finish ALTONUMBUSELF, create a fresh admission binding every final artifact path, and carry out the bounded desired-state work",
+    "scope": [
+      "situaedmilly/ALTONUMBUSELF",
+      "branch morph-xi/selfmoat-proving",
+      "create-only successor admission REVERSELF-PROOF-ADMISSION-002.json",
+      "create-only versioned predicate map PREDICATE-DEPENDENCY-MAP-002.json",
+      "create-only final external recontact FINAL-RECONTACT-001.json",
+      "create-only terminal proof FINAL-PROOF-001.json"
+    ],
+    "standing_authority": false
+  },
+  "capability": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "authenticated_identity": "DABULLMILLY",
+    "repository_permission": "write",
+    "verified": true,
+    "verified_by": [
+      "GitHub authenticated-user read",
+      "GitHub repository collaborator read reporting role write"
+    ]
+  },
+  "preimage": {
+    "head": "6d981a525e530bf0ed64615a6632838d71458c96",
+    "tree": "c844f54bbd7abbfee091bc726fa90afdd32d2e7c",
+    "remote_head_recontacted": true,
+    "branch_head_matches_preimage": true,
+    "all_target_paths_absent_at_preimage": true
+  },
+  "targets": [
+    {
+      "path": "evidence/morph-xiii/REVERSELF-PROOF-ADMISSION-002.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_THIS_FRESH_SCOPED_DECISION"
+    },
+    {
+      "path": "evidence/morph-xiii/PREDICATE-DEPENDENCY-MAP-002.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_VERSIONED_MAP_REFERENCING_THIS_SUCCESSOR_ADMISSION"
+    },
+    {
+      "path": "evidence/morph-xiii/FINAL-RECONTACT-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_FINAL_EXTERNAL_HEAD_AND_ARTIFACT_READ"
+    },
+    {
+      "path": "evidence/morph-xiii/FINAL-PROOF-001.json",
+      "current_state": "ABSENT",
+      "intended_state": "PRESENT_AS_SINGLE_FINITE_TERMINAL_PREDICATE_EVALUATION"
+    }
+  ],
+  "decision_basis": {
+    "user_scope_explicitly_requests_fresh_admission_and_final_artifacts": true,
+    "authenticated_identity_and_repository_write_role_verified": true,
+    "branch_head_and_tree_recontacted_at_exact_preimage": true,
+    "target_paths_absent_at_preimage": true,
+    "historical_admission_001_and_dependency_map_001_preserved": true,
+    "proof_before_recontact_order": "C16 admission -> versioned dependency map -> C17 final recontact -> C15 final proof"
+  },
+  "expected_proof": [
+    "Preserve the original admission, dependency map, all scanner findings, and historical MORPH-XII ambiguity without overwriting or rewriting them.",
+    "Version the dependency map to retain the C1-C17 graph and identify admission 002 as fresh C16 evidence; keep the order admission -> final recontact -> final proof.",
+    "Record C10 as BLOCKED unless an actually distinct independently authenticated witness identity, channel, runtime, and host are available; same-seat recontact is not a witness.",
+    "Record final external head and artifact reads, observed byte digests, dependency map, unresolved predicates, migration gate CLOSED, and REALISELF false.",
+    "Choose one contract-permitted terminal state based only on the persisted evidence; do not claim product success from artifact presence alone."
+  ],
+  "authorized_operations_only": [
+    "Create the four absent allowlisted paths on the named branch, with each later artifact written only after its predecessor is externally read and verified.",
+    "Perform read-only external recontact and compute digests from returned bytes.",
+    "Persist observation receipts in session-scoped durable memory and recontact the corresponding immutable GitHub artifact after each receipt is persisted."
+  ],
+  "prohibitions": [
+    "Do not overwrite or delete admission 001, dependency map 001, scanner reports, or historical evidence.",
+    "No edits to SELFGRAPH, registry, migration gate, or unrelated Matter.",
+    "No REALISELF=true claim and no independent-witness success claim without its actual predicate.",
+    "No force push or history rewrite."
+  ],
+  "decision_record_self_hash": false
+}
