@@ -1,0 +1,134 @@
+{
+  "recontact_id": "FINAL-RECONTACT-001",
+  "contract": "runtime/reverself/TERMINAL-PROOF-CONTRACT-001.json",
+  "admission": {
+    "ref": "evidence/morph-xiii/REVERSELF-PROOF-ADMISSION-002.json",
+    "sha256": "4a5918a3c04a99e62bc22019eaff87ac9c427679ece6876306978642930ef0a0",
+    "git_blob": "69bb23d71c41d8ff2c3c3674de49d36daba6b319",
+    "preimage_head": "6d981a525e530bf0ed64615a6632838d71458c96"
+  },
+  "dependency_map": {
+    "ref": "evidence/morph-xiii/PREDICATE-DEPENDENCY-MAP-002.json",
+    "sha256": "33ecd00196620d3d2b91d9a781342cbdf3a15c470533255effbb9e408f86fc58",
+    "git_blob": "3c693390e61c0531f90cceacd7c4e2f1737186cb",
+    "terminal_order": ["C16", "C13", "C17", "C15"]
+  },
+  "recontacted_at": "2026-09-29T06:14:48Z",
+  "source": "GitHub immutable commit, tree, and file reads; raw.githubusercontent.com HTTPS byte/hash recontact at the recorded source commit",
+  "branch": "morph-xi/selfmoat-proving",
+  "branch_head": "d586ad2785ec3d44b8c5dda535ae5563f4c56f96",
+  "branch_tree": "99a34748cdfece71f7222c9df9643c60855b162b",
+  "read_scope": "Pre-write snapshot at the exact admitted branch head; this record itself and FINAL-PROOF-001.json were absent at this source head.",
+  "subjects": [
+    {
+      "path": "evidence/morph-xiii/REVERSELF-PROOF-ADMISSION-002.json",
+      "byte_count": 4397,
+      "sha256": "4a5918a3c04a99e62bc22019eaff87ac9c427679ece6876306978642930ef0a0",
+      "git_blob": "69bb23d71c41d8ff2c3c3674de49d36daba6b319"
+    },
+    {
+      "path": "evidence/morph-xiii/PREDICATE-DEPENDENCY-MAP-002.json",
+      "byte_count": 5707,
+      "sha256": "33ecd00196620d3d2b91d9a781342cbdf3a15c470533255effbb9e408f86fc58",
+      "git_blob": "3c693390e61c0531f90cceacd7c4e2f1737186cb"
+    },
+    {
+      "path": "evidence/morph-xiii/C11-WITNESS-CAPABILITY-ASSESSMENT-001.json",
+      "byte_count": 1726,
+      "sha256": "7f93e51515926a274109cce736fdfada3ede88290b401251141c77a0dab20f8f",
+      "git_blob": "553da33ae0dbac79e99530bf60ef2837d4a4c0e8"
+    },
+    {
+      "path": "evidence/morph-xiii/NO-UNWITNESSED-CLAIMS-RECONCILIATION-002.json",
+      "byte_count": 10485,
+      "sha256": "399643af0d988cf97e312a88309c41581ce02425fce8c381d9e47c88e473da9d",
+      "git_blob": "c2f33ee9486f9b0a70f8c293b0157697b0e3b6a2"
+    },
+    {
+      "path": "evidence/morph-xiii/INDEPENDENT-WITNESS-001.json",
+      "byte_count": 1503,
+      "sha256": "7775269df68a347b170843cd85e086db24f2a301c2b23be13c053e91cb91fede",
+      "git_blob": "df52592889b160b55d0ef955cd31fb1877f8d794"
+    },
+    {
+      "path": "runtime/reverself/TERMINAL-PROOF-CONTRACT-001.json",
+      "byte_count": 2075,
+      "sha256": "610541fb543a5223377d79891d1b9737c35c24bdccb699baebf2c7f8582d9c20",
+      "git_blob": "365a9c391e877850e58ccee7f62ae384dd6d348e"
+    },
+    {
+      "path": "runtime/compilers/matter-compiler/outputs/MATTER-0001-SELFMOAT-C-OUTPUT.json",
+      "byte_count": 3275,
+      "sha256": "a931be79ae0b10642a76140d3eeefa2e24b6c5887fe824fbe1085f72a4aa0c4e",
+      "git_blob": "920374aed9d93bdafbe052b15870c903ab7a4f09"
+    },
+    {
+      "path": "runtime/compilers/matter-compiler/MIGRATION_GATE.md",
+      "byte_count": 590,
+      "sha256": "9d7721f7876ebcdad9c2960d3f8f6bb610f919994c60b69ba8ba1502e7154f57",
+      "git_blob": "0e7a047212657eef45792355b01d9e46f0148e3a"
+    },
+    {
+      "path": "runtime/reverself/REVERSELF-0001.json",
+      "byte_count": 3849,
+      "sha256": "7ac72a8788556f1700666029bb109410d5b31982a2f5b3229566841aaffc82cc",
+      "git_blob": "3fc77537b6caea27d60602b33bdba73a3c225d06"
+    },
+    {
+      "path": "evidence/morph-xiii/NO-UNWITNESSED-CLAIMS-REPORT-001.json",
+      "byte_count": 6772,
+      "sha256": "7d91faa419751f450de3a2d3b89c0d9e56de70f9ac45d5d89e79e6a025c84280",
+      "git_blob": "3b3124373ccb06bc4dfd895613c3cbbbb24f1020"
+    }
+  ],
+  "predicate_snapshot": {
+    "C10": {
+      "status": "BLOCKED",
+      "independent_identity_available": false,
+      "distinct_channel_available": false,
+      "distinct_runtime_available": false,
+      "distinct_host_available": false,
+      "same_seat_recontact_is_witness": false
+    },
+    "C11": {
+      "status": "SCAN_PERSISTED_FINDINGS_RETAINED",
+      "decision": "BLOCKED_UNWITNESSED_STATE_CLAIMS_PRESENT",
+      "finding_count": 11,
+      "mutated_inputs": false
+    },
+    "C13": {
+      "status": "VERSIONED_MAP_PRESENT",
+      "map": "evidence/morph-xiii/PREDICATE-DEPENDENCY-MAP-002.json"
+    },
+    "C15": {
+      "status": "PENDING_TERMINAL_PROOF"
+    },
+    "C17": {
+      "status": "PREWRITE_SNAPSHOT_RECONTACTED"
+    }
+  },
+  "unresolved_predicates": [
+    {
+      "predicate": "C10",
+      "reason": "No separate independently authenticated identity, channel, runtime, and host endpoint is available."
+    },
+    {
+      "predicate": "C11_FINDINGS",
+      "reason": "Eleven scanner findings remain, including absent witness links, historical MORPH-XII process-proof ambiguity, and a semantic observation contradiction; findings are preserved, not suppressed."
+    },
+    {
+      "predicate": "MORPH_XII_HISTORICAL_EXECUTION_CLAIMS",
+      "reason": "Historical process proof and semantic observation ambiguity are not repaired or reclassified by this pass."
+    }
+  ],
+  "global_invariants": {
+    "migration_gate": "CLOSED",
+    "REALISELF": false,
+    "graph_or_registry_mutation": false,
+    "historical_evidence_rewritten": false,
+    "independent_witness_claim": false
+  },
+  "result": "VERIFIED_PREWRITE_ARTIFACT_SNAPSHOT",
+  "independent_witness": false,
+  "terminal_proof_written": false
+}
