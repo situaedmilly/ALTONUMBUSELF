@@ -1,0 +1,105 @@
+{
+  "assessment_id": "C10-REOPEN-ASSESSMENT-001",
+  "schema": "ourself.reverself.c10-reopen-assessment.v1",
+  "assessed_at": "2026-09-29T06:35:00Z",
+  "repository": "situaedmilly/ALTONUMBUSELF",
+  "branch": "morph-xi/selfmoat-proving",
+  "transition": {
+    "historical_terminal_state": "BLOCKED_IRREDUCIBLE_BOUNDARY",
+    "historical_proof": {
+      "path": "evidence/morph-xiii/FINAL-PROOF-001.json",
+      "commit": "4ebe99c13e00ccfa6c04d0925c4e843e3392fe51",
+      "git_blob": "51ac592106f6b2087475b80ae21b7a6fd4065be",
+      "byte_count": 12161,
+      "sha256": "22a4228da535aab04fb653b19f07d71fc81d3305fc9a0db398a2e6acfc717c5f",
+      "preserved": true
+    },
+    "new_instruction": "REOPEN_REQUESTED",
+    "fresh_admission": {
+      "path": "evidence/morph-xiii/REVERSELF-REOPEN-ADMISSION-001.json",
+      "commit": "604eb19a727c3e38efb2bbcc404442e5f920085d",
+      "git_blob": "3e2ea1ca8a1d3c9b3ef21ee95b4007940e74c5ca",
+      "byte_count": 3904,
+      "sha256": "37395d1e4e1793be6045f0571e6a88221077854a5a404b5d36a4cdf0bd8d0a31",
+      "post_receipt_recontact": "MATCHED"
+    },
+    "current_assessment_state": "C10_REASSESSMENT_BLOCKED_ON_UNAVAILABLE_INDEPENDENT_ENDPOINT",
+    "interpretation": "The prior terminal state remains a historical result for its admitted pass, not a claim that the ecosystem can never proceed. This reassessment reopens the question but does not erase or rewrite that proof."
+  },
+  "contract": {
+    "path": "runtime/reverself/INDEPENDENT-WITNESS-CONTRACT-001.json",
+    "commit": "4ebe99c13e00ccfa6c04d0925c4e843e3392fe51",
+    "git_blob": "c4cdcd9099ed3e365a6f23fd9b35f1895d951416",
+    "byte_count": 1786,
+    "sha256": "8dd915d872e278bc7f80a611c7e260230f8729623e10f615c80e2ab7a2f1c6da",
+    "requirements": [
+      "Independently authenticated primary and witness identity references",
+      "Distinct channel identifiers",
+      "Distinct runtime identifiers",
+      "Distinct host identifiers",
+      "Both endpoints bind the same repository, branch, path, immutable commit, and SHA-256",
+      "Durable witness evidence reference"
+    ]
+  },
+  "subject_recontact": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "main",
+    "current_branch_head": "9aa80ab53d034b36c3fae4474d1bdc9b2f0c3c9b",
+    "current_branch_tree": "3d51c50a99b2658be359009808142fb35b6066db",
+    "path": "evidence/MORPH-015-memory-object.md",
+    "last_content_commit": "4e09ac674193bdef4949f65823c219fc2769fdf0",
+    "git_blob": "49ccc74edfbe4320b0ac60655c8fbce670216e0d",
+    "byte_count": 2941,
+    "sha256": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd",
+    "raw_https_digest_matches_expected": true
+  },
+  "prior_persisted_receipt": {
+    "path": "evidence/REVERSELF-001-memory-recontact-receipt.json",
+    "current_main_commit": "080d1fbe8d943264f1414414fbf466d4b04b5e77",
+    "git_blob": "050d8229c76d7c11e0b16f7e787172bca01371c1",
+    "byte_count": 6399,
+    "sha256": "b701121172f2b6d2b1c83d2bc7450c486d43471bdbf62d0dfe186986ae20b185",
+    "meaning": "A persisted same-seat recontact receipt for the memory object; it does not itself constitute a C10 independent-witness observation."
+  },
+  "prior_c10_record": {
+    "path": "evidence/morph-xiii/INDEPENDENT-WITNESS-001.json",
+    "git_blob": "df52592889b160b55d0ef955cd31fb1877f8d794",
+    "byte_count": 1503,
+    "sha256": "7775269df68a347b170843cd85e086db24f2a301c2b23be13c053e91cb91fede",
+    "primary_endpoint_identity_runtime_host": "null",
+    "witness_endpoint": "null",
+    "prior_evaluation": "BLOCKED; no witness observation performed"
+  },
+  "current_capability_observation": {
+    "authenticated_github_login": "situaedmilly",
+    "repository_permission": "write",
+    "observed_by": ["GitHub authenticated-user API", "GitHub collaborator permission API"],
+    "independent_witness_endpoint_available": false,
+    "distinct_runtime_proven": false,
+    "distinct_host_proven": false,
+    "identity_pair_independently_authenticated": false,
+    "notes": [
+      "The prior memory receipt names authenticated login sohocode4, but the C10 primary endpoint record has no authenticated identity/runtime/host identifiers from which to establish a distinct endpoint pair.",
+      "The current GitHub CLI and raw HTTPS observations are from this execution seat; separate URLs or APIs in one seat do not prove distinct runtime or host.",
+      "No durable MODELSELF-WITNESS endpoint reference was present in the inspected product-branch tree. The user-referenced Copilot session is not independently attributable to a distinct host/runtime by the available tools."
+    ]
+  },
+  "predicate_result": {
+    "C10": "BLOCKED",
+    "decision_kind": "BLOCKED_NOT_REFUSED",
+    "reason": "The target digest matches, but no independently authenticated witness endpoint with evidenced distinct identity, channel, runtime, and host is available. A matching recontact proves integrity, not independent witnessing.",
+    "successful_witness_claim": false,
+    "witness_observation_performed": false
+  },
+  "current_state": {
+    "reopen_request": "RECORDED",
+    "fresh_admission": "ADMITTED_FOR_ONE_FINITE_C10_REASSESSMENT",
+    "C10": "BLOCKED_PENDING_QUALIFYING_WITNESS_ENDPOINT",
+    "migration_gate": "CLOSED",
+    "REALISELF": false,
+    "historical_proof_rewritten": false,
+    "automatic_retry": false
+  },
+  "minimum_evidence_to_satisfy_c10": "A durable witness endpoint reference binding the same immutable subject and SHA-256, with independently authenticated identity and evidenced channel, runtime, and host identifiers distinct from the primary endpoint.",
+  "assessment_hashes_itself": false
+}
