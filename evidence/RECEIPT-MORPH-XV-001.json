@@ -1,0 +1,17 @@
+{
+  "receipt_id": "RECEIPT-MORPH-XV-001",
+  "morph": "MORPH-XV",
+  "target": "OpenCode SELFGRAPH authority propagation",
+  "branch": "morph-xv/authority-separation",
+  "transition": "CONTRACT_AND_TEST_DEFINITION",
+  "authority": {
+    "governed_relation": "UNKNOWN",
+    "validator_action": "UNKNOWN"
+  },
+  "decision": "SCOPED_CONTRACT_UPDATE_AUTHORIZED",
+  "admission_for_execution": false,
+  "actuation_performed": false,
+  "historical_artifacts_mutated": false,
+  "selfgraph_authority_propagation": "NOT_ESTABLISHED",
+  "realiself": false
+}
