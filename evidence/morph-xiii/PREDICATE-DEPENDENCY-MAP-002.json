@@ -1,0 +1,167 @@
+{
+  "map_id": "PREDICATE-DEPENDENCY-MAP-002",
+  "schema": "ourself.reverself.predicate-dependency-map.v1",
+  "versioned_from": "evidence/morph-xiii/PREDICATE-DEPENDENCY-MAP-001.json",
+  "scope": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "morph-xi/selfmoat-proving",
+    "morph": "MORPH-XIII"
+  },
+  "rule": "Dependencies are conjunctive unless explicitly marked optional. A present artifact is not by itself proof of the predicate it names.",
+  "admission_lineage": [
+    {
+      "path": "evidence/morph-xiii/REVERSELF-PROOF-ADMISSION-001.json",
+      "status": "HISTORICAL_SCOPED_TO_C10_C14",
+      "standing_authority": false
+    },
+    {
+      "path": "evidence/morph-xiii/REVERSELF-PROOF-ADMISSION-002.json",
+      "status": "FRESH_SCOPED_ADMISSION_FOR_FINAL_ARTIFACTS",
+      "standing_authority": false
+    }
+  ],
+  "predicates": [
+    {
+      "id": "C1",
+      "name": "Bounded deterministic structural compiler",
+      "evidence": [
+        "runtime/compilers/matter-compiler/MATTER-0001.json",
+        "runtime/compilers/matter-compiler/structural_compiler.py",
+        "runtime/compilers/matter-compiler/COMPILER_CONTRACT.md"
+      ],
+      "depends_on": []
+    },
+    {
+      "id": "C2",
+      "name": "Fresh current-preimage admission",
+      "evidence": [
+        "evidence/morph-xiii/COMPILER-BOOTSTRAP-ADMISSION-001.json",
+        "evidence/morph-xiii/COMPILER-EXECUTION-ADMISSION-001.json"
+      ],
+      "depends_on": ["C1"]
+    },
+    {
+      "id": "C3",
+      "name": "Bounded compiler output execution",
+      "evidence": [
+        "evidence/morph-xiii/COMPILER-EXECUTION-001.json",
+        "runtime/compilers/matter-compiler/outputs/MATTER-0001-SELFMOAT-C-OUTPUT.json"
+      ],
+      "depends_on": ["C1", "C2"]
+    },
+    {
+      "id": "C4",
+      "name": "Raw external observation",
+      "evidence": ["evidence/morph-xiii/COMPILER-OBSERVATION-001.json"],
+      "depends_on": ["C3"]
+    },
+    {
+      "id": "C5",
+      "name": "Observation-bound receipt",
+      "evidence": ["evidence/morph-xiii/COMPILER-RECEIPT-001.json"],
+      "depends_on": ["C4"]
+    },
+    {
+      "id": "C6",
+      "name": "Artifact-subject contract and post-receipt recontact",
+      "evidence": [
+        "evidence/morph-xiii/COMPILER-RECONTACT-CONTRACT-001.json",
+        "evidence/morph-xiii/COMPILER-RECONTACT-001.json"
+      ],
+      "depends_on": ["C5"]
+    },
+    {
+      "id": "C7",
+      "name": "Fresh isolated Runtime B recovery",
+      "evidence": [
+        "runtime/reverself/runtime_b_recovery.py",
+        "evidence/morph-xiii/RUNTIME-B-RECOVERY-001.json"
+      ],
+      "depends_on": ["C6"]
+    },
+    {
+      "id": "C8",
+      "name": "External drift observed and preserved",
+      "evidence": [
+        "evidence/morph-xiii/drift/DRIFT-BASELINE-RECEIPT-001.json",
+        "evidence/morph-xiii/drift/DRIFT-OBSERVATION-001.json",
+        "evidence/morph-xiii/drift/DRIFT-REFUSAL-QUARANTINE-001.json"
+      ],
+      "depends_on": ["C4", "C5"]
+    },
+    {
+      "id": "C9",
+      "name": "Stale refusal and fresh preimage admission",
+      "evidence": [
+        "evidence/morph-xiii/drift/STALE-ADMISSION-REFUSAL-001.json",
+        "evidence/morph-xiii/drift/FRESH-ADMISSION-001.json"
+      ],
+      "depends_on": ["C8"]
+    },
+    {
+      "id": "C10",
+      "name": "Independent witness verified",
+      "evidence": [
+        "runtime/reverself/INDEPENDENT-WITNESS-CONTRACT-001.json",
+        "evidence/morph-xiii/INDEPENDENT-WITNESS-001.json"
+      ],
+      "depends_on": ["C4", "C5"],
+      "terminal_blocker": "A truthful BLOCKED record is available; no independent witness capability exists."
+    },
+    {
+      "id": "C11",
+      "name": "Non-mutating scanner identifies unwitnessed claims",
+      "evidence": [
+        "runtime/reverself/no_unwitnessed_claims.py",
+        "runtime/reverself/test_reverself_evidence.py",
+        "evidence/morph-xiii/NO-UNWITNESSED-CLAIMS-REPORT-001.json"
+      ],
+      "depends_on": ["C1", "C4", "C7", "C8", "C9"]
+    },
+    {
+      "id": "C12",
+      "name": "Finite terminal-proof contract",
+      "evidence": ["runtime/reverself/TERMINAL-PROOF-CONTRACT-001.json"],
+      "depends_on": ["C1", "C8", "C9", "C10", "C11"]
+    },
+    {
+      "id": "C13",
+      "name": "Machine-readable predicate dependency map",
+      "evidence": ["evidence/morph-xiii/PREDICATE-DEPENDENCY-MAP-002.json"],
+      "depends_on": ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10", "C11", "C12", "C16"]
+    },
+    {
+      "id": "C14",
+      "name": "REVERSELF Matter distinct from compiler Matter",
+      "evidence": ["runtime/reverself/REVERSELF-0001.json"],
+      "depends_on": ["C1", "C11"]
+    },
+    {
+      "id": "C15",
+      "name": "Final proof and predicate evaluation",
+      "evidence": ["evidence/morph-xiii/FINAL-PROOF-001.json"],
+      "depends_on": ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10", "C11", "C12", "C13", "C14", "C16", "C17"]
+    },
+    {
+      "id": "C16",
+      "name": "Write-scoped authority, preimage, and admission",
+      "evidence": ["evidence/morph-xiii/REVERSELF-PROOF-ADMISSION-002.json"],
+      "depends_on": []
+    },
+    {
+      "id": "C17",
+      "name": "Final external head and artifact read",
+      "evidence": ["evidence/morph-xiii/FINAL-RECONTACT-001.json"],
+      "depends_on": ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10", "C11", "C12", "C13", "C14", "C16"]
+    }
+  ],
+  "terminal_order": ["C16", "C13", "C17", "C15"],
+  "global_invariants": {
+    "migration_gate": "CLOSED",
+    "REALISELF": false,
+    "graph_or_registry_mutation": false,
+    "historical_evidence_rewritten": false,
+    "independent_witness_claim": false
+  },
+  "mutation_authority": false
+}
