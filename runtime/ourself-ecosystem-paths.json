@@ -1,6 +1,6 @@
 {
   "schema": "OURSELF-ECOSYSTEM-PATHS-v0.1",
-  "status": "DECLARED",
+  "status": "RECONCILED_WITH_THIRD_EYE",
   "workspace_root": "/Users/millysituated/OURSELF",
   "launch_realm": {
     "address_repo": {
@@ -47,5 +47,28 @@
     "situaedmilly/SELFVEREIGN-ADDRESSELF",
     "situaedmilly/FLOWACTIONSELFWORK",
     "situaedmilly/Cognitive-Transmutation-Core"
-  ]
+  ],
+  "third_eye_reconciliation": {
+    "role": "RUNTIME_REALITY_WITNESS",
+    "rule": "GITHUB_REGISTRY_CLAIM != CURRENT_RUNTIME_TRUTH",
+    "canonical_runtime_observation": {
+      "host": "OURSELFMAC.lan",
+      "substrate": "LLAMA_CPP",
+      "endpoint": "http://127.0.0.1:11435",
+      "pid": 70370,
+      "model": "NousResearch/Hermes-3-Llama-3.2-3B-GGUF:Q4_K_M",
+      "context_size": 32768,
+      "health": "ok",
+      "inference": "MODELSELF ONLINE",
+      "witness_sha256": "4e1b1153687c8cecce4bed611d632d37630021bf97b4c9eea875aa33d14daebd"
+    },
+    "field_classification": {
+      "canonical_server.server_id": "STALE_DECLARATION",
+      "canonical_server.ollama_role": "STALE_DECLARATION",
+      "canonical_server.model_target": "STALE_DECLARATION",
+      "third_eye_reconciliation.canonical_runtime_observation": "CURRENT_OBSERVATION"
+    },
+    "preservation_rule": "Historical registry claim is preserved; live observation is authoritative for current runtime state.",
+    "genesis_status": "NOT_VERIFIED"
+  }
 }
