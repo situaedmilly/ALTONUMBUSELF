@@ -35,6 +35,15 @@
     "cognition_substrate": "GENESIS_LLAMA_SERVER",
     "model_target": "GENESIS_MODEL_ID_FROM_SERVER"
   },
+  "third_eye_reality": {
+    "snapshot": "third_eye/runtime_reality/SELFREALIZE-20261007T001742-OURSELFMAC.json",
+    "snapshot_id": "SELFREALIZE-20261007T001742-OURSELFMAC",
+    "capture_sha256": "393a3302db61f6e6a20e5acc5c0bdaa01a3b964dfecf17d1d1655767c262c908",
+    "sources": ["RAW_MAC","SELFPI","GITHUB_DECLARATIONS"],
+    "reconciliation_rule": "RUNTIME_OBSERVATION_RECONCILES_DECLARATION; REGISTRY_DOES_NOT_OVERRIDE_OBSERVATION",
+    "service_discovery_mode": "THIRD_EYE_RUNTIME_REALITY",
+    "registry_role": "PROJECTION_AND_POINTER"
+  },
   "ecosystem_repos": [
     "situaedmilly/ourself-core",
     "situaedmilly/ourself-agent-bridge-kernel",
@@ -53,5 +62,5 @@
     "situaedmilly/FLOWACTIONSELFWORK",
     "situaedmilly/Cognitive-Transmutation-Core"
   ],
-  "registry_state": "DECLARED"
+  "registry_state": "RECONCILED_WITH_THIRD_EYE_SNAPSHOT"
 }
