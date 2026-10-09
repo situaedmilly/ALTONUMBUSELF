@@ -1,0 +1,64 @@
+{
+  "evidence_schema": "ourself.alchemy.selfserve-binding-proof.v1",
+  "evidence_id": "SELFSERVE-BINDING-PROOF-001-RECEIPT",
+  "transition": "SELFSERVE_WRITE -> INDEPENDENT_RECALL -> CROSS_NODE_INTEGRITY",
+  "target": {
+    "object_id": "SELFSERVE-BINDING-PROOF-001",
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "main",
+    "path": "evidence/SELFSERVE-BINDING-PROOF-001-object.json",
+    "content_type": "application/json; charset=utf-8",
+    "preimage_head": "24bd607d106f90e9d51644be7361ad454d5292d9",
+    "write_commit": "b7f8eac7c1cb8ff5f3d9f206b2d65a0974943ef0",
+    "post_write_head": "b7f8eac7c1cb8ff5f3d9f206b2d65a0974943ef0",
+    "git_blob": "dadfa8ce485b28a89737b30c0ffb37c0b55216a7"
+  },
+  "binding": {
+    "write_provider": "Authenticated GitHub Contents API connector",
+    "write_method": "PUT",
+    "write_route": "/repos/situaedmilly/ALTONUMBUSELF/contents/evidence/SELFSERVE-BINDING-PROOF-001-object.json",
+    "recall_provider": "GitHub raw content delivery over HTTPS",
+    "recall_method": "GET",
+    "recall_route": "https://raw.githubusercontent.com/situaedmilly/ALTONUMBUSELF/main/evidence/SELFSERVE-BINDING-PROOF-001-object.json",
+    "authentication": "GitHub connector authentication for write; public HTTPS retrieval for readback; no credential material recorded"
+  },
+  "expected": {
+    "byte_count": 1250,
+    "sha256": "2ea684111e0907a7c7d64388e52900d4928a8c8b59774a1535fe06b748b39dfa"
+  },
+  "observations": [
+    {
+      "runtime": "GitHub connector fresh GET",
+      "byte_count": 1250,
+      "sha256": "2ea684111e0907a7c7d64388e52900d4928a8c8b59774a1535fe06b748b39dfa",
+      "result": "MATCH"
+    },
+    {
+      "runtime": "RAWMAC / OURSELFMAC.lan",
+      "channel": "direct HTTPS GET raw.githubusercontent.com",
+      "byte_count": 1250,
+      "sha256": "2ea684111e0907a7c7d64388e52900d4928a8c8b59774a1535fe06b748b39dfa",
+      "result": "MATCH"
+    },
+    {
+      "runtime": "SELFPI / OURSELFPIMAC",
+      "channel": "SSH-executed direct HTTPS GET raw.githubusercontent.com",
+      "byte_count": 1250,
+      "sha256": "2ea684111e0907a7c7d64388e52900d4928a8c8b59774a1535fe06b748b39dfa",
+      "result": "MATCH"
+    }
+  ],
+  "predicate_evaluation": {
+    "scoped_fresh_write": true,
+    "independent_recall": true,
+    "cross_node_byte_match": true,
+    "scoped_binding_verified": true,
+    "production_selserve_runtime_binding": "NOT_ESTABLISHED_BY_THIS_PROOF_OBJECT",
+    "live_storage_drift_enforcement": false,
+    "live_storage_re_admission": false,
+    "required_witness_verified": false,
+    "realiself": false
+  },
+  "interpretation": "This receipt proves one authorized fresh object write through the authenticated GitHub Contents API and independent cross-node retrieval of matching bytes. It does not prove production SELFSERVE drift refusal, re-admission, or the complete REALISELF predicate.",
+  "authority_effect": "Receipt only; grants no future write authority."
+}
