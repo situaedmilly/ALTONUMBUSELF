@@ -1,0 +1,75 @@
+{
+  "evidence_schema": "ourself.alchemy.reverself-cross-node-recontact.v1",
+  "evidence_id": "ALTONUMBUSELF-REVERSELF-003",
+  "transition": "REVERSELF(ALTONUMBUSELF -> SELFMEMORY/STORAGE -> REALISELF)",
+  "observed_at_start_utc": "2026-10-09T15:12:00Z",
+  "observed_at_end_utc": "2026-10-09T15:12:01Z",
+  "target": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "main",
+    "observed_pre_receipt_head": "8013db1f520b0eaad976d73a9bd5f4e4370bce58",
+    "object_id": "ALTONUMBUSELF-MEMORY-MORPH-015-001",
+    "path": "evidence/MORPH-015-memory-object.md",
+    "content_type": "text/markdown; charset=utf-8",
+    "git_blob": "49ccc74edfbe4320b0ac60655c8fbce670216e0d"
+  },
+  "expected": {
+    "byte_count": 2941,
+    "sha256": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd"
+  },
+  "observations": [
+    {
+      "runtime": "RAWMAC / OURSELFMAC.lan",
+      "channel": "direct HTTPS GET raw.githubusercontent.com",
+      "byte_count": 2941,
+      "sha256": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd",
+      "result": "MATCH"
+    },
+    {
+      "runtime": "SELFPI / OURSELFPIMAC",
+      "channel": "SSH-executed direct HTTPS GET raw.githubusercontent.com",
+      "byte_count": 2941,
+      "sha256": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd",
+      "result": "MATCH"
+    }
+  ],
+  "recontact": {
+    "status": "LATER_RUNTIME_CROSS_NODE_READ_MATCHED",
+    "cross_node_byte_match": true,
+    "integrity": "CONFIRMED",
+    "expected_digest_retained": true
+  },
+  "boundary_test": {
+    "implementation": "evidence/reverself-boundary-check.py",
+    "test_mode": "NON_MUTATING_ISOLATED_FIXTURE",
+    "assertions_passed": true,
+    "controlled_fixture_drift": "QUARANTINE_REFUSE",
+    "stale_admission": "REFUSED",
+    "fresh_scoped_fixture_admission": "ADMITTED",
+    "external_memory_mutated": false,
+    "limitation": "Fixture tests do not prove drift enforcement against the live external memory object or enforce a production write path."
+  },
+  "selserve": {
+    "fresh_write_declared_by_user": true,
+    "fresh_write_receipt_located_in_live_workspace": false,
+    "exact_live_write_binding": "UNRESOLVED",
+    "exact_live_recall_binding": "UNRESOLVED",
+    "runtime_write_path_verified": false,
+    "note": "This receipt records cross-node recontact of MORPH-015. It does not assert that the separately declared fresh SELFSERVE write was observed or recontacted."
+  },
+  "predicate_evaluation": {
+    "realiself": false,
+    "established_by_this_receipt": [
+      "RECONTACT_VERIFIED",
+      "INTEGRITY_VERIFIED",
+      "CROSS_NODE_BYTE_MATCHED"
+    ],
+    "still_unsatisfied": [
+      "SELFSERVE_LIVE_WRITE_AND_RECALL_BINDING_VERIFIED",
+      "DRIFT_BOUNDARY_ENFORCED_ON_LIVE_STORAGE_PATH",
+      "RE_ADMISSION_BOUNDARY_ENFORCED_ON_LIVE_STORAGE_PATH",
+      "REQUIRED_WITNESS_VERIFIED"
+    ],
+    "rule": "REALISELF remains false while any required predicate is unsatisfied."
+  }
+}
