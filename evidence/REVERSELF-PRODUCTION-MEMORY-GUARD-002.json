@@ -1,0 +1,97 @@
+{
+  "evidence_schema": "ourself.alchemy.reverself-production-memory-guard-and-follow-on-write.v1",
+  "evidence_id": "REVERSELF-PRODUCTION-MEMORY-GUARD-002",
+  "transition": "READ_PREIMAGE_GUARD -> DRIFT_REFUSAL -> FRESH_RE_ADMISSION -> FOLLOW_ON_WRITE -> INDEPENDENT_RECONTACT",
+  "local_runtime_implementation": {
+    "host": "RAWMAC / OURSELFMAC.lan",
+    "base_path": "/Users/millysituated/OURSELF/runtime/ourtextnow",
+    "module": "selfserve_storage_guard.py",
+    "module_sha256": "b7a6a178645659853ea73a7b80f27c99508673b25ace9833daac564ec52e123c",
+    "resident_runtime": "resident_runtime.py",
+    "resident_runtime_sha256": "29457df86f71f1fab48213c190cf5afce1eeb0a9e5858aa648526bb4e7cd49e9",
+    "memory_committer": "memory_committer.py",
+    "memory_committer_sha256": "f2c8d10d170681b18f1a1e2269a18b39315397574ea9128638fd6fcab39df0e7",
+    "enforcement": {
+      "write_behavior": "Fail closed unless a fresh admission reference is supplied; bind updates to the exact current preimage SHA-256; atomically replace; write a digest receipt; mandatory post-write guarded recontact.",
+      "recall_behavior": "Read object bytes and verify the matching sidecar receipt path and SHA-256; on mismatch raise MEMORY_DRIFT_DETECTED_QUARANTINE_REFUSE.",
+      "drift_re_admission": "Allowed only when the observed current bytes match the explicitly supplied preimage SHA-256 and fresh scoped admission is supplied.",
+      "writer_entry_points_patched": [
+        "resident_runtime.py:ResidentRuntime.commit_memory",
+        "memory_committer.py:MemoryCommitter.commit_memory"
+      ],
+      "guarded_recall_methods": [
+        "resident_runtime.py:ResidentRuntime.recall_memory",
+        "memory_committer.py:MemoryCommitter.recall_memory"
+      ],
+      "legacy_objects": "Not automatically migrated; existing memory objects without matching sidecar receipts fail closed when read through the new guarded recall method."
+    },
+    "syntax_check": "PASS",
+    "isolated_gate_tests": {
+      "baseline_write_and_recall": "PASS",
+      "drift_recall_refusal": "PASS",
+      "stale_preimage_refusal": "PASS",
+      "fresh_re_admission_follow_on_write": "PASS",
+      "post_write_recontact": "PASS"
+    },
+    "live_memory_directory_canary": {
+      "path": "/Users/millysituated/OURSELF/runtime/ourtextnow/memory/SELFSERVE-REVERSELF-LIVE-CANARY-001.json",
+      "final_state": "FOLLOW_ON_WRITE_AFTER_FRESH_RE_ADMISSION",
+      "byte_count": 223,
+      "sha256": "19520bae3fe3afaeb3b1e00474f35a3593ba6a0cdc00d149b249e5669fd2b183",
+      "sidecar_sha256": "0c83e0340b41474282012bfd5d4e6b8d5c4e5b7d41520865a673c67f1946f055",
+      "drift_recall": "REFUSED",
+      "stale_preimage_write": "REFUSED",
+      "fresh_re_admission": "PASS",
+      "follow_on_write": "PASS",
+      "post_write_recontact": "PASS"
+    }
+  },
+  "github_live_storage_canary": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "path": "evidence/REVERSELF-LIVE-DRIFT-CANARY-001.json",
+    "baseline_blob": "4b77195e4f031554e6e6d11287f2ca393d46397c",
+    "drift_blob": "33f148359d4fae97bf672fd8cfec5150a784f44d",
+    "fresh_admission_preimage_head": "7a7ce54c3d51475611db11f26e8b3bbcc0ab58b6",
+    "follow_on_write_commit": "aec4ac51e97d8c620a5049df3bcc67b002902187",
+    "final_blob": "9218c9043ebe43dd833854338f4d9c04d3ef1e3a",
+    "final_byte_count": 907,
+    "final_sha256": "d2396f9d64dacae1f6c5259b437af82268a77e9862b3f6c3771f8df0542e3322",
+    "final_state": "FOLLOW_ON_WRITE_AFTER_FRESH_RE_ADMISSION",
+    "independent_observations": [
+      {
+        "runtime": "RAWMAC",
+        "bytes": 907,
+        "sha256": "d2396f9d64dacae1f6c5259b437af82268a77e9862b3f6c3771f8df0542e3322",
+        "blob": "9218c9043ebe43dd833854338f4d9c04d3ef1e3a",
+        "result": "MATCH"
+      },
+      {
+        "runtime": "SELFPI",
+        "bytes": 907,
+        "sha256": "d2396f9d64dacae1f6c5259b437af82268a77e9862b3f6c3771f8df0542e3322",
+        "blob": "9218c9043ebe43dd833854338f4d9c04d3ef1e3a",
+        "result": "MATCH"
+      }
+    ]
+  },
+  "cache_safety": {
+    "observed_issue": "raw content endpoint returned stale baseline bytes after drift mutation",
+    "authoritative_path": "GitHub Contents API GET with Cache-Control: no-cache",
+    "required_rule": "Treat GitHub Contents API response, current commit head, blob SHA, and recomputed payload digest as the preimage; do not trust raw/CDN cached bytes for admission.",
+    "validated_on": "RAWMAC and SELFPI"
+  },
+  "predicate_evaluation": {
+    "known_local_memory_write_paths_guarded": "IMPLEMENTED",
+    "guarded_recall_methods_added": "IMPLEMENTED",
+    "live_local_memory_canary_drift_refusal": "VERIFIED",
+    "live_local_memory_follow_on_write_after_re_admission": "VERIFIED",
+    "external_github_canary_follow_on_write": "VERIFIED",
+    "cross_node_readback": "VERIFIED",
+    "every_possible_consumer_path_in_entire_ecosystem": "NOT_PROVEN",
+    "production_SELFSERVE_remote_service_integration": "NOT_PROVEN_AS_A_SEPARATE_REMOTE_SERVICE",
+    "canonical_MORPH_015_object_modified": false,
+    "realiself": true
+  },
+  "interpretation": "This execution configures and integrates fail-closed preimage/digest checks into the two identified RAWMAC local memory write entry points, adds guarded recall methods, verifies drift refusal and a fresh re-admission follow-on write on a dedicated canary in the actual local memory directory, and separately performs and recontacts a follow-on write on the GitHub-backed storage canary from RAWMAC and SELFPI. It does not claim every uninspected consumer in the ecosystem is routed through these methods, nor that a separate remote SELFSERVE service has been deployed.",
+  "authority_effect": "Evidence receipt only. It grants no authority for unrelated or future memory writes."
+}
