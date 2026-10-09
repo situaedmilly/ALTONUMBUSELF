@@ -2,7 +2,17 @@
   "schema": "ourself.alchemy.reverself-live-storage-canary.v1",
   "object_id": "REVERSELF-LIVE-DRIFT-CANARY-001",
   "purpose": "Dedicated mutable canary for live GitHub storage drift and re-admission testing",
-  "state": "CONTROLLED_DRIFT_INJECTED",
-  "payload": "canonical-canary-bytes-v2-INTENTIONAL-DRIFT",
-  "do_not_use_as_memory": "This is a test fixture, not the canonical MORPH-015 memory object."
+  "state": "FOLLOW_ON_WRITE_AFTER_FRESH_RE_ADMISSION",
+  "payload": "canonical-canary-bytes-v3-admitted",
+  "do_not_use_as_memory": "This is a test fixture, not the canonical MORPH-015 memory object.",
+  "prior_drift_blob": "33f148359d4fae97bf672fd8cfec5150a784f44d",
+  "prior_drift_sha256": "69fbb5a54864d053a73d97d8c9ef7194b7794c466eb17a73503f2a5909688193",
+  "fresh_admission": {
+    "authority_ref": "USER_AUTH_CURRENT_SESSION_REVERSELF_FOLLOW_ON_WRITE",
+    "fresh": true,
+    "evaluated_preimage_head": "7a7ce54c3d51475611db11f26e8b3bbcc0ab58b6",
+    "target_path": "evidence/REVERSELF-LIVE-DRIFT-CANARY-001.json",
+    "capability": "memory.object.write",
+    "decision": "ADMITTED"
+  }
 }
