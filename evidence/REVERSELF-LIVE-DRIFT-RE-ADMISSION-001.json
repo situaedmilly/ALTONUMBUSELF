@@ -1,0 +1,87 @@
+{
+  "evidence_schema": "ourself.alchemy.reverself-live-storage-drift-re-admission.v1",
+  "evidence_id": "REVERSELF-LIVE-DRIFT-RE-ADMISSION-001",
+  "transition": "LIVE_STORAGE_CANARY -> DRIFT_DETECTED -> STALE_ADMISSION_REFUSED -> FRESH_SCOPED_RE_ADMISSION",
+  "scope": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "main",
+    "target_path": "evidence/REVERSELF-LIVE-DRIFT-CANARY-001.json",
+    "target_class": "ISOLATED_LIVE_STORAGE_CANARY",
+    "canonical_memory_object_modified": false
+  },
+  "baseline": {
+    "write_commit": "789123c9380593b647751cf4bcf7a461094abc77",
+    "git_blob": "4b77195e4f031554e6e6d11287f2ca393d46397c",
+    "byte_count": 374,
+    "sha256": "08b64ca35f83ab145abc05f0105f645065b50867ad0fd3a568d59481127e9cd7",
+    "state": "BASELINE"
+  },
+  "controlled_drift": {
+    "write_commit": "b26a9d546772a01c67008fa3d6de9461e5693cd9",
+    "git_blob": "33f148359d4fae97bf672fd8cfec5150a784f44d",
+    "byte_count": 409,
+    "sha256": "69fbb5a54864d053a73d97d8c9ef7194b7794c466eb17a73503f2a5909688193",
+    "expected_digest": "08b64ca35f83ab145abc05f0105f645065b50867ad0fd3a568d59481127e9cd7",
+    "observed_digest": "69fbb5a54864d053a73d97d8c9ef7194b7794c466eb17a73503f2a5909688193",
+    "decision": "RECONTACT_DISTINGUISH_QUARANTINE_REFUSE",
+    "quarantine": true,
+    "mutation_permitted": false,
+    "status": "MEMORY_DRIFT_DETECTED"
+  },
+  "observations": [
+    {
+      "runtime": "RAWMAC / OURSELFMAC.lan",
+      "source": "GitHub Contents API GET with no-cache",
+      "byte_count": 409,
+      "sha256": "69fbb5a54864d053a73d97d8c9ef7194b7794c466eb17a73503f2a5909688193",
+      "git_blob": "33f148359d4fae97bf672fd8cfec5150a784f44d",
+      "result": "MATCH"
+    },
+    {
+      "runtime": "SELFPI / OURSELFPIMAC",
+      "source": "GitHub Contents API GET with no-cache via SSH",
+      "byte_count": 409,
+      "sha256": "69fbb5a54864d053a73d97d8c9ef7194b7794c466eb17a73503f2a5909688193",
+      "git_blob": "33f148359d4fae97bf672fd8cfec5150a784f44d",
+      "result": "MATCH"
+    }
+  ],
+  "cache_observation": {
+    "raw_content_endpoint_initially_returned_stale_baseline": true,
+    "authoritative_contents_api_confirmed_drifted_preimage": true,
+    "implication": "A stale CDN/raw response must not be treated as current storage state; the tested read path uses the GitHub Contents API and verifies blob identity."
+  },
+  "admission_gate": {
+    "evaluator": "evidence/reverself-boundary-check.py",
+    "evaluated_preimage_head": "b26a9d546772a01c67008fa3d6de9461e5693cd9",
+    "target_path": "evidence/REVERSELF-LIVE-DRIFT-CANARY-001.json",
+    "capability": "memory.object.write",
+    "stale_admission": {
+      "supplied_preimage_head": "b7f8eac7c1cb8ff5f3d9f206b2d65a0974943ef0",
+      "decision": "REFUSED",
+      "failed_check": "preimage_head"
+    },
+    "fresh_scoped_readmission": {
+      "authority_ref": "USER_AUTH_CURRENT_SESSION_DRIFT_CANARY",
+      "fresh": true,
+      "preimage_head": "b26a9d546772a01c67008fa3d6de9461e5693cd9",
+      "target_path": "evidence/REVERSELF-LIVE-DRIFT-CANARY-001.json",
+      "capability": "memory.object.write",
+      "all_checks_passed": true,
+      "decision": "ADMITTED",
+      "note": "This is a fresh admission decision against the drifted canary preimage. No follow-on write was performed."
+    }
+  },
+  "predicate_evaluation": {
+    "live_external_storage_canary_drift_observed": true,
+    "drift_digest_mismatch_refused": true,
+    "stale_preimage_admission_refused": true,
+    "fresh_scoped_re_admission_decision_passed": true,
+    "cross_node_observation_matched": true,
+    "canonical_memory_object_mutated": false,
+    "production_selserve_runtime_enforcement": "NOT_ESTABLISHED_BY_CANARY",
+    "realiself": false
+  },
+  "interpretation": "This receipt records a real mutation of a dedicated test canary in the GitHub-backed storage path, independent cross-node observation of changed bytes, drift classification/quarantine/refusal, refusal of a stale-preimage admission, and a fresh scoped admission decision against the observed drifted preimage. It does not prove that a separate production SELFSERVE runtime automatically enforces this gate.",
+  "authority_effect": "Receipt only. The fresh admission decision did not execute another write and grants no future authority."
+}
