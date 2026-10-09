@@ -1,0 +1,28 @@
+{
+  "schema": "ourself.alchemy.selfserve-memory-object.v1",
+  "object_id": "SELFSERVE-BINDING-PROOF-001",
+  "instance": "ALTONUMBUSELF",
+  "purpose": "Fresh authorized memory write for SELFSERVE binding proof",
+  "authority": {
+    "source": "User authorization in current session",
+    "declaration": "I AUTHORIZE ALCHEMY SELFSERVE_BINDING_PROOF_001",
+    "scope": "Create this one proof object, independently re-fetch it, and verify exact bytes. This object does not itself grant future write authority."
+  },
+  "binding": {
+    "provider": "GitHub Contents API",
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "main",
+    "write_method": "PUT",
+    "write_route": "/repos/situaedmilly/ALTONUMBUSELF/contents/evidence/SELFSERVE-BINDING-PROOF-001-object.json",
+    "recall_method": "GET",
+    "recall_route": "/repos/situaedmilly/ALTONUMBUSELF/contents/evidence/SELFSERVE-BINDING-PROOF-001-object.json?ref=main",
+    "authentication": "Authenticated GitHub connector; credential material not embedded",
+    "preimage_head": "24bd607d106f90e9d51644be7361ad454d5292d9"
+  },
+  "claims": {
+    "fresh_write": "REQUESTED_BY_AUTHORIZATION",
+    "independent_recall": "PENDING",
+    "byte_integrity": "PENDING",
+    "realiself": false
+  }
+}
