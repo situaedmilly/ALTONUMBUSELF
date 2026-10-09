@@ -1,0 +1,8 @@
+{
+  "schema": "ourself.alchemy.reverself-live-storage-canary.v1",
+  "object_id": "REVERSELF-LIVE-DRIFT-CANARY-001",
+  "purpose": "Dedicated mutable canary for live GitHub storage drift and re-admission testing",
+  "state": "BASELINE",
+  "payload": "canonical-canary-bytes-v1",
+  "do_not_use_as_memory": "This is a test fixture, not the canonical MORPH-015 memory object."
+}
