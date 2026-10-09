@@ -90,7 +90,8 @@
     "every_possible_consumer_path_in_entire_ecosystem": "NOT_PROVEN",
     "production_SELFSERVE_remote_service_integration": "NOT_PROVEN_AS_A_SEPARATE_REMOTE_SERVICE",
     "canonical_MORPH_015_object_modified": false,
-    "realiself": true
+    "realiself": false,
+    "realiself_reason": "The known local memory write entry points and canaries pass, but complete ecosystem-wide routing and any separate remote SELFSERVE service enforcement remain unproven."
   },
   "interpretation": "This execution configures and integrates fail-closed preimage/digest checks into the two identified RAWMAC local memory write entry points, adds guarded recall methods, verifies drift refusal and a fresh re-admission follow-on write on a dedicated canary in the actual local memory directory, and separately performs and recontacts a follow-on write on the GitHub-backed storage canary from RAWMAC and SELFPI. It does not claim every uninspected consumer in the ecosystem is routed through these methods, nor that a separate remote SELFSERVE service has been deployed.",
   "authority_effect": "Evidence receipt only. It grants no authority for unrelated or future memory writes."
