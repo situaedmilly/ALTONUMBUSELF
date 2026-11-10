@@ -1,0 +1,177 @@
+{
+  "authority_effect": "The founder directive authorized this bounded remote service, noncanonical canary, and verification campaign only. No standing authority for unrelated or future memory writes is created.",
+  "certification": {
+    "global_realiself": "NOT_CERTIFIED",
+    "reason": "The remote memory service and restricted transport are live and tested, but production runtime integration, exhaustive consumer coverage, hardware-backed founder signing, independent custody, and an independent witness remain unestablished.",
+    "reverself_6_1_local_v0_2": "VERIFIED",
+    "reverself_6_2_remote_selserve": "VERIFIED"
+  },
+  "conformance": {
+    "cases": [
+      "create_and_signed_recall",
+      "duplicate_create_refused",
+      "payload_substitution_refused",
+      "signature_tampering_refused",
+      "target_binding_refused",
+      "drift_quarantine_and_explicit_repair",
+      "consumed_preimage_replay_refused",
+      "path_escape_refused",
+      "concurrent_updates_serializable"
+    ],
+    "result": "PASS",
+    "test_suite": "tests/test_server_v0_1.py",
+    "tests_failed": 0,
+    "tests_passed": 9
+  },
+  "evidence_id": "REVERSELF-6-2-SELFSERVE-REMOTE-001",
+  "live_security_tests": {
+    "concurrent_same_preimage_updates": "ONE_COMMITTED_ONE_REFUSED_PREIMAGE_DIGEST_MISMATCH",
+    "consumed_preimage_admission_replay": "REFUSED_PREIMAGE_DIGEST_MISMATCH",
+    "create_with_exact_signed_admission": "PASS",
+    "drift_recall": "REFUSED_MEMORY_DRIFT_DETECTED_QUARANTINE_REFUSE",
+    "fresh_repair_admission": "PASS",
+    "payload_substitution": "REFUSED_PAYLOAD_BINDING_MISMATCH",
+    "post_restart_cross_node_recontact": "PASS",
+    "repair_without_explicit_flag": "REFUSED_REPAIR_REQUIRES_EXPLICIT_RE_ADMISSION",
+    "service_restart_persistence": "PASS",
+    "signed_receipt_verification": "PASS",
+    "tampered_admission_signature": "REFUSED_SIGNATURE_INVALID",
+    "update_without_repair_admission_after_drift": "REFUSED_DRIFT_REQUIRES_REPAIR_ADMISSION"
+  },
+  "memory_consumer_inventory": {
+    "inventory_completeness": "BOUNDED_SCAN_ONLY_NOT_ECOSYSTEM_WIDE",
+    "known_local_memory_readers": [
+      {
+        "guard": "selfserve_storage_guard_v0_2.recall",
+        "path": "runtime/ourtextnow/memory_committer.py"
+      },
+      {
+        "guard": "selfserve_storage_guard_v0_2.recall",
+        "path": "runtime/ourtextnow/resident_runtime.py"
+      }
+    ],
+    "known_local_memory_writers": [
+      {
+        "guard": "selfserve_storage_guard_v0_2.write",
+        "path": "runtime/ourtextnow/memory_committer.py",
+        "state": "GUARDED_LOCAL_WRITER"
+      },
+      {
+        "guard": "selfserve_storage_guard_v0_2.write",
+        "path": "runtime/ourtextnow/resident_runtime.py",
+        "state": "GUARDED_LOCAL_WRITER"
+      }
+    ],
+    "remote_selserve_consumers": "MAC_CLIENT_VERIFIED; NOT_YET_WIRED_AS_DEFAULT_BACKEND_FOR_RESIDENT_RUNTIME",
+    "scope": "Bounded local filesystem scan of Mac OURSELF and ALTONUMBUSELF workspaces plus SELFPI /home/selfadmin/.local/share/ourself and /home/selfadmin/OURSELF; excludes .git, package caches, virtualenvs, node_modules, build artifacts."
+  },
+  "next_transition": "REVERSELF_6_3_PRODUCTION_MEMORY_BACKEND_INTEGRATION_AND_HARDWARE_CUSTODY",
+  "nodes": {
+    "mac": {
+      "admission_issuer_cli_sha256": "a0df178113ce8b7bc5780f7ba9c13d1479e00a1b72439e39fba5a23968ca1e86",
+      "client_sha256": "ceaed79f50983eb4ebab1e95405bf892766ec43a5ee25d7754f5e9e997a63966",
+      "device": "OURSELFMAC.local",
+      "issuer_public_key_sha256": "35a97a156ed090a5c2d0ff168ce8b0c00c0ed26f5f447f2ee9d329b27adacc18",
+      "role": "FOUNDER_ADMISSION_ISSUER_AND_REMOTE_CLIENT",
+      "secure_enclave_probe": {
+        "hardware": "Apple M4 Secure Enclave presence indicated by AppleSEP platform",
+        "interpretation": "Secure Enclave key creation from this command-line runtime failed at Keychain insertion with missing-entitlement status; no probe key was established and no existing key was replaced.",
+        "osstatus": -34018,
+        "probe_key": "OURSELF-REVERSELF-SEP-PROBE-001",
+        "result": "BLOCKED"
+      },
+      "signer_custody": "FILE_BACKED_SOFTWARE_KEY",
+      "signer_key_id": "OURSELF-ED25519-002",
+      "signer_private_key_mode": "0600"
+    },
+    "selfpi": {
+      "device": "OURSELFPIMAC",
+      "execution_authority": "NONE",
+      "external_network_exposure": "NONE",
+      "issuer_public_key_sha256": "35a97a156ed090a5c2d0ff168ce8b0c00c0ed26f5f447f2ee9d329b27adacc18",
+      "memory_store_root": "/home/selfadmin/.local/share/ourself/selfserve-memory-v0.1/objects",
+      "role": "REMOTE_MEMORY_STORE_AND_RECEIPT_SIGNER",
+      "service_authority": "NONE",
+      "service_bind": "127.0.0.1:49373",
+      "service_code_sha256": "9a15259bba5c3561a5921bdef58e66bb0080ba0209950bb78568d09820c04839",
+      "service_contract_sha256": "6af001ccc9f76b710d3b27a12ff785cb16fcc126410420a7b2c4c18277e8fe63",
+      "service_id": "SELFSERVE-SELFPI-001",
+      "service_persistence": {
+        "linger": "YES",
+        "post_restart_cross_node_recontact": "MATCH",
+        "restart_test": "PASS",
+        "systemd_user_service": "ACTIVE",
+        "systemd_user_tunnel": "ACTIVE"
+      },
+      "service_private_key_mode": "0600",
+      "service_public_key_sha256": "7ecf95e66152acf08bacc0f7917b29986011882b1ffb595f631dbefa3f7d7554",
+      "service_public_keypair_check": "MATCH",
+      "service_receipt_key_custody": "FILE_BACKED",
+      "service_receipt_key_id": "SELFSERVE-PI-ED25519-001",
+      "service_version": "0.1.1",
+      "systemd_service_unit_sha256": "90d540b40882338b65039cf18c3bbc8597d9fbf4825305691d5cd138dc1ec13b",
+      "systemd_tunnel_unit_sha256": "978a44641dda43c3467a6b0d6242b4a1925b90ec06c5b22d7f3738f480ec77fc",
+      "test_suite_sha256": "227e8779d7e739c0953bf89ea1b59b7153450b63b6ad5a56c8b02e5ae357c893"
+    }
+  },
+  "observed_at_utc": "2026-11-10T23:22:57.172589Z",
+  "predicate_evaluation": {
+    "all_production_memory_consumers_remote_integrated": false,
+    "cross_node_recontact_verified": true,
+    "ecosystem_wide_memory_consumer_completeness": false,
+    "independent_hardware_signer": false,
+    "independent_human_custodian": false,
+    "independent_witness": false,
+    "local_memory_writer_paths_guarded": true,
+    "per_memory_concurrent_write_serialization_verified": true,
+    "realiself": false,
+    "remote_admission_signature_verified": true,
+    "remote_receipt_signature_verified": true,
+    "remote_service_established": true,
+    "restricted_transport_verified": true
+  },
+  "preservation": {
+    "canonical_local_memory_mutated": false,
+    "canonical_morph_015_mutated": false,
+    "existing_memory_committer_mutated": false,
+    "existing_resident_runtime_mutated": false,
+    "new_remote_service_is_separate": true,
+    "preexisting_local_reverself_v0_2_policy_mutated": false
+  },
+  "remaining_gates": [
+    "ESTABLISH_HARDWARE_BACKED_FOUNDER_SIGNER_OR_EXTERNAL_HARDWARE_TOKEN",
+    "ESTABLISH_INDEPENDENT_CUSTODIAN_AND_HUMAN_AUTHENTICATION",
+    "INTEGRATE_REMOTE_SELFSERVE_BACKEND_WITH_PRODUCTION_MEMORY_WRITERS_AND_READERS",
+    "COMPLETE_ECOSYSTEM_WIDE_MEMORY_CONSUMER_INVENTORY",
+    "ADD_INDEPENDENT_WITNESS_FOR_ADMISSION_COMMIT_AND_RECONTACT_SEQUENCE"
+  ],
+  "remote_memory_canary": {
+    "canonical_memory": false,
+    "final_admission_id": "MEMADM-F402E13372524C96897BD8D7C647AB1A",
+    "final_byte_count": 332,
+    "final_cross_node_recontact": "MATCH",
+    "final_payload_sha256": "4d797cc993bf63d472fa7f239c78fe870860101fff06d8b55a094dbf8ee1894f",
+    "final_receipt_sha256": "c93036d2a6a0b9cf8bc2c9898942dbd88868a3dd3ced1998f4f16f2731a7c869",
+    "final_state": "VERIFIED_FINAL_AFTER_CREATE_DRIFT_REPAIR_UPDATE_AND_CONCURRENCY_TESTS",
+    "final_version": 7,
+    "memory_id": "REVERSELF-6-2-CANARY-001",
+    "service_restart_then_recontact": "MATCH"
+  },
+  "schema": "ourself.reverself.remote-selserve-certification-evidence.v0.1",
+  "stage": "REVERSELF-6-2",
+  "status": "REMOTE_SELFSERVE_V0_1_1_VERIFIED_GLOBAL_REALISELF_BLOCKED",
+  "transition": "LOCAL_V0_2_MEMORY_ADMISSION -> REMOTE_SELFSERVE_SERVICE -> RESTRICTED_MAC_PI_TRANSPORT -> SIGNED_REMOTE_RECEIPT_AND_CROSS_NODE_RECONTACT",
+  "transport": {
+    "alternate_remote_listen_14938": "DENIED",
+    "authorized_key_options": "restrict,port-forwarding,permitlisten=127.0.0.1:14937,permitopen=127.0.0.1:1,command=/usr/bin/false",
+    "local_forward_to_mac_application_port": "DENIED",
+    "mac_listener": "127.0.0.1:14937",
+    "only_permitted_remote_listener": "127.0.0.1:14937",
+    "pi_to_mac_destination": "127.0.0.1:49373",
+    "private_key_mode": "0600",
+    "shell_attempt": "DENIED",
+    "ssh_key_fingerprint": "SHA256:7U4ax9uGk/KZ1h0+PRGozvTANP28gv/x9Er1RcCGEWk",
+    "strict_host_key_checking": "ENABLED",
+    "type": "RESTRICTED_SSH_REVERSE_TUNNEL"
+  }
+}
