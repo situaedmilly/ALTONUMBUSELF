@@ -1,0 +1,130 @@
+{
+  "authority_effect": "The Secure Enclave key is limited to signing exact memory-write admissions. It grants no inference, execution, or standing future memory-write authority.",
+  "certification": {
+    "global_realiself": "NOT_CERTIFIED",
+    "reason": "Hardware-backed founder admission signing is verified, but the active key has no user-presence requirement, the signer process is not isolated, no independent human custodian or witness is established, and the Pi receipt key remains file-backed.",
+    "reverself_6_3_secure_enclave_admission": "VERIFIED"
+  },
+  "conformance": {
+    "explicit_repair_flag_enforced": "PASS",
+    "fresh_secure_enclave_re_admission": "PASS",
+    "live_create_admission": "PASS",
+    "live_drift_quarantine": "PASS",
+    "live_p256_signature_verified_by_pi": "PASS",
+    "pi_unit_tests_failed": 0,
+    "pi_unit_tests_passed": 9,
+    "post_restart_recontact": "PASS"
+  },
+  "evidence_id": "REVERSELF-6-3-SECURE-ENCLAVE-ADMISSION-002",
+  "hardware_signer": {
+    "access_control": [
+      "PRIVATE_KEY_USAGE"
+    ],
+    "accessibility": "WHEN_UNLOCKED_THIS_DEVICE_ONLY",
+    "algorithm": "ECDSA_P256_SHA256_SECURE_ENCLAVE",
+    "hardware": "APPLE_SECURE_ENCLAVE",
+    "independent_human_custodian_established": false,
+    "key_blob_bytes": 324,
+    "key_blob_mode": "0600",
+    "key_blob_sha256": "259244ac2ddb3ee02f5181b9d6e662c747455dac68e7a1846ed3413c913d1054",
+    "key_id": "OURSELF-SEP-P256-001",
+    "key_representation": "OPAQUE_DEVICE_BOUND_DATA_REPRESENTATION",
+    "keychain_permanent_item": false,
+    "platform": "APPLE_SILICON_M4",
+    "private_key_raw_export": false,
+    "process_isolation_established": false,
+    "public_key_pem_sha256": "c2f667c35648993f385b09ef4d89bcb32cdc18175ec738ca95d3798924ee514a",
+    "public_key_x963_sha256": "ed82122bc397a02dee2f2f1404f2d0ce504fb152b2d907fee73eef4ead8a6592",
+    "user_presence_required": false
+  },
+  "live_secure_enclave_canaries": {
+    "canary_001": {
+      "cross_node_recontact": "MATCH",
+      "memory_id": "REVERSELF-6-3-SEP-CANARY-001",
+      "payload_sha256": "8f567772da724866c168025275cbe48d55174de56a95444e68302bda6d7aba54",
+      "receipt_sha256": "53ef6f2fe045dfef3c6252c1b3712e5180b8f7d798c8ee4b8f4ceca5c320ae69"
+    },
+    "canary_002": {
+      "controlled_drift_sha256": "16c3bddc4138a48fe533d384bc8a751ae86447d2e6a75b805010e964476465f9",
+      "create_admission_id": "MEMADM-SEP-655CEAE3EE90407D87E97AA798D02448",
+      "drift_recall": "REFUSED_MEMORY_DRIFT_DETECTED_QUARANTINE_REFUSE",
+      "final_cross_node_recontact": "MATCH",
+      "final_payload_sha256": "7bb34773c793e1e12f9739bdf043a25e6e9b8aa88a416bf28752056eb8ade09d",
+      "final_receipt_sha256": "42fb85ad8af13d7566487d1ccf3d0d2cc43864bebd5d3e44abd3e7a9ae194214",
+      "memory_id": "REVERSELF-6-3-SEP-CANARY-002",
+      "repair_admission_id": "MEMADM-SEP-751333DB3BF54497A458C814D44DA1A2",
+      "repair_without_allow_flag": "REFUSED_REPAIR_REQUIRES_EXPLICIT_RE_ADMISSION"
+    }
+  },
+  "next_transition": "REVERSELF_6_4_SECURE_ENCLAVE_REMOTE_MEMORY_BACKEND_INTEGRATION",
+  "observed_at_utc": "2026-11-10T23:35:00.919956Z",
+  "predicate_evaluation": {
+    "hardware_backed_founder_admission_signer": "VERIFIED",
+    "independent_human_custodian": "NOT_ESTABLISHED",
+    "independent_witness": "NOT_ESTABLISHED",
+    "pi_root_hardware": "NOT_ESTABLISHED",
+    "pi_side_p256_signature_verification": "VERIFIED",
+    "process_isolation": "NOT_ESTABLISHED",
+    "realiself": false,
+    "remote_memory_admission_and_receipt": "VERIFIED",
+    "secure_enclave_nonexportable_key_representation": "VERIFIED",
+    "user_presence_enforcement_for_active_key": "NOT_ESTABLISHED"
+  },
+  "remote_service": {
+    "bind": "127.0.0.1:49374",
+    "direct_lan_exposure": "NONE",
+    "execution_authority": "NONE",
+    "linger": "YES",
+    "mac_listener": "127.0.0.1:14938",
+    "pi_root_hardware": "NOT_ESTABLISHED",
+    "pinned_issuer_public_key_sha256": "c2f667c35648993f385b09ef4d89bcb32cdc18175ec738ca95d3798924ee514a",
+    "pinned_service_receipt_public_key_sha256": "d7adc49e73a2107cab25700dbb8d7128818bafb031ace23cef0c51bfe5d3d54f",
+    "reboot_tested": false,
+    "receipt_signer": "SELFSERVE-PI-ED25519-002",
+    "receipt_signer_custody": "FILE_BACKED_SOFTWARE_KEY",
+    "service_code_sha256": "6fa542e5102731b4efbddfef9560d9be7b58d4ae8ec45dd9c051e5d25e86c744",
+    "service_contract_sha256": "7bf72edf7f742b41a8bf05f5ec20b6635eef11e9106ddb7920466271ec62e4ba",
+    "service_id": "SELFSERVE-SELFPI-002",
+    "service_tests_sha256": "3328b046eb64cb0ea0af67f5c03ec4c2fe2dd5d1c137fbfcf68150d92674b3e2",
+    "systemd_service_unit_sha256": "cb3ea049f991189b5e717bc266a35cf956d36af06e977eaf56bffa90e07e1554",
+    "systemd_tunnel_service": "ACTIVE",
+    "systemd_tunnel_unit_sha256": "96940a89ae5fca68e57d4e3c0a0240eed033e1e0600f12b9619ed8ee24f20ee6",
+    "systemd_user_service": "ACTIVE",
+    "transport": "RESTRICTED_SSH_REVERSE_TUNNEL",
+    "version": "0.2.0"
+  },
+  "restore_and_cross_node_verification": {
+    "cross_process_signature_verification": "PASS",
+    "openssl_signature_verification_on_selfpi": "VERIFIED_OK",
+    "pi_pinned_public_key_sha256": "c2f667c35648993f385b09ef4d89bcb32cdc18175ec738ca95d3798924ee514a",
+    "restore_from_opaque_blob_in_separate_process": "PASS",
+    "restored_public_key_match": "PASS"
+  },
+  "restricted_transport": {
+    "alternate_remote_listen": "DENIED",
+    "authorized_key_options": "restrict,port-forwarding,permitlisten=127.0.0.1:14938,permitopen=127.0.0.1:1,command=/usr/bin/false",
+    "local_forward_to_application_port": "DENIED",
+    "private_key_mode": "0600",
+    "shell": "DENIED",
+    "tunnel_key_fingerprint": "SHA256:BYyvXlIXU/HpeQqGr/p8cw63uZ8I5J+X1nEl5LxTB8M"
+  },
+  "schema": "ourself.reverself.secure-enclave-admission-evidence.v0.1",
+  "stage": "REVERSELF-6-3",
+  "status": "MAC_SECURE_ENCLAVE_P256_ADMISSION_VERIFIED_ON_SELFPI",
+  "user_presence_probe": {
+    "access_control": [
+      "PRIVATE_KEY_USAGE",
+      "USER_PRESENCE"
+    ],
+    "independent_human_custodian": false,
+    "interactive_authentication_prompt_observed": false,
+    "key_blob_mode": "0600",
+    "key_blob_sha256": "8600efbeed8a7fe4a09c04c57ae119da117dcc04b250e03bf6f7b2b9c415ec39",
+    "key_id": "OURSELF-SEP-P256-UP-PROBE-001",
+    "metadata_sha256": "033411f3a39da7183afb1c59f7611c7b05dbe3de253cd24d5d768733737c72d4",
+    "pinned_to_selfpi": false,
+    "production_signer": false,
+    "public_key_sha256": "0dbae1d3b67eb2f88b3e7f552d1c90aab4c1b5f89910c8d98042f3c8296257ca",
+    "sign_test": "PASS"
+  }
+}
