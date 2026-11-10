@@ -1,0 +1,176 @@
+{
+  "authority_effect": "The founder directive authorized the one dedicated noncanonical local canary and bounded REVERSELF 6-1 hardening. It grants no standing authority for future or unrelated memory writes.",
+  "canonical_memory": {
+    "byte_count": 2941,
+    "cross_node_recontact": "PREVIOUSLY_VERIFIED_FROM_MAC_AND_SELFPI",
+    "git_blob": "49ccc74edfbe4320b0ac60655c8fbce670216e0d",
+    "mutated": false,
+    "object_id": "ALTONUMBUSELF-MEMORY-MORPH-015-001",
+    "path": "evidence/MORPH-015-memory-object.md",
+    "sha256": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd"
+  },
+  "conformance": {
+    "cases": [
+      "signed create/update/drift refusal/fresh re-admission",
+      "target and payload binding",
+      "path escape and unscoped authority refusal",
+      "REFUSED receipt plus empty authorization rejected by MemoryCommitter",
+      "valid signed inference receipt plus separate memory admission completes two-phase commit in isolated fixture",
+      "resident runtime stages pending payload and does not write without memory admission"
+    ],
+    "result": "PASS",
+    "runner": "OURSELFD Python 3.9.6 virtual environment",
+    "test_file": "runtime/ourtextnow/reverself_v0_2/tests/test_reverself_v0_2.py",
+    "test_file_sha256": "a1c95d0edf30d085de9ba77eecbbde3e867763bd345816a7dda77dbc227f2240",
+    "tests_failed": 0,
+    "tests_passed": 6
+  },
+  "evidence_id": "REVERSELF-6-1-ADMISSION-HARDENING-001",
+  "evidence_schema": "ourself.alchemy.reverself-admission-hardening.v0.2",
+  "issuer_custody": {
+    "byte_count": 119,
+    "custody_class": "FILE_BACKED_SOFTWARE_KEY",
+    "file_mode": "0600",
+    "hardware_backed": false,
+    "issuer": "OURSELF-ED25519-002",
+    "issuer_process_isolation": "NOT_ESTABLISHED",
+    "limitation": "The signed admission proves issuance by the local software key, not independent human authentication or HSM/TPM-backed custody. The authority_ref string is a trace reference, not a cryptographic proof of the chat directive. The signer and receipt-signing functions are available in the same local Python module imported by the runtime; no separate OS principal or isolated signer process is established.",
+    "private_key_location": "Mac local filesystem",
+    "same_user_process_access": "POSSIBLE",
+    "sha256": "cc964c77af55165bf2100dfa589c651f7d16aa29a0c235a56fa5f02d6fc1a9ab"
+  },
+  "live_local_canary": {
+    "baseline": {
+      "admission_id": "MEMADM-15E9AC37B00B48D3B93F21A0018ADE75",
+      "byte_count": 85,
+      "sha256": "2dc39616839c696893b39a44d9aba3b256414df7e2c0f170ff7f4f925b34cd50"
+    },
+    "canonical_memory": false,
+    "controlled_drift": {
+      "byte_count": 93,
+      "recall_decision": "MEMORY_DRIFT_DETECTED_QUARANTINE_REFUSE",
+      "sha256": "fb57000eb15f11f9fa31920e22244848c41f701dca049a1b8b568044278f2cea"
+    },
+    "final": {
+      "byte_count": 117,
+      "evidence_sha256": "0db6f24734393294f3b04fbbc4aa16785e94e3e205f110f9825867a6ee66d66f",
+      "guarded_recontact": "MATCH",
+      "sha256": "19ed7ec8265e915b516782a358523c522fccf4baa2b9ecdbfc10ccaeaeb65853",
+      "sidecar_sha256": "2bea9868718c15f4f3d28449939cbfd652c70c28be1883dbdb7dac0917a0f1b3",
+      "state": "FOLLOW_ON_WRITE_AFTER_FRESH_RE_ADMISSION"
+    },
+    "fresh_re_admission": {
+      "admission_id": "MEMADM-4F0C54BD67D0424393D5C2447F73700D",
+      "decision": "ADMITTED",
+      "expected_preimage_sha256": "fb57000eb15f11f9fa31920e22244848c41f701dca049a1b8b568044278f2cea"
+    },
+    "object_id": "REVERSELF-6-1-CANARY-001",
+    "path": "runtime/ourtextnow/memory/REVERSELF-6-1-CANARY-001.json"
+  },
+  "next_transition": "ESTABLISH_SEPARATE_SELFSERVE_SERVICE_AND_INDEPENDENT_ADMISSION_CUSTODY_WITHOUT_MUTATING_MORPH_015",
+  "observed_at_utc": "2026-11-10T23:01:46Z",
+  "predicate_evaluation": {
+    "canonical_memory_integrity": "PRESERVED",
+    "cross_node_morph015_recontact": "PREVIOUSLY_VERIFIED",
+    "ecosystem_wide_memory_consumer_completeness": "NOT_PROVEN",
+    "independent_hardware_root_and_custody": "NOT_ESTABLISHED",
+    "independent_witness_for_this_v0_2_run": "NOT_ESTABLISHED",
+    "local_drift_quarantine": "VERIFIED",
+    "local_fresh_re_admission": "VERIFIED",
+    "local_memory_integrity_guard": "VERIFIED",
+    "local_two_phase_memory_commit": "VERIFIED_IN_ISOLATED_FIXTURE",
+    "realiself": false,
+    "refused_receipt_bypass": "BLOCKED_BY_V0_2",
+    "separate_remote_selserve_service": "NOT_ESTABLISHED"
+  },
+  "remote_service_discovery": {
+    "mac_selserve_service": "NOT_FOUND_IN_INSPECTED_WORKSPACE_OR_PROCESS_TABLE",
+    "root_hardware": {
+      "dev_crypto": "ABSENT",
+      "dev_hidraw0": "ABSENT",
+      "dev_hwrng": "PRESENT",
+      "dev_tpm0": "ABSENT",
+      "dev_tpmrm0": "ABSENT",
+      "independent_custody": "UNBOUND"
+    },
+    "selfpi_existing_service": {
+      "authority": "NONE",
+      "bind": "127.0.0.1:49372",
+      "binding": "UNBOUND",
+      "block_reason": "missing_environment:SELFTOSYS_ROOT_ENDPOINT",
+      "challenge_issued": false,
+      "challenge_result": "HTTP_423_ROOT_TRANSPORT_BLOCKED",
+      "health": "OK",
+      "name": "SELFTOSYS root intake",
+      "signature_produced": false,
+      "signing": "DISABLED",
+      "upstream_transport": "CONFIGURATION_REQUIRED",
+      "version": "0.2"
+    },
+    "selfpi_selserve_service": "NOT_FOUND_IN_INSPECTED_WORKSPACE_OR_PROCESS_TABLE"
+  },
+  "repository_preimage": {
+    "branch": "main",
+    "graph_blob": "475b541db24921178e6b0ccf86c748c21ba3e6c2",
+    "graph_mutated": false,
+    "graph_path": "SELFGRAPH_INSTANCE.json",
+    "head": "28796ded836e3712a56fbc2af850b7ca2c94d0a5",
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "working_tree": "CLEAN"
+  },
+  "stage": "REVERSELF-6-1",
+  "status": "REVERSELF_6_1_LOCAL_V0_2_VERIFIED_GLOBAL_REALISELF_BLOCKED",
+  "transition": "V0.1_AUTHORITY_BYPASS_REPRODUCED -> V0.2_SIGNED_MEMORY_ADMISSION -> GUARDED_TWO_PHASE_COMMIT -> LIVE_LOCAL_CANARY_DRIFT_REPAIR",
+  "v0_1_failure_reproduction": {
+    "canonical_memory_mutated": false,
+    "classification": "MEMORY_COMMITTER_AUTHORITY_BYPASS",
+    "input": {
+      "authorization_artifact": "{}",
+      "output_digest": "MATCHING",
+      "receipt_status": "REFUSED"
+    },
+    "old_committer": "MEMORY_CREATED",
+    "old_forensic_gate": "VERIFIED",
+    "test_mode": "ISOLATED_TEMPORARY_FIXTURE"
+  },
+  "v0_2_implementation": {
+    "founder_signer_cli": {
+      "path": "runtime/ourtextnow/issue_memory_admission_v0_2.py",
+      "sha256": "2e9b32f76e07e32489f0834fc62761cc3a6e029203aa8db93c43264b68519434"
+    },
+    "guard": {
+      "controls": [
+        "Ed25519-signed memory-write admission",
+        "exact target-path binding",
+        "exact payload digest and byte-count binding",
+        "exact preimage digest binding",
+        "memory-root path confinement",
+        "CREATE versus UPDATE versus REPAIR_AFTER_DRIFT separation",
+        "drift quarantine and explicit fresh re-admission",
+        "atomic payload and sidecar writes",
+        "signed sidecar receipt and guarded post-write recontact"
+      ],
+      "path": "runtime/ourtextnow/selfserve_storage_guard_v0_2.py",
+      "sha256": "334421c6987d33bded07aa2dc7119dd1bd96cf30b613e3850f0cce6cbe97a7fb"
+    },
+    "memory_committer": {
+      "path": "runtime/ourtextnow/memory_committer.py",
+      "refused_receipt_bypass": "BLOCKED",
+      "sha256": "554e2b6da15dc7b661b3e042719e90e9269284dd7c3adc55970b26854c14c4c0",
+      "workflow": "PREPARE_PAYLOAD -> VERIFY_INFERENCE_RECEIPT -> SIGN_EXACT_MEMORY_ADMISSION -> COMMIT_PREPARED_PAYLOAD"
+    },
+    "preimages_preserved": {
+      "backup_directory": "runtime/ourtextnow/reverself_v0_2/preimage_20261110",
+      "memory_committer.py": "f2c8d10d170681b18f1a1e2269a18b39315397574ea9128638fd6fcab39df0e7",
+      "resident_runtime.py": "29457df86f71f1fab48213c190cf5afce1eeb0a9e5858aa648526bb4e7cd49e9",
+      "selfserve_storage_guard.py": "b7a6a178645659853ea73a7b80f27c99508673b25ace9833daac564ec52e123c",
+      "v0_1_guard_mutated": false
+    },
+    "resident_runtime": {
+      "behavior_with_memory_admission": "VERIFY_EXACT_ADMISSION_THEN_GUARDED_WRITE",
+      "behavior_without_memory_admission": "STAGE_PENDING_PAYLOAD_AND_DO_NOT_WRITE",
+      "path": "runtime/ourtextnow/resident_runtime.py",
+      "sha256": "656d0dbae7197daf04c437eccc62de7fb7d1ed3faa309728c3b776b144706f78"
+    }
+  }
+}
