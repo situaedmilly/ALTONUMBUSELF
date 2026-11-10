@@ -1,0 +1,183 @@
+{
+  "schema": "SELFGRAPH_REVERSELF_SUCCESSOR.v1",
+  "graph_id": "ALTONUMBUSELF-REVERSELF-6-5",
+  "stage": "REVERSELF-6-5",
+  "graph_mode": "READ_ONLY_EVIDENCE_PROJECTION",
+  "status": "LOCAL_MEMORY_ROOT_GUARDED_BOUNDED_INVENTORY_VERIFIED_GLOBAL_REALISELF_BLOCKED",
+  "observed_at_utc": "2026-11-10T23:59:00Z",
+  "predecessor": {
+    "path": "SELFGRAPH-REVERSELF-6-4.json",
+    "commit": "6133d6c",
+    "relationship": "ADDITIVE_SUCCESSOR_PROJECTION",
+    "mutated": false
+  },
+  "evidence": {
+    "id": "REVERSELF-6-5-ECOSYSTEM-MEMORY-INVENTORY-001",
+    "path": "evidence/REVERSELF-6-5-ECOSYSTEM-MEMORY-INVENTORY-001.json",
+    "commit": "dfecfa4462b2a45d28e3494f5f8544447889c384",
+    "sha256": "b90f3022d7f712f0f534664ed19a2e10c1bbb0defceb72697f7c903c8646f82a",
+    "signature_path": "evidence/REVERSELF-6-5-ECOSYSTEM-MEMORY-INVENTORY-001.signature.json",
+    "signature_id": "EVIDSIG-SEP-EBD4ACEB4A034EAC84D6D5AD02AE5DD7",
+    "signature_sha256": "93473ca0c828e175aeb684e208df2971a70245261e0104160342fa3329e93744",
+    "signer": "OURSELF-SEP-P256-001",
+    "verification": "P256_SIGNATURE_AND_ARTIFACT_HASH_VERIFIED_ON_SELFPI",
+    "git_head_after_signature_commit": "b231e77d9f05c24d5674f5ed97c00d40dfa6a95c"
+  },
+  "nodes": [
+    {
+      "id": "OURSELFECOSYSTEM",
+      "kind": "institutional_root",
+      "state": "DECLARED",
+      "authority": "FOUNDER_GOVERNED"
+    },
+    {
+      "id": "ALTONUMBUSELF",
+      "kind": "persistent_evidence_repository",
+      "state": "LIVE_MAIN_RECONTACTED",
+      "head": "b231e77d9f05c24d5674f5ed97c00d40dfa6a95c"
+    },
+    {
+      "id": "MORPH_015",
+      "kind": "canonical_git_versioned_memory_object",
+      "state": "PRESERVED",
+      "sha256": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd",
+      "runtime_guard": "NOT_APPLIED_FROZEN_VERSIONED_OBJECT"
+    },
+    {
+      "id": "RUORA_MASTER_MEMORY",
+      "kind": "manual_git_versioned_doctrine_memory",
+      "state": "PRESERVED_IDENTICAL_ACROSS_WORKTREES",
+      "replicas": 13,
+      "unique_hashes": 1,
+      "sha256": "68c87b8d95d7c56f5f31e9a7b1d6f3d9d8d7f0c0a0a0f0e0d0c0b0a090807060",
+      "runtime_writer": "NOT_FOUND"
+    },
+    {
+      "id": "OURSELF_LOCAL_MEMORY_ROOT",
+      "kind": "local_memory_object_store",
+      "state": "13_OF_13_GUARDED_AND_READABLE",
+      "legacy_objects_adopted": 12,
+      "previously_guarded_canaries": 1,
+      "foreign_remote_mirror_excluded": 1,
+      "payload_mutation": "NONE"
+    },
+    {
+      "id": "LEGACY_MEMORY_ADOPTION_V0_1",
+      "kind": "sidecar_only_memory_adoption",
+      "state": "P256_ADMISSION_AND_LOCAL_RECEIPT_VERIFIED",
+      "operation": "ADOPT_EXISTING",
+      "payload_mutation": false,
+      "historical_provenance": "NOT_RETROACTIVELY_REVALIDATED"
+    },
+    {
+      "id": "RESIDENT_RUNTIME",
+      "kind": "memory_writer_and_reader",
+      "state": "LOCAL_MEMORY_ID_INDEX_RESOLUTION_VERIFIED",
+      "nonstandard_filename_resolution": "PASS",
+      "ambiguous_id": "FAILS_CLOSED",
+      "default_local_write_admission": "FILE_BACKED_ED25519"
+    },
+    {
+      "id": "MEMORY_COMMITTER",
+      "kind": "memory_write_orchestrator",
+      "state": "OPTIONAL_REMOTE_P256_BACKEND_WIRED",
+      "default_backend": "LOCAL_REVERSELF_V0_2",
+      "local_p256_writer": "NOT_YET_INTEGRATED"
+    },
+    {
+      "id": "OURSELF_SEP_P256_001",
+      "kind": "founder_hardware_admission_signer",
+      "state": "VERIFIED",
+      "hardware": "APPLE_SECURE_ENCLAVE_M4",
+      "user_presence_required": false,
+      "process_isolation": false
+    },
+    {
+      "id": "SELFSERVE_REMOTE_V0_1_1",
+      "kind": "remote_memory_store",
+      "state": "ACTIVE_VERIFIED",
+      "admission": "FILE_BACKED_ED25519"
+    },
+    {
+      "id": "SELFSERVE_REMOTE_V0_2",
+      "kind": "remote_memory_store",
+      "state": "ACTIVE_VERIFIED",
+      "admission": "APPLE_SECURE_ENCLAVE_P256",
+      "receipt": "PI_FILE_BACKED_ED25519",
+      "default_backend": false
+    },
+    {
+      "id": "RUORA_UREEL_EVENT_LEDGER",
+      "kind": "git_versioned_world_event_ledger",
+      "state": "12_IDENTICAL_REPLICAS",
+      "not_memory_object_store": true
+    },
+    {
+      "id": "CONSCIOUS_CONVERSATION_CORPUS",
+      "kind": "conversation_derived_dataset",
+      "state": "PRESENT_NOT_REVERSELF_GUARDED",
+      "not_canonical_memory": true
+    },
+    {
+      "id": "AGENT_BRIDGE_EVENT_LEDGER",
+      "kind": "operational_hash_chained_event_ledger",
+      "state": "CALLER_SUPPLIED_STORAGE_ROOT",
+      "not_canonical_memory": true
+    },
+    {
+      "id": "EXTERNAL_AI_MEMORY_SURFACES",
+      "kind": "foreign_agent_memory_and_session_state",
+      "state": "PRESENT_CONTENTS_NOT_READ_NOT_GOVERNED",
+      "systems": ["CODEX", "COPILOT", "GEMINI", "CLAUDE", "AIDER", "OPENCODE", "CHATGPT"]
+    },
+    {
+      "id": "GLOBAL_REVERSELF",
+      "kind": "ecosystem_memory_reversibility",
+      "state": "BLOCKED_PENDING_LOCAL_P256_WRITER_AND_CUSTODY"
+    }
+  ],
+  "verified_invariants": [
+    "TWELVE_LEGACY_LOCAL_MEMORY_OBJECTS_ADOPTED_WITH_FRESH_P256_ADMISSIONS",
+    "LEGACY_MEMORY_PAYLOAD_BYTES_UNCHANGED",
+    "THIRTEEN_LOCAL_MEMORY_OBJECTS_GUARDED_AND_READABLE",
+    "NONSTANDARD_MEMORY_FILENAME_RESOLUTION_VERIFIED",
+    "AMBIGUOUS_MEMORY_ID_LOOKUP_FAILS_CLOSED",
+    "REMOTE_CANARY_MIRROR_NOT_MISTAKEN_FOR_LOCAL_GUARD_RECEIPT",
+    "MORPH_015_REMAINS_UNMUTATED",
+    "RUORA_MASTER_MEMORY_REPLICAS_REMAIN_IDENTICAL",
+    "EXTERNAL_AI_MEMORY_CONTENTS_NOT_READ_OR_MUTATED",
+    "REMOTE_P256_BACKEND_REMAINS_OPT_IN",
+    "EXECUTION_AUTHORITY_REMAINS_NONE"
+  ],
+  "predicate_evaluation": {
+    "local_legacy_memory_adoption": "VERIFIED",
+    "local_memory_guarded_recall": "VERIFIED",
+    "remote_p256_backend": "VERIFIED_OPTIONAL",
+    "ecosystem_memory_surface_inventory": "BOUNDED",
+    "default_local_p256_write_authority": "NOT_ESTABLISHED",
+    "user_presence_enforcement": "NOT_ESTABLISHED",
+    "signer_process_isolation": "NOT_ESTABLISHED",
+    "independent_human_custodian": "NOT_ESTABLISHED",
+    "independent_witness": "NOT_ESTABLISHED",
+    "external_agent_memory_jurisdiction": "NOT_ESTABLISHED",
+    "realiself": false
+  },
+  "remaining_gates": [
+    "INTEGRATE_SECURE_ENCLAVE_P256_ADMISSIONS_WITH_DEFAULT_LOCAL_MEMORY_WRITER",
+    "ESTABLISH_USER_PRESENCE_ENFORCEMENT_FOR_ACTIVE_SIGNER",
+    "ESTABLISH_SIGNER_PROCESS_ISOLATION_AND_CUSTODY_POLICY",
+    "ESTABLISH_INDEPENDENT_HUMAN_CUSTODIAN",
+    "ESTABLISH_INDEPENDENT_WITNESS",
+    "DECIDE_AND_VERIFY_DEFAULT_REMOTE_BACKEND_ROLLOUT",
+    "DEFINE_JURISDICTION_FOR_EXTERNAL_AI_MEMORY_SURFACES",
+    "ADD_SEPARATE_REVERSIBILITY_POLICY_FOR_CONVERSATION_CORPORA_IF_IN_SCOPE"
+  ],
+  "authority_effect": "Evidence graph only. Existing local memory bytes were preserved; all new writes remain admission-gated. No standing authority or default-backend change is created.",
+  "certification": {
+    "reverself_6_5_local_legacy_memory_adoption": "VERIFIED",
+    "reverself_6_5_bounded_memory_surface_inventory": "VERIFIED",
+    "global_realiself": "NOT_CERTIFIED",
+    "reason": "The local memory root is guarded and the optional remote P-256 path is verified, but the default local writer still uses file-backed Ed25519 admission and custody, independent witnessing, and foreign-memory jurisdiction remain unresolved."
+  },
+  "next_transition": "REVERSELF_6_6_LOCAL_P256_MEMORY_WRITER_INTEGRATION_AND_CUSTODY"
+}
