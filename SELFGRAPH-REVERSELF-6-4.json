@@ -1,0 +1,215 @@
+{
+  "schema": "SELFGRAPH_REVERSELF_SUCCESSOR.v1",
+  "graph_id": "ALTONUMBUSELF-REVERSELF-6-4",
+  "stage": "REVERSELF-6-4",
+  "graph_mode": "READ_ONLY_EVIDENCE_PROJECTION",
+  "status": "OPTIONAL_SECURE_ENCLAVE_P256_REMOTE_BACKEND_VERIFIED_GLOBAL_REALISELF_BLOCKED",
+  "observed_at_utc": "2026-11-10T23:58:00Z",
+  "predecessor": {
+    "path": "SELFGRAPH-REVERSELF-6-3.json",
+    "commit": "29cab9d433a679b50bee36a0a92db65da833294c",
+    "relationship": "ADDITIVE_SUCCESSOR_PROJECTION",
+    "mutated": false
+  },
+  "evidence": {
+    "id": "REVERSELF-6-4-P256-REMOTE-BACKEND-INTEGRATION-001",
+    "path": "evidence/REVERSELF-6-4-P256-REMOTE-BACKEND-INTEGRATION-001.json",
+    "commit": "4ebdc99ee64de264fe62e8064b136156f8cc4ddf",
+    "sha256": "1631856b763d546003fe70bcba78d2131e84d75d92f4a98bf63e458efa1232dc",
+    "status": "VERIFIED"
+  },
+  "nodes": [
+    {
+      "id": "OURSELFECOSYSTEM",
+      "kind": "institutional_root",
+      "state": "DECLARED",
+      "authority": "FOUNDER_GOVERNED"
+    },
+    {
+      "id": "ALTONUMBUSELF",
+      "kind": "persistent_evidence_repository",
+      "state": "LIVE_MAIN_RECONTACTED",
+      "head": "4ebdc99ee64de264fe62e8064b136156f8cc4ddf"
+    },
+    {
+      "id": "MORPH_015",
+      "kind": "canonical_memory_object",
+      "state": "PRESERVED",
+      "mutation": "NONE"
+    },
+    {
+      "id": "REVERSELF_V0_2",
+      "kind": "local_memory_admission_and_integrity_guard",
+      "state": "VERIFIED"
+    },
+    {
+      "id": "MEMORY_COMMITTER",
+      "kind": "memory_write_orchestrator",
+      "state": "OPTIONAL_P256_REMOTE_COMMIT_PATH_WIRED",
+      "remote_command": "commit-remote-v0_2",
+      "inference_receipt_revalidation": "REQUIRED",
+      "separate_memory_admission": "REQUIRED",
+      "default_backend": "LOCAL_REVERSELF_V0_2"
+    },
+    {
+      "id": "RESIDENT_RUNTIME",
+      "kind": "memory_writer_and_reader",
+      "state": "OPTIONAL_P256_REMOTE_STAGING_AND_RECALL_WIRED",
+      "remote_backend_selector": "SELFSERVE_REMOTE_V0_2",
+      "remote_write": "STAGE_ONLY_UNTIL_SEPARATE_SIGNED_ADMISSION",
+      "remote_recall": "P256_ADMISSION_AND_PI_RECEIPT_VERIFIED_CLIENT",
+      "default_backend": "LOCAL_REVERSELF_V0_2"
+    },
+    {
+      "id": "REMOTE_MEMORY_COMMITTER_V0_2",
+      "kind": "remote_memory_commit_adapter",
+      "state": "LIVE_INTEGRATION_VERIFIED_WITH_SYNTHETIC_INFERENCE_FIXTURE",
+      "checks": [
+        "OURSELFD_INFERENCE_RECEIPT",
+        "PENDING_ROOT_PATH",
+        "ACTION_AND_RECEIPT_BINDING",
+        "P256_SECURE_ENCLAVE_ADMISSION_SIGNATURE",
+        "EXACT_REMOTE_TARGET_PAYLOAD_AND_PREIMAGE",
+        "PI_SIGNED_RECEIPT",
+        "POST_COMMIT_RECONTACT"
+      ]
+    },
+    {
+      "id": "OURSELF_SEP_P256_001",
+      "kind": "founder_memory_admission_signer",
+      "state": "HARDWARE_BACKED_SIGNATURE_VERIFIED",
+      "hardware": "APPLE_SECURE_ENCLAVE_M4",
+      "algorithm": "ECDSA_P256_SHA256",
+      "user_presence_required": false,
+      "process_isolation": false,
+      "independent_custodian": false
+    },
+    {
+      "id": "SELFSERVE_REMOTE_V0_2",
+      "kind": "remote_memory_store",
+      "state": "LIVE_VERIFIED",
+      "service_id": "SELFSERVE-SELFPI-002",
+      "bind": "127.0.0.1:49374",
+      "admission": "P256_SECURE_ENCLAVE",
+      "receipt": "PI_FILE_BACKED_ED25519",
+      "execution": "DISABLED"
+    },
+    {
+      "id": "REVERSELF_6_3_SEP_CANARY_002",
+      "kind": "noncanonical_remote_memory_object",
+      "state": "DRIFT_QUARANTINE_FRESH_P256_REPAIR_RECONTACT_MATCH",
+      "sha256": "7bb34773c793e1e12f9739bdf043a25e6e9b8aa88a416bf28752056eb8ade09d"
+    },
+    {
+      "id": "MEM_VALID_INFERENCE_TEST",
+      "kind": "noncanonical_remote_adapter_test_object",
+      "state": "REMOTE_COMMIT_AND_RECONTACT_MATCH",
+      "fixture": "SYNTHETIC_VALID_OURSELFD_INFERENCE_FIXTURE",
+      "sha256": "907904307cf73bce20a9b0cfa2018fceff095a8fdf28fc126812631d53441762"
+    },
+    {
+      "id": "OURSELF_SEP_P256_UP_PROBE_001",
+      "kind": "user_presence_key_probe",
+      "state": "CREATED_AND_SIGNED_NOT_PINNED",
+      "access_control": "PRIVATE_KEY_USAGE_PLUS_USER_PRESENCE",
+      "interactive_prompt_observed": false
+    },
+    {
+      "id": "GLOBAL_REVERSELF",
+      "kind": "ecosystem_memory_reversibility",
+      "state": "BLOCKED_PENDING_USER_PRESENCE_CUSTODY_AND_INDEPENDENT_WITNESS"
+    }
+  ],
+  "edges": [
+    {
+      "from": "OURSELFECOSYSTEM",
+      "to": "ALTONUMBUSELF",
+      "relation": "PERSISTS_EVIDENCE_THROUGH"
+    },
+    {
+      "from": "ALTONUMBUSELF",
+      "to": "MORPH_015",
+      "relation": "REGISTERS_CANONICAL_MEMORY_OBJECT"
+    },
+    {
+      "from": "MEMORY_COMMITTER",
+      "to": "REMOTE_MEMORY_COMMITTER_V0_2",
+      "relation": "EXPLICIT_REMOTE_COMMIT_COMMAND"
+    },
+    {
+      "from": "RESIDENT_RUNTIME",
+      "to": "REMOTE_MEMORY_COMMITTER_V0_2",
+      "relation": "STAGES_PENDING_PAYLOAD_FOR_SEPARATE_COMMIT"
+    },
+    {
+      "from": "REMOTE_MEMORY_COMMITTER_V0_2",
+      "to": "OURSELF_SEP_P256_001",
+      "relation": "REQUIRES_EXACT_HARDWARE_BACKED_MEMORY_ADMISSION"
+    },
+    {
+      "from": "REMOTE_MEMORY_COMMITTER_V0_2",
+      "to": "SELFSERVE_REMOTE_V0_2",
+      "relation": "SUBMITS_ADMITTED_MEMORY_AND_VERIFIES_SIGNED_RECEIPT"
+    },
+    {
+      "from": "RESIDENT_RUNTIME",
+      "to": "SELFSERVE_REMOTE_V0_2",
+      "relation": "REMOTE_RECALL_VERIFIES_PI_RECEIPT_AND_EXACT_BYTES"
+    },
+    {
+      "from": "SELFSERVE_REMOTE_V0_2",
+      "to": "REVERSELF_6_3_SEP_CANARY_002",
+      "relation": "P256_ADMISSION_DRIFT_QUARANTINE_AND_FRESH_REPAIR"
+    },
+    {
+      "from": "SELFSERVE_REMOTE_V0_2",
+      "to": "MEM_VALID_INFERENCE_TEST",
+      "relation": "SYNTHETIC_INFERENCE_FIXTURE_REMOTE_COMMIT"
+    }
+  ],
+  "verified_invariants": [
+    "INFERENCE_RECEIPT_VALIDATION_PRECEDES_REMOTE_MEMORY_COMMIT",
+    "REMOTE_MEMORY_WRITE_REQUIRES_SEPARATE_P256_SECURE_ENCLAVE_ADMISSION",
+    "ADMISSION_BINDS_EXACT_TARGET_OPERATION_PAYLOAD_AND_PREIMAGE",
+    "DRIFT_REQUIRES_QUARANTINE_AND_FRESH_RE_ADMISSION",
+    "REPAIR_REQUIRES_EXPLICIT_ALLOW_FLAG",
+    "PI_SIGNED_RECEIPT_VERIFIED_BY_MAC",
+    "RESIDENT_RUNTIME_REMOTE_RECALL_VERIFIES_RECEIPT",
+    "REMOTE_BACKEND_IS_OPT_IN_AND_NOT_DEFAULT",
+    "CANONICAL_MORPH_015_REMAINS_UNMUTATED",
+    "EXECUTION_AUTHORITY_REMAINS_NONE"
+  ],
+  "predicate_evaluation": {
+    "local_v0_2_guard": "VERIFIED",
+    "remote_v0_2_service": "VERIFIED",
+    "secure_enclave_p256_signer": "VERIFIED",
+    "remote_memory_committer_adapter": "VERIFIED_WITH_SYNTHETIC_INFERENCE_FIXTURE",
+    "resident_runtime_remote_staging": "VERIFIED",
+    "resident_runtime_remote_recall": "VERIFIED",
+    "known_memory_writer_paths_optional_remote_route": "VERIFIED",
+    "default_remote_backend": "NOT_ENABLED",
+    "ecosystem_wide_consumer_inventory": "BOUNDED_NOT_EXHAUSTIVE",
+    "user_presence_enforcement": "NOT_ESTABLISHED",
+    "signer_process_isolation": "NOT_ESTABLISHED",
+    "independent_human_custodian": "NOT_ESTABLISHED",
+    "independent_witness": "NOT_ESTABLISHED",
+    "multi_process_coordination": "NOT_ESTABLISHED",
+    "realiself": false
+  },
+  "remaining_gates": [
+    "ESTABLISH_USER_PRESENCE_ENFORCEMENT_FOR_ACTIVE_SIGNER",
+    "ESTABLISH_SIGNER_PROCESS_ISOLATION_AND_CUSTODY_POLICY",
+    "ESTABLISH_INDEPENDENT_HUMAN_CUSTODIAN",
+    "COMPLETE_ECOSYSTEM_WIDE_MEMORY_CONSUMER_INVENTORY",
+    "DECIDE_AND_VERIFY_DEFAULT_REMOTE_BACKEND_ROLLOUT",
+    "ADD_INDEPENDENT_WITNESS_FOR_ADMISSION_COMMIT_AND_RECONTACT",
+    "ESTABLISH_MULTI_PROCESS_COORDINATION_IF_SERVICE_IS_REPLICATED"
+  ],
+  "authority_effect": "Evidence graph only. Remote memory writes remain opt-in and require a separately signed P-256 admission. No standing authority is created.",
+  "certification": {
+    "reverself_6_4_p256_remote_backend": "VERIFIED",
+    "global_realiself": "NOT_CERTIFIED",
+    "reason": "The optional Secure Enclave remote path is operational, but user-presence enforcement, process isolation, independent human custody, exhaustive memory-consumer coverage, and independent witnessing remain unestablished."
+  },
+  "next_transition": "REVERSELF_6_5_USER_PRESENCE_SIGNER_ISOLATION_AND_INDEPENDENT_CUSTODY"
+}
