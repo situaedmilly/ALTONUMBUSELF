@@ -1,0 +1,333 @@
+{
+  "authority_effect": "This transition adopts existing local memory bytes through sidecar-only P-256 admissions and records a bounded memory-surface inventory. No payload bytes were rewritten, no external assistant memory was read or mutated, and no default backend was changed.",
+  "certification": {
+    "global_realiself": "NOT_CERTIFIED",
+    "reason": "The local legacy memory root is guarded and the known remote paths are operational, but the default local writer still uses a file-backed Ed25519 admission, user-presence enforcement and process isolation are absent, independent human custody and witnessing are not established, and external assistant memory surfaces remain outside OURSELF jurisdiction.",
+    "reverself_6_5_bounded_memory_surface_inventory": "VERIFIED",
+    "reverself_6_5_local_legacy_memory_adoption": "VERIFIED"
+  },
+  "conformance": {
+    "mac_local_reverself_v0_2_tests": {
+      "failed": 0,
+      "passed": 6
+    },
+    "mac_p256_adoption_and_remote_adapter_tests": {
+      "failed": 0,
+      "passed": 16
+    },
+    "mac_v0_1_remote_adapter_tests": {
+      "failed": 0,
+      "passed": 8
+    },
+    "result": "PASS",
+    "selfpi_v0_1_service_tests": {
+      "failed": 0,
+      "passed": 9
+    },
+    "selfpi_v0_2_service_tests": {
+      "failed": 0,
+      "passed": 9
+    },
+    "total_tests_failed": 0,
+    "total_tests_passed": 48
+  },
+  "custody_and_authority": {
+    "Pi_receipt_signer": "FILE_BACKED_ED25519",
+    "active_founder_admission_signer": "APPLE_SECURE_ENCLAVE_P256",
+    "active_signer_process_isolation": false,
+    "active_signer_user_presence_required": false,
+    "execution_authority": "NONE",
+    "independent_human_custodian": false,
+    "independent_witness": false,
+    "local_P256_memory_writer": "NOT_YET_INTEGRATED",
+    "local_default_memory_write_admission": "FILE_BACKED_ED25519",
+    "remote_P256_memory_backend": "OPTIONAL_WIRED_NOT_DEFAULT",
+    "remote_memory_write_without_separate_admission": false
+  },
+  "evidence_id": "REVERSELF-6-5-ECOSYSTEM-MEMORY-INVENTORY-001",
+  "foreign_ai_state_surfaces": {
+    "AIDER": {
+      "content_read": false,
+      "jurisdiction": "EXTERNAL_TOOL_STATE_NOT_GOVERNED_BY_REVERSELF",
+      "metadata_file_count": 4,
+      "path": "~/.aider"
+    },
+    "CHATGPT": {
+      "jurisdiction": "OUTSIDE_LOCAL_OURSELF_RUNTIME",
+      "local_filesystem_access": "NOT_AVAILABLE",
+      "path": "CLOUD_ACCOUNT_MEMORY"
+    },
+    "CLAUDE": {
+      "content_read": false,
+      "jurisdiction": "EXTERNAL_TOOL_STATE_NOT_GOVERNED_BY_REVERSELF",
+      "metadata_file_count": 3941,
+      "path": "~/.claude"
+    },
+    "CODEX": {
+      "content_read": false,
+      "files": 4,
+      "jurisdiction": "EXTERNAL_TOOL_MEMORY_NOT_GOVERNED_BY_REVERSELF",
+      "path": "~/.codex/memories"
+    },
+    "COPILOT": {
+      "content_read": false,
+      "jurisdiction": "EXTERNAL_TOOL_SESSION_STATE_NOT_GOVERNED_BY_REVERSELF",
+      "path": "~/.copilot/session-state/*/events.jsonl",
+      "session_event_ledgers": 48
+    },
+    "GEMINI": {
+      "credential_content_read": false,
+      "jurisdiction": "EXTERNAL_TOOL_STATE_AND_CREDENTIALS_NOT_GOVERNED_BY_REVERSELF",
+      "paths": [
+        "~/.gemini",
+        "~/OURSELF-RUNTIME-STATE/geminiself/.gemini"
+      ],
+      "state_files_metadata_counts": [
+        59,
+        10
+      ]
+    },
+    "OPENCODE": {
+      "content_read": false,
+      "jurisdiction": "EXTERNAL_TOOL_STATE_NOT_GOVERNED_BY_REVERSELF",
+      "metadata_file_count": 2,
+      "path": "~/.opencode"
+    }
+  },
+  "inventory_scope": "BOUNDED_LOCAL_MAC_SELFPI_AND_INSPECTED_REPOSITORY_WORKSPACES; EXTERNAL_AI_MEMORY_CONTENTS_NOT_READ",
+  "local_memory_root": {
+    "adoption_admission_algorithm": "ECDSA_P256_SHA256_SECURE_ENCLAVE",
+    "adoption_receipt_algorithm": "ED25519_LOCAL_GUARD_RECEIPT",
+    "adoption_results_path": "/Users/millysituated/OURSELF/runtime/ourtextnow/reverself_v0_2/legacy_memory_adoption_results_20261110.json",
+    "adoption_results_sha256": "5a52ae746ac53a6c0ccd08dbfb3d4ce69dbb393d876fc27cfbceabddfe96d5c8",
+    "ambiguous_memory_id": "FAILS_CLOSED",
+    "excluded_remote_canary_mirrors": 1,
+    "failed": 0,
+    "files_in_preimage_manifest": 14,
+    "foreign_remote_mirror_excluded": 1,
+    "guarded_local_objects_verified": 13,
+    "historical_provenance": "NOT_RETROACTIVELY_REVALIDATED",
+    "legacy_objects_adopted": 12,
+    "nonstandard_filename_resolution": "VERIFIED",
+    "objects": [
+      {
+        "admission_id": "MEMADM-SEP-29869311024A41528BFD4E89907A4B0F",
+        "guarded_recontact": "MATCH",
+        "memory_id": "MEM-AUDIO-OUT-001",
+        "payload_mutated": false,
+        "payload_sha256": "4d795cfc6a4a68ac7d13c514292f16abfeb9506e25be01b27fa65d3c905b7b85",
+        "sidecar_sha256": "e9e23445f0d2d8b46a6fdf96e5dbf07ee8ba56b4b0feba0374efa1912cc94898",
+        "status": "ADOPTED_PREVIOUSLY"
+      },
+      {
+        "admission_id": "MEMADM-SEP-E06F1934EB364D2395FDA5C2B26D9F78",
+        "guarded_recontact": "MATCH",
+        "memory_id": "MEM-AUDIO-OUT-L3-001",
+        "payload_mutated": false,
+        "payload_sha256": "64c9aace1049e2a18efdb0c8cc168a73f768580bb36e25831c2fc6e65678f11b",
+        "sidecar_sha256": "a4974b90b527c716f45ca400c31a835cfeb727c9ef84c66684752fd96582b5d1",
+        "status": "ADOPTED_PREVIOUSLY"
+      },
+      {
+        "admission_id": "MEMADM-SEP-227CB1E8B9824212A2277F39D0BBF55E",
+        "guarded_recontact": "MATCH",
+        "memory_id": "MEM-08B2EF4C7EB1",
+        "payload_mutated": false,
+        "payload_sha256": "428acca0df089781c9a9dcc6e22b85df87a8d09c0a7ffb6b60550c1eaf37472d",
+        "sidecar_sha256": "def9387549ce2938ff13b3fe29f4cc6babb19c20bffced527a92f7797457a5bb",
+        "status": "ADOPTED_PREVIOUSLY"
+      },
+      {
+        "admission_id": "MEMADM-SEP-C6B8D7CD3C534494A24E0704045A462E",
+        "guarded_recontact": "MATCH",
+        "memory_id": "MEM-30DB44EC6F44",
+        "payload_mutated": false,
+        "payload_sha256": "59b03fc625448877b847eae34ff7bb69abf916d97a52106137b9d1ab7aa5581b",
+        "sidecar_sha256": "a614b41eb5d7a9d352483a3d6a3a97b16f6a04f3547eb43de1b002e6ac2913a1",
+        "status": "ADOPTED_PREVIOUSLY"
+      },
+      {
+        "admission_id": "MEMADM-SEP-B30D934579D7495F9CC50CDD0CB3D539",
+        "guarded_recontact": "MATCH",
+        "memory_id": "MEM-537269A87E99",
+        "payload_mutated": false,
+        "payload_sha256": "1e57586bf3b43157d486a7e2fcfb5f3bb35ee859dfc32db0633798ec042a9b9c",
+        "sidecar_sha256": "deebe0793e1e4d21044a4ccf3add1bc941b0822f344285dd0ecab82ec695ded0",
+        "status": "ADOPTED_PREVIOUSLY"
+      },
+      {
+        "admission_id": "MEMADM-SEP-9A202D9ECB08401EA93AC60E9390A0CD",
+        "guarded_recontact": "MATCH",
+        "memory_id": "MEM-6B381EB7C3FA",
+        "payload_mutated": false,
+        "payload_sha256": "77f821355a87b69f9a9b04eb8dddde04a81600c41fbbf1bd141ad14c2a52c392",
+        "sidecar_sha256": "716862dbc442bdf0cde6afa3b8ebfa109c01a9d5d8a3198643f1be82d3ff07b2",
+        "status": "ADOPTED_PREVIOUSLY"
+      },
+      {
+        "admission_id": "MEMADM-SEP-29F551989F35430D8F9B92D71AFD5D24",
+        "guarded_recontact": "MATCH",
+        "memory_id": "MEM-820140AC3CEA",
+        "payload_mutated": false,
+        "payload_sha256": "177b647e1b0ad2a7b979774bf0e2a1db52de8436d23b9b05f23cc03fa393c5fb",
+        "sidecar_sha256": "b0659c6f4b52e6bff12bdd067889958af63807e6838121408130b502864eb9a9",
+        "status": "ADOPTED_PREVIOUSLY"
+      },
+      {
+        "admission_id": "MEMADM-SEP-22937865E3D6429AA4F427EF2953F647",
+        "guarded_recontact": "MATCH",
+        "memory_id": "MEM-ACT-MSG-PROBE-001",
+        "payload_mutated": false,
+        "payload_sha256": "35dd642bed12a7bdad1c9721ad0b03271c82706f1495a4611cd43cbd9f5bba63",
+        "sidecar_sha256": "cf223a56fd38d1aeb1df5dd202843dfd152e282c8842668d94e5433925036bd4",
+        "status": "ADOPTED_PREVIOUSLY"
+      },
+      {
+        "admission_id": "MEMADM-SEP-E1511E961C554C5BAAFC8F74684FF481",
+        "guarded_recontact": "MATCH",
+        "memory_id": "MEM-CE048CDC2EC4",
+        "payload_mutated": false,
+        "payload_sha256": "88fa6f2ed84cfd6a4e01fce01e14a6a0de864f77073e90930ba8664a87b5a905",
+        "sidecar_sha256": "1c3e9a6e461b2f8b63b17f16a4d235edc4bb9eb6d25d0ca9d65be8e3898c4d76",
+        "status": "ADOPTED_PREVIOUSLY"
+      },
+      {
+        "admission_id": "MEMADM-SEP-37F988F7326F4BD0A40DFF748EFFD346",
+        "guarded_recontact": "MATCH",
+        "memory_id": "MEM-CONV-SELF-LOOP-001",
+        "payload_mutated": false,
+        "payload_sha256": "7b04e9882c2b70d0e075d39b8bbef8bf010db06b05d2c312eff9a32aa6d441e3",
+        "sidecar_sha256": "b4a8458d1ec0355fe67db5f53151a1dbd08c047010533992071983f2280fc746",
+        "status": "ADOPTED_PREVIOUSLY"
+      },
+      {
+        "admission_id": "MEMADM-SEP-FD9D5A56C0B34F438E38D42BB1BE12BD",
+        "guarded_recontact": "MATCH",
+        "memory_id": "MEM-F3EA1CCC15D4",
+        "payload_mutated": false,
+        "payload_sha256": "f52482171f66262d8203d0343e1e7a3113923727f2addde3d42e7fe9ed289616",
+        "sidecar_sha256": "aa431014a09f07156bc8b724daab622bcdd1430752d56de681a291d8edda508e",
+        "status": "ADOPTED_PREVIOUSLY"
+      },
+      {
+        "admission_id": "MEMADM-SEP-1139F33C71BD4DA6AA9905140F134D3C",
+        "guarded_recontact": "MATCH",
+        "memory_id": "MEM-VOICE-SESS-PROBE-001",
+        "payload_mutated": false,
+        "payload_sha256": "c3c7e3e444a1a49379a969f0ce6bf5dc4e846d67c380b461829acbff4f80f29a",
+        "sidecar_sha256": "9440064c23425e8a1551632dc84981a180ba52ee16de00d724dc55772d0a7c68",
+        "status": "ADOPTED_PREVIOUSLY"
+      }
+    ],
+    "path": "/Users/millysituated/OURSELF/runtime/ourtextnow/memory",
+    "payload_mutation": "NONE",
+    "preimage_manifest_path": "/Users/millysituated/OURSELF/runtime/ourtextnow/reverself_v0_2/legacy_memory_preimage_manifest_20261110.json",
+    "preimage_manifest_sha256": "4ae8f0c76fdbac5e6a68e519dc42a3de831615503926fa4629e4332727e692c4",
+    "previously_guarded_local_canaries": 1,
+    "refused": 0,
+    "resident_runtime_recall": "PASS_FOR_ALL_12_MEMORY_IDS"
+  },
+  "memory_surface_inventory": {
+    "AGENT_BRIDGE_EVENT_LEDGER": {
+      "RUNTIME_MEMORY_EVENT": "OPERATIONAL_EVENT_TYPE_ONLY",
+      "active_default_store_found": false,
+      "classification": "OPERATIONAL_HASH_CHAINED_EVENT_LEDGER_NOT_CANONICAL_MEMORY",
+      "ledger_name": "events.jsonl",
+      "storage_root": "EXPLICIT_CALLER_SUPPLIED",
+      "writer_model": "APPEND_ONLY_HASH_CHAINED"
+    },
+    "ALTONUMBUSELF_MORPH_015": {
+      "bytes": 2941,
+      "classification": "CANONICAL_GIT_VERSIONED_MEMORY_OBJECT",
+      "local_memory_guard": "NOT_APPLIED_FROZEN_VERSIONED_OBJECT",
+      "path": "evidence/MORPH-015-memory-object.md",
+      "repository": "situaedmilly/ALTONUMBUSELF",
+      "sha256": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd",
+      "status": "PRESERVED_GIT_VERSIONED_NO_RUNTIME_WRITER_FOUND"
+    },
+    "ALTONUMBUSELF_RECONTACT_HARNESS": {
+      "classification": "READ_ONLY_RECONTACT_CHECKPOINT_AND_TEST_OUTPUT_SURFACE",
+      "live_persistent_checkpoint_files_found": false
+    },
+    "CONSCIOUS_CONVERSATION_CORPUS": {
+      "classification": "CONVERSATION_DERIVED_DATASET_NOT_CANONICAL_MEMORY",
+      "content_read": false,
+      "corpus_files": 9,
+      "reverself_guard": "NOT_APPLIED_SEPARATE_DATASET_SCOPE",
+      "runtime_shadow_records_directory_present": false,
+      "runtime_transcript_directory_present": false
+    },
+    "OURSELF_LOCAL_MEMORY_ROOT": {
+      "classification": "CANONICAL_LOCAL_MEMORY_OBJECT_STORE",
+      "new_adoptions": 12,
+      "sidecar_only": true,
+      "status": "13_OF_13_LOCAL_OBJECTS_GUARDED_AND_READABLE"
+    },
+    "RUORA_MASTER_MEMORY": {
+      "bytes": 614,
+      "classification": "MANUAL_GIT_VERSIONED_DOCTRINE_MEMORY",
+      "path": "memory/master_memory.md",
+      "programmatic_writer_found": false,
+      "replicas_across_ruora_worktrees": 13,
+      "sha256": "68c87d7b43aed83bd0d10ff636cead89c74babd848103cd4b5563e0a0696954e",
+      "status": "PRESERVED_GIT_VERSIONED_MANUAL_MEMORY_NOT_IN_LOCAL_RUNTIME_GUARD",
+      "unique_replica_hashes": 1
+    },
+    "SELFCUSTODY_AND_OURSELFECOSYSTEM": {
+      "classification": "GOVERNANCE_AND_CUSTODY_EVIDENCE_NOT_MEMORY_STORES",
+      "memory_writer_found": false
+    },
+    "SELFSERVE_REMOTE_V0_1_1": {
+      "admission": "FILE_BACKED_ED25519",
+      "bind": "127.0.0.1:49373",
+      "classification": "REMOTE_MEMORY_STORE",
+      "receipt": "FILE_BACKED_ED25519",
+      "status": "ACTIVE_VERIFIED"
+    },
+    "SELFSERVE_REMOTE_V0_2": {
+      "admission": "MAC_APPLE_SECURE_ENCLAVE_P256",
+      "bind": "127.0.0.1:49374",
+      "classification": "REMOTE_MEMORY_STORE",
+      "optional_runtime_backend": "WIRED_NOT_DEFAULT",
+      "receipt": "PI_FILE_BACKED_ED25519",
+      "status": "ACTIVE_VERIFIED"
+    },
+    "SELF_COMMUNICATION_WORKING_ENTRY": {
+      "classification": "STATIC_GOVERNANCE_AND_WORKING_ENTRY_ARTIFACTS",
+      "runtime_receipt_or_memory_store_found": false
+    },
+    "UREEL_WORLD_EVENT_LEDGER": {
+      "bytes": 9613,
+      "classification": "WORLD_EVENT_LEDGER_NOT_MEMORY_OBJECT_STORE",
+      "git_tracked": true,
+      "path_pattern": "RUORA-worktrees/*/worlds/ureel-unreal-003/events/events.jsonl",
+      "records": 18,
+      "replicas": 12,
+      "sha256": "4e47463a1c4c79eda4ec928ec5f92e16e9dc94e5c5ba00da203de996a8a75302",
+      "unique_hashes": 1
+    }
+  },
+  "next_transition": "REVERSELF_6_6_LOCAL_P256_MEMORY_WRITER_INTEGRATION_AND_CUSTODY",
+  "observed_at_utc": "2026-11-10T23:49:04.986169Z",
+  "preservation": {
+    "12_legacy_local_memory_payloads_unchanged": true,
+    "local_canary_payload_unchanged": true,
+    "morph_015_unchanged": true,
+    "remote_mirror_payload_unchanged": true,
+    "ruora_master_memory_unchanged": true,
+    "ureel_event_ledgers_unchanged": true
+  },
+  "remaining_gates": [
+    "INTEGRATE_SECURE_ENCLAVE_P256_ADMISSIONS_WITH_DEFAULT_LOCAL_MEMORY_WRITER",
+    "ESTABLISH_USER_PRESENCE_ENFORCEMENT_FOR_ACTIVE_SIGNER",
+    "ESTABLISH_SIGNER_PROCESS_ISOLATION_AND_CUSTODY_POLICY",
+    "ESTABLISH_INDEPENDENT_HUMAN_CUSTODIAN",
+    "ESTABLISH_INDEPENDENT_WITNESS",
+    "DECIDE_AND_VERIFY_DEFAULT_REMOTE_BACKEND_ROLLOUT",
+    "DEFINE_JURISDICTION_FOR_EXTERNAL_CODEX_COPILOT_GEMINI_CLAUDE_AIDER_OPENCODE_AND_CHATGPT_MEMORY",
+    "ADD_SEPARATE_REVERSIBILITY_POLICY_FOR_CONSCIOUS_CONVERSATION_CORPUS_IF_IN_SCOPE"
+  ],
+  "schema": "ourself.reverself.ecosystem-memory-inventory-evidence.v0.1",
+  "stage": "REVERSELF-6-5",
+  "status": "LOCAL_MEMORY_ROOT_ADOPTED_AND_GUARDED_BOUNDED_ECOSYSTEM_INVENTORY_COMPLETE_GLOBAL_REALISELF_BLOCKED"
+}
