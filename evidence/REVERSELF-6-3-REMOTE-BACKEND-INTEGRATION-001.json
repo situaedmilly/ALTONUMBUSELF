@@ -1,0 +1,144 @@
+{
+  "authority_effect": "This transition adds an optional remote backend and bounded synthetic integration test. It does not enable remote writes by default and does not grant standing memory-write authority.",
+  "certification": {
+    "global_realiself": "NOT_CERTIFIED",
+    "reason": "The known Mac memory paths now have an optional remote route and remote recall, but the default remains local, the ecosystem inventory is bounded, and hardware-backed founder custody, independent human custody, and independent witnessing remain unestablished.",
+    "reverself_6_1_local_v0_2": "VERIFIED",
+    "reverself_6_2_remote_selserve": "VERIFIED",
+    "reverself_6_3_optional_remote_backend": "VERIFIED"
+  },
+  "conformance": {
+    "local_reverself_v0_2_tests": {
+      "failed": 0,
+      "passed": 6,
+      "suite": "Mac reverself_v0_2/tests/test_reverself_v0_2.py"
+    },
+    "remote_adapter_and_runtime_tests": {
+      "failed": 0,
+      "passed": 8,
+      "suite": "Mac selserve_remote_v0_1/tests/test_remote_memory_committer_v0_1.py"
+    },
+    "remote_service_tests": {
+      "failed": 0,
+      "passed": 9,
+      "suite": "SELFPI tests/test_server_v0_1.py"
+    },
+    "result": "PASS",
+    "total_tests_failed": 0,
+    "total_tests_passed": 23
+  },
+  "evidence_id": "REVERSELF-6-3-REMOTE-BACKEND-INTEGRATION-001",
+  "hashes": {
+    "mac_memory_committer": "131642cf1be9cd621a04f584a033f6d07e4d43e2f698906bda450676ea8578f8",
+    "mac_remote_adapter_tests": "dd1362d4571ebbcb44477b0b9622e1ec34a301cd4f44a98f2c99a50d52108178",
+    "mac_remote_client": "c6514878aca10611dd8dfcad15a6610e301338e374796ea189f1b4dfa67eea23",
+    "mac_remote_memory_committer": "556ef99a5ee775e6928848034e3a80ddfacdbde3bd77ade404eb16ec275fae1d",
+    "mac_resident_runtime": "a899e2841161e7f8488abe3dadb9f5ea0e16cc6750eb141c3980380b862260c6",
+    "pi_service_code": "9a15259bba5c3561a5921bdef58e66bb0080ba0209950bb78568d09820c04839",
+    "pi_service_contract": "6af001ccc9f76b710d3b27a12ff785cb16fcc126410420a7b2c4c18277e8fe63",
+    "pi_service_tests": "227e8779d7e739c0953bf89ea1b59b7153450b63b6ad5a56c8b02e5ae357c893"
+  },
+  "implementation": {
+    "memory_committer": {
+      "behavior": "REVALIDATE_OURSELFD_INFERENCE_RECEIPT_THEN_VERIFY_REMOTE_ADMISSION_THEN_COMMIT_TO_SELFSERVE",
+      "new_cli": "commit-remote",
+      "path": "runtime/ourtextnow/memory_committer.py",
+      "sha256": "131642cf1be9cd621a04f584a033f6d07e4d43e2f698906bda450676ea8578f8"
+    },
+    "remote_admission_issuer": {
+      "path": "runtime/ourtextnow/selserve_remote_v0_1/issue_remote_memory_admission_v0_1.py",
+      "sha256": "a0df178113ce8b7bc5780f7ba9c13d1479e00a1b72439e39fba5a23968ca1e86"
+    },
+    "remote_client": {
+      "path": "runtime/ourtextnow/selserve_remote_v0_1/selserve_client_v0_1.py",
+      "receipt_verification": "ED25519_SIGNATURE_IDENTITY_PAYLOAD_DIGEST_AND_BYTE_COUNT",
+      "recontact": "EXACT_BYTE_MATCH_AND_SAME_SIGNED_RECEIPT",
+      "sha256": "c6514878aca10611dd8dfcad15a6610e301338e374796ea189f1b4dfa67eea23"
+    },
+    "remote_memory_committer": {
+      "controls": [
+        "revalidate_authoritative_OURSELFD_inference_receipt",
+        "prepared_payload_confined_to_pending_root",
+        "memory_id_action_id_and_receipt_id_binding",
+        "remote_admission_signature_verified_locally",
+        "exact_remote_target_operation_payload_digest_and_byte_count_binding",
+        "remote_commit_requires_signed_admission",
+        "remote_receipt_signature_verified",
+        "post_commit_cross_node_recontact"
+      ],
+      "path": "runtime/ourtextnow/selserve_remote_v0_1/remote_memory_committer_v0_1.py",
+      "sha256": "556ef99a5ee775e6928848034e3a80ddfacdbde3bd77ade404eb16ec275fae1d"
+    },
+    "resident_runtime": {
+      "backend_selector": "OURSELF_MEMORY_BACKEND",
+      "default": "LOCAL_REVERSELF_V0_2",
+      "local_default_preserved": true,
+      "path": "runtime/ourtextnow/resident_runtime.py",
+      "remote_mode": "SELFSERVE_REMOTE",
+      "remote_recall": "FETCH_REMOTE_OBJECT_AND_VERIFY_PI_SIGNED_RECEIPT",
+      "remote_write_behavior": "STAGE_PENDING_PAYLOAD_ONLY; SEPARATE_SIGNED_ADMISSION_AND_COMMIT-REMOTE_REQUIRED",
+      "sha256": "a899e2841161e7f8488abe3dadb9f5ea0e16cc6750eb141c3980380b862260c6"
+    }
+  },
+  "live_remote_adapter_test": {
+    "actual_model_inference": "NOT_CLAIMED",
+    "canonical_memory": false,
+    "cross_node_recontact": "MATCH",
+    "fixture_class": "SYNTHETIC_VALID_OURSELFD_INFERENCE_FIXTURE",
+    "memory_admission_id": "MEMADM-06BD2630F3A34F01B830A784BBDF0F3F",
+    "memory_id": "MEM-VALID-INFERENCE-TEST",
+    "payload_sha256": "ba5083af1acff82283ccefb8c7b95389c733b1596068610bf1c5d8b33f3cd592",
+    "receipt_sha256": "d24a6010b66a3c9385296a904e0a250340983bd1734d2fb57061b05adf1813be",
+    "remote_receipt_authority": "SELFSERVE-PI-ED25519-001",
+    "result": "REMOTE_COMMITTED_AND_RECONTACT_VERIFIED"
+  },
+  "next_transition": "REVERSELF_6_4_HARDWARE_SIGNER_AND_INDEPENDENT_CUSTODY",
+  "observed_at_utc": "2026-11-10T23:29:05.604587Z",
+  "predecessor_evidence": {
+    "reverself_6_1": "evidence/REVERSELF-004-ADMISSION-HARDENING-001.json",
+    "reverself_6_2": "evidence/REVERSELF-6-2-SELFSERVE-REMOTE-001.json",
+    "reverself_6_2_graph": "SELFGRAPH-REVERSELF-6-2.json"
+  },
+  "predicate_evaluation": {
+    "ecosystem_wide_consumer_inventory": "BOUNDED_NOT_EXHAUSTIVE",
+    "hardware_backed_founder_signer": false,
+    "independent_human_custodian": false,
+    "independent_witness": false,
+    "known_writer_paths_have_optional_remote_route": "VERIFIED",
+    "local_v0_2_guard": "VERIFIED",
+    "multi_process_write_serialization": false,
+    "realiself": false,
+    "remote_backend_default_enabled": false,
+    "remote_memory_committer_adapter": "VERIFIED_WITH_SYNTHETIC_INFERENCE_FIXTURE",
+    "remote_selserve_service": "VERIFIED",
+    "remote_transport": "VERIFIED",
+    "resident_runtime_remote_recall": "VERIFIED",
+    "resident_runtime_remote_staging": "VERIFIED"
+  },
+  "preservation": {
+    "automatic_memory_write_without_separate_admission": false,
+    "canonical_local_memory_mutated": false,
+    "canonical_morph_015_mutated": false,
+    "existing_local_reverself_guard_mutated": false,
+    "local_backend_default_unchanged": true,
+    "remote_service_admission_authority": "NONE",
+    "remote_service_execution_authority": "NONE"
+  },
+  "remaining_gates": [
+    "ESTABLISH_HARDWARE_BACKED_FOUNDER_SIGNER_OR_EXTERNAL_HARDWARE_TOKEN",
+    "ESTABLISH_INDEPENDENT_CUSTODIAN_AND_HUMAN_AUTHENTICATION",
+    "COMPLETE_ECOSYSTEM_WIDE_MEMORY_CONSUMER_INVENTORY",
+    "DEFINE_AND_APPROVE_DEFAULT_REMOTE_BACKEND_ROLLOUT_POLICY",
+    "ADD_INDEPENDENT_WITNESS_FOR_ADMISSION_COMMIT_AND_RECONTACT_SEQUENCE",
+    "ESTABLISH_MULTI_PROCESS_OR_MULTI_INSTANCE_CONCURRENCY_COORDINATION_IF_SERVICE_IS_REPLICATED"
+  ],
+  "resident_runtime_remote_read": {
+    "memory_id": "REVERSELF-6-2-CANARY-001",
+    "payload_sha256": "4d797cc993bf63d472fa7f239c78fe870860101fff06d8b55a094dbf8ee1894f",
+    "result": "PASS",
+    "service_receipt_sha256": "c93036d2a6a0b9cf8bc2c9898942dbd88868a3dd3ced1998f4f16f2731a7c869"
+  },
+  "schema": "ourself.reverself.remote-backend-integration-evidence.v0.1",
+  "stage": "REVERSELF-6-3",
+  "status": "OPTIONAL_REMOTE_BACKEND_INTEGRATION_VERIFIED_GLOBAL_REALISELF_BLOCKED"
+}
