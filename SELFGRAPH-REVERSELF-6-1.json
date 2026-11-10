@@ -1,0 +1,215 @@
+{
+  "schema": "SELFGRAPH_REVERSELF_SUCCESSOR.v1",
+  "graph_id": "ALTONUMBUSELF-REVERSELF-6-1",
+  "stage": "REVERSELF-6-1",
+  "graph_mode": "READ_ONLY_EVIDENCE_PROJECTION",
+  "status": "LOCAL_V0_2_VERIFIED_GLOBAL_REALISELF_BLOCKED",
+  "observed_at_utc": "2026-11-10T23:01:46Z",
+  "predecessor": {
+    "path": "SELFGRAPH_INSTANCE.json",
+    "blob_sha": "475b541db24921178e6b0ccf86c748c21ba3e6c2",
+    "mutated": false,
+    "relationship": "ADDITIVE_SUCCESSOR_PROJECTION"
+  },
+  "source_repository": {
+    "repository": "situaedmilly/ALTONUMBUSELF",
+    "branch": "main",
+    "evidence_commit": "3e4babc66b6d3a6933ac389c6c0b2db827710c9f"
+  },
+  "evidence": [
+    {
+      "id": "REVERSELF-004-ADMISSION-HARDENING-001",
+      "path": "evidence/REVERSELF-004-ADMISSION-HARDENING-001.json",
+      "status": "VERIFIED",
+      "commit": "3e4babc66b6d3a6933ac389c6c0b2db827710c9f",
+      "sha256": "744c7e17e7f29fac3e6c8fa40887b428735f396a673f743d28275f404a6e40fe"
+    },
+    {
+      "id": "REVERSELF-003-CROSS-NODE-RECONTACT",
+      "path": "evidence/REVERSELF-003-cross-node-recontact.json",
+      "status": "PREVIOUSLY_VERIFIED"
+    },
+    {
+      "id": "REVERSELF-PRODUCTION-MEMORY-GUARD-002",
+      "path": "evidence/REVERSELF-PRODUCTION-MEMORY-GUARD-002.json",
+      "status": "SUPERSEDED_BY_V0_2_FOR_KNOWN_LOCAL_WRITERS"
+    },
+    {
+      "id": "REVERSELF-LIVE-DRIFT-CANARY-001",
+      "path": "evidence/REVERSELF-LIVE-DRIFT-CANARY-001.json",
+      "status": "PREVIOUSLY_VERIFIED"
+    },
+    {
+      "id": "REVERSELF-LIVE-DRIFT-RE-ADMISSION-001",
+      "path": "evidence/REVERSELF-LIVE-DRIFT-RE-ADMISSION-001.json",
+      "status": "PREVIOUSLY_VERIFIED"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "OURSELFECOSYSTEM",
+      "kind": "institutional_root",
+      "state": "DECLARED",
+      "authority": "FOUNDER_GOVERNED"
+    },
+    {
+      "id": "ALTONUMBUSELF",
+      "kind": "persistent_evidence_repository",
+      "state": "LIVE_MAIN_RECONTACTED",
+      "head": "3e4babc66b6d3a6933ac389c6c0b2db827710c9f"
+    },
+    {
+      "id": "MORPH_015",
+      "kind": "canonical_memory_object",
+      "state": "PRESERVED_AND_RECONTACTED",
+      "sha256": "b3beb89dfef3569a6bd714bbd1abb010782c8328606586cae993e22a1605abdd",
+      "mutation": "NONE"
+    },
+    {
+      "id": "REVERSELF_V0_2",
+      "kind": "local_memory_admission_and_integrity_guard",
+      "state": "VERIFIED",
+      "controls": [
+        "SIGNED_MEMORY_WRITE_ADMISSION",
+        "EXACT_TARGET_BINDING",
+        "EXACT_PAYLOAD_BINDING",
+        "EXACT_PREIMAGE_BINDING",
+        "MEMORY_ROOT_PATH_CONFINEMENT",
+        "DRIFT_QUARANTINE",
+        "FRESH_RE_ADMISSION",
+        "SIGNED_RECEIPT",
+        "POST_WRITE_RECONTACT"
+      ]
+    },
+    {
+      "id": "MEMORY_COMMITTER",
+      "kind": "two_phase_memory_writer",
+      "state": "VERIFIED_IN_ISOLATED_FIXTURE",
+      "workflow": "PREPARE -> VERIFY_INFERENCE -> MEMORY_ADMISSION -> COMMIT"
+    },
+    {
+      "id": "RESIDENT_RUNTIME",
+      "kind": "memory_consumer",
+      "state": "FAILS_CLOSED_WITHOUT_MEMORY_ADMISSION",
+      "default_without_admission": "PENDING_PAYLOAD_NO_MEMORY_WRITE"
+    },
+    {
+      "id": "REVERSELF_6_1_CANARY",
+      "kind": "local_noncanonical_memory_canary",
+      "state": "FOLLOW_ON_WRITE_AFTER_FRESH_RE_ADMISSION",
+      "guarded_recontact": "MATCH"
+    },
+    {
+      "id": "SELFPI",
+      "kind": "independent_readback_node",
+      "state": "CROSS_NODE_EVIDENCE_RECONTACT_VERIFIED",
+      "target": "REVERSELF-004-ADMISSION-HARDENING-001"
+    },
+    {
+      "id": "SELFTOSYS_ROOT_INTAKE",
+      "kind": "loopback_root_intake",
+      "state": "RUNNING_STATUS_ONLY_UNBOUND",
+      "endpoint": "127.0.0.1:49372",
+      "authenticated_transport": "NOT_ESTABLISHED",
+      "signing": "DISABLED",
+      "admission": "BLOCKED"
+    },
+    {
+      "id": "SELFSERVE_REMOTE_MEMORY_SERVICE",
+      "kind": "remote_memory_service",
+      "state": "NOT_ESTABLISHED"
+    },
+    {
+      "id": "ISSUER_CUSTODY",
+      "kind": "memory_admission_signer",
+      "state": "FILE_BACKED_SOFTWARE_KEY",
+      "hardware_root": "NOT_ESTABLISHED",
+      "process_isolation": "NOT_ESTABLISHED"
+    },
+    {
+      "id": "GLOBAL_REVERSELF",
+      "kind": "ecosystem_memory_reversibility",
+      "state": "BLOCKED_PENDING_REMOTE_SERVICE_AND_INDEPENDENT_CUSTODY"
+    }
+  ],
+  "edges": [
+    {
+      "from": "OURSELFECOSYSTEM",
+      "to": "ALTONUMBUSELF",
+      "relation": "PERSISTS_EVIDENCE_THROUGH"
+    },
+    {
+      "from": "ALTONUMBUSELF",
+      "to": "MORPH_015",
+      "relation": "REGISTERS_CANONICAL_MEMORY_OBJECT"
+    },
+    {
+      "from": "REVERSELF_V0_2",
+      "to": "REVERSELF_6_1_CANARY",
+      "relation": "GUARDS_WRITE_AND_RECONTACT"
+    },
+    {
+      "from": "MEMORY_COMMITTER",
+      "to": "REVERSELF_V0_2",
+      "relation": "REQUIRES_SIGNED_MEMORY_ADMISSION"
+    },
+    {
+      "from": "RESIDENT_RUNTIME",
+      "to": "REVERSELF_V0_2",
+      "relation": "FAILS_CLOSED_WITHOUT_ADMISSION"
+    },
+    {
+      "from": "SELFPI",
+      "to": "ALTONUMBUSELF",
+      "relation": "READS_BACK_COMMITTED_EVIDENCE"
+    },
+    {
+      "from": "SELFTOSYS_ROOT_INTAKE",
+      "to": "ISSUER_CUSTODY",
+      "relation": "ROOT_BINDING_NOT_ESTABLISHED"
+    },
+    {
+      "from": "SELFSERVE_REMOTE_MEMORY_SERVICE",
+      "to": "GLOBAL_REVERSELF",
+      "relation": "REQUIRED_BUT_NOT_ESTABLISHED"
+    }
+  ],
+  "invariants": [
+    "INFERENCE_AUTHORITY != MEMORY_WRITE_AUTHORITY",
+    "MODEL_OUTPUT != AUTHORITY",
+    "OBSERVATION != AUTHORITY",
+    "ADMISSION != ACTUATION",
+    "RECEIPT != EFFECT",
+    "MEMORY_WRITE_REQUIRES_SEPARATE_SIGNED_ADMISSION",
+    "MEMORY_ADMISSION_BINDS_EXACT_TARGET_PAYLOAD_AND_PREIMAGE",
+    "DRIFT_REQUIRES_QUARANTINE_AND_FRESH_RE_ADMISSION",
+    "CANONICAL_MORPH_015_REMAINS_UNMUTATED"
+  ],
+  "predicate_evaluation": {
+    "local_memory_integrity_guard": "VERIFIED",
+    "local_drift_quarantine": "VERIFIED",
+    "local_fresh_re_admission": "VERIFIED",
+    "local_two_phase_commit": "VERIFIED_IN_ISOLATED_FIXTURE",
+    "refused_receipt_bypass": "BLOCKED",
+    "canonical_memory_integrity": "PRESERVED",
+    "cross_node_evidence_recontact": "VERIFIED",
+    "ecosystem_wide_memory_consumer_completeness": "NOT_PROVEN",
+    "separate_remote_selserve_service": "NOT_ESTABLISHED",
+    "independent_hardware_root_and_custody": "NOT_ESTABLISHED",
+    "independent_witness": "NOT_ESTABLISHED",
+    "realiself": false
+  },
+  "remaining_gates": [
+    "EXHAUSTIVE_ECOSYSTEM_MEMORY_WRITE_PATH_INVENTORY",
+    "SEPARATE_SELFSERVE_REMOTE_SERVICE_DEPLOYMENT_AND_ENFORCEMENT",
+    "INDEPENDENT_SIGNER_PROCESS_OR_HARDWARE_ROOT_CUSTODY",
+    "REMOTE_ADMISSION_AND_RECEIPT_INTEGRATION",
+    "INDEPENDENT_WITNESS_OF_THE_COMPLETE_V0_2_SEQUENCE"
+  ],
+  "authority_effect": "Evidence graph only. No standing or future memory-write authority is created.",
+  "certification": {
+    "local_reverself_6_1": "VERIFIED",
+    "global_realiself": "NOT_CERTIFIED",
+    "reason": "The local memory guard and known local write paths are hardened, but the separate remote SELFSERVE service and independent signer custody are not established."
+  }
+}
