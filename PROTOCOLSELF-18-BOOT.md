@@ -6,11 +6,12 @@ Source: `situaedmilly/self-communication` /
 
 Pinned SHA-256: `76a2a14c9bab0d0ded7ff05c80991141df53e9f1f15ec948443e0b950017508c`
 
-Consumer role: Auxiliary OURSELF runtime reality; registry metadata only, subject to its local runtime and authority contract.
+Consumer role: Memory-storage instance and evidence repository; ProtocolSELF registry is a metadata-only projection, not a network runtime.
 
 This is a registry-only projection of 18 protocol identities. It does not
-change this repository's protocol schemas, communication behavior, authority
-rules, runtime deployment, or service activation.
+change this repository's memory object model, payload custody, protocol
+schemas, communication behavior, authority rules, runtime deployment, or
+service activation.
 
 Boot state: `REGISTRY_PRESENT_LISTENERS_DISABLED`.
 - Protocol count: 18
